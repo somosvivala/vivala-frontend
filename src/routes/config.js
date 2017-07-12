@@ -1,4 +1,5 @@
 import Index from '../components/pages/index';
+import NotFound from '../components/errors/404';
 
 export default [
     {
@@ -7,7 +8,7 @@ export default [
         component: Index,
         key: 'route-index'
     },  {
-        component: Index,
+        component: NotFound,
         key: 'route-404'
     },
 ]
