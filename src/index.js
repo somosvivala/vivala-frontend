@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import { MuiThemeProvider } from 'material-ui/styles';
 import configureStore from './utils/config-store';
 import App from './components/app';
 import { Router } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
 import registerServiceWorker from './registerServiceWorker';
+import customMuiTheme from './assets/theme/custom';
 
 ReactDOM.render(
-    <Provider store={configureStore()}>
+    <MuiThemeProvider store={configureStore()} theme={customMuiTheme}>
         <Router history={createBrowserHistory()}>
             <App />
         </Router>
-    </Provider>
+    </MuiThemeProvider>
     , document.getElementById('root'));
 registerServiceWorker();
