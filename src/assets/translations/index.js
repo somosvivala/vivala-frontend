@@ -1,7 +1,18 @@
 export default {
-    first: {
+    header: {
         title: 'Conheça seu mundo',
-        text: 'Nós ajudamos você...',
+        text: `Não perca mais horas e horas procurando sua próxima viagem. 
+                Peça sua cotação de forma ágil e seja atendido por agentes 
+                profissionais de forma humanizada e gratuita.`,
         button: 'Receba sua cotação em até 24 horas'
+    },
+    imageMessage: {
+        text: 'Transforme a sua vida e a realidade de pessoas e comunidades'
+    },
+    institute: {
+        text: 'Buscando experiências em projetos de Impacto Social?'
+    },
+    mediaNews: {
+        text: 'O que falam de nós?'
     }
 }

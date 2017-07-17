@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Routes from '../../routes';
 import routesConfig from '../../routes/config';
 import Menu from '../header/menu';
+import Footer from '../footer';
 
 class App extends Component {
     render() {
@@ -9,6 +10,7 @@ class App extends Component {
             <div>
                 <Menu />
                 {Routes(routesConfig)}
+                <Footer />
             </div>
         );
     }

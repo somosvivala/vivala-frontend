@@ -1,0 +1,15 @@
+*{min-height: 0;min-width: 0;}.container{position:relative;&.padding{padding: 20px}&.padding-2x{padding: 40px}}@media screen and (min-width:800px){.container{margin:0 auto;max-width:800px;width:800px}.container.is-fluid{margin:0 20px;max-width:none;width:auto}}
+a { color: inherit; text-decoration: none }
+.slider-enter {
+  height: 0px;
+}
+
+.slider-enter.slider-enter-active {
+  height: 200px;
+  -webkit-transition: height .3s ease;
+}
+
+.slider-leave.slider-leave-active {
+  height: 0px;
+  -webkit-transition: height .3s ease;
+}

@@ -7,6 +7,7 @@ import { Router } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
 import registerServiceWorker from './registerServiceWorker';
 import customMuiTheme from './assets/theme/custom';
+import 'typeface-titillium-web';
 
 ReactDOM.render(
     <MuiThemeProvider store={configureStore()} theme={customMuiTheme}>
