@@ -8,13 +8,13 @@ class MenuItems extends Component {
         const {direction, showContact} = this.props;
 
         return (
-            <Grid gutter={24} container align="flex-start" justify="space-around" {...direction}>
-                <Grid gutter={4} container xs={direction === 'column' ? 12 : 3} item direction="column">
+            <Grid gutter={24} container align="flex-start" justify="space-around" direction={direction}>
+                <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
                     <Typography type="subheading">
                         <a href="#">Saiba Mais</a>
                     </Typography>
                 </Grid>
-                <Grid gutter={4} container xs={direction === 'column' ? 12 : 3} item direction="column">
+                <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
                     <Typography type="subheading" gutterBottom>
                         Vivalá
                     </Typography>
@@ -31,7 +31,7 @@ class MenuItems extends Component {
                         <a href="#">Corporativo</a>
                     </Typography>
                 </Grid>
-                <Grid gutter={4} container xs={direction === 'column' ? 12 : 3} item direction="column">
+                <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
                     <Typography type="subheading" color="accent" gutterBottom>
                         Instituto Vivalá
                     </Typography>
@@ -49,7 +49,7 @@ class MenuItems extends Component {
                     </Typography>
                 </Grid>
                 { showContact &&
-                    <Grid gutter={4} container xs={direction === 'column' ? 12 : 3} item direction="column">
+                    <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
                         <Typography type="subheading" gutterBottom>
                             Contato
                         </Typography>
@@ -70,6 +70,5 @@ MenuItems.propTypes = {
     direction: PropTypes.string.isRequired,
     showContact: PropTypes.bool.isRequired,
 };
-MenuItems.defaultProps = {};
 
 export default MenuItems;
