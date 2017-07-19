@@ -29,7 +29,7 @@ class SearchCallToAction extends Component {
                                 {translations.text}
                             </Typography>
                         </Grid>
-                        <Grid container item xs={12} sm={6} gutterBottom justify="center">
+                        <Grid gutter={8} container item xs={12} sm={6} justify="center" align="center">
                             <Button raised color="contrast" onClick={click}>
                                 <Icon color="contrast">search</Icon> {translations.button}
                             </Button>

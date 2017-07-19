@@ -18,6 +18,9 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     },
     text: {
         margin: '0 0 20px 20px',
+    },
+    img: {
+        padding: 10
     }
 }));
 
@@ -30,7 +33,7 @@ class MediaNews extends Component {
             slidesToShow: 5,
             slidesToScroll: 1,
             responsive: [
-                { breakpoint: 400, settings: { slidesToShow: 3 } },
+                { breakpoint: 480, settings: { slidesToShow: 2 } },
                 { breakpoint: 800, settings: { slidesToShow: 4 } }
             ]
         }
@@ -40,19 +43,19 @@ class MediaNews extends Component {
                     <Typography type="subheading" gutterBottom className={classes.text}>{text}</Typography>
                     <Slider {...settings} className={classes.slider}>
                         <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" />
+                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
                         </div>
                         <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" />
+                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
                         </div>
                         <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" />
+                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
                         </div>
                         <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" />
+                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
                         </div>
                         <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" />
+                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
                         </div>
                     </Slider>
                 </div>

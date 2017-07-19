@@ -22,7 +22,7 @@ class MenuItems extends Component {
                         <a href="#">Sobre</a>
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Busca</a>
+                        <a href="#">Busque Sua Viagem</a>
                     </Typography>
                     <Typography type="subheading" color="inherit">
                         <a href="#">Agentes</a>
@@ -42,7 +42,7 @@ class MenuItems extends Component {
                         <a href="#">Expedições</a>
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Sustentável</a>
+                        <a href="#">Instituto Sustentável</a>
                     </Typography>
                     <Typography type="subheading" color="inherit">
                         <a href="#">Resultados</a>

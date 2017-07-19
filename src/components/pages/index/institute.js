@@ -6,6 +6,7 @@ import Typography from 'material-ui/Typography';
 import Social from '../../social';
 import Slider from 'react-slick';
 import InstituteItem from './institute-item';
+import Logo from '../../../assets/svg/logo_instituto.svg';
 
 const styleSheet = createStyleSheet('Institute', theme => ({
     bg: {
@@ -16,7 +17,9 @@ const styleSheet = createStyleSheet('Institute', theme => ({
         margin: 0,
     },
     img: {
-        marginBottom: 20
+        marginBottom: 20,
+        width: 150,
+        height: 100
     },
     subheading: {
         color: 'white'
@@ -44,7 +47,7 @@ class Institute extends Component {
                 <div className="container padding">
                     <Grid container className={classes.gridContainer} justify="space-around">
                         <Grid container item xs={5} justify="center">
-                            <img src="http://via.placeholder.com/150x60" alt="Instituto Vivala" className={classes.img} />
+                            <img src={Logo} alt="Instituto Vivala" className={classes.img} />
                         </Grid>
                         <Grid container item xs={6} justify="center">
                             <Typography type="subheading" gutterBottom color="inherit" className={classes.subheading}>

@@ -6,7 +6,7 @@ export default {
             {text: 'Hotéis'},
             {text: 'Vôos'},
             {text: 'Ônibus'},
-            {text: 'Experiências'},
+            {text: 'Experiências Vivalá'},
         ],
         boxRight: {
             text: 'Ou, se preferir, seja atendido de forma ágil, humanizada e gratuita.',

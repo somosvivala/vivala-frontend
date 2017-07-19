@@ -5,6 +5,11 @@ import Icon from 'material-ui/Icon';
 import Typography from 'material-ui/Typography';
 import List, { ListItem } from 'material-ui/List';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
+import PacotesCompletosSvg from '../../assets/svg/icons/pacotes.svg';
+import OnibusSvg from '../../assets/svg/icons/onibus.svg';
+import HoteisSvg from '../../assets/svg/icons/hoteis.svg';
+import VoosSvg from '../../assets/svg/icons/voos.svg';
+import ExperienciasSvg from '../../assets/svg/icons/experiencia.svg';
 
 const styleSheet = createStyleSheet('SearchTravel', theme => ({
     bg: {
@@ -30,7 +35,9 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
         color: 'white !important'
     },
     img: {
-        marginRight: 20
+        marginRight: 20,
+        width: 70,
+        height: 50,
     },
     bordered: {
         border: '2px solid white',
@@ -67,23 +74,23 @@ class SearchTravel extends Component {
                         <Grid xs={12} sm={6} item>
                             <List className={classes.list}>
                                 <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                                    <img src="http://via.placeholder.com/50x50" className={classes.img} />
+                                    <img src={PacotesCompletosSvg} className={classes.img} />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[0].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                                    <img src="http://via.placeholder.com/50x50" className={classes.img} />
+                                    <img src={HoteisSvg} className={classes.img} />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[1].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                                    <img src="http://via.placeholder.com/50x50" className={classes.img} />
+                                    <img src={VoosSvg} className={classes.img} />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[2].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                                    <img src="http://via.placeholder.com/50x50" className={classes.img} />
+                                    <img src={OnibusSvg} className={classes.img} />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[3].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                                    <img src="http://via.placeholder.com/50x50" className={classes.img} />
+                                    <img src={ExperienciasSvg} className={classes.img} />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[4].text}</Typography>
                                 </ListItem>
                             </List>

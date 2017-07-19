@@ -17,10 +17,10 @@ class Social extends Component {
         const { classes, color, facebook, instagram, youtube, linkedin } = this.props;
         return (
             <Grid item className={classes.social}>
-                { facebook ? <a target="_blank" href={facebook}><i className="fa fa-2x fa-facebook-square" style={{ color }}></i></a> : null }
-                { linkedin ? <a target="_blank" href={linkedin}><i className="fa fa-2x fa-linkedin-square" style={{ color }}></i></a> : null }
-                { youtube ? <a target="_blank" href={youtube}><i className="fa fa-2x fa-youtube-square" style={{ color }}></i></a> : null }
                 { instagram ? <a target="_blank" href={instagram}><i className="fa fa-2x fa-instagram" style={{ color }}></i></a> : null }
+                { facebook ? <a target="_blank" href={facebook}><i className="fa fa-2x fa-facebook-square" style={{ color }}></i></a> : null }
+                { youtube ? <a target="_blank" href={youtube}><i className="fa fa-2x fa-youtube-square" style={{ color }}></i></a> : null }
+                { linkedin ? <a target="_blank" href={linkedin}><i className="fa fa-2x fa-linkedin-square" style={{ color }}></i></a> : null }
             </Grid>
         );
     }
