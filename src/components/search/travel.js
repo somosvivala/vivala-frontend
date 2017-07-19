@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Grid from 'material-ui/Grid';
 import Icon from 'material-ui/Icon';
-import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import List, { ListItem } from 'material-ui/List';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 
 const styleSheet = createStyleSheet('SearchTravel', theme => ({

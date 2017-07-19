@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import SearchCallToAction from '../../search/call-to-action';
 import SearchTravel from '../../search/travel';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -7,7 +6,7 @@ import trans from '../../../utils/translate';
 
 class IndexSearch extends Component {
     state = {
-        clicked: true,
+        clicked: false,
     }
 
     handleClick = () => {
@@ -25,7 +24,10 @@ class IndexSearch extends Component {
                                         translations={trans('search.callToAction')}
                     />
                     :
-                    <SearchTravel translations={trans('search.travel')} key="search-travel" click={this.handleClick} />
+                    <SearchTravel key="search-travel"
+                                  click={this.handleClick}
+                                  translations={trans('search.travel')}
+                    />
                 }
             </ReactCSSTransitionGroup>
         );

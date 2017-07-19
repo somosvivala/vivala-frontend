@@ -18,7 +18,7 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
 
 class SearchCallToAction extends Component {
     render() {
-        const { classes, translations } = this.props;
+        const { classes, click, translations } = this.props;
 
         return (
             <div className={classes.bg}>
@@ -30,7 +30,7 @@ class SearchCallToAction extends Component {
                             </Typography>
                         </Grid>
                         <Grid container item xs={12} sm={6} gutterBottom justify="center">
-                            <Button raised color="contrast" onClick={translations.click}>
+                            <Button raised color="contrast" onClick={click}>
                                 <Icon color="contrast">search</Icon> {translations.button}
                             </Button>
                             <Social color="#ccc" facebook="#" linkedin="#" instagram="#" youtube="#"/>
@@ -44,7 +44,8 @@ class SearchCallToAction extends Component {
 
 SearchCallToAction.propTypes = {
     classes: PropTypes.object.isRequired,
-    translations: PropTypes.object.isRequired
+    translations: PropTypes.object.isRequired,
+    click: PropTypes.func.isRequired,
 }
 
 export default withStyles(styleSheet)(SearchCallToAction);
