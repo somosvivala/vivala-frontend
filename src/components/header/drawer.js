@@ -24,6 +24,7 @@ const styleSheet = createStyleSheet('Drawer', {
 class Drawer extends Component {
     render() {
         const {classes,open,close} = this.props;
+
         return (
             <MaterialDrawer
                 open={open}
@@ -39,8 +40,8 @@ class Drawer extends Component {
                             <Icon color="primary">close</Icon>
                         </IconButton>
                     </Grid>
-                    <Grid container item gutter={0} className={classes.menuItems}>
-                        <MenuItems direction="column" showContact={false} />
+                    <Grid container item gutter={0} className={classes.menuItems} direction="column">
+                        <MenuItems key="drawer-items" direction={"column"} showContact={false} />
                     </Grid>
                 </Grid>
             </MaterialDrawer>

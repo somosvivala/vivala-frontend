@@ -17,7 +17,7 @@ class Footer extends Component {
 
         const footerDesktop = (
             <div className="container padding-2x">
-                <MenuItems direction="row" showContact={true}  />
+                <MenuItems direction={"row"} showContact={true}  />
                 <Grid container align="center" justify="center" style={{ marginTop: 40 }}>
                     <Typography type="subheading">2017 Vivala</Typography>
                 </Grid>
