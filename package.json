@@ -24,9 +24,7 @@
     "redux-thunk": "^2.2.0",
     "slick-carousel": "^1.6.0",
     "typeface-titillium-web": "^0.0.31",
-    "webpack": "^3.2.0"
-  },
-  "devDependencies": {
+    "webpack": "^3.2.0",
     "react-scripts": "1.0.10"
   },
   "scripts": {
