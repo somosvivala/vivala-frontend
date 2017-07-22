@@ -12,6 +12,15 @@ let theme = createMuiTheme({
         color: vivalaInstituteColor,
         lightColor: '#3fb7b5'
     },
+    reverse: {
+        color: 'white',
+    },
+    default: {
+        color: '#f5f5f5',
+    },
+    defaultDarken: {
+        color: '#e1e1e1',
+    },
     overrides: {
         MuiTypography: {
             colorAccent: {

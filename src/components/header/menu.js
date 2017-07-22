@@ -9,7 +9,6 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 
 const styleSheet = createStyleSheet('Menu', theme => ({
     bg: {
-        backgroundColor: '#f5f5f5',
         height: 80,
     },
     img: {
