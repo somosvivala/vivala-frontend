@@ -52,5 +52,5 @@ class SubscribeForm extends Component {
 }
 
 export default reduxForm({
-    form: 'subscribeorm',
+    form: 'subscribeForm',
 })(SubscribeForm)
