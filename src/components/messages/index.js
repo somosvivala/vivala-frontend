@@ -30,17 +30,22 @@ class MessagesIndex extends Component {
             <div className={classes.message}>
                 <Icon className={classes[type]}>done</Icon>
                 <Typography type="body1">
-                    Formulário enviado com sucesso!
+                    <strong>Formulário enviado com sucesso!</strong>
+                </Typography>
+                <Typography type="body1">
                     Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos.
                 </Typography>
+
             </div>
         );
 
         const errorMessage = (
             <div className={classes.message}>
                 <Icon className={classes[type]}>block</Icon>
-                <Typography type="body1">
-                    Erro ao enviar formulário!
+                <Typography type="body1" paragraph>
+                    <strong>Erro ao enviar formulário!</strong>
+                </Typography>
+                <Typography type="body1" paragraph>
                     Houve um problema ao guardar as informações.
                 </Typography>
             </div>

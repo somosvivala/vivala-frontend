@@ -6,6 +6,7 @@ import IconButton from 'material-ui/IconButton';
 import Grid from 'material-ui/Grid';
 import Drawer from './drawer';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
+import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('Menu', theme => ({
     bg: {
@@ -46,7 +47,7 @@ class Menu extends Component {
             <div className={ classes.bg }>
                 <Grid {...container} className="container">
                     <Grid item xs={6} className={classes.img}>
-                        <img src={Logo} alt="Logo" width="150" height="60"/>
+                        <Link to="/"><img src={Logo} alt="Logo" width="150" height="60"/></Link>
                     </Grid>
 
                     <Grid item xs={6} className={classes.button}>
