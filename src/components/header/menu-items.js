@@ -29,7 +29,7 @@ class MenuItems extends Component {
                         <a href="#">Agentes</a>
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Corporativo</a>
+                        <Link to="/corporativo">Corporativo</Link>
                     </Typography>
                 </Grid>
                 <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">

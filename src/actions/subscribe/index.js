@@ -9,7 +9,7 @@ export function storeSubscription(data) {
     requestLoading();
 
     return function(dispatch) {
-        return axios.post(`/${data.record.type}/${data.record.id}/inscricoes`, { data })
+        return axios.post(`/${data.record.type}/${data.record.id}/inscricoes`, data.values)
             .then(function(response) {
                 dispatch(requestFulfilled());
             })

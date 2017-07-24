@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form'
 import PropTypes from 'prop-types';
 import {email, required} from '../../utils/validations';
-import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import TextField from '../form-fields/text';
 import { withStyles, createStyleSheet } from 'material-ui/styles';

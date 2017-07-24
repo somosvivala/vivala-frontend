@@ -15,7 +15,7 @@ class SubscribeForm extends Component {
                     <Grid item xs={12}>
                         <Field
                             type="text"
-                            name="name"
+                            name="nome"
                             component={TextField}
                             label="Nome"
                             validate={required}

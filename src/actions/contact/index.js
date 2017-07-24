@@ -1,15 +1,15 @@
 import {
-    REQUEST_LOADING_NEWSLETTER,
-    REQUEST_REJECTED_NEWSLETTER,
-    REQUEST_FULFILLED_NEWSLETTER
+    REQUEST_LOADING_CONTACT,
+    REQUEST_REJECTED_CONTACT,
+    REQUEST_FULFILLED_CONTACT
 } from './action';
 import axios from '../../utils/axios';
 
-export function storeNewsletter(data) {
+export function storeContact({ data, type }) {
     requestLoading();
 
     return function(dispatch) {
-        return axios.post(`/newsletter`, data)
+        return axios.post(`/contatos/${type}`, { data })
             .then(function(response) {
                 dispatch(requestFulfilled());
             })
@@ -21,18 +21,18 @@ export function storeNewsletter(data) {
 
 function requestLoading() {
     return {
-        type: REQUEST_LOADING_NEWSLETTER
+        type: REQUEST_LOADING_CONTACT
     };
 }
 
 function requestRejected() {
     return {
-        type: REQUEST_REJECTED_NEWSLETTER
+        type: REQUEST_REJECTED_CONTACT
     };
 }
 
 function requestFulfilled() {
     return {
-        type: REQUEST_FULFILLED_NEWSLETTER
+        type: REQUEST_FULFILLED_CONTACT
     }
 }

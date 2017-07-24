@@ -1,6 +1,7 @@
 import Index from '../components/pages/index';
 import ExpeditionsIndex from '../components/pages/expeditions';
 import ExpeditionsShow from '../components/pages/expeditions/show';
+import CorporativeIndex from '../components/pages/corporative/index';
 import NotFound from '../components/errors/404';
 
 export default [
@@ -19,6 +20,11 @@ export default [
         exact: true,
         component: ExpeditionsShow,
         key: 'expeditions.show'
+    }, {
+        path: '/corporativo',
+        exact: true,
+        component: CorporativeIndex,
+        key: 'corporative.index'
     }, {
         component: NotFound,
         key: 'error.404'

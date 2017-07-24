@@ -41,6 +41,9 @@ let theme = createMuiTheme({
                     backgroundColor: vivalaInstituteColor,
                 },
             },
+            raisedPrimary: {
+                color: 'white',
+            },
             raisedContrast: {
                 backgroundColor: '#bbb',
             }
