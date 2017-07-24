@@ -13,3 +13,6 @@ a { color: inherit; text-decoration: none }
   height: 0px;
   -webkit-transition: height .3s ease;
 }
+.slick-prev:before, .slick-next:before {
+  color: rgba(255, 109, 32, 0.7) !important;
+}

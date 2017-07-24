@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from'material-ui/Typography';
 import Slider from 'react-slick';
-import ExpeditionsItem from './item';
+import ExpeditionsListItem from './list-item';
 
 const styleSheet = createStyleSheet('ExpeditonsAfter', theme => ({
     bg: {
@@ -20,8 +20,16 @@ const styleSheet = createStyleSheet('ExpeditonsAfter', theme => ({
 }));
 
 class ExpeditonsAfter extends Component {
+    renderListItems(expeditions) {
+        return expeditions.map(expedition => {
+            return <div key={expedition.title}>
+                <ExpeditionsListItem expedition={expedition} color="default" />
+            </div>
+        })
+    }
+
     render() {
-        const { classes, translations } = this.props;
+        const { classes, translations, expeditions } = this.props;
         const settings = {
             infinite: true,
             speed: 500,
@@ -29,6 +37,7 @@ class ExpeditonsAfter extends Component {
             slidesToScroll: 1,
         }
         const align = window.screen.width < 800 ? 'center' : 'left';
+
         return (
             <div className={classes.bg}>
                 <div className="container" style={{ textAlign: align}}>
@@ -36,9 +45,7 @@ class ExpeditonsAfter extends Component {
                         {translations.title}
                     </Typography>
                     <Slider {...settings} className={classes.slider}>
-                        <div><ExpeditionsItem link="#" translations={{ title: 'Teste', text: 'Teste 123', button: 'Saiba Mais' }} color="inherit" /></div>
-                        <div><ExpeditionsItem link="#" translations={{ title: 'Teste', text: 'Teste 123', button: 'Saiba Mais' }} color="default" /></div>
-                        <div><ExpeditionsItem link="#" translations={{ title: 'Teste', text: 'Teste 123', button: 'Saiba Mais' }} color="inherit" /></div>
+                        { this.renderListItems(expeditions) }
                     </Slider>
                 </div>
             </div>
@@ -48,7 +55,8 @@ class ExpeditonsAfter extends Component {
 
 ExpeditonsAfter.propTypes = {
     classes: PropTypes.object.isRequired,
-    translations: PropTypes.object.isRequired
+    translations: PropTypes.object.isRequired,
+    expeditions: PropTypes.array.isRequired
 };
 
 export default withStyles(styleSheet)(ExpeditonsAfter);

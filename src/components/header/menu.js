@@ -12,7 +12,7 @@ const styleSheet = createStyleSheet('Menu', theme => ({
         height: 80,
     },
     img: {
-        marginTop: 15
+        marginTop: 10
     },
     button: {
         textAlign: 'right'

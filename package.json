@@ -18,14 +18,14 @@
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
+    "react-scripts": "1.0.10",
     "react-slick": "^0.14.11",
     "redux": "^3.7.1",
     "redux-form": "^7.0.0",
     "redux-thunk": "^2.2.0",
     "slick-carousel": "^1.6.0",
     "typeface-titillium-web": "^0.0.31",
-    "webpack": "^3.2.0",
-    "react-scripts": "1.0.10"
+    "webpack": "^3.2.0"
   },
   "scripts": {
     "css-dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",

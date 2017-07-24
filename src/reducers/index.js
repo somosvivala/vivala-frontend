@@ -1,3 +1,10 @@
 import { combineReducers } from 'redux';
+import expeditions from './expeditions';
+import subscribe from './subscribe';
+import { reducer as formReducer } from 'redux-form'
 
-export default combineReducers({});
+export default combineReducers({
+    form: formReducer,
+    expeditions,
+    subscribe
+});

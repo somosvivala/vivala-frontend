@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
+import {Link} from 'react-router-dom';
 
 class MenuItems extends Component {
     render() {
@@ -39,7 +40,7 @@ class MenuItems extends Component {
                         <a href="#">Sobre</a>
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Expedições</a>
+                        <Link to="/expedicoes">Expedições</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
                         <a href="#">Instituto Sustentável</a>

@@ -1,5 +1,6 @@
 import Index from '../components/pages/index';
-import IndexExpeditions from '../components/pages/expeditions';
+import ExpeditionsIndex from '../components/pages/expeditions';
+import ExpeditionsShow from '../components/pages/expeditions/show';
 import NotFound from '../components/errors/404';
 
 export default [
@@ -11,9 +12,14 @@ export default [
     }, {
         path: '/expedicoes',
         exact: true,
-        component: IndexExpeditions,
+        component: ExpeditionsIndex,
         key: 'expeditions.index'
-    },  {
+    }, {
+        path: '/expedicoes/:id',
+        exact: true,
+        component: ExpeditionsShow,
+        key: 'expeditions.show'
+    }, {
         component: NotFound,
         key: 'error.404'
     },

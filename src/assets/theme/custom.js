@@ -33,8 +33,26 @@ let theme = createMuiTheme({
                 '&:hover': {
                     backgroundColor: 'transparent',
                 },
+            },
+            raisedAccent: {
+                color: 'white',
+                backgroundColor: vivalaInstituteColor,
+                '&:hover': {
+                    backgroundColor: vivalaInstituteColor,
+                },
+            },
+            raisedContrast: {
+                backgroundColor: '#bbb',
             }
-        }
+        },
+        MuiCircularProgress: {
+            primaryColor: {
+                color: vivalaColor,
+            },
+            accentColor: {
+                color: vivalaInstituteColor,
+            },
+        },
     }
 });
 const customTypography = createTypography(theme.palette, {
@@ -81,7 +99,5 @@ theme = {
         }
     },
 };
-
-console.log(theme)
 
 export default theme;

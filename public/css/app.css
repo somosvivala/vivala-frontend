@@ -50,6 +50,11 @@ a {
   -webkit-transition: height .3s ease;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: rgba(255, 109, 32, 0.7) !important;
+}
+
 /* Slider */
 
 .slick-slider {
