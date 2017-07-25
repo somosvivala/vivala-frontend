@@ -16,3 +16,14 @@ a { color: inherit; text-decoration: none }
 .slick-prev:before, .slick-next:before {
   color: rgba(255, 109, 32, 0.7) !important;
 }
+
+.fix-slider {
+  .slick-prev {
+    z-index: 99999;
+    left: 0 !important;
+  }
+  .slick-next {
+    z-index: 99999;
+    right: 0 !important;
+  }
+}

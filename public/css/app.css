@@ -55,6 +55,16 @@ a {
   color: rgba(255, 109, 32, 0.7) !important;
 }
 
+.fix-slider .slick-prev {
+  z-index: 99999;
+  left: 0 !important;
+}
+
+.fix-slider .slick-next {
+  z-index: 99999;
+  right: 0 !important;
+}
+
 /* Slider */
 
 .slick-slider {

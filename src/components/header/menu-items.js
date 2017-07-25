@@ -20,13 +20,13 @@ class MenuItems extends Component {
                         Vivalá
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Sobre</a>
+                        <Link to="/sobre">Sobre</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
                         <a href="#">Busque Sua Viagem</a>
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Agentes</a>
+                        <Link to="/agentes">Agentes</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
                         <Link to="/corporativo">Corporativo</Link>
