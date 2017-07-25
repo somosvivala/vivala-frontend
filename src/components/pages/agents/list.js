@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
-import CorporativeContact from './contact';
+import Button from 'material-ui/Button';
 import Slider from 'react-slick';
 
-const styleSheet = createStyleSheet('CorporativeBonus', theme => ({
+const styleSheet = createStyleSheet('AgentsList', theme => ({
     bg: {
-        backgroundColor: theme.defaultDarken.color
+        backgroundColor: theme.default.color
     },
     subheading: {
         textTransform: 'uppercase'
@@ -17,21 +17,18 @@ const styleSheet = createStyleSheet('CorporativeBonus', theme => ({
         margin: '20px auto'
     },
     item: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: theme.default.color,
+        backgroundColor: 'white',
         padding: 20,
         margin: 10,
         textAlign: 'center',
-        height: 200,
+        height: 150,
     },
     img: {
-        margin: 'auto'
+        margin: '10px auto'
     },
 }));
 
-class CorporativeBonus extends Component {
+class AgentsList extends Component {
     render() {
         const { classes } = this.props;
         const settings = {
@@ -47,43 +44,48 @@ class CorporativeBonus extends Component {
         return (
             <div className={classes.bg}>
                 <div className="container padding">
-                    <Typography type="subheading" align="center" className={classes.subheading} gutterBottom>
-                        Vantagens oferecidas para nossos clientes corporativos
+                    <Typography type="headline" align="center" className={classes.subheading} gutterBottom>
+                        Agentes
+                    </Typography>
+                    <Typography type="body1" align="center" gutterBottom>
+                        Conheça algumas pessoas do nosso time de agentes
                     </Typography>
 
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Reduza Custos</Typography>
                                 <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography>Os melhores preços do mercado</Typography>
+                                <Typography type="body1">Luiza Celidonio</Typography>
+                                <Typography type="body1">São Paulo, São Paulo</Typography>
                             </div>
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Economize Tempo</Typography>
                                 <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography>Seja atendido de forma ágil e personalizada</Typography>
+                                <Typography type="body1">Maria Fernanda Padovan</Typography>
+                                <Typography type="body1">Santa de Parnaíba, São Paulo</Typography>
                             </div>
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Melhore o controle</Typography>
                                 <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography>Receba relatórios mensais com seus gastos</Typography>
+                                <Typography type="body1">Cristiane Schuh</Typography>
+                                <Typography type="body1">Dois Irmãos, Rio Grande do Sul</Typography>
                             </div>
                         </div>
                     </Slider>
 
-                    <CorporativeContact />
+                    <div style={{ textAlign: 'center' }}>
+                        <Button raised color="primary" href="/agentes/seja-um-agente">Seja um Agente Vivalá!</Button>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
-CorporativeBonus.propTypes = {
+AgentsList.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styleSheet)(CorporativeBonus);
+export default withStyles(styleSheet)(AgentsList);

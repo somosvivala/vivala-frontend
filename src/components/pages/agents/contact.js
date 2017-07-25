@@ -8,13 +8,13 @@ import Message from '../../messages';
 import { storeContact } from '../../../actions/contact';
 import ContactForm from '../../contact';
 
-const styleSheet = createStyleSheet('CorporativeContact', theme => ({
+const styleSheet = createStyleSheet('AgentsContact', theme => ({
     button: {
         textAlign: 'center',
     }
 }));
 
-class CorporativeContact extends Component {
+class AgentsContact extends Component {
     state = {
         clicked: false,
     }
@@ -26,7 +26,7 @@ class CorporativeContact extends Component {
     }
 
     handleSubmit = (values) => {
-        this.props.storeContact(values, 'corporativo');
+        this.props.storeContact(values, 'agente');
     }
 
     render() {
@@ -52,7 +52,7 @@ class CorporativeContact extends Component {
         const renderButton = (
             <div className={classes.button}>
                 <Button raised color="primary" onClick={this.handleClick}>
-                    Quero Saber Mais
+                    Seja um agente!
                 </Button>
             </div>
         )
@@ -60,7 +60,7 @@ class CorporativeContact extends Component {
         return (
             <div className="container padding">
                 { clicked ?
-                    <ContactForm key="corporative-contact" type="corporative" onSubmit={this.handleSubmit} />
+                    <ContactForm key="agents-contact" type="agents" onSubmit={this.handleSubmit} />
                     :
                     renderButton
                 }
@@ -69,7 +69,7 @@ class CorporativeContact extends Component {
     }
 }
 
-CorporativeContact.propTypes = {
+AgentsContact.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
@@ -81,4 +81,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {storeContact})(withStyles(styleSheet)(CorporativeContact));
+export default connect(mapStateToProps, {storeContact})(withStyles(styleSheet)(AgentsContact));

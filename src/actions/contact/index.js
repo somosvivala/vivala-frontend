@@ -5,11 +5,11 @@ import {
 } from './action';
 import axios from '../../utils/axios';
 
-export function storeContact({ data, type }) {
+export function storeContact(data, type) {
     requestLoading();
 
     return function(dispatch) {
-        return axios.post(`/contatos/${type}`, { data })
+        return axios.post(`/contatos/${type}`, data)
             .then(function(response) {
                 dispatch(requestFulfilled());
             })

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
-import CorporativeContact from './contact';
+import AgentsContact from './contact';
 import Slider from 'react-slick';
 
-const styleSheet = createStyleSheet('CorporativeBonus', theme => ({
+const styleSheet = createStyleSheet('AgentsBonus', theme => ({
     bg: {
         backgroundColor: theme.defaultDarken.color
     },
@@ -24,14 +24,14 @@ const styleSheet = createStyleSheet('CorporativeBonus', theme => ({
         padding: 20,
         margin: 10,
         textAlign: 'center',
-        height: 200,
+        height: 150,
     },
     img: {
-        margin: 'auto'
+        marginTop: 'auto'
     },
 }));
 
-class CorporativeBonus extends Component {
+class AgentsBonus extends Component {
     render() {
         const { classes } = this.props;
         const settings = {
@@ -48,42 +48,66 @@ class CorporativeBonus extends Component {
             <div className={classes.bg}>
                 <div className="container padding">
                     <Typography type="subheading" align="center" className={classes.subheading} gutterBottom>
-                        Vantagens oferecidas para nossos clientes corporativos
+                        Benefícios
+                    </Typography>
+                    <Typography type="body1" align="center" gutterBottom>
+                        Exlusivos para agentes vivalá
                     </Typography>
 
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Reduza Custos</Typography>
+                                <Typography type="subheading">Treinamento</Typography>
                                 <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography>Os melhores preços do mercado</Typography>
                             </div>
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Economize Tempo</Typography>
+                                <Typography type="subheading">Melhores valores de mercado</Typography>
                                 <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography>Seja atendido de forma ágil e personalizada</Typography>
                             </div>
                         </div>
                         <div>
                             <div className={classes.item}>
                                 <Typography type="subheading">Melhore o controle</Typography>
                                 <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography>Receba relatórios mensais com seus gastos</Typography>
+                            </div>
+                        </div>
+                        <div>
+                            <div className={classes.item}>
+                                <Typography type="subheading">Material de divulgação diário</Typography>
+                                <img src={""} width="80" height="80" className={classes.img} />
+                            </div>
+                        </div>
+                        <div>
+                            <div className={classes.item}>
+                                <Typography type="subheading">Suporte para vendas e pós vendas</Typography>
+                                <img src={""} width="80" height="80" className={classes.img} />
+                            </div>
+                        </div>
+                        <div>
+                            <div className={classes.item}>
+                                <Typography type="subheading">Operação global para mais de 160 países</Typography>
+                                <img src={""} width="80" height="80" className={classes.img} />
+                            </div>
+                        </div>
+                        <div>
+                            <div className={classes.item}>
+                                <Typography type="subheading">Controle de comissões</Typography>
+                                <img src={""} width="80" height="80" className={classes.img} />
                             </div>
                         </div>
                     </Slider>
 
-                    <CorporativeContact />
+                    <AgentsContact />
                 </div>
             </div>
         );
     }
 }
 
-CorporativeBonus.propTypes = {
+AgentsBonus.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styleSheet)(CorporativeBonus);
+export default withStyles(styleSheet)(AgentsBonus);
