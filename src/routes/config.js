@@ -5,6 +5,9 @@ import CorporativeIndex from '../components/pages/corporative';
 import AgentsIndex from '../components/pages/agents';
 import AgentsSubscribe from '../components/pages/agents/subscribe';
 import AboutIndex from '../components/pages/about';
+import InstituteIndex from '../components/pages/institute';
+import InstituteAbout from '../components/pages/institute/about';
+import InstituteResults from '../components/pages/institute/results';
 import NotFound from '../components/errors/404';
 
 export default [
@@ -43,6 +46,21 @@ export default [
         exact: true,
         component: AboutIndex,
         key: 'about.index'
+    }, {
+        path: '/instituto',
+        exact: true,
+        component: InstituteIndex,
+        key: 'institute.index'
+    }, {
+        path: '/instituto/sobre',
+        exact: true,
+        component: InstituteAbout,
+        key: 'institute.about'
+    }, {
+        path: '/instituto/resultados',
+        exact: true,
+        component: InstituteResults,
+        key: 'institute.results'
     }, {
         component: NotFound,
         key: 'error.404'

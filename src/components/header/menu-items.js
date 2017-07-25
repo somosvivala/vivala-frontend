@@ -37,16 +37,16 @@ class MenuItems extends Component {
                         Instituto Vivalá
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Sobre</a>
+                        <Link to="/instituto/sobre">Sobre</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
                         <Link to="/expedicoes">Expedições</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Instituto Sustentável</a>
+                        <Link to="/instituto">Instituto Sustentável</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Resultados</a>
+                        <Link to="/instituto/resultados">Resultados</Link>
                     </Typography>
                 </Grid>
                 { showContact &&
