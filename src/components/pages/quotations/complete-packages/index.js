@@ -13,6 +13,8 @@ import SixthStep from './sixth-step';
 import SeventhStep from './seventh-step';
 import EigthStep from './eigth-step';
 import NinthStep from './ninth-step';
+import axios from '../../../../utils/axios';
+import Message from '../../../messages';
 
 const styleSheet = createStyleSheet('CompletePackagesFirstStep', theme => ({
     bg: {
@@ -27,33 +29,67 @@ const styleSheet = createStyleSheet('CompletePackagesFirstStep', theme => ({
 class CompletePackagesIndex extends Component {
     constructor(props) {
         super(props);
-        this.nextPage = this.nextPage.bind(this);
-        this.previousPage = this.previousPage.bind(this);
         this.state = {
-            page: 5
+            page: 1,
+            saved: false,
+            error: false
         }
     }
-    nextPage() {
-        this.setState({ page: this.state.page + 1 })
+    nextPage = () => {
+        this.setState({ page: parseInt(this.state.page, 10) + 1 })
     }
 
-    previousPage() {
-        this.setState({ page: this.state.page - 1 })
+    previousPage = () => {
+        this.setState({ page: parseInt(this.state.page, 10) - 1 })
     }
 
     handleSubmit = (values) => {
-        console.log(values);
+        axios.post('/cotacoes/pacote', { data: values })
+            .then(response => {
+                this.setState({
+                    saved: true,
+                    error: false
+                });
+            })
+            .catch(err => {
+                this.setState({
+                    saved: true,
+                    error: true
+                })
+            });
     }
 
     render() {
         const { classes } = this.props;
-        const { page } = this.state;
-        return (
+        const { page, saved, error } = this.state;
 
+        if (saved) {
+            return (
+                <div className={classes.bg}>
+                    <div className="container padding">
+                        <CompletePackagesHeader/>
+                        <Typography type="subheading" align="right" color="primary">{page} / 9</Typography>
+
+                        <LinearProgress
+                            color="primary"
+                            mode="determinate"
+                            value={page * 11.11}
+                            valueBuffer={100}
+                        />
+                        <div style={{ marginTop: 30 }}>
+                            <Message type={error ? 'error' : 'success'} title="Contato" />
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        return (
             <div className={classes.bg}>
                 <div className="container padding-2x">
                     <CompletePackagesHeader/>
                     <Typography type="subheading" align="right" color="primary">{page} / 9</Typography>
+
                     <LinearProgress
                         color="primary"
                         mode="determinate"

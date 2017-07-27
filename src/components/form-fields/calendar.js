@@ -14,6 +14,7 @@ class CalendarInput extends Component {
                     selected={input.value}
                     onChange={input.onChange}
                     minDate={moment()}
+                    dateFormat="dd/mm/YYYY"
                 />
             </div>
         );

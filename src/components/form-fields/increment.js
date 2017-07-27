@@ -8,7 +8,6 @@ class Increment extends Component {
         const { title, helper, input, meta: { touched, error }} = this.props;
         return (
             <div style={{display: 'flex', justifyContent: 'space-between', width: '100%'}}>
-                <Field type="hidden" component="input" {...input}/>
                 <div>
                     <Typography type="subheading" color="inherit" style={{ textTransform: 'uppercase' }}>{title}</Typography>
                     <Typography type="body1">{helper}</Typography>

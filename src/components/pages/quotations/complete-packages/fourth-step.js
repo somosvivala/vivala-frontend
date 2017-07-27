@@ -61,16 +61,6 @@ class CompletePackagesThirdStep extends Component {
                     <Grid item xs={12}>
                         <Field
                             type="text"
-                            name="aeroporto_origem"
-                            component={TextField}
-                            label="Aeroporto de Origem"
-                            validate={required}
-                        />
-                    </Grid>
-
-                    <Grid item xs={12}>
-                        <Field
-                            type="text"
                             name="aeroporto_destino"
                             component={TextField}
                             label="Aeroporto de Destino"
@@ -120,7 +110,7 @@ class CompletePackagesThirdStep extends Component {
 
                     <Grid gutter={0} container style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
-                            <Button raised color="primary" type="submit" onClick={previousPage}>
+                            <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior
                             </Button>
                         </Grid>

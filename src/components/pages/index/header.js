@@ -4,11 +4,11 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import PrimaryButton from '../../buttons/primary';
 import PropTypes from 'prop-types';
+import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('IndexHeader', theme => ({
     gridContainer: {
         margin: 0,
-        height: 400,
         maxWidth: '100%'
     },
     gridItem: {
@@ -25,12 +25,17 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
 class IndexHeader extends Component {
    render() {
         const { classes, title, text, button } = this.props;
-        const imgSrc = `http://via.placeholder.com/${window.screen.width < 800 ? window.screen.width : 800 }x400`;
 
         return (
             <div className="container">
                 <Grid container align="center" className={classes.gridContainer}>
-                    <img src={imgSrc} alt="Conheça seu mundo" />
+                    <Image
+                        cloudName="vivala"
+                        publicId="home_1.png"
+                        width={window.screen.width < 800 ? window.screen.width : 800}
+                        height={window.screen.width < 800 ? 300 : 400}
+                        crop="scale" alt="Conheça seu mundo"
+                    />
                     <Grid item xs={12} sm={5} className={classes.gridItem}>
                         <Typography type="headline" gutterBottom>{title}</Typography>
                         <Typography type="body1" gutterBottom className={classes.margin}>{text}</Typography>

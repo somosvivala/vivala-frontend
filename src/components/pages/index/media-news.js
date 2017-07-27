@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Slider from "react-slick";
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
+import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('MediaNews', theme => ({
     bg: {
@@ -43,7 +44,14 @@ class MediaNews extends Component {
                     <Typography type="subheading" gutterBottom className={classes.text}>{text}</Typography>
                     <Slider {...settings} className={classes.slider}>
                         <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
+                            <Image
+                                cloudName="vivala"
+                                publicId="logo_catracalivre.png"
+                                width={200}
+                                height={100}
+                                alt="Conheça seu mundo"
+                                className={classes.img}
+                            />
                         </div>
                         <div className={classes.item}>
                             <img src="http://via.placeholder.com/120x100" className={classes.img} />

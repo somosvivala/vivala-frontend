@@ -10,6 +10,7 @@ import OnibusSvg from '../../assets/svg/icons/onibus.svg';
 import HoteisSvg from '../../assets/svg/icons/hoteis.svg';
 import VoosSvg from '../../assets/svg/icons/voos.svg';
 import ExperienciasSvg from '../../assets/svg/icons/experiencia.svg';
+import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('SearchTravel', theme => ({
     bg: {
@@ -73,32 +74,24 @@ class SearchTravel extends Component {
                         </Grid>
                         <Grid xs={12} sm={6} item>
                             <List className={classes.list}>
-                                <ListItem button component="a" href="#simple-list" className={classes.listItem}>
+                                <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/packages" className={classes.listItem}>
                                     <img src={PacotesCompletosSvg} className={classes.img} />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[0].text}</Typography>
                                 </ListItem>
-                                <ListItem button component="a" href="#simple-list" className={classes.listItem}>
+                                <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/hotels" className={classes.listItem}>
                                     <img src={HoteisSvg} className={classes.img} />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[1].text}</Typography>
                                 </ListItem>
-                                <ListItem button component="a" href="#simple-list" className={classes.listItem}>
+                                <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.listItem}>
                                     <img src={VoosSvg} className={classes.img} />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[2].text}</Typography>
-                                </ListItem>
-                                <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                                    <img src={OnibusSvg} className={classes.img} />
-                                    <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[3].text}</Typography>
-                                </ListItem>
-                                <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                                    <img src={ExperienciasSvg} className={classes.img} />
-                                    <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[4].text}</Typography>
                                 </ListItem>
                             </List>
                         </Grid>
                         <Grid xs={12} sm={6} item>
                             <div className={classes.bordered}>
                                 <p>{translations.boxRight.text}</p>
-                                <a href="#" className={classes.button}>{translations.boxRight.button} <Icon>arrow_forward</Icon></a>
+                                <Link to="/monte-sua-viagem" className={classes.button}>{translations.boxRight.button} <Icon>arrow_forward</Icon></Link>
                             </div>
                         </Grid>
                     </Grid>

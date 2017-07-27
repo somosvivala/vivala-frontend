@@ -19,10 +19,10 @@ class CompletePackagesSixthStep extends Component {
                         Passageiro {key+1}
                     </Typography>
 
-                    <Grid item xs={12}>
+                    <Grid item xs={12} style={{ marginBottom: 10 }}>
                         <Field
                             type="text"
-                            name="seguro_viagem_nome[]"
+                            name={`seguro_viagem_nome[${key}]`}
                             component={TextField}
                             label="Nome Completo"
                             validate={required}
@@ -31,8 +31,9 @@ class CompletePackagesSixthStep extends Component {
 
                     <Grid item xs={12}>
                         <Field
-                            type="text"
-                            name="seguro_viagem_data_nascimento[]"
+                            type="date"
+                            date
+                            name={`seguro_viagem_data_nascimento[${key}]`}
                             component={TextField}
                             label="Data de Nascimento"
                             validate={required}
@@ -62,7 +63,7 @@ class CompletePackagesSixthStep extends Component {
 
                                 <Grid gutter={0} container style={{ marginTop: 30}}>
                                     <Grid gutter={0} container item xs={6} justify="flex-start">
-                                        <Button raised color="primary" type="submit" onClick={previousPage}>
+                                        <Button raised color="primary" type="button" onClick={previousPage}>
                                             Anterior
                                         </Button>
                                     </Grid>
@@ -82,7 +83,7 @@ class CompletePackagesSixthStep extends Component {
                                 </Grid>
                                 <Grid gutter={0} container style={{ marginTop: 30}}>
                                     <Grid gutter={0} container item xs={6} justify="flex-start">
-                                        <Button raised color="primary" type="submit" onClick={previousPage}>
+                                        <Button raised color="primary" type="button" onClick={previousPage}>
                                             Anterior
                                         </Button>
                                     </Grid>
@@ -113,11 +114,11 @@ CompletePackagesSixthStep = reduxForm({
 
 const selector = formValueSelector('completePackagesForm')
 CompletePackagesSixthStep = connect(state => {
-    const adultos = selector(state, 'qnty_adultos');
-    const criancas = selector(state, 'qnty_criancas');
-    const bebes = selector(state, 'qnty_bebes');
+    const adultos = selector(state, 'qnt_adultos');
+    const criancas = selector(state, 'qnt_criancas');
+    const bebes = selector(state, 'qnt_bebes');
     return {
-        total: parseInt(adultos, 10) + parseInt(criancas, 10) + parseInt(bebes, 10),
+        total: adultos + criancas + bebes,
     }
 })(CompletePackagesSixthStep);
 

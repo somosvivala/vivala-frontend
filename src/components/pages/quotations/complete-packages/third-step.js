@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import Increment from '../../../form-fields/increment';
@@ -50,7 +51,7 @@ class CompletePackagesThirdStep extends Component {
 
                     <Grid gutter={0} container style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
-                            <Button raised color="primary" type="submit" onClick={previousPage}>
+                            <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior
                             </Button>
                         </Grid>
@@ -70,9 +71,16 @@ CompletePackagesThirdStep.propTypes = {
     handleSubmit: PropTypes.func.isRequired
 };
 
+
 export default reduxForm({
     form: 'completePackagesForm',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
-    initialValues: { qnt_adultos: 0, qnt_criancas: 0, qnt_bebes: 0 }
-})(CompletePackagesThirdStep)
+    enableReinitialize: true,
+    keepDirtyOnReinitialize: true,
+    initialValues: {
+        qnt_adultos: 0,
+        qnt_criancas: 0,
+        qnt_bebes: 0
+    }
+})(CompletePackagesThirdStep);

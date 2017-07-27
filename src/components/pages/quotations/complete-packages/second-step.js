@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import CalendarInput from '../../../form-fields/calendar';
 import ButtonBoolean from '../../../form-fields/button-boolean';
-import {required, notNull} from '../../../../utils/validations';
+import {required, number} from '../../../../utils/validations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
@@ -49,16 +49,16 @@ class CompletePackagesSecondStep extends Component {
 
                     <div style={{ margin: '0 auto'}}>
                         <Field
+                            type="text"
                             component={ButtonBoolean}
                             name="datas_flexiveis"
-                            defaultValue=""
-                            validate={notNull}
+                            validate={number}
                         />
                     </div>
 
                     <Grid gutter={0} container style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
-                            <Button raised color="primary" type="submit" onClick={previousPage}>
+                            <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior
                             </Button>
                         </Grid>
@@ -82,4 +82,8 @@ export default reduxForm({
     form: 'completePackagesForm',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
+    initialValues: {
+        "datas_flexiveis": ''
+    },
+    keepDirtyOnReinitialize: true,
 })(CompletePackagesSecondStep)

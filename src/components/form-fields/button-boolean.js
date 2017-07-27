@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Button from 'material-ui/Button';
+import {Field} from 'redux-form';
 
 class ButtonBoolean extends Component {
     render() {
@@ -7,16 +8,16 @@ class ButtonBoolean extends Component {
         return (
             <div>
                 <Button raised
-                        color={input.value === true ? 'primary' : 'default'}
+                        color={input.value === 1 ? 'primary' : 'default'}
                         style={{ marginRight: 10 }}
-                        onClick={(event, index, value) => input.onChange(true)}
+                        onClick={value => input.onChange(1)}
                 >
                     SIM
                 </Button>
                 <Button raised
-                        color={input.value === false ? 'primary' : 'default'}
+                        color={input.value === 0 ? 'primary' : 'default'}
                         style={{ marginRight: 10 }}
-                        onClick={(event, index, value) => input.onChange(false)}
+                        onClick={value => input.onChange(0)}
                 >
                     NÃO
                 </Button>

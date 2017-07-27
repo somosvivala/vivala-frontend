@@ -14,11 +14,21 @@ class CompletePackagesFifthStep extends Component {
     render() {
         const { invalid, previousPage, pristine, submitting, handleSubmit } = this.props;
 
+        const roomTypes = [
+            { value: 'individual', text: 'Individual' },
+            { value: 'casal', text: 'Casal' },
+            { value: 'triplo', text: 'Triplo' },
+            { value: 'quadruplo', text: 'Quadruplo' },
+            { value: 'casa-apartamento', text: 'Casa/Apartamento Inteiro' },
+        ];
+
+
         const type1 = [
-            { value: '1', text: 'Hospedagem 1' },
-            { value: '2', text: 'Hospedagem 2' },
-            { value: '3', text: 'Hospedagem 3' },
-            { value: '4', text: 'Hospedagem 4' },
+            { value: 'hostel', text: 'Hostel' },
+            { value: 'pousada', text: 'Pousda' },
+            { value: 'casa-ap', text: 'Casa/AP' },
+            { value: 'hotel', text: 'Hotel' },
+            { value: 'todos', text: 'Todos' },
         ];
 
         return (
@@ -52,7 +62,7 @@ class CompletePackagesFifthStep extends Component {
                         <Field
                             name="tipo_quarto"
                             component={SelectInput}
-                            options={type1}
+                            options={roomTypes}
                             label="Tipo de Quarto"
                         />
                     </Grid>
@@ -142,13 +152,13 @@ class CompletePackagesFifthStep extends Component {
 
                     <Grid gutter={0} container style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
-                            <Button raised color="primary" type="submit" onClick={previousPage}>
+                            <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior
                             </Button>
                         </Grid>
                         <Grid gutter={0} container item xs={6} justify="flex-end">
                             <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting}>
-                                Enviar
+                                Próximo
                             </Button>
                         </Grid>
                     </Grid>

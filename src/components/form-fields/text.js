@@ -2,13 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MuiTextField from 'material-ui/TextField';
 
-const TextField = ({ input, meta: { touched, error }, ...other }) => (
+const TextField = ({ input, date, meta: { touched, error }, ...other }) => (
     <MuiTextField
         error={Boolean(touched && error)}
         {...input}
         {...other}
         helperText={touched ? error : ''}
         fullWidth
+        InputLabelProps={{
+            shrink: date,
+        }}
     />
 );
 
