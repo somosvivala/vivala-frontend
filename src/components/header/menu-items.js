@@ -23,13 +23,16 @@ class MenuItems extends Component {
                         <Link to="/sobre">Sobre</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <a href="#">Busque Sua Viagem</a>
+                        <Link to="/monte-sua-viagem">Busque Sua Viagem</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
                         <Link to="/agentes">Agentes</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
                         <Link to="/corporativo">Corporativo</Link>
+                    </Typography>
+                    <Typography type="subheading" color="inherit">
+                        <Link to="/contato">Contato</Link>
                     </Typography>
                 </Grid>
                 <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">

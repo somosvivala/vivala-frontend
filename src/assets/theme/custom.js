@@ -46,7 +46,14 @@ let theme = createMuiTheme({
             },
             raisedContrast: {
                 backgroundColor: '#bbb',
-            }
+            },
+            dense: {
+                minWidth: 20,
+                minHeight: 10,
+                height: 25,
+                width: 25,
+                padding: 0
+            },
         },
         MuiCircularProgress: {
             primaryColor: {

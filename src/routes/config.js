@@ -8,6 +8,8 @@ import AboutIndex from '../components/pages/about';
 import InstituteIndex from '../components/pages/institute';
 import InstituteAbout from '../components/pages/institute/about';
 import InstituteResults from '../components/pages/institute/results';
+import QuotationsIndex from '../components/pages/quotations';
+import CompletePackagesIndex from '../components/pages/quotations/complete-packages';
 import NotFound from '../components/errors/404';
 
 export default [
@@ -61,6 +63,16 @@ export default [
         exact: true,
         component: InstituteResults,
         key: 'institute.results'
+    }, {
+        path: '/monte-sua-viagem',
+        exact: true,
+        component: QuotationsIndex,
+        key: 'quotations.index'
+    }, {
+        path: '/cotacao/pacotes-completos',
+        exact: true,
+        component: CompletePackagesIndex,
+        key: 'quotations.complete-packages'
     }, {
         component: NotFound,
         key: 'error.404'
