@@ -24,11 +24,13 @@ class CompletePackagesThirdStep extends Component {
             { value: 2, text: 'Voos com 2 paradas ou mais'},
         ]
         return (
-            <form onSubmit={handleSubmit} style={{ width: 400, margin: '60px auto 0 auto' }}>
+            <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '60px auto 0 auto' }}>
                 <Grid container gutter={16}>
-                    <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
-                        Transporte Aéreo
-                    </Typography>
+                    <Grid item xs={12}>
+                        <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
+                            Transporte Aéreo
+                        </Typography>
+                    </Grid>
 
                     <Grid item xs={12} style={{ margin: '10px 0'}}>
                         <Field

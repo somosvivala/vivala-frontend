@@ -23,78 +23,84 @@ class CompletePackagesSeventhStep extends Component {
         return (
             <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '60px auto 0 auto' }}>
                 <Grid container gutter={16}>
-                    <Typography type="title" color="inherit" paragraph>
-                        Passeios e Experiências
-                    </Typography>
-
-                    <Typography type="subheading" color="inherit" paragraph>
-                        Interesses
-                    </Typography>
-
-                    <Grid item xs={6}>
-                        <Field
-                            name="passeios_aventura"
-                            component={Checkbox}
-                            label="Aventura"
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Field
-                            name="passeios_exclusivo"
-                            component={Checkbox}
-                            label="Exclusivo"
-                        />
+                    <Grid item xs={12}>
+                        <Typography type="title" color="inherit" paragraph>
+                            Passeios e Experiências
+                        </Typography>
                     </Grid>
 
-                    <Grid item xs={6}>
-                        <Field
-                            name="passeios_city_tour"
-                            component={Checkbox}
-                            label="City Tour"
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Field
-                            name="passeios_familia"
-                            component={Checkbox}
-                            label="Família"
-                        />
+                    <Grid item xs={12}>
+                        <Typography type="subheading" color="inherit" paragraph>
+                            Interesses
+                        </Typography>
                     </Grid>
 
-                    <Grid item xs={6}>
-                        <Field
-                            name="passeios_comer_beber"
-                            component={Checkbox}
-                            label="Comer e Beber"
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Field
-                            name="passeios_natureza"
-                            component={Checkbox}
-                            label="natureza"
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Field
-                            name="passeios_cultural_local"
-                            component={Checkbox}
-                            label="Cultura + Local"
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Field
-                            name="passeios_romantico"
-                            component={Checkbox}
-                            label="Romântico"
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Field
-                            name="passeios_esporte"
-                            component={Checkbox}
-                            label="Esporte"
-                        />
+                    <Grid container gutter={8}>
+                        <Grid item xs={6}>
+                            <Field
+                                name="passeios_aventura"
+                                component={Checkbox}
+                                label="Aventura"
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Field
+                                name="passeios_exclusivo"
+                                component={Checkbox}
+                                label="Exclusivo"
+                            />
+                        </Grid>
+
+                        <Grid item xs={6}>
+                            <Field
+                                name="passeios_city_tour"
+                                component={Checkbox}
+                                label="City Tour"
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Field
+                                name="passeios_familia"
+                                component={Checkbox}
+                                label="Família"
+                            />
+                        </Grid>
+
+                        <Grid item xs={6}>
+                            <Field
+                                name="passeios_comer_beber"
+                                component={Checkbox}
+                                label="Comer e Beber"
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Field
+                                name="passeios_natureza"
+                                component={Checkbox}
+                                label="natureza"
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Field
+                                name="passeios_cultural_local"
+                                component={Checkbox}
+                                label="Cultura + Local"
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Field
+                                name="passeios_romantico"
+                                component={Checkbox}
+                                label="Romântico"
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Field
+                                name="passeios_esporte"
+                                component={Checkbox}
+                                label="Esporte"
+                            />
+                        </Grid>
                     </Grid>
 
                     <Grid item xs={12}>
