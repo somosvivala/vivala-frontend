@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import TextField from '../../../form-fields/text';
 import Checkbox from '../../../form-fields/checkbox';
+import SelectInput from '../../../form-fields/select';
 import {required, min} from '../../../../utils/validations';
 import {maskCurrency} from '../../../../utils/normalizations';
 import Typography from 'material-ui/Typography';
@@ -37,7 +38,7 @@ class CompletePackagesFifthStep extends Component {
                         />
                     </Grid>
 
-                    <Grid item xs={12} style={{ marginBottom: 30 }}>
+                    <Grid item xs={12}>
                         <Field
                             type="number"
                             name="qnt_quartos"
@@ -47,79 +48,75 @@ class CompletePackagesFifthStep extends Component {
                         />
                     </Grid>
 
+                    <Grid item xs={12}  style={{ marginTop: 10, marginBottom: 30 }}>
+                        <Field
+                            name="tipo_quarto"
+                            component={SelectInput}
+                            options={type1}
+                            label="Tipo de Quarto"
+                        />
+                    </Grid>
+
+                    <Grid container gutter={0}>
+                        <Grid item xs={12}>
+                            <Typography type="subheading" color="inherit" paragraph>
+                                Serviço incluídos desejados
+                            </Typography>
+                        </Grid>
+
+                        <Grid item xs={6}>
+                            <Field
+                                name="cafe_manha"
+                                component={Checkbox}
+                                label="Café da Manhã"
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Field
+                                name="academia"
+                                component={Checkbox}
+                                label="Academia"
+                            />
+                        </Grid>
+
+                        <Grid item xs={6}>
+                            <Field
+                                name="piscina"
+                                component={Checkbox}
+                                label="Piscina"
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Field
+                                name="estacionamento"
+                                component={Checkbox}
+                                label="Estacionamento"
+                            />
+                        </Grid>
+
+                        <Grid item xs={6}>
+                            <Field
+                                name="wifi"
+                                component={Checkbox}
+                                label="Wi-Fi"
+                            />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Field
+                                name="cancelamento_gratis"
+                                component={Checkbox}
+                                label="Cancelamento Grátis"
+                            />
+                        </Grid>
+                    </Grid>
+
                     <Grid item xs={12}>
-                        <Field name="numero_paradas"
-                               component="select"
-                        >
-                            <option value="" disabled>Selecione uma opção</option>
-                            {type1.map(option =>
-                                <option value={option.value} key={option.value}>
-                                    {option.text}
-                                </option>
-                            )}
-                        </Field>
-                    </Grid>
-
-                    <Typography type="title" color="inherit" paragraph>
-                        Serviço incluídos desejados
-                    </Typography>
-
-                    <Grid item xs={6}>
                         <Field
-                            name="cafe_manha"
-                            component={Checkbox}
-                            label="Café da Manhã"
+                            name="hospedagem_tipo"
+                            component={SelectInput}
+                            options={type1}
+                            label="Tipo de Hospedagem"
                         />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Field
-                            name="academia"
-                            component={Checkbox}
-                            label="Academia"
-                        />
-                    </Grid>
-
-                    <Grid item xs={6}>
-                        <Field
-                            name="piscina"
-                            component={Checkbox}
-                            label="Piscina"
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Field
-                            name="estacionamento"
-                            component={Checkbox}
-                            label="Estacionamento"
-                        />
-                    </Grid>
-
-                    <Grid item xs={6}>
-                        <Field
-                            name="wifi"
-                            component={Checkbox}
-                            label="Wi-Fi"
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Field
-                            name="cancelamento_gratis"
-                            component={Checkbox}
-                            label="Cancelamento Grátis"
-                        />
-                    </Grid>
-
-                    <Grid item xs={12}>
-                        <Field name="hospedagem_tipo"
-                               component="select"
-                        >
-                            <option value="" disabled>Selecione uma opção</option>
-                            {type1.map(option =>
-                                <option value={option.value} key={option.value}>
-                                    {option.text}
-                                </option>
-                            )}
-                        </Field>
                     </Grid>
 
                     <Grid item xs={12}>

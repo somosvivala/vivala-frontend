@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import TextField from '../../../form-fields/text';
+import SelectInput from '../../../form-fields/select';
 import {required} from '../../../../utils/validations';
 import {maskCurrency} from '../../../../utils/normalizations';
 import Typography from 'material-ui/Typography';
@@ -25,21 +26,26 @@ class CompletePackagesThirdStep extends Component {
         return (
             <form onSubmit={handleSubmit} style={{ width: 400, margin: '60px auto 0 auto' }}>
                 <Grid container gutter={16}>
-                    <Typography type="title" color="inherit">
+                    <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
                         Transporte Aéreo
                     </Typography>
 
-                    <Grid item xs={12}>
-                        <Field name="aeroporto_origem"
-                               component="select"
-                        >
-                            <option value="" disabled>Selecione uma opção</option>
-                            {options.map(option =>
-                                <option value={option.value} key={option.value}>
-                                    {option.text}
-                                </option>
-                            )}
-                        </Field>
+                    <Grid item xs={12} style={{ margin: '10px 0'}}>
+                        <Field
+                            name="periodo_voo_ida"
+                            component={SelectInput}
+                            options={options}
+                            label="Ida"
+                        />
+                    </Grid>
+
+                    <Grid item xs={12} style={{ margin: '10px 0'}}>
+                        <Field
+                            name="periodo_voo_volta"
+                            component={SelectInput}
+                            options={options}
+                            label="Volta"
+                        />
                     </Grid>
 
                     <Grid item xs={12}>
@@ -81,17 +87,14 @@ class CompletePackagesThirdStep extends Component {
                             validate={required}
                         />
                     </Grid>
-                    <Grid item xs={12}>
-                        <Field name="numero_paradas"
-                               component="select"
-                        >
-                            <option value="" disabled>Selecione uma opção</option>
-                            {options2.map(option =>
-                                <option value={option.value} key={option.value}>
-                                    {option.text}
-                                </option>
-                            )}
-                        </Field>
+
+                    <Grid item xs={12} style={{ margin: '10px 0'}}>
+                        <Field
+                            name="numero_paradas"
+                            component={SelectInput}
+                            options={options2}
+                            label="Número de Paradas"
+                        />
                     </Grid>
 
                     <Grid item xs={12}>
