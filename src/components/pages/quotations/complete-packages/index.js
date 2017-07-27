@@ -30,7 +30,7 @@ class CompletePackagesIndex extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            page: 7,
+            page: 1,
             saved: false,
             error: false
         }
