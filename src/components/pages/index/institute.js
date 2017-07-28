@@ -54,7 +54,12 @@ class Institute extends Component {
                             <Typography type="subheading" gutterBottom color="inherit" className={classes.subheading}>
                                 {text}
                             </Typography>
-                            <Social color="rgba(255,255,255, 0.5)" facebook="#" linkedin="#" instagram="#" youtube="#"/>
+                            <Social color="rgba(255,255,255, 0.5)"
+                                    facebook="https://www.facebook.com/institutovivala/"
+                                    linkedin="https://pt.linkedin.com/company/vivalá"
+                                    instagram="https://www.instagram.com/institutovivala/"
+                                    youtube="https://www.youtube.com/channel/UCF-Lv8two48zRLLd8_DOcGA"
+                            />
                         </Grid>
                     </Grid>
                     <Slider {...settings} className={classes.slider}>
