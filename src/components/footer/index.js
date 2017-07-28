@@ -10,7 +10,7 @@ class Footer extends Component {
                 <Grid container align="center" justify="center" direction="column">
                     <Typography type="subheading">2017 Vivala</Typography>
                     <Typography type="body1">contato@vivala.com.br</Typography>
-                    <Typography type="body1">(11) 1234-1234</Typography>
+                    <Typography type="body1">11 2645-2632</Typography>
                 </Grid>
             </div>
         );

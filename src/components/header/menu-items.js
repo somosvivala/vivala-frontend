@@ -58,7 +58,7 @@ class MenuItems extends Component {
                             Contato
                         </Typography>
                         <Typography type="body1">
-                            contato@vivala.com.br <br/> 11 1235 1234 <br/>
+                            contato@vivala.com.br <br/> 11 2645-2632 <br/>
                         </Typography>
                     </Grid>
                 }
