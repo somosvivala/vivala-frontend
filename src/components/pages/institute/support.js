@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import {Link} from 'react-router-dom';
+import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('InstituteSupport', theme => ({
     bg: {
@@ -31,16 +32,21 @@ const styleSheet = createStyleSheet('InstituteSupport', theme => ({
 class InstituteSupport extends Component {
     render() {
         const { classes } = this.props;
-        const imgSrc = `http://via.placeholder.com/${window.screen.width < 800 ? window.screen.width : 800 }x400`;
 
         return (
             <div>
                 <div className={classes.bg}>
                     <div className="container padding">
                         <Typography type="subheading" color="inherit" className={classes.title} paragraph>
-                            Apoio Financeiro
+                            Seja um doador
                         </Typography>
-                        <img src={imgSrc} alt="Apoio Financeiro" />
+                        <Image
+                            cloudName="vivala"
+                            publicId="instututo_apoio.png"
+                            width={window.screen.width > 800 ? 800 : 400}
+                            height={window.screen.width > 800 ? 400 : 250}
+                            crop="scale" alt="Apoio Financeiro"
+                        />
                         <Typography type="body1" color="inherit" className={classes.body} paragraph>
                             Seja um dos nosso patrocinadores.
                         </Typography>

@@ -38,17 +38,17 @@ class QuotationsSearch extends Component {
                             O que você está procurando?
                         </Typography>
                         <Button raised color="primary" className={classes.button}>
-                            <Link to="/cotacao/pacotes-completos">
+                            <Link to="/cotacao/pacotes-completos" style={{ width: '100%' }}>
                                 Pacotes Completos
                             </Link>
                         </Button>
                         <Button raised color="primary" className={classes.button}>
-                            <Link to="/cotacao/hospedagens">
+                            <Link to="/cotacao/hospedagens" style={{ width: '100%' }}>
                                 Hospedagens
                             </Link>
                         </Button>
                         <Button raised color="primary" className={classes.button}>
-                            <Link to="/cotacao/voos">
+                            <Link to="/cotacao/voos" style={{ width: '100%' }}>
                                 Voos
                             </Link>
                         </Button>

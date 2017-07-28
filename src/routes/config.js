@@ -10,9 +10,11 @@ import InstituteAbout from '../components/pages/institute/about';
 import InstituteResults from '../components/pages/institute/results';
 import QuotationsIndex from '../components/pages/quotations';
 import QuotationsSearch from '../components/pages/quotations/search';
-import CompletePackagesIndex from '../components/pages/quotations/complete-packages';
 import ContactIndex from '../components/pages/contact';
 import SearchPageIndex from '../components/pages/search';
+import CompletePackagesIndex from '../components/pages/quotations/complete-packages';
+import LodgingIndex from '../components/pages/quotations/lodging';
+import FlightsIndex from '../components/pages/quotations/flights';
 import NotFound from '../components/errors/404';
 
 export default [
@@ -86,6 +88,16 @@ export default [
         exact: true,
         component: CompletePackagesIndex,
         key: 'quotations.complete-packages'
+    }, {
+        path: '/cotacao/hospedagens',
+        exact: true,
+        component: LodgingIndex,
+        key: 'quotations.lodging'
+    }, {
+        path: '/cotacao/voos',
+        exact: true,
+        component: FlightsIndex,
+        key: 'quotations.flights'
     }, {
         path: '/contato',
         exact: true,

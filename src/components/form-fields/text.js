@@ -6,6 +6,7 @@ const TextField = ({ input, date, type, meta: { touched, error }, ...other }) =>
     <MuiTextField
         error={Boolean(touched && error)}
         {...input}
+        type={type === 'area' ? 'text' : type}
         rows={type === 'area' ? 3 : 1}
         multiline={type === 'area'}
         {...other}
