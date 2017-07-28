@@ -5,6 +5,7 @@ import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import {Link} from 'react-router-dom';
+import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('ExpeditionsListItem', theme => ({
     padding: {
@@ -17,7 +18,7 @@ const styleSheet = createStyleSheet('ExpeditionsListItem', theme => ({
         color: 'inherit'
     },
     img: {
-        width: '100%',
+        maxWidth: '100%',
         textAlign: 'center'
     },
     subheading: {
@@ -36,7 +37,14 @@ class ExpeditionsListItem extends Component {
             <Grid container gutter={16} align="flex-start" justify="center" className={classes.padding}>
                 <Grid gutter={0} container item xs={12} sm={6} align={align}>
                     <Link to={url}>
-                        <img src="http://via.placeholder.com/400x300" className={classes.img}/>
+                        <Image
+                            cloudName="vivala"
+                            publicId={expedition.photos[0].name}
+                            width={window.screen.width > 900 ? 400 : 300}
+                            height={window.screen.width > 900 ? 300 : 200}
+                            crop="scale" alt={`${expedition.title}`}
+                            className={classes.img}
+                        />
                     </Link>
                 </Grid>
                 <Grid gutter={0} container item xs={12} sm={6} className={[classes[color], classes.padding]} align={align} justify="center" direction="column">

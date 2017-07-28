@@ -11,9 +11,10 @@ const styleSheet = createStyleSheet('Newsletter', theme => ({
         marginLeft: theme.spacing.unit,
         marginRight: theme.spacing.unit,
         width: 200,
+        marginBottom: 20,
     },
     button: {
-        marginTop: 10
+        marginLeft: 10
     },
     form: {
         display: 'flex',

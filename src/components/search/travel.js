@@ -91,7 +91,7 @@ class SearchTravel extends Component {
                         <Grid xs={12} sm={6} item>
                             <div className={classes.bordered}>
                                 <p>{translations.boxRight.text}</p>
-                                <Link to="/monte-sua-viagem" className={classes.button}>{translations.boxRight.button} <Icon>arrow_forward</Icon></Link>
+                                <Link to="/cotacao" className={classes.button}>{translations.boxRight.button} <Icon>arrow_forward</Icon></Link>
                             </div>
                         </Grid>
                     </Grid>

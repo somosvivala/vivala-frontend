@@ -12,7 +12,7 @@ class MenuItems extends Component {
             <Grid gutter={24} container align="flex-start" justify="space-around" direction={direction}>
                 <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
                     <Typography type="subheading">
-                        <a href="#">Saiba Mais</a>
+                        <Link to="/contato">Saiba Mais</Link>
                     </Typography>
                 </Grid>
                 <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
@@ -23,7 +23,7 @@ class MenuItems extends Component {
                         <Link to="/sobre">Sobre</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
-                        <Link to="/monte-sua-viagem">Busque Sua Viagem</Link>
+                        <Link to="/busque-sua-viagem">Busque Sua Viagem</Link>
                     </Typography>
                     <Typography type="subheading" color="inherit">
                         <Link to="/agentes">Agentes</Link>

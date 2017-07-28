@@ -22,14 +22,14 @@ class SearchCallToAction extends Component {
 
         return (
             <div className={classes.bg}>
-                <div className="container padding">
+                <div className="container">
                     <Grid container gutter={0} align="center" justify="center" className={classes.container}>
-                        <Grid container item xs={12} sm={6} justify="center">
+                        <Grid gutter={0} container item xs={12} sm={6} justify="center">
                             <Typography type="subheading" align="center">
                                 {translations.text}
                             </Typography>
                         </Grid>
-                        <Grid gutter={8} container item xs={12} sm={6} justify="center" align="center">
+                        <Grid gutter={24} container item xs={12} sm={6} justify="center" align="center">
                             <Button raised color="contrast" onClick={click}>
                                 <Icon color="contrast">search</Icon> {translations.button}
                             </Button>

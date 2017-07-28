@@ -10,8 +10,8 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
         backgroundColor: '#e1e1e1'
     },
     item: {
-        margin: '0px auto',
-        textAlign: 'center'
+        display: 'flex',
+        justifyContent: 'center'
     },
     slider: {
         width: '90%',
@@ -20,9 +20,6 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     text: {
         margin: '0 0 20px 20px',
     },
-    img: {
-        padding: 10
-    }
 }));
 
 class MediaNews extends Component {
@@ -31,39 +28,91 @@ class MediaNews extends Component {
         const settings = {
             infinite: true,
             speed: 500,
-            slidesToShow: 5,
+            slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
-                { breakpoint: 480, settings: { slidesToShow: 2 } },
-                { breakpoint: 800, settings: { slidesToShow: 4 } }
-            ]
+                { breakpoint: 768, settings: { slidesToShow: 2 } },
+                { breakpoint: 480, settings: { slidesToShow: 1 } },
+            ],
+            adaptativeHeight: true,
+            autplay: true,
         }
         return (
             <div className={classes.bg}>
                 <div className="container padding">
-                    <Typography type="subheading" gutterBottom className={classes.text}>{text}</Typography>
+                    <Typography type="title" color="primary" gutterBottom className={classes.text}>{text}</Typography>
                     <Slider {...settings} className={classes.slider}>
-                        <div className={classes.item}>
-                            <Image
-                                cloudName="vivala"
-                                publicId="logo_catracalivre.png"
-                                width={200}
-                                height={100}
-                                alt="Conheça seu mundo"
-                                className={classes.img}
-                            />
+                        <div>
+                            <a className={classes.item} target="_blank" href="https://catracalivre.com.br/geral/agenda/indicacao/startup-conecta-pessoas-que-tem-interesse-de-viajar-e-realizar-voluntariado-no-brasil/">
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="logo-catracalivre_c9bijc.png"
+                                    width={200}
+                                    height={200}
+                                    crop="scale" alt="Logo Catraca Livre"
+                                    className={classes.img}
+                                />
+                            </a>
                         </div>
-                        <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
+                        <div>
+                            <a className={classes.item} target="_blank" href="http://projetodraft.com/viagens-com-voluntariado-essa-e-a-proposta-da-vivala-para-se-destacar-no-mercado-do-turismo-de-experiencia/">
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="logo-draft_rqzoyg.png"
+                                    width={200}
+                                    height={200}
+                                    crop="scale" alt="Logo Projeto Draft"
+                                    className={classes.img}
+                                />
+                            </a>
                         </div>
-                        <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
+                        <div>
+                            <a className={classes.item} target="_blank" href="https://www.freetheessence.com.br/unplug/inspire-se/vivala-viajar-voluntariado/">
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="logo-freetheessence_bisca1.png"
+                                    width={200}
+                                    height={200}
+                                    crop="scale" alt="Logo Free The Esseence"
+                                    className={classes.img}
+                                />
+                            </a>
                         </div>
-                        <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
+                        <div>
+                            <a className={classes.item} target="_blank" href="https://conteudo.startse.com.br/startups/julia_miozzo/trabalho-voluntrio-para-viajar-startup-conecta-usurios-a-oportunidades/">
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="logo-startse_rrocmn.png"
+                                    width={200}
+                                    height={200}
+                                    crop="scale" alt="Logo StartSe"
+                                    className={classes.img}
+                                />
+                            </a>
                         </div>
-                        <div className={classes.item}>
-                            <img src="http://via.placeholder.com/120x100" className={classes.img} />
+                        <div>
+                            <a className={classes.item} target="_blank" href="http://www.fiesp.com.br/mobile/noticia/?id=216115">
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="logo-fiesp_jzbcmw.png"
+                                    width={200}
+                                    height={200}
+                                    crop="scale" alt="Logo FIESP"
+                                    className={classes.img}
+                                />
+                            </a>
+                        </div>
+                        <div>
+                            <a className={classes.item} target="_blank" href="http://www1.folha.uol.com.br/turismo/2015/12/1717605-jovens-criam-rede-social-que-liga-turistas-a-projetos-sociais-pelo-brasil.shtml">
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="logo-infomoney_wlyjbp.png"
+                                    width={200}
+                                    height={200}
+                                    crop="scale" alt="Logo Infomoney"
+                                    className={classes.img}
+                                />
+                            </a>
                         </div>
                     </Slider>
                 </div>

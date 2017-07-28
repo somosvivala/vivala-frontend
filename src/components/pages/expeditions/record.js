@@ -4,6 +4,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Grid from "material-ui/Grid";
 import Typography from "material-ui/Typography";
 import Slider from 'react-slick';
+import {Image} from  'cloudinary-react';
 
 const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
     bg: {
@@ -28,14 +29,30 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
 }));
 
 class ExpeditionsRecord extends Component {
+    renderPhotos = () => {
+        return this.props.photos.map((photo, key) => {
+            return <div key={`expedicao-${key}`} style={{ width: window.screen.width > 900 ? 900 : window.screen.width, height: window.screen.width > 900 ? 420 : 250 }}>
+                <Image
+                    cloudName="vivala"
+                    publicId={photo.name}
+                    width={window.screen.width > 900 ? 900 : window.screen.width}
+                    height={window.screen.width > 900 ? 420 : 250}
+                    crop="scale" alt={`Expedição Foto ${key+1}`}
+                    className={this.props.classes.img}
+                />
+            </div>
+        })
+    }
     render() {
-        const { classes, title, text, text2 } = this.props;
+        const { classes, photos, title, text, text2 } = this.props;
 
         const settings = {
             infinite: true,
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
+            adaptativeHeight: true,
+            autoplay: true
         }
 
         return (
@@ -47,9 +64,7 @@ class ExpeditionsRecord extends Component {
                         </Typography>
 
                         <Slider {...settings} className={classes.slider}>
-                            <div><img src="http://via.placeholder.com/800x400" className={classes.img}/></div>
-                            <div><img src="http://via.placeholder.com/800x400" className={classes.img}/></div>
-                            <div><img src="http://via.placeholder.com/800x400" className={classes.img}/></div>
+                            {this.renderPhotos()}
                         </Slider>
 
                         <Grid container gutter={0} item xs={12} align="center" justify="center">
@@ -80,6 +95,7 @@ ExpeditionsRecord.propTypes = {
     title: PropTypes.string,
     text: PropTypes.string,
     text2: PropTypes.string,
+    photos: PropTypes.array,
 };
 
 export default withStyles(styleSheet)(ExpeditionsRecord);

@@ -4,6 +4,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Slider from 'react-slick';
+import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('AgentsList', theme => ({
     bg: {
@@ -21,7 +22,7 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
         padding: 20,
         margin: 10,
         textAlign: 'center',
-        height: 150,
+        height: 170,
     },
     img: {
         margin: '10px auto'
@@ -54,21 +55,42 @@ class AgentsList extends Component {
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <div className={classes.item}>
-                                <img src={""} width="80" height="80" className={classes.img} />
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="luiza_celidonio.png"
+                                    width={130}
+                                    height={100}
+                                    crop="scale" alt="Luiza Celidonio"
+                                    className={classes.img}
+                                />
                                 <Typography type="body1">Luiza Celidonio</Typography>
                                 <Typography type="body1">São Paulo, São Paulo</Typography>
                             </div>
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography type="body1">Maria Fernanda Padovan</Typography>
-                                <Typography type="body1">Santa de Parnaíba, São Paulo</Typography>
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="lara_magnago.png"
+                                    width={130}
+                                    height={100}
+                                    crop="scale" alt="Lara Magnago"
+                                    className={classes.img}
+                                />
+                                <Typography type="body1">Lara Magnago</Typography>
+                                <Typography type="body1">Vitória, Espírito Santo</Typography>
                             </div>
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <img src={""} width="80" height="80" className={classes.img} />
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="cristiane_schuh.png"
+                                    width={130}
+                                    height={100}
+                                    crop="scale" alt="Cristiane Schuh"
+                                    className={classes.img}
+                                />
                                 <Typography type="body1">Cristiane Schuh</Typography>
                                 <Typography type="body1">Dois Irmãos, Rio Grande do Sul</Typography>
                             </div>

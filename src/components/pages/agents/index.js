@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import AgentsList from './list';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
+import {Link} from 'react-router-dom';
 
 class AgentsIndex extends Component {
     render() {
@@ -14,8 +15,10 @@ class AgentsIndex extends Component {
                         <Typography type="body1" paragraph>
                             Quer uma proposta para sua viagem ágil, humanizada e gratuita?
                         </Typography>
-                        <Button raised color="primary" href="#">
-                            Receba sua cotação em até 24 horas
+                        <Button raised color="primary">
+                            <Link to="/cotacaocotacao">
+                                Receba sua cotação em até 24 horas
+                            </Link>
                         </Button>
                     </div>
                 </div>

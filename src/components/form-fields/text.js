@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MuiTextField from 'material-ui/TextField';
 
-const TextField = ({ input, date, meta: { touched, error }, ...other }) => (
+const TextField = ({ input, date, type, meta: { touched, error }, ...other }) => (
     <MuiTextField
         error={Boolean(touched && error)}
         {...input}
+        rows={type === 'area' ? 3 : 1}
+        multiline={type === 'area'}
         {...other}
         helperText={touched ? error : ''}
         fullWidth

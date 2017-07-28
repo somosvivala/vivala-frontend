@@ -9,7 +9,10 @@ import InstituteIndex from '../components/pages/institute';
 import InstituteAbout from '../components/pages/institute/about';
 import InstituteResults from '../components/pages/institute/results';
 import QuotationsIndex from '../components/pages/quotations';
+import QuotationsSearch from '../components/pages/quotations/search';
 import CompletePackagesIndex from '../components/pages/quotations/complete-packages';
+import ContactIndex from '../components/pages/contact';
+import SearchPageIndex from '../components/pages/search';
 import NotFound from '../components/errors/404';
 
 export default [
@@ -64,7 +67,17 @@ export default [
         component: InstituteResults,
         key: 'institute.results'
     }, {
-        path: '/monte-sua-viagem',
+        path: '/busque-sua-viagem',
+        exact: true,
+        component: SearchPageIndex,
+        key: 'quotations.search-2'
+    }, {
+        path: '/cotacao',
+        exact: true,
+        component: QuotationsSearch,
+        key: 'quotations.search'
+    }, {
+        path: '/busca',
         exact: true,
         component: QuotationsIndex,
         key: 'quotations.index'
@@ -73,6 +86,11 @@ export default [
         exact: true,
         component: CompletePackagesIndex,
         key: 'quotations.complete-packages'
+    }, {
+        path: '/contato',
+        exact: true,
+        component: ContactIndex,
+        key: 'contact.index'
     }, {
         component: NotFound,
         key: 'error.404'

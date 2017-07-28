@@ -10,7 +10,7 @@ export default {
         text: 'Transforme a sua vida e a realidade de pessoas e comunidades'
     },
     institute: {
-        text: 'Buscando experiências em projetos de Impacto Social?'
+        text: 'Participe de viagens de capacitação profissional em comunidades brasileiras'
     },
     mediaNews: {
         text: 'O que falam de nós?'

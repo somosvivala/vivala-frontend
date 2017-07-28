@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
+import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('QuotationsIndex', theme => ({
     bg: {
@@ -33,29 +34,19 @@ class QuotationsIndex extends Component {
                         <Typography type="headline" paragraph className={classes.text}>
                             Monte sua viagem sozinho
                         </Typography>
-                        <Button raised color="primary" href="/cotacao/pacotes-completos" className={classes.button}>
+                        <Button raised color="primary" target="_blank" href="https://www.e-agencias.com.br/vivala/home/packages" className={classes.button}>
                             <Typography className={classes.text} color="inherit">
                                 Pacotes Completos
                             </Typography>
                         </Button>
-                        <Button raised color="primary" href="/cotacao/hospedagens" className={classes.button}>
+                        <Button raised color="primary" target="_blank" href="https://www.e-agencias.com.br/vivala/home/hotels" className={classes.button}>
                             <Typography className={classes.text} color="inherit">
                                 Hospedagens
                             </Typography>
                         </Button>
-                        <Button raised color="primary" href="/cotacao/voos" className={classes.button}>
+                        <Button raised color="primary" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.button}>
                             <Typography className={classes.text} color="inherit">
                                 Voos
-                            </Typography>
-                        </Button>
-                        <Button raised color="primary" href="/cotacao/onibus" className={classes.button}>
-                            <Typography className={classes.text} color="inherit">
-                                Onibus
-                            </Typography>
-                        </Button>
-                        <Button raised color="primary" href="/cotacao/experiencias" className={classes.button}>
-                            <Typography className={classes.text} color="inherit">
-                                Experiências
                             </Typography>
                         </Button>
                     </div>
@@ -65,8 +56,10 @@ class QuotationsIndex extends Component {
                         <Typography type="subheading" color="inherit" paragraph className={classes.text}>
                             Ou se preferir, seja atendido de forma ágil, humanizada e gratuita
                         </Typography>
-                        <Button raised color="primary" href="#">
-                            Receba sua cotação em até 24 horas
+                        <Button raised color="primary">
+                            <Link to="/cotacao">
+                                Receba sua cotação em até 24 horas
+                            </Link>
                         </Button>
                     </div>
                 </div>

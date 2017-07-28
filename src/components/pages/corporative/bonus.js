@@ -4,6 +4,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import CorporativeContact from './contact';
 import Slider from 'react-slick';
+import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('CorporativeBonus', theme => ({
     bg: {
@@ -19,7 +20,7 @@ const styleSheet = createStyleSheet('CorporativeBonus', theme => ({
     item: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        justifyContent: 'space-between',
         backgroundColor: theme.default.color,
         padding: 20,
         margin: 10,
@@ -41,7 +42,8 @@ class CorporativeBonus extends Component {
             slidesToScroll: 1,
             responsive: [
                 { breakpoint: 480, settings: { slidesToShow: 1 } },
-            ]
+            ],
+            adaptativeHeight: true
         }
 
         return (
@@ -54,23 +56,72 @@ class CorporativeBonus extends Component {
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <div className={classes.item}>
+                                <Typography type="subheading">Teste Primeiro</Typography>
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="corporativo_icone_1.png"
+                                    width={120}
+                                    height={120}
+                                    crop="fit" alt="Ícone - Teste Primeiro"
+                                    className={classes.img}
+                                />
+                                <Typography type="body1">Faça um mês de teste sem contrato</Typography>
+                            </div>
+                        </div>
+                        <div>
+                            <div className={classes.item}>
                                 <Typography type="subheading">Reduza Custos</Typography>
-                                <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography>Os melhores preços do mercado</Typography>
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="corporativo_icone_2.png"
+                                    width={120}
+                                    height={120}
+                                    crop="fit" alt="Ícone - Reduza Custos"
+                                    className={classes.img}
+                                />
+                                <Typography type="body1">Os melhores preços do mercado</Typography>
                             </div>
                         </div>
                         <div>
                             <div className={classes.item}>
                                 <Typography type="subheading">Economize Tempo</Typography>
-                                <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography>Seja atendido de forma ágil e personalizada</Typography>
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="corporativo_icone_3.png"
+                                    width={120}
+                                    height={100}
+                                    crop="scale" alt="Ícone - Economize Tempo"
+                                    className={classes.img}
+                                />
+                                <Typography type="body1">Seja atendido de forma ágil e personalizada</Typography>
                             </div>
                         </div>
                         <div>
                             <div className={classes.item}>
                                 <Typography type="subheading">Melhore o controle</Typography>
-                                <img src={""} width="80" height="80" className={classes.img} />
-                                <Typography>Receba relatórios mensais com seus gastos</Typography>
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="corporativo_icone_4.png"
+                                    width={120}
+                                    height={120}
+                                    crop="fit" alt="Ícone - Melhore o Controle"
+                                    className={classes.img}
+                                />
+                                <Typography type="body1">Receba relatórios mensais com seus ganhos</Typography>
+                            </div>
+                        </div>
+                        <div>
+                            <div className={classes.item}>
+                                <Typography type="subheading">Valorize seus funcionários</Typography>
+                                <Image
+                                    cloudName="vivala"
+                                    publicId="corporativo_icone_5.png"
+                                    width={120}
+                                    height={120}
+                                    crop="fit" alt="Ícone - Valorize seus funcionários"
+                                    className={classes.img}
+                                />
+                                <Typography type="body1">Atendimento e descontos em sua viagem de lazer</Typography>
                             </div>
                         </div>
                     </Slider>

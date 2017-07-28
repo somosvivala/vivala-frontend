@@ -9,12 +9,6 @@ import { CircularProgress } from 'material-ui/Progress';
 import Message from '../messages';
 import { storeNewsletter } from '../../actions/newsletter';
 
-const styleSheet = createStyleSheet('NewsletterIndex', theme => ({
-    gridContainer: {
-        margin: 0,
-    }
-}));
-
 class NewsletterIndex extends Component {
     handleSubmit = (values) => {
         this.props.storeNewsletter(values);
@@ -24,7 +18,7 @@ class NewsletterIndex extends Component {
         const { classes, requesting, error, success, text } = this.props;
 
         if (requesting) {
-            return <div className={classes.bg}>
+            return <div>
                 <div className="container padding">
                     <CircularProgress color="primary" size={50} />
                 </div>
@@ -32,7 +26,7 @@ class NewsletterIndex extends Component {
         }
 
         if (error || success) {
-            return <div className={classes.bg}>
+            return <div>
                 <div className="container padding">
                     <Message type={error ? 'error' : 'success'} title="Newsletter" />
                 </div>
@@ -40,23 +34,24 @@ class NewsletterIndex extends Component {
         }
 
         return (
-            <div className="container padding-2x">
-                <Grid container className={classes.gridContainer} justify="center" align="center">
-                    <Grid container item xs={12} sm={3} align="center" justify="center">
-                        <Typography type="subheading">{text}</Typography>
+            <Grid gutter={0} container>
+                <div className="container padding-2x">
+                    <Grid gutter={16} container justify="center" align="center">
+                        <Grid gutter={0} container item xs={12} sm={3}>
+                            <Typography type="subheading">{text}</Typography>
+                        </Grid>
+                        <Grid gutter={16} container item xs={12} sm={9}>
+                            <NewsletterForm onSubmit={this.handleSubmit}/>
+                        </Grid>
                     </Grid>
-                    <Grid container item xs={12} sm={9} align="center" justify="center">
-                        <NewsletterForm onSubmit={this.handleSubmit}/>
-                    </Grid>
-                </Grid>
-            </div>
+                </div>
+            </Grid>
         );
     }
 }
 
 
 NewsletterIndex.propTypes = {
-    classes: PropTypes.object.isRequired,
     text: PropTypes.string.isRequired,
 };
 
@@ -68,5 +63,5 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {storeNewsletter})(withStyles(styleSheet)(NewsletterIndex));
+export default connect(mapStateToProps, {storeNewsletter})(NewsletterIndex);
 

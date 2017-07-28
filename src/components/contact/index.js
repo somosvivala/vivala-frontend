@@ -13,24 +13,24 @@ class ContactForm extends Component {
         const { type, handleSubmit, invalid, pristine, submitting } = this.props;
         const corporative = type === 'corporative';
         const agents = type === 'agents';
+        const common = type === 'common';
 
         return (
             <div>
-                <Typography type="subheading" align="center" gutterBottom style={{ textTransform: 'uppercase'}}>Contato</Typography>
+                { !common && <Typography type="subheading" align="center" gutterBottom style={{ textTransform: 'uppercase'}}>Contato</Typography> }
                 <form onSubmit={handleSubmit} style={{ width: '100%'}}>
                     <Grid container gutter={16} justify="center">
-                        { (corporative || agents) &&
-                            <Grid item xs={12}>
-                                <Field
-                                    type="text"
-                                    name="nome_completo"
-                                    component={TextField}
-                                    label="Nome"
-                                    validate={required}
-                                />
-                            </Grid>
-                        }
-                        { agents &&
+                        <Grid item xs={12}>
+                            <Field
+                                type="text"
+                                name="nome_completo"
+                                component={TextField}
+                                label="Nome"
+                                validate={required}
+                            />
+                        </Grid>
+
+                        { (agents || common) &&
                             <Grid item xs={12}>
                                 <Field
                                     type="text"
@@ -41,29 +41,27 @@ class ContactForm extends Component {
                                 />
                             </Grid>
                         }
-                        { (corporative || agents) &&
-                            <Grid item xs={12}>
-                                <Field
-                                    type="text"
-                                    name="email"
-                                    component={TextField}
-                                    label="Email"
-                                    validate={email}
-                                />
-                            </Grid>
-                        }
-                        { (corporative || agents) &&
-                            <Grid item xs={12}>
-                                <Field
-                                    type="text"
-                                    name="telefone"
-                                    component={TextField}
-                                    label="Telefone"
-                                    normalize={maskTelephone}
-                                    validate={required}
-                                />
-                            </Grid>
-                        }
+
+                        <Grid item xs={12}>
+                            <Field
+                                type="text"
+                                name="email"
+                                component={TextField}
+                                label="Email"
+                                validate={email}
+                            />
+                        </Grid>
+
+                        <Grid item xs={12}>
+                            <Field
+                                type="text"
+                                name="telefone"
+                                component={TextField}
+                                label="Telefone"
+                                normalize={maskTelephone}
+                                validate={required}
+                            />
+                        </Grid>
                         { corporative &&
                             <Grid item xs={12}>
                                 <Field
@@ -86,10 +84,10 @@ class ContactForm extends Component {
                                 />
                             </Grid>
                         }
-                        { corporative &&
+                        { (corporative || common) &&
                             <Grid item xs={12}>
                                 <Field
-                                    type="text"
+                                    type="area"
                                     name="mensagem"
                                     component={TextField}
                                     label="Mensagem"
@@ -97,6 +95,7 @@ class ContactForm extends Component {
                                 />
                             </Grid>
                         }
+
                         <Grid gutter={0} container justify="flex-end" style={{ marginTop: 30 }}>
                             <Button raised color="accent" type="submit" disabled={invalid || pristine || submitting}>
                                 Enviar

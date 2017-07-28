@@ -8,14 +8,12 @@ import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('IndexHeader', theme => ({
     gridContainer: {
-        margin: 0,
-        maxWidth: '100%'
+        marginBottom: 20,
+        padding: '0 20px'
     },
     gridItem: {
-        left: 20,
-        right: 20,
-        padding: '0 !important',
-        position: 'absolute',
+        position: window.screen.width > 900 ? 'absolute' : 'relative',
+        textAlign: window.screen.width < 900 ? 'center' : 'left'
     },
     margin: {
         marginBottom: 25,
@@ -27,22 +25,25 @@ class IndexHeader extends Component {
         const { classes, title, text, button } = this.props;
 
         return (
-            <div className="container">
-                <Grid container align="center" className={classes.gridContainer}>
-                    <Image
-                        cloudName="vivala"
-                        publicId="home_1.png"
-                        width={window.screen.width < 800 ? window.screen.width : 800}
-                        height={window.screen.width < 800 ? 300 : 400}
-                        crop="scale" alt="Conheça seu mundo"
-                    />
-                    <Grid item xs={12} sm={5} className={classes.gridItem}>
-                        <Typography type="headline" gutterBottom>{title}</Typography>
-                        <Typography type="body1" gutterBottom className={classes.margin}>{text}</Typography>
-                        <PrimaryButton text={button} />
+            <Grid gutter={0} container>
+                <div className="container">
+                    <Grid gutter={0} container align="center" className={classes.gridContainer}>
+                        <Image
+                            cloudName="vivala"
+                            publicId="home_1.png"
+                            width={window.screen.width > 800 ? 800 : 400}
+                            height={window.screen.width > 800 ? 400 : 250}
+                            crop="scale" alt="Conheça seu mundo"
+                            style={{ marginLeft: window.screen.width > 800 ? 250 : 0 }}
+                        />
+                        <Grid container gutter={0} item xs={12} sm={4} className={classes.gridItem}>
+                            <Grid item xs={12}><Typography type="headline" gutterBottom>{title}</Typography></Grid>
+                            <Grid item xs={12}><Typography type="body1" gutterBottom className={classes.margin}>{text}</Typography></Grid>
+                            <Grid item xs={12}><PrimaryButton text={button} /></Grid>
+                        </Grid>
                     </Grid>
-                </Grid>
-            </div>
+                </div>
+            </Grid>
         );
     }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
+import Icon from 'material-ui/Icon';
 import List, { ListItem } from 'material-ui/List';
 
 const styleSheet = createStyleSheet('AgentsFeatures', theme => ({
@@ -12,7 +13,7 @@ const styleSheet = createStyleSheet('AgentsFeatures', theme => ({
         textTransform: 'uppercase'
     },
     listItem: {
-        backgroundColor: theme.defaultDarken.color,
+        backgroundColor: 'white',
         marginBottom: 10,
     },
     img: {
@@ -33,7 +34,7 @@ class AgentsFeatures extends Component {
                     </Typography>
                     <List>
                         <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <img src={""} className={classes.img} />
+                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
                             <div>
                                 <Typography type="subheading">
                                     Sem investimento inicial
@@ -44,7 +45,7 @@ class AgentsFeatures extends Component {
                             </div>
                         </ListItem>
                         <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <img src={""} className={classes.img} />
+                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
                             <div>
                                 <Typography type="subheading">
                                     Trabalhe quando e onde quiser
@@ -55,7 +56,7 @@ class AgentsFeatures extends Component {
                             </div>
                         </ListItem>
                         <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <img src={""} className={classes.img} />
+                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
                             <div>
                                 <Typography type="subheading">
                                     Ganhe dinheiro

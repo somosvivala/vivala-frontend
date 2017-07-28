@@ -7,6 +7,7 @@ import Youtube from 'react-youtube';
 import Slider from 'react-slick';
 import MediaNews from '../index/media-news';
 import {Image} from 'cloudinary-react';
+import trans from '../../../utils/translate';
 
 const styleSheet = createStyleSheet('AboutIndex', theme => ({
     bg: {
@@ -19,23 +20,19 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
         textTransform: 'uppercase'
     },
     gridContainer: {
+        maxWidth: '100%',
         position: 'relative',
-        height: 400,
-        textAlign: 'center',
-        width: '100%',
-        margin: 0,
-    },
-    img: {
-        position: 'absolute',
-    },
-    text: {
-        display: 'flex',
-        width: window.screen.width < 800 ? window.screen.width : 800,
-        alignItems: 'center',
-        justifyContent: 'center'
     },
     subheading: {
         color: 'white !important'
+    },
+    img: {
+        position: 'absolute',
+        maxWidth: '100%'
+    },
+    slider: {
+        position: 'relative',
+        height: window.screen.width > 900 ? 400 : 300
     }
 }));
 
@@ -47,8 +44,10 @@ class AboutIndex extends Component {
             infinite: true,
             speed: 500,
             slidesToShow: 1,
+            arrows: false,
             slidesToScroll: 1,
             autoplay: true,
+            adaptativeHeight: true,
         }
         return (
             <div>
@@ -58,75 +57,75 @@ class AboutIndex extends Component {
                             Sobre
                         </Typography>
                         <Typography type="body1" paragraph>
-                            Acreditamos que viagens melhoram pessoas e pessoas melhoram o mundo!
+                            Acreditamos que viagens melhora pessoas
+                            e pessoas melhoram o mundo
                         </Typography>
                         <Youtube videoId="kaIRH4Uh7nw" opts={{ width: '100%' }}/>
                     </div>
                 </div>
                 <div className={classes.bgOrange}>
                     <div className="container">
-                        <Grid container align="center" className={classes.gridContainer}>
+                        <Grid gutter={0} container className={classes.gridContainer}>
                             <Image
                                 cloudName="vivala"
                                 publicId="sobre_vivala_slide_fundo.png"
-                                width={800}
-                                height={400}
-                                alt="Sobre"
+                                width={window.screen.width > 900 ? 900 : 400}
+                                height={window.screen.width > 900 ? 400 : 300}
+                                crop="scale" alt="Sobre"
                                 className={classes.img}
                             />
-                            <Slider {...settings} className="fix-slider">
+
+
+                            <Slider {...settings} className={classes.slider}>
                                 <div>
-                                    <Grid gutter={0} container justify="center" className={classes.text}>
-                                        <Grid item xs={8}>
-                                            <Typography type="subheading" align="center" className={classes.subheading}>
+                                    <div style={{ padding: '100px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <Grid item xs={12} >
+                                            <Typography type="subheading" className={classes.subheading}>
                                                 Não perca mais horas e horas procurando sua próxima viagem.
-                                                Peça sua cotação de forma ágil e seja atendido por agentes profissionais de forma humanizada e gratuita.
-                                                Analisaremos seu perfil e iremos te sugerir opções em até 24 horas!
+                                                Peça sua cotação de forma ágil e seja atendido por agentes profissionais de forma humanizada e gratuita. Analisaremos seu perfil e iremos te sugerir opções em até 24 horas!
                                             </Typography>
                                         </Grid>
-                                    </Grid>
+                                    </div>
                                 </div>
+
                                 <div>
-                                    <div className={classes.text}>
-                                        <Grid gutter={0} container justify="center" className={classes.text}>
-                                            <Grid item xs={8}>
-                                                <Typography type="subheading" align="center" className={classes.subheading}>
-                                                    Se preferir, busque e compre suas próximas experiências comparando mais de 500.000 fornecedores no mundo
-                                                </Typography>
-                                            </Grid>
+                                    <div style={{ padding: '100px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                        <Grid item xs={12} >
+                                            <Typography type="subheading" className={classes.subheading}>
+                                                Se preferir, busque e compre suas próximas experiências comparando mais de 500.000 fornecedores no mundo
+                                            </Typography>
                                         </Grid>
                                     </div>
                                 </div>
+
                                 <div>
-                                    <div  className={classes.text}>
-                                        <Grid gutter={0} container justify="center" className={classes.text}>
-                                            <Grid item xs={8}>
-                                                <Typography type="subheading" align="center" className={classes.subheading}>
-                                                    Buscando soluções corporativas?
-                                                    Realizamos a gestão corporativa de viagens e programas de incentivo de viagens para seus funcionários.
+                                    <div style={{ padding: '100px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                        <Grid item xs={12} >
+                                            <Typography type="subheading" className={classes.subheading}>
+                                                Buscando soluções corporativas?
+                                                Realizamos a gestão corporativa de viagens e programas de incentivo de viagens para seus funcionários.
                                                 </Typography>
-                                            </Grid>
                                         </Grid>
                                     </div>
                                 </div>
+
                                 <div>
-                                    <div  className={classes.text}>
-                                        <Grid gutter={0} container justify="center" className={classes.text}>
-                                            <Grid item xs={8}>
-                                                <Typography type="subheading" align="center" className={classes.subheading}>
-                                                    A Vivalá reverte 5% do seu lucro para o Instituto Vivalá,
-                                                    fortalecendo o trabalho de Expedições de capacitação profissional realizado com microempreendedores brasileiros,
-                                                    ou seja, comprando conosco você estará ajudando o Instituto a se manter e expandir suas atividades.
-                                                </Typography>
-                                            </Grid>
+                                    <div style={{ padding: '100px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                        <Grid item xs={12} >
+                                            <Typography type="subheading" className={classes.subheading}>
+                                                A Vivalá reverte 5% do seu lucro para o Instituto Vivalá,
+                                                fortalecendo o trabalho de Expedições de capacitação profissional realizado com microempreendedores brasileiros,
+                                                ou seja, comprando conosco você estará ajudando o Instituto a se manter e expandir suas atividades.
+                                            </Typography>
                                         </Grid>
                                     </div>
                                 </div>
                             </Slider>
+
                         </Grid>
                     </div>
                 </div>
-                <MediaNews />
+                <MediaNews text={trans('index.mediaNews.text')} />
             </div>
         );
     }

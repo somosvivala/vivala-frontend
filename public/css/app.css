@@ -813,11 +813,11 @@
   padding: 40px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .container {
     margin: 0 auto;
-    max-width: 800px;
-    width: 800px;
+    max-width: 900px;
+    width: 900px;
   }
 }
 
