@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import List, { ListItem } from 'material-ui/List';
+import Icon from 'material-ui/Icon';
 
 const styleSheet = createStyleSheet('CorporativeFeatures', theme => ({
     bg: {
@@ -14,12 +15,7 @@ const styleSheet = createStyleSheet('CorporativeFeatures', theme => ({
     listItem: {
         backgroundColor: theme.defaultDarken.color,
         marginBottom: 10,
-    },
-    img: {
-        marginRight: 20,
-        width: 70,
-        height: 50,
-    },
+    }
 }));
 
 class CorporativeFeatures extends Component {
@@ -36,19 +32,19 @@ class CorporativeFeatures extends Component {
                     </Typography>
                     <List>
                         <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <img src={""} className={classes.img} />
+                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
                             <Typography type="subheading" color="inherit">
                                 Gestão completa de viagens para pequenas e médias empresas
                             </Typography>
                         </ListItem>
                         <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <img src={""} className={classes.img} />
+                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
                             <Typography type="subheading" color="inherit">
                                 Campanhas de premiação e viagens de incentivo
                             </Typography>
                         </ListItem>
                         <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <img src={""} className={classes.img} />
+                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
                             <Typography type="subheading" color="inherit">
                                 Grupos e eventos
                             </Typography>

@@ -24,14 +24,14 @@ class ExpeditionsIndex extends Component {
             return <BadRequestError />;
         }
 
-        const past = expeditions.filter(expedition => expedition.id === 1 || expedition.id === 2);
         const future = expeditions.filter(expedition => expedition.id === 3 || expedition.id === 4);
+        const past = expeditions.filter(expedition => expedition.id === 1 || expedition.id === 2);
 
         return (
             <div>
                 <ExpeditionsHeader translations={trans('expeditions.header')}/>
-                <ExpeditionsAfter expeditions={past} translations={trans('expeditions.after')}/>
-                <ExpeditionsBefore expeditions={future} translations={trans('expeditions.before')}/>
+                <ExpeditionsAfter expeditions={future} translations={trans('expeditions.after')}/>
+                <ExpeditionsBefore expeditions={past} translations={trans('expeditions.before')}/>
             </div>
         );
     }

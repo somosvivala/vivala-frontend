@@ -10,4 +10,6 @@ export const notNull = value => (value !== null ? undefined : 'Este campo deve s
 
 export const min = min => value => (parseInt(min, 10) <= parseInt(value, 10) ? undefined : `Este campo não pode ser menor que ${min}`);
 
+export const min0 = value => min(value);
+
 export const number = value => (_.isNumber(value) ? undefined : 'Este campo deve ser preenchido!');

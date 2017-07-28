@@ -39,27 +39,34 @@ class Institute extends Component {
             slidesToShow: 4,
             slidesToScroll: 1,
             responsive: [
-                { breakpoint: 480, settings: { slidesToShow: 2 } },
-            ]
+                { breakpoint: 768, settings: { slidesToShow: 2 } },
+            ],
+            adaptativeHeight: true,
         }
         return (
             <div className={classes.bg}>
                 <div className="container padding">
-                    <Grid container className={classes.gridContainer} justify="space-around">
-                        <Grid container item xs={5} justify="center">
+                    <Grid gutter={0} container className={classes.gridContainer} justify="space-around">
+                        <Grid gutter={0} container item xs={5} justify="center">
                             <img src={Logo} alt="Instituto Vivala" className={classes.img} />
                         </Grid>
-                        <Grid container item xs={6} justify="center">
+                        <Grid gutter={0} container item xs={6} justify="center">
                             <Typography type="subheading" gutterBottom color="inherit" className={classes.subheading}>
                                 {text}
                             </Typography>
-                            <Social color="rgba(255,255,255, 0.5)" facebook="#" linkedin="#" instagram="#" youtube="#"/>
+                            <Social color="rgba(255,255,255, 0.5)"
+                                    facebook="https://www.facebook.com/institutovivala/"
+                                    linkedin="https://pt.linkedin.com/company/vivalá"
+                                    instagram="https://www.instagram.com/institutovivala/"
+                                    youtube="https://www.youtube.com/channel/UCF-Lv8two48zRLLd8_DOcGA"
+                            />
                         </Grid>
                     </Grid>
                     <Slider {...settings} className={classes.slider}>
-                        <div><InstituteItem title='asdasdasdasd' place='asdasdasdasd' subTitle='asdasdasdasd' link='ddd' /></div>
-                        <div><InstituteItem title='asdasdasdasd' place='asdasdasdasd' subTitle='asdasdasdasd' link='ddd' /></div>
-                        <div><InstituteItem title='asdasdasdasd' place='asdasdasdasd' subTitle='asdasdasdasd' link='ddd' /></div>
+                        <div><InstituteItem title='Amazônia #1' link='/expedicoes/1' /></div>
+                        <div><InstituteItem title='Amazônia #2' link='/expedicoes/2' /></div>
+                        <div><InstituteItem title='Amazônia #3' link='/expedicoes/3' /></div>
+                        <div><InstituteItem title='Mata Atlântica #1' link='/expedicoes/4' /></div>
                     </Slider>
                 </div>
             </div>

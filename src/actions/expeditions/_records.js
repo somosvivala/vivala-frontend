@@ -21,7 +21,17 @@ export default [
       Na quarta feira de manhã, fechamos nossa consultoria individual e realizamos um treinamento de expansão com a comunidade, para que eles propaguem o impacto da Expedição para outros empreendedores quando já não estivermos mais lá. 
       No dia seguinte, voltamos à Manaus. 
       Apesar de nos despedirmos da Amazônia, nossas atividades não terminam aí. Continuamos em contato com a comunidade ribeirinha para mensurar o impacto de nossas ações e organizar a volta na Expedição Amazônia #2. 
-    `
+    `,
+    photos: [
+        {name: 'amazonia_1_1.png'},
+        {name: 'amazonia_1_2.png'},
+        {name: 'amazonia_1_3.png'},
+        {name: 'amazonia_1_4.png'},
+        {name: 'amazonia_1_5.png'},
+        {name: 'amazonia_1_6.png'},
+        {name: 'amazonia_1_7.png'},
+        {name: 'amazonia_1_8.png'},
+    ]
   },
   {
     id: 2,
@@ -42,7 +52,18 @@ export default [
       O resto do dia foi lotado de sessões com a comunidade e começamos nossa primeira fase de consultoria individual - gerar empatia para entender os desafios. Após o jantar, a adrenalina sobe com a focagem noturna de jacarés. 
       No sábado, o dia começa ainda escuro: vamos ver o sol nascer no Rio Negro. O dia segue com mais workshops e a segunda fase da consultoria individual: a definição do desafio. No fim do dia teremos  pesca esportiva de piranha nos igarapés, seguido de jantar com a comunidade.
       No domingo, acordamos cedo para darmos início ao nosso último dia.  Realizaremos o fechamento da nossa ação e um treinamento de expansão com a comunidade, para que eles propaguem o impacto da Expedição para outros empreendedores quando já não estivermos mais lá. Conheceremos também a Casa de Farinha, onde são processadas a  farinha de mandioca, a tapioca e o tucupi, principais alimentos da região. No fim da tarde, partimos de volta a Manaus. Apesar de nos despedirmos da Amazônia, nossas atividades não terminam aí. Continuamos em contato com a comunidade ribeirinha para mensurar o impacto de nossas ações e organizar a volta na Expedição Amazônia #3. 
-    `
+    `,
+    photos: [
+        {name: 'amazonia_2_1.png'},
+        {name: 'amazonia_2_2.png'},
+        {name: 'amazonia_2_3.png'},
+        {name: 'amazonia_2_4.png'},
+        {name: 'amazonia_2_5.png'},
+        {name: 'amazonia_2_6.png'},
+        {name: 'amazonia_2_7.png'},
+        {name: 'amazonia_2_8.png'},
+        {name: 'amazonia_2_9.png'},
+    ]
   },
   {
     id: 3,
@@ -63,7 +84,18 @@ export default [
       O resto do dia foi lotado de sessões com a comunidade e começamos nossa primeira fase de consultoria individual - gerar empatia para entender os desafios. Após o jantar, a adrenalina sobe com a focagem noturna de jacarés. 
       No sábado, o dia começa ainda escuro: vamos ver o sol nascer no Rio Negro. O dia segue com mais workshops e a segunda fase da consultoria individual: a definição do desafio. No fim do dia teremos  pesca esportiva de piranha nos igarapés, seguido de jantar com a comunidade.
       No domingo, acordamos cedo para darmos início ao nosso último dia.  Realizaremos o fechamento da nossa ação e um treinamento de expansão com a comunidade, para que eles propaguem o impacto da Expedição para outros empreendedores quando já não estivermos mais lá. Conheceremos também a Casa de Farinha, onde são processadas a  farinha de mandioca, a tapioca e o tucupi, principais alimentos da região. No fim da tarde, partimos de volta a Manaus. Apesar de nos despedirmos da Amazônia, nossas atividades não terminam aí. Continuamos em contato com a comunidade ribeirinha para mensurar o impacto de nossas ações e organizar a volta na Expedição Amazônia #4
-    `
+    `,
+    photos: [
+        {name: 'amazonia_3_1.png'},
+        {name: 'amazonia_3_2.png'},
+        {name: 'amazonia_3_3.png'},
+        {name: 'amazonia_3_4.png'},
+        {name: 'amazonia_3_5.png'},
+        {name: 'amazonia_3_6.png'},
+        {name: 'amazonia_3_7.png'},
+        {name: 'amazonia_3_8.png'},
+        {name: 'amazonia_3_9.png'},
+    ]
   },
   {
     id: 4,
@@ -82,6 +114,11 @@ export default [
       Depois disso, partimos para um sítio vizinho para uma caminhada muito especial na Mata Atlântica: seremos guiado por um especialista em medicina da floresta, que vai nos informar sobre remédios naturais, plantas medicinais encontradas na região e alimentação saudável no nosso dia a dia.  Na sequência, vamos nos reunir para tomar um café da tarde com ingredientes orgânicos cultivados na própria roça aproveitando para discutir tudo o que vimos, vivemos e criarmos juntos durante o final de semana. 
       Deixamos Cananeia por volta das 17 horas com previsão de chegada em SP por volta das 21h, mas nossas atividades não terminam aí. 
       Continuamos em contato com a comunidade para mensurar o impacto de nossas ações e organizar a volta na Expedição Mata Atlântica #2. 
-    `
+    `,
+    photos: [
+        {name: 'mata_atlantica_1_1.png'},
+        {name: 'mata_atlantica_1_2.png'},
+        {name: 'mata_atlantica_1_3.png'},
+    ]
   },
 ]

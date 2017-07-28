@@ -17,6 +17,27 @@ const styleSheet = createStyleSheet('CorporativeContact', theme => ({
 class CorporativeContact extends Component {
     state = {
         clicked: false,
+        requesting: false,
+        error: false,
+        success: false
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.success === true) {
+            this.setState({
+                success: nextProps.success
+            })
+        }
+        if (nextProps.error === true) {
+            this.setState({
+                error: nextProps.error
+            })
+        }
+        if (nextProps.requesting === true) {
+            this.setState({
+                requesting: nextProps.requesting
+            })
+        }
     }
 
     handleClick = () => {
@@ -30,8 +51,8 @@ class CorporativeContact extends Component {
     }
 
     render() {
-        const { classes, requesting, error, success, } = this.props;
-        const { clicked } = this.state;
+        const { classes } = this.props;
+        const { clicked, requesting, error, success } = this.state;
 
         if (requesting) {
             return <div className={classes.bg}>

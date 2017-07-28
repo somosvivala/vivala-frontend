@@ -9,7 +9,7 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
 
-class CompletePackagesFourthStep extends Component {
+class FlightsFourthStep extends Component {
     render() {
         const { previousPage, invalid, pristine, submitting, handleSubmit } = this.props;
         const options = [
@@ -18,11 +18,13 @@ class CompletePackagesFourthStep extends Component {
             { value: 'noite', text: 'Das 18:00 às 23:59'},
             { value: 'madrugada', text: 'Das 00:00 às 05:59'},
         ];
+
         const options2 = [
             { value: 0, text: 'Somente voos diretos'},
             { value: 1, text: 'Voos com até 1 parada'},
             { value: 2, text: 'Voos com 2 paradas ou mais'},
         ]
+
         return (
             <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '60px auto 0 auto' }}>
                 <Grid container gutter={16}>
@@ -51,23 +53,9 @@ class CompletePackagesFourthStep extends Component {
                     </Grid>
 
                     <Grid item xs={12}>
-                        <Field
-                            type="text"
-                            name="aeroporto_origem"
-                            component={TextField}
-                            label="Aeroporto de Origem"
-                            validate={required}
-                        />
-                    </Grid>
-
-                    <Grid item xs={12}>
-                        <Field
-                            type="text"
-                            name="aeroporto_destino"
-                            component={TextField}
-                            label="Aeroporto de Destino"
-                            validate={required}
-                        />
+                        <Typography type="title" color="inherit" style={{ marginTop: 50, marginBottom: 20 }}>
+                            Opções Avançadas
+                        </Typography>
                     </Grid>
 
                     <Grid item xs={12}>
@@ -128,12 +116,12 @@ class CompletePackagesFourthStep extends Component {
     }
 }
 
-CompletePackagesFourthStep.propTypes = {
+FlightsFourthStep.propTypes = {
     handleSubmit: PropTypes.func.isRequired
 };
 
 export default reduxForm({
-    form: 'completePackagesForm',
+    form: 'flightsForm',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
-})(CompletePackagesFourthStep)
+})(FlightsFourthStep)

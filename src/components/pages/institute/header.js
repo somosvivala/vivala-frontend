@@ -22,9 +22,6 @@ class InstituteHeader extends Component {
                     <Typography type="headline" color="accent" gutterBottom className={classes.title}>
                         Instituto Sustentável
                     </Typography>
-                    <Typography type="subheading" color="accent" paragraph className={classes.title}>
-                        Seja um doador
-                    </Typography>
                     <Typography type="body1">
                         Através do seu apoio teremos mais força para continuar
                         e expandir nossos projetos de capacitação profissional para microempreendedores

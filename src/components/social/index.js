@@ -5,7 +5,6 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 
 const styleSheet = createStyleSheet('Social', theme => ({
     social: {
-        marginTop: 15,
         display: 'flex',
         justifyContent: 'space-around',
         width: 200,

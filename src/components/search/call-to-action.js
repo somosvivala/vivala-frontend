@@ -22,18 +22,23 @@ class SearchCallToAction extends Component {
 
         return (
             <div className={classes.bg}>
-                <div className="container padding">
+                <div className="container" style={{ padding: window.screen.width < 900 ? '0 20px' : '0' }}>
                     <Grid container gutter={0} align="center" justify="center" className={classes.container}>
-                        <Grid container item xs={12} sm={6} justify="center">
+                        <Grid gutter={0} container item xs={12} sm={6} justify="center">
                             <Typography type="subheading" align="center">
                                 {translations.text}
                             </Typography>
                         </Grid>
-                        <Grid gutter={8} container item xs={12} sm={6} justify="center" align="center">
+                        <Grid gutter={24} container item xs={12} sm={6} justify="center" align="center">
                             <Button raised color="contrast" onClick={click}>
                                 <Icon color="contrast">search</Icon> {translations.button}
                             </Button>
-                            <Social color="#ccc" facebook="#" linkedin="#" instagram="#" youtube="#"/>
+                            <Social color="#ccc"
+                                    facebook="https://www.facebook.com/SomosVivala/"
+                                    linkedin="https://pt.linkedin.com/company/vivalá"
+                                    instagram="https://www.instagram.com/somosvivala/"
+                                    youtube="https://www.youtube.com/channel/UCT8bbWeVmbaDDMxvWlI8bBA"
+                            />
                         </Grid>
                     </Grid>
                 </div>

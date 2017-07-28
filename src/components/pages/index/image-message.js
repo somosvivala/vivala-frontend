@@ -8,7 +8,6 @@ import {Image} from 'cloudinary-react';
 const styleSheet = createStyleSheet('ImageMessage', theme => ({
     gridContainer: {
         margin: 0,
-        height: 400,
         maxWidth: '100%'
     },
     gridItem: {
@@ -28,8 +27,8 @@ class ImageMessage extends Component
                     <Image
                         cloudName="vivala"
                         publicId="home_2.png"
-                        width={window.screen.width < 800 ? window.screen.width : 800}
-                        height={window.screen.width < 800 ? 300 : 400}
+                        width={window.screen.width > 800 ? 700 : 400}
+                        height={window.screen.width > 800 ? 500 : 250}
                         crop="scale" alt="Transforme sua vida"
                     />
                     <Grid item xs={4}  className={classes.gridItem}>
