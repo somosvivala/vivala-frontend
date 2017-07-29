@@ -71,8 +71,8 @@ class CorporativeContact extends Component {
         }
 
         const renderButton = (
-            <div className={classes.button}>
-                <Button raised color="primary" onClick={this.handleClick}>
+            <div style={{ textAlign: 'center' }}>
+                <Button onClick={this.handleClick} raised color="primary" style={{width: window.screen.width < 900 ? '100%' : 'auto'}}>
                     Quero Saber Mais
                 </Button>
             </div>

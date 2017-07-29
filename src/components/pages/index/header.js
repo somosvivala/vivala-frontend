@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
-import PrimaryButton from '../../buttons/primary';
+import Button from 'material-ui/Button';
 import PropTypes from 'prop-types';
 import {Image} from 'cloudinary-react';
+import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('IndexHeader', theme => ({
     gridContainer: {
@@ -39,7 +40,11 @@ class IndexHeader extends Component {
                         <Grid container gutter={0} item xs={12} sm={4} className={classes.gridItem}>
                             <Grid item xs={12}><Typography type="headline" gutterBottom>{title}</Typography></Grid>
                             <Grid item xs={12}><Typography type="body1" gutterBottom className={classes.margin}>{text}</Typography></Grid>
-                            <Grid item xs={12}><PrimaryButton text={button} /></Grid>
+                            <Grid item xs={12}>
+                                <Button raised color="primary">
+                                    <Link to="/cotacao">{button}</Link>
+                                </Button>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </div>

@@ -27,7 +27,7 @@ class CompletePackagesHeader extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.flex}>
-                <img src={HospedagensSvg} className={classes.img} />
+                <img src={HospedagensSvg} className={classes.img} alt="Hospedagens Icone" />
                 <div className={classes.right}>
                     <Typography type="subheading" color="primary" gutterbottom>
                         Pedido de Cotação

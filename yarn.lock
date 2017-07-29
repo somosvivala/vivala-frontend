@@ -6498,6 +6498,14 @@ react-event-listener@^0.4.5:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
+react-ga@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.2.0.tgz#45235de1356e4d988d9b82214d615a08489c9291"
+  dependencies:
+    create-react-class "^15.5.2"
+    object-assign "^4.0.1"
+    prop-types "^15.5.6"
+
 react-material-select@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-material-select/-/react-material-select-1.2.0.tgz#997c2cf8891171b66b2ced832f6b3ab087691efb"

@@ -45,7 +45,11 @@ let theme = createMuiTheme({
                 color: 'white',
             },
             raisedContrast: {
-                backgroundColor: '#bbb',
+                color: '#333',
+                backgroundColor: 'white',
+                '&:hover': {
+                    backgroundColor: 'white',
+                },
             },
             dense: {
                 minWidth: 20,

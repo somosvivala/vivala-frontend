@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Typography from 'material-ui/Typography';
 import NewsletterForm from './form';
 import Grid from 'material-ui/Grid';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
 import { CircularProgress } from 'material-ui/Progress';
 import Message from '../messages';
 import { storeNewsletter } from '../../actions/newsletter';
@@ -15,7 +14,7 @@ class NewsletterIndex extends Component {
     }
 
     render() {
-        const { classes, requesting, error, success, text } = this.props;
+        const { requesting, error, success, text } = this.props;
 
         if (requesting) {
             return <div>
@@ -38,7 +37,7 @@ class NewsletterIndex extends Component {
                 <div className="container padding-2x">
                     <Grid gutter={16} container justify="center" align="center">
                         <Grid gutter={0} container item xs={12} sm={3}>
-                            <Typography type="subheading">{text}</Typography>
+                            <Typography type="subheading" color="inherit">{text}</Typography>
                         </Grid>
                         <Grid gutter={16} container item xs={12} sm={9}>
                             <NewsletterForm onSubmit={this.handleSubmit}/>

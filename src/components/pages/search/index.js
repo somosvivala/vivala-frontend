@@ -42,7 +42,7 @@ class SearchPageIndex extends Component {
             <div>
                 <div className={classes.bg}>
                     <div className="container padding">
-                        <Typography type="headline">Busque sua viagem</Typography>
+                        <Typography type="headline" gutterBottom>Busque sua viagem</Typography>
                         <Typography type="body1">
                             Encontre pacotes completos, hospedagens, voos, ônibus
                             e experiências de mais de 500.000 fornecedores em poucos cliques
@@ -52,7 +52,7 @@ class SearchPageIndex extends Component {
 
                 <div className={classes.bg2}>
                     <div className="container padding">
-                        <Typography type="title">Como funciona</Typography>
+                        <Typography type="title" style={{ textTransform: 'uppercase'}} gutterBottom>Como funciona</Typography>
                         <List>
                             <ListItem button className={classes.listItem}>
                                 <Typography className={classes.circle} type="title" color="inherit" component="span"><strong>1</strong></Typography>
@@ -95,16 +95,18 @@ class SearchPageIndex extends Component {
                                 </div>
                             </ListItem>
                         </List>
-                        <Button raised color="primary" style={{ width: window.screen.width < 900 ? '100%' : 'auto' }}>
-                            <Link to="/busca">
-                                Vamos às buscas
-                            </Link>
-                        </Button>
+                        <div style={{textAlign: 'center'}}>
+                            <Button raised color="primary" style={{  width: window.screen.width < 900 ? '100%' : 'auto' }}>
+                                <Link to="/busca">
+                                    Vamos às buscas
+                                </Link>
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
                 <div className={classes.bg}>
-                    <div className="container padding">
+                    <div className="container padding" style={{textAlign: 'center'}}>
                         <Typography type="subheading" color="inherit" paragraph>
                             Ou se preferir, seja atendido de forma ágil, humanizada e gratuita
                         </Typography>

@@ -14,19 +14,20 @@ const styleSheet = createStyleSheet('InstituteResults', theme => ({
         marginBottom: 10,
     },
     text: {
-        paddingLeft: 15,
-
+        maxWidth: '100%',
+        flex: 10
     },
-    img: {
+    icon: {
         fontWeight: 'bold',
         backgroundColor: theme.institute.color,
         color: 'white',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: 50,
-        height: 50,
+        padding: 20,
         fontSize: 20,
+        marginRight: 20,
+        flex: 1
     },
 }));
 
@@ -41,37 +42,37 @@ class InstituteResults extends Component {
                     </Typography>
                     <List>
                         <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.img}>3</Typography>
+                            <Typography className={classes.icon}>3</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Expedições
                             </Typography>
                         </ListItem>
                         <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.img}>15</Typography>
+                            <Typography className={classes.icon}>15</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Instituições sociais ajudadas em 5 estados
                             </Typography>
                         </ListItem>
                         <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.img}>18</Typography>
+                            <Typography className={classes.icon}>18</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Microempreendedores capacitados
                             </Typography>
                         </ListItem>
                         <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.img}>25</Typography>
+                            <Typography className={classes.icon}>25</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Transformadores de expedição
                             </Typography>
                         </ListItem>
                         <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.img}>500</Typography>
+                            <Typography className={classes.icon}>500</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Inscrições voluntárias
                             </Typography>
                         </ListItem>
                         <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.img}>RIO</Typography>
+                            <Typography className={classes.icon}>RIO</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Único parceiro global na capacitação de voluntários para os jogos RIO 2016
                             </Typography>

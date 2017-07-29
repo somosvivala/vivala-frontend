@@ -6,10 +6,8 @@ import Typography from 'material-ui/Typography';
 import List, { ListItem } from 'material-ui/List';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import PacotesCompletosSvg from '../../assets/svg/icons/pacotes.svg';
-import OnibusSvg from '../../assets/svg/icons/onibus.svg';
 import HoteisSvg from '../../assets/svg/icons/hoteis.svg';
 import VoosSvg from '../../assets/svg/icons/voos.svg';
-import ExperienciasSvg from '../../assets/svg/icons/experiencia.svg';
 import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('SearchTravel', theme => ({
@@ -75,23 +73,29 @@ class SearchTravel extends Component {
                         <Grid xs={12} sm={6} item>
                             <List className={classes.list}>
                                 <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/packages" className={classes.listItem}>
-                                    <img src={PacotesCompletosSvg} className={classes.img} />
+                                    <img src={PacotesCompletosSvg} className={classes.img} alt="Pacotes Completos Icone"/>
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[0].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/hotels" className={classes.listItem}>
-                                    <img src={HoteisSvg} className={classes.img} />
+                                    <img src={HoteisSvg} className={classes.img}alt="Hospedagens Icone" />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[1].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.listItem}>
-                                    <img src={VoosSvg} className={classes.img} />
+                                    <img src={VoosSvg} className={classes.img} alt="Voos Icone"/>
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[2].text}</Typography>
                                 </ListItem>
                             </List>
                         </Grid>
                         <Grid xs={12} sm={6} item>
                             <div className={classes.bordered}>
-                                <p>{translations.boxRight.text}</p>
-                                <Link to="/cotacao" className={classes.button}>{translations.boxRight.button} <Icon>arrow_forward</Icon></Link>
+                                <Typography type="body1" style={{color: 'white'}} paragraph>
+                                    {translations.boxRight.text}
+                                </Typography>
+                                <Typography type="subheading" style={{color: 'white'}} paragraph>
+                                    <Link to="/cotacao" className={classes.button}>
+                                        {translations.boxRight.button} <Icon>arrow_forward</Icon>
+                                    </Link>
+                                </Typography>
                             </div>
                         </Grid>
                     </Grid>

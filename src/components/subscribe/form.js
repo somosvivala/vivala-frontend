@@ -8,7 +8,7 @@ import Button from 'material-ui/Button';
 
 class SubscribeForm extends Component {
     render() {
-        const { handleSubmit, submit, invalid, pristine, submitting } = this.props;
+        const { handleSubmit, invalid, pristine, submitting } = this.props;
         return (
             <form onSubmit={handleSubmit} style={{ width: '100%'}}>
                 <Grid container gutter={16} justify="center">

@@ -10,11 +10,15 @@ import registerServiceWorker from './registerServiceWorker';
 import customMuiTheme from './assets/theme/custom';
 import 'typeface-titillium-web';
 import ScrollTop from './components/app/scroll-top';
+import ga from './components/analytics';
+
+const history = createBrowserHistory();
+ga(history);
 
 ReactDOM.render(
     <Provider store={configureStore()}>
         <MuiThemeProvider theme={customMuiTheme}>
-            <Router history={createBrowserHistory()}>
+            <Router history={history}>
                 <ScrollTop>
                     <App />
                 </ScrollTop>

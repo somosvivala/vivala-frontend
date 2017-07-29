@@ -9,20 +9,25 @@ const styleSheet = createStyleSheet('InstituteItem', theme => ({
         backgroundColor: theme.institute.lightColor,
         margin: '0 5px',
         display: 'flex',
+        padding: 5,
         flexDirection: 'column',
         justifyContent: 'space-around',
         textAlign: 'center',
-        height: 75
+        height: 100,
+        color: '#222'
     }
 }));
 
 class InstituteItem extends Component {
     render() {
-        const { classes, title, link } = this.props;
+        const { classes, title, subtitle, link } = this.props;
         return (
             <div className={classes.item}>
-                <Typography type="subheading" color="inherit" gutterBottom>
+                <Typography type="subheading" color="inherit">
                     {title}
+                </Typography>
+                <Typography type="subheading" color="inherit">
+                    {subtitle}
                 </Typography>
                 <Typography type="body1" color="inherit">
                     <Link to={link}>
@@ -37,6 +42,7 @@ class InstituteItem extends Component {
 InstituteItem.propTypes = {
     classes: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
 };
 

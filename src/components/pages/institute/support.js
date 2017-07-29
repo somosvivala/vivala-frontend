@@ -8,11 +8,11 @@ import {Image} from 'cloudinary-react';
 const styleSheet = createStyleSheet('InstituteSupport', theme => ({
     bg: {
         backgroundColor: theme.institute.color,
-        textAlign: window.screen.width < 800 ? 'center' : 'left'
+        textAlign: 'center'
     },
     bg2: {
         backgroundColor: theme.default.color,
-        textAlign: window.screen.width < 800 ? 'center' : 'left'
+        textAlign: 'center'
     },
     title: {
         textTransform: 'uppercase',
@@ -26,6 +26,10 @@ const styleSheet = createStyleSheet('InstituteSupport', theme => ({
     },
     title2: {
         textTransform: 'uppercase',
+    },
+    img: {
+        marginBottom: 10,
+        maxWidth: '100%'
     }
 }));
 
@@ -36,28 +40,31 @@ class InstituteSupport extends Component {
         return (
             <div>
                 <div className={classes.bg}>
-                    <div className="container padding">
-                        <Typography type="subheading" color="inherit" className={classes.title} paragraph>
+                    <div className="container padding-2x">
+                        <Typography type="title" color="inherit" className={classes.title} paragraph>
                             Seja um doador
                         </Typography>
                         <Image
                             cloudName="vivala"
                             publicId="instututo_apoio.png"
-                            width={window.screen.width > 800 ? 800 : 400}
-                            height={window.screen.width > 800 ? 400 : 250}
+                            width={window.screen.width > 800 ? 700 : 400}
+                            height={window.screen.width > 800 ? 300 : 200}
                             crop="scale" alt="Apoio Financeiro"
+                            className={classes.img}
                         />
-                        <Typography type="body1" color="inherit" className={classes.body} paragraph>
-                            Seja um dos nosso patrocinadores.
+                        <Typography type="subheading" color="inherit" className={classes.body} paragraph>
+                            Seja um dos nosso patrocinadores, contribuindo mensalmente com a quantia que desejar.
+                            <br/>
+                            Acesse <Link to="http://doa.re/vivala" target="_blank" style={{ fontWeight: 'bolder' }}>http://doa.re/vivala</Link> e saiba mais
                         </Typography>
                     </div>
                 </div>
                 <div className={classes.bg2}>
-                    <div className="container padding">
-                        <Typography type="subheading" color="accent" paragraph className={classes.title2}>
+                    <div className="container padding-2x">
+                        <Typography type="title" color="accent" paragraph className={classes.title2}>
                             Apoio Com Recursos
                         </Typography>
-                        <Typography type="body1">
+                        <Typography type="subheading" color="inherit">
                             Se você acredita que pode ajudar o instituto, entre em <Link to="/contato" className={classes.contact}>contato</Link>
                         </Typography>
                     </div>

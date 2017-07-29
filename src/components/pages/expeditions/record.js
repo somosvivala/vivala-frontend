@@ -44,7 +44,7 @@ class ExpeditionsRecord extends Component {
         })
     }
     render() {
-        const { classes, photos, title, text, text2 } = this.props;
+        const { classes, title, text, text2 } = this.props;
 
         const settings = {
             infinite: true,

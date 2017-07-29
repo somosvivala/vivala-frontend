@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Button from 'material-ui/Button';
-import {Field} from 'redux-form';
 
 class ButtonBoolean extends Component {
     render() {

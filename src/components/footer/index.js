@@ -2,15 +2,20 @@ import React, {Component} from 'react';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import MenuItems from "../header/menu-items";
+import {Link} from 'react-router-dom';
 
 class Footer extends Component {
     render() {
         const footerMobile = (
             <div className="container padding-2x">
                 <Grid container align="center" justify="center" direction="column">
-                    <Typography type="subheading">2017 Vivala</Typography>
-                    <Typography type="body1">contato@vivala.com.br</Typography>
-                    <Typography type="body1">11 2645-2632</Typography>
+                    <Typography type="subheading">© 2017 Vivala</Typography>
+                    <Typography type="body1">
+                        <a href="mailto:contato@vivala.com.br">contato@vivala.com.br</a>
+                    </Typography>
+                    <Typography type="body1">
+                        <a href="tel:+551126452632">11 2645-2632</a>
+                    </Typography>
                 </Grid>
             </div>
         );
@@ -26,7 +31,7 @@ class Footer extends Component {
             </Grid>
         );
 
-        return window.screen.width < 768 ? footerMobile : footerDesktop;
+        return window.screen.width < 900 ? footerMobile : footerDesktop;
     }
 }
 

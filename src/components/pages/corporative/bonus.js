@@ -49,8 +49,8 @@ class CorporativeBonus extends Component {
         return (
             <div className={classes.bg}>
                 <div className="container padding">
-                    <Typography type="subheading" align="center" className={classes.subheading} gutterBottom>
-                        Vantagens oferecidas para nossos clientes corporativos
+                    <Typography type="title" align="center" className={classes.subheading} gutterBottom>
+                        Vantagens oferecidas para nossos <br/> clientes corporativos
                     </Typography>
 
                     <Slider {...settings} className={classes.slider}>

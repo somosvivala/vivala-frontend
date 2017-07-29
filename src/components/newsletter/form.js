@@ -34,7 +34,7 @@ class NewsletterForm extends Component {
                     type="text"
                     name="nome"
                     component={TextField}
-                    label="Qual o seu nome?"
+                    label="Como quer ser chamado?"
                     validate={required}
                     className={classes.input}
                 />
@@ -42,16 +42,17 @@ class NewsletterForm extends Component {
                     type="text"
                     name="email"
                     component={TextField}
-                    label="Qual o seu E-mail?"
+                    label="E-mail"
                     validate={email}
                     className={classes.input}
                 />
                 <Button type="submit"
                         raised
+                        color="primary"
                         className={classes.button}
                         disabled={invalid || pristine || submitting}
                 >
-                    Enviar
+                    Cadastrar
                 </Button>
             </form>
         );

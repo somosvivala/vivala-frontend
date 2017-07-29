@@ -27,6 +27,7 @@ class Drawer extends Component {
 
         return (
             <MaterialDrawer
+                anchor="right"
                 open={open}
                 onRequestClose={close}
                 onClick={close}

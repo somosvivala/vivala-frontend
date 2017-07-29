@@ -16,7 +16,7 @@ class AgentsIndex extends Component {
                             Quer uma proposta para sua viagem ágil, humanizada e gratuita?
                         </Typography>
                         <Button raised color="primary">
-                            <Link to="/cotacaocotacao">
+                            <Link to="/cotacao">
                                 Receba sua cotação em até 24 horas
                             </Link>
                         </Button>

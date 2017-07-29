@@ -32,7 +32,7 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
     },
     slider: {
         position: 'relative',
-        height: window.screen.width > 900 ? 400 : 300
+        height: window.screen.width > 900 ? 300 : 250
     }
 }));
 
@@ -42,13 +42,16 @@ class AboutIndex extends Component {
 
         const settings = {
             infinite: true,
-            speed: 500,
+            speed: 1000,
             slidesToShow: 1,
             arrows: false,
             slidesToScroll: 1,
             autoplay: true,
             adaptativeHeight: true,
         }
+
+        const padding = window.screen.width < 900 ? '70px 20px' : '100px 20px';
+
         return (
             <div>
                 <div className={classes.bg}>
@@ -57,7 +60,7 @@ class AboutIndex extends Component {
                             Sobre
                         </Typography>
                         <Typography type="body1" paragraph>
-                            Acreditamos que viagens melhora pessoas
+                            Acreditamos que viagens melhoram pessoas
                             e pessoas melhoram o mundo
                         </Typography>
                         <Youtube videoId="kaIRH4Uh7nw" opts={{ width: '100%' }}/>
@@ -69,16 +72,15 @@ class AboutIndex extends Component {
                             <Image
                                 cloudName="vivala"
                                 publicId="sobre_vivala_slide_fundo.png"
-                                width={window.screen.width > 900 ? 900 : 400}
-                                height={window.screen.width > 900 ? 400 : 300}
+                                width={window.screen.width > 900 ? 900 : window.screen.width}
+                                height={window.screen.width > 900 ? 300 : 250}
                                 crop="scale" alt="Sobre"
                                 className={classes.img}
                             />
 
-
                             <Slider {...settings} className={classes.slider}>
                                 <div>
-                                    <div style={{ padding: '100px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                                         <Grid item xs={12} >
                                             <Typography type="subheading" className={classes.subheading}>
                                                 Não perca mais horas e horas procurando sua próxima viagem.
@@ -89,7 +91,7 @@ class AboutIndex extends Component {
                                 </div>
 
                                 <div>
-                                    <div style={{ padding: '100px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                    <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center'}}>
                                         <Grid item xs={12} >
                                             <Typography type="subheading" className={classes.subheading}>
                                                 Se preferir, busque e compre suas próximas experiências comparando mais de 500.000 fornecedores no mundo
@@ -99,7 +101,7 @@ class AboutIndex extends Component {
                                 </div>
 
                                 <div>
-                                    <div style={{ padding: '100px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                    <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center'}}>
                                         <Grid item xs={12} >
                                             <Typography type="subheading" className={classes.subheading}>
                                                 Buscando soluções corporativas?
@@ -110,7 +112,7 @@ class AboutIndex extends Component {
                                 </div>
 
                                 <div>
-                                    <div style={{ padding: '100px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                    <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center'}}>
                                         <Grid item xs={12} >
                                             <Typography type="subheading" className={classes.subheading}>
                                                 A Vivalá reverte 5% do seu lucro para o Instituto Vivalá,

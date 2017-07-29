@@ -12,8 +12,8 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
         height: 190
     },
     bg: {
-        backgroundColor: 'rgb(245, 245, 245)'
-    },
+        backgroundColor: theme.default.color
+    }
 }));
 
 class SearchCallToAction extends Component {
@@ -25,7 +25,7 @@ class SearchCallToAction extends Component {
                 <div className="container" style={{ padding: window.screen.width < 900 ? '0 20px' : '0' }}>
                     <Grid container gutter={0} align="center" justify="center" className={classes.container}>
                         <Grid gutter={0} container item xs={12} sm={6} justify="center">
-                            <Typography type="subheading" align="center">
+                            <Typography type="subheading" align="center" className={classes.text}>
                                 {translations.text}
                             </Typography>
                         </Grid>

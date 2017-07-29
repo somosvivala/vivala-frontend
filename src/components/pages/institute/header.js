@@ -18,7 +18,7 @@ class InstituteHeader extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.bg}>
-                <div className="container padding">
+                <div className="container padding-2x">
                     <Typography type="headline" color="accent" gutterBottom className={classes.title}>
                         Instituto Sustentável
                     </Typography>

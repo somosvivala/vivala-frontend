@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ReactMaterialSelect from 'react-material-select'
-import Typography from 'material-ui/Typography';
 
 class SelectInput extends Component {
     render() {

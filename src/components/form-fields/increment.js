@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import Button from 'material-ui/Button';
-import { Field } from 'redux-form';
 import Typography from 'material-ui/Typography';
 
 class Increment extends Component {
     render() {
-        const { title, helper, input, meta: { touched, error }} = this.props;
+        const { title, helper, input } = this.props;
         return (
             <div style={{display: 'flex', justifyContent: 'space-between', width: '100%'}}>
                 <div>

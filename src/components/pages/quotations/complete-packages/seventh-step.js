@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import TextField from '../../../form-fields/text';
 import Checkbox from '../../../form-fields/checkbox';
-import {required, min} from '../../../../utils/validations';
 import {maskCurrency} from '../../../../utils/normalizations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
@@ -11,14 +10,7 @@ import Grid from 'material-ui/Grid';
 
 class CompletePackagesSeventhStep extends Component {
     render() {
-        const { invalid, previousPage, pristine, submitting, handleSubmit } = this.props;
-
-        const type1 = [
-            { value: '1', text: 'Hospedagem 1' },
-            { value: '2', text: 'Hospedagem 2' },
-            { value: '3', text: 'Hospedagem 3' },
-            { value: '4', text: 'Hospedagem 4' },
-        ];
+        const { invalid, previousPage, submitting, handleSubmit } = this.props;
 
         return (
             <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '60px auto 0 auto' }}>

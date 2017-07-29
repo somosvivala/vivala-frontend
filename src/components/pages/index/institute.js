@@ -50,7 +50,7 @@ class Institute extends Component {
                         <Grid gutter={0} container item xs={5} justify="center">
                             <img src={Logo} alt="Instituto Vivala" className={classes.img} />
                         </Grid>
-                        <Grid gutter={0} container item xs={6} justify="center">
+                        <Grid gutter={0} container item xs={5} justify="center">
                             <Typography type="subheading" gutterBottom color="inherit" className={classes.subheading}>
                                 {text}
                             </Typography>
@@ -63,10 +63,10 @@ class Institute extends Component {
                         </Grid>
                     </Grid>
                     <Slider {...settings} className={classes.slider}>
-                        <div><InstituteItem title='Amazônia #1' link='/expedicoes/1' /></div>
-                        <div><InstituteItem title='Amazônia #2' link='/expedicoes/2' /></div>
-                        <div><InstituteItem title='Amazônia #3' link='/expedicoes/3' /></div>
-                        <div><InstituteItem title='Mata Atlântica #1' link='/expedicoes/4' /></div>
+                        <div><InstituteItem title='Expedição Amazônia #1' subtitle="O pulmão do mundo" link='/expedicoes/1' /></div>
+                        <div><InstituteItem title='Expedição Amazônia #2' subtitle="O pulmão do mundo" link='/expedicoes/2' /></div>
+                        <div><InstituteItem title='Expedição Amazônia #3' subtitle="O pulmão do mundo" link='/expedicoes/3' /></div>
+                        <div><InstituteItem title='Expedição Mata Atlântica #1' subtitle="Sabedoria da floresta"  link='/expedicoes/4' /></div>
                     </Slider>
                 </div>
             </div>

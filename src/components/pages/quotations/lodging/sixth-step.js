@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import TextField from '../../../form-fields/text';
 import Checkbox from '../../../form-fields/checkbox';
 import SelectInput from '../../../form-fields/select';
-import {required, min} from '../../../../utils/validations';
+import {required} from '../../../../utils/validations';
 import {maskCurrency} from '../../../../utils/normalizations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
