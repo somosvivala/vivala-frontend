@@ -25,7 +25,6 @@ class CompletePackagesSixthStep extends Component {
                             name={`seguro_viagem_nome[${key}]`}
                             component={TextField}
                             label="Nome Completo"
-                            validate={required}
                         />
                     </Grid>
 
@@ -36,7 +35,6 @@ class CompletePackagesSixthStep extends Component {
                             name={`seguro_viagem_data_nascimento[${key}]`}
                             component={TextField}
                             label="Data de Nascimento"
-                            validate={required}
                         />
                     </Grid>
                 </Grid>

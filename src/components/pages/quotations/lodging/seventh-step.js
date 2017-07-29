@@ -34,7 +34,6 @@ class LodingSeventhStep extends Component {
                             component={textInput}
                             name="nome_preferencia"
                             label="Como quer ser chamado?"
-                            validate={required}
                         />
                     </Grid>
 

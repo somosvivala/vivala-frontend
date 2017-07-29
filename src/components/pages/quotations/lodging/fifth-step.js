@@ -24,7 +24,7 @@ class LodgingFifthStep extends Component {
                             name="qnt_quartos"
                             component={TextField}
                             label="Quantidade de Quartos"
-                            validate={min(1)}
+                            validate={min(0)}
                         />
                     </Grid>
 

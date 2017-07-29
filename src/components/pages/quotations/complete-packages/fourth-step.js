@@ -56,7 +56,6 @@ class CompletePackagesFourthStep extends Component {
                             name="aeroporto_origem"
                             component={TextField}
                             label="Aeroporto de Origem"
-                            validate={required}
                         />
                     </Grid>
 
@@ -66,7 +65,6 @@ class CompletePackagesFourthStep extends Component {
                             name="aeroporto_destino"
                             component={TextField}
                             label="Aeroporto de Destino"
-                            validate={required}
                         />
                     </Grid>
 
@@ -76,7 +74,6 @@ class CompletePackagesFourthStep extends Component {
                             name="companias_aereas_preferenciais"
                             component={TextField}
                             label="Companhias Aéreas de Preferência"
-                            validate={required}
                         />
                     </Grid>
 
@@ -95,7 +92,6 @@ class CompletePackagesFourthStep extends Component {
                             name="tempo_voo"
                             component={TextField}
                             label="Tempo de Voo em Horas"
-                            validate={required}
                         />
                     </Grid>
 
@@ -105,7 +101,6 @@ class CompletePackagesFourthStep extends Component {
                             name="aereo_preco_desejado"
                             component={TextField}
                             label="Preço Máximo"
-                            validate={required}
                             normalize={maskCurrency}
                         />
                     </Grid>

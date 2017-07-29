@@ -44,7 +44,6 @@ class CompletePackagesFifthStep extends Component {
                             name="hotel_ou_regiao"
                             component={TextField}
                             label="Nome do Hotel ou Regiao de preferência"
-                            validate={required}
                         />
                     </Grid>
 
@@ -54,7 +53,6 @@ class CompletePackagesFifthStep extends Component {
                             name="qnt_quartos"
                             component={TextField}
                             label="Quantidade de Quartos"
-                            validate={min(1)}
                         />
                     </Grid>
 
@@ -135,7 +133,6 @@ class CompletePackagesFifthStep extends Component {
                             name="hospedagem_solicitacoes"
                             component={TextField}
                             label="Solicitações Especiais"
-                            validate={required}
                         />
                     </Grid>
 
@@ -146,7 +143,6 @@ class CompletePackagesFifthStep extends Component {
                             component={TextField}
                             label="Preço Máximo"
                             normalize={maskCurrency}
-                            validate={required}
                         />
                     </Grid>
 

@@ -33,7 +33,6 @@ class CompletePackagesThirdStep extends Component {
                             component={Increment}
                             name="qnt_criancas"
                             title="Crianças"
-                            validate={min(0)}
                             helper="De 2 a 11 anos"
                         />
                     </Grid>
@@ -42,7 +41,6 @@ class CompletePackagesThirdStep extends Component {
                         <Field
                             component={Increment}
                             name="qnt_bebes"
-                            validate={min(0)}
                             title="Bebês"
                             helper="Até 2 anos"
                         />

@@ -23,7 +23,7 @@ class FlightFirstStep extends Component {
                     <Grid item xs={12}>
                         <Field
                             type="text"
-                            name="aeroporto_origem"
+                            name="origem"
                             component={TextField}
                             label="Aeroporto de Origem"
                             validate={required}
@@ -33,7 +33,7 @@ class FlightFirstStep extends Component {
                     <Grid item xs={12}>
                         <Field
                             type="text"
-                            name="aeroporto_destino"
+                            name="destino"
                             component={TextField}
                             label="Aeroporto de Destino"
                             validate={required}

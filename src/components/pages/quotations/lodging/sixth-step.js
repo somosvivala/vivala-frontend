@@ -95,7 +95,6 @@ class LodgingSixthStep extends Component {
                             name="hospedagem_solicitacoes"
                             component={TextField}
                             label="Solicitações Especiais"
-                            validate={required}
                         />
                     </Grid>
 
@@ -106,7 +105,6 @@ class LodgingSixthStep extends Component {
                             component={TextField}
                             label="Preço Máximo"
                             normalize={maskCurrency}
-                            validate={required}
                         />
                     </Grid>
 

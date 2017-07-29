@@ -33,7 +33,6 @@ class LodgingSecondStep extends Component {
                         type="text"
                         component={CalendarInput}
                         name="data_volta"
-                        validate={required}
                     />
 
                     <Grid gutter={0} container style={{ marginTop: 30}}>

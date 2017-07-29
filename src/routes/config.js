@@ -15,7 +15,7 @@ import SearchPageIndex from '../components/pages/search';
 import CompletePackagesIndex from '../components/pages/quotations/complete-packages';
 import LodgingIndex from '../components/pages/quotations/lodging';
 import FlightsIndex from '../components/pages/quotations/flights';
-import NotFound from '../components/errors/404';
+import PageNotFound from '../components/errors/404';
 
 export default [
     {
@@ -104,7 +104,7 @@ export default [
         component: ContactIndex,
         key: 'contact.index'
     }, {
-        component: NotFound,
+        component: PageNotFound,
         key: 'error.404'
     },
 ]

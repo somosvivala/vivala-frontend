@@ -34,7 +34,6 @@ class FlightsSecondStep extends Component {
                         type="text"
                         component={CalendarInput}
                         name="data_volta"
-                        validate={required}
                     />
 
                     <div style={{ marginTop: 40, marginBottom: 30 }}>
