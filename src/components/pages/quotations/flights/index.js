@@ -40,7 +40,7 @@ class FlightIndex extends Component {
     }
 
     handleSubmit = (values) => {
-        axios.post('/cotacoes/aereo', { data: values })
+        axios.post('/cotacoes/aereo', values)
             .then(response => {
                 this.setState({
                     saved: true,

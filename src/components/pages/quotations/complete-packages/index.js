@@ -44,7 +44,7 @@ class CompletePackagesIndex extends Component {
     }
 
     handleSubmit = (values) => {
-        axios.post('/cotacoes/pacote', { data: values })
+        axios.post('/cotacoes/pacote', values)
             .then(response => {
                 this.setState({
                     saved: true,

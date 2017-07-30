@@ -42,7 +42,7 @@ class LodgingIndex extends Component {
     }
 
     handleSubmit = (values) => {
-        axios.post('/cotacoes/hospedagem', { data: values })
+        axios.post('/cotacoes/hospedagem', values)
             .then(response => {
                 this.setState({
                     saved: true,
