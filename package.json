@@ -36,9 +36,10 @@
   "scripts": {
     "css-dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "css-watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "css-prod": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "css-prod": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "start": "react-scripts start",
     "run-dev": "yarn css-dev && react-scripts start",
+    "dev-build": "yarn css-dev && react-scripts build",
     "build": "yarn css-prod && react-scripts build",
     "heroku-postbuild": "NODE_ENV=production && npm run css-prod && react-scripts build",
     "test": "react-scripts test --env=jsdom",
