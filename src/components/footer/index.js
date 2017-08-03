@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import MenuItems from "../header/menu-items";
-import {Link} from 'react-router-dom';
 
 class Footer extends Component {
     render() {

@@ -5,6 +5,7 @@ import Typography from 'material-ui/Typography';
 import List, { ListItem } from 'material-ui/List';
 import Button from 'material-ui/Button';
 import {Link} from 'react-router-dom';
+import SearchButton from '../../search/button';
 
 const styleSheet = createStyleSheet('SearchPageIndex', theme => ({
     bg: {
@@ -35,9 +36,6 @@ const styleSheet = createStyleSheet('SearchPageIndex', theme => ({
     },
     button: {
         width: window.screen.width < 900 ? '100%' : 'auto'
-    },
-    alignCenter: {
-        textAlign: 'center'
     }
 }));
 
@@ -111,18 +109,7 @@ class SearchPageIndex extends Component {
                     </div>
                 </div>
 
-                <div className={`${classes.bg} ${classes.alignCenter}`}>
-                    <div className="container padding">
-                        <Typography type="subheading" color="inherit" paragraph>
-                            Ou se preferir, seja atendido de forma ágil, humanizada e gratuita
-                        </Typography>
-                        <Button raised color="primary" className={classes.button}>
-                            <Link to="/cotacao">
-                                Receba sua cotação em até 24 horas
-                            </Link>
-                        </Button>
-                    </div>
-                </div>
+                <SearchButton />
             </div>
         );
     }
