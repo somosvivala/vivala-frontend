@@ -8,9 +8,14 @@ import {Image} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('IndexHeader', theme => ({
+    gridContainerBack: {
+        backgroundColor: '#F7F7F7',
+        width: '100%',
+        paddingBottom: '25px',
+    }, 
     gridContainer: {
-        marginBottom: 20,
-        padding: '0 20px'
+        //marginBottom: 20,
+        //padding: '0 20px',
     },
     gridItem: {
         position: window.screen.width > 900 ? 'absolute' : 'relative',
@@ -18,9 +23,13 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
     },
     margin: {
         marginBottom: 25,
+        width: window.screen.width < 900 ? '300px' : 'default',
+        marginLeft:  window.screen.width < 900 ? 'auto' : 'default',
+        marginRight:  window.screen.width < 900 ? 'auto' : 'default',
     },
     addMargin: {
-        marginLeft: window.screen.width > 900 ? 250 : 0
+        marginLeft: window.screen.width > 900 ? 250 : 'auto',
+        marginRight: window.screen.width > 900 ? 0 : 'auto',
     }
 }));
 
@@ -30,13 +39,13 @@ class IndexHeader extends Component {
 
         return (
             <Grid gutter={0} container>
+                <div className={classes.gridContainerBack}>
                 <div className="container">
                     <Grid gutter={0} container align="center" className={classes.gridContainer}>
                         <Image
                             cloudName="vivala"
                             publicId="home_1.png"
-                            width={window.screen.width > 800 ? 800 : 400}
-                            height={window.screen.width > 800 ? 400 : 250}
+                            width={window.screen.width > 900 ? 800 : 320}
                             crop="scale" alt="Conheça seu mundo"
                             className={classes.addMargin}
                         />
@@ -45,11 +54,12 @@ class IndexHeader extends Component {
                             <Grid item xs={12}><Typography type="body1" gutterBottom className={classes.margin}>{text}</Typography></Grid>
                             <Grid item xs={12}>
                                 <Button raised color="primary">
-                                    <Link to="/cotacao">{button}</Link>
+                                    <Link to="/cotacao"><b>{button}</b></Link>
                                 </Button>
                             </Grid>
                         </Grid>
                     </Grid>
+                </div>
                 </div>
             </Grid>
         );
