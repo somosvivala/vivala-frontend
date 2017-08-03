@@ -3,16 +3,12 @@ import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
-import {Link} from 'react-router-dom';
+import SearchButton from '../../search/button';
 
 const styleSheet = createStyleSheet('QuotationsIndex', theme => ({
     bg: {
         backgroundColor: theme.default.color,
-        textAlign: window.screen.width < 800 ? 'center' : 'left'
-    },
-    bg2: {
-        backgroundColor: theme.defaultDarken.color,
-        textAlign: 'center'
+        textAlign: window.screen.width < 900 ? 'center' : 'left'
     },
     text: {
         textTransform: 'uppercase'
@@ -51,18 +47,8 @@ class QuotationsIndex extends Component {
                         </Button>
                     </div>
                 </div>
-                <div className={classes.bg2}>
-                    <div className="container padding">
-                        <Typography type="subheading" color="inherit" paragraph className={classes.text}>
-                            Ou se preferir, seja atendido de forma ágil, humanizada e gratuita
-                        </Typography>
-                        <Button raised color="primary">
-                            <Link to="/cotacao">
-                                Receba sua cotação em até 24 horas
-                            </Link>
-                        </Button>
-                    </div>
-                </div>
+
+                <SearchButton darkBg />
             </div>
         );
     }

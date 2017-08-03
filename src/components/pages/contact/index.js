@@ -8,7 +8,6 @@ import ContactForm from '../../contact';
 import { storeContact } from '../../../actions/contact';
 import { CircularProgress } from 'material-ui/Progress';
 import Message from '../../messages';
-import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('ContactIndex', theme => ({
     bg: {
