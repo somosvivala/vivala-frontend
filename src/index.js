@@ -11,6 +11,7 @@ import customMuiTheme from './assets/theme/custom';
 import 'typeface-titillium-web';
 import ScrollTop from './components/app/scroll-top';
 import ga from './components/analytics';
+import './assets/css/app.css';
 
 const history = createBrowserHistory();
 ga(history);

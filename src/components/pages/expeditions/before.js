@@ -8,7 +8,8 @@ import ExpeditionsListItem from './list-item';
 const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
     bg: {
         backgroundColor: theme.defaultDarken.color,
-        padding: 30
+        padding: 30,
+        textAlign: window.screen.width < 900 ? 'center' : 'left'
     },
     headline: {
         color: theme.institute.color
@@ -35,10 +36,10 @@ class ExpeditonsBefore extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
         }
-        const align = window.screen.width < 800 ? 'center' : 'left';
+
         return (
             <div className={classes.bg}>
-                <div className="container" style={{ textAlign: align }}>
+                <div className="container">
                     <Typography type="headline" color="inherit" className={classes.headline} gutterBottom>
                         {translations.title}
                     </Typography>

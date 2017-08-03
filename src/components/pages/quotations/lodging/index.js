@@ -22,6 +22,9 @@ const styleSheet = createStyleSheet('LodgingFirstStep', theme => ({
         width: '100%',
         flexGrow: 1,
     },
+    fixMargin: {
+        marginTop: 30
+    }
 }));
 
 class LodgingIndex extends Component {
@@ -74,7 +77,7 @@ class LodgingIndex extends Component {
                             value={page * 14.279}
                             valueBuffer={100}
                         />
-                        <div style={{ marginTop: 30 }}>
+                        <div className={classes.fixMargin}>
                             <Message type={error ? 'error' : 'success'} title="Contato" />
                         </div>
                     </div>

@@ -50,6 +50,12 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between'
+    },
+    applyPadding: {
+        paddingRight: 20
+    },
+    colorWhite: {
+        color: 'white'
     }
 }));
 
@@ -67,7 +73,7 @@ class SearchTravel extends Component {
                                 {translations.text}
                             </Typography>
                         </Grid>
-                        <Grid xs={2} item style={{paddingRight: 20}}>
+                        <Grid xs={2} item className={classes.applyPadding}>
                             <div onClick={click} className={classes.click}><Icon>keyboard_arrow_up</Icon></div>
                         </Grid>
                         <Grid xs={12} sm={6} item>
@@ -88,10 +94,10 @@ class SearchTravel extends Component {
                         </Grid>
                         <Grid xs={12} sm={6} item>
                             <div className={classes.bordered}>
-                                <Typography type="body1" style={{color: 'white'}} paragraph>
+                                <Typography type="body1" paragraph className={classes.colorWhite}>
                                     {translations.boxRight.text}
                                 </Typography>
-                                <Typography type="subheading" style={{color: 'white'}} paragraph>
+                                <Typography type="subheading" paragraph className={classes.colorWhite}>
                                     <Link to="/cotacao" className={classes.button}>
                                         {translations.boxRight.button} <Icon>arrow_forward</Icon>
                                     </Link>

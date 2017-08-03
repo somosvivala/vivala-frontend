@@ -13,6 +13,9 @@ const styleSheet = createStyleSheet('PageNotFound', theme => ({
     title: {
         textTransform: 'uppercase',
         color: theme.vivala.color
+    },
+    message: {
+        marginBottom: 30
     }
 }));
 
@@ -28,7 +31,7 @@ class PageNotFound extends Component {
                     <Typography type="display2" color="primary" paragraph>
                         : (
                     </Typography>
-                    <Typography type="title" color="inherit" style={{ marginBottom: 30 }}>
+                    <Typography type="title" color="inherit" className={classes.message}>
                         O link que você acessou parece estar quebrado ou a página pode ter sido removida.
                     </Typography>
                     <Button raised color="primary"><Link to="/">Voltar para Home</Link></Button>

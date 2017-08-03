@@ -18,6 +18,9 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
     },
     margin: {
         marginBottom: 25,
+    },
+    addMargin: {
+        marginLeft: window.screen.width > 900 ? 250 : 0
     }
 }));
 
@@ -35,7 +38,7 @@ class IndexHeader extends Component {
                             width={window.screen.width > 800 ? 800 : 400}
                             height={window.screen.width > 800 ? 400 : 250}
                             crop="scale" alt="Conheça seu mundo"
-                            style={{ marginLeft: window.screen.width > 800 ? 250 : 0 }}
+                            className={classes.addMargin}
                         />
                         <Grid container gutter={0} item xs={12} sm={4} className={classes.gridItem}>
                             <Grid item xs={12}><Typography type="headline" gutterBottom>{title}</Typography></Grid>

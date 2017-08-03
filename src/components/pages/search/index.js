@@ -33,6 +33,12 @@ const styleSheet = createStyleSheet('SearchPageIndex', theme => ({
         maxWidth: window.screen.width < 480 ? 150 : '100%',
         textAlign: 'left'
     },
+    button: {
+        width: window.screen.width < 900 ? '100%' : 'auto'
+    },
+    alignCenter: {
+        textAlign: 'center'
+    }
 }));
 
 class SearchPageIndex extends Component {
@@ -52,9 +58,9 @@ class SearchPageIndex extends Component {
 
                 <div className={classes.bg2}>
                     <div className="container padding">
-                        <Typography type="title" style={{ textTransform: 'uppercase'}} gutterBottom>Como funciona</Typography>
+                        <Typography type="title" gutterBottom>Como funciona</Typography>
                         <List>
-                            <ListItem button className={classes.listItem}>
+                            <ListItem className={classes.listItem}>
                                 <Typography className={classes.circle} type="title" color="inherit" component="span"><strong>1</strong></Typography>
                                 <div className={classes.text}>
                                     <Typography type="subheading" color="inherit">
@@ -95,8 +101,8 @@ class SearchPageIndex extends Component {
                                 </div>
                             </ListItem>
                         </List>
-                        <div style={{textAlign: 'center'}}>
-                            <Button raised color="primary" style={{  width: window.screen.width < 900 ? '100%' : 'auto' }}>
+                        <div className={classes.alignCenter}>
+                            <Button raised color="primary" className={classes.button}>
                                 <Link to="/busca">
                                     Vamos às buscas
                                 </Link>
@@ -105,12 +111,12 @@ class SearchPageIndex extends Component {
                     </div>
                 </div>
 
-                <div className={classes.bg}>
-                    <div className="container padding" style={{textAlign: 'center'}}>
+                <div className={`${classes.bg} ${classes.alignCenter}`}>
+                    <div className="container padding">
                         <Typography type="subheading" color="inherit" paragraph>
                             Ou se preferir, seja atendido de forma ágil, humanizada e gratuita
                         </Typography>
-                        <Button raised color="primary" style={{ width: window.screen.width < 900 ? '100%' : 'auto' }}>
+                        <Button raised color="primary" className={classes.button}>
                             <Link to="/cotacao">
                                 Receba sua cotação em até 24 horas
                             </Link>

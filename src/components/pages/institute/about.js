@@ -43,6 +43,9 @@ const styleSheet = createStyleSheet('InstituteAbout', theme => ({
     },
     slider: {
         maxWidth: '100%'
+    },
+    whiteColor: {
+        color: 'white'
     }
 }));
 
@@ -64,10 +67,10 @@ class InstituteAbout extends Component {
                         </Grid>
                         <Grid gutter={0} container className={classes.text}>
                             <Grid item xs={8}>
-                                <Typography type="subheading" color="inherit" className={classes.title} style={{ color: 'white' }} gutterBottom>
+                                <Typography type="subheading" color="inherit" className={`${classes.title} ${classes.whiteColor}`} gutterBottom>
                                     Melhore o seu Mundo
                                 </Typography>
-                                <Typography type="body1" color="inherit" style={{ color: 'white' }}>
+                                <Typography type="body1" color="inherit" className={classes.whiteColor}>
                                     Projetos de capacitação <br/> profissional com microempreendedores
                                 </Typography>
                             </Grid>
@@ -108,8 +111,8 @@ class InstituteAbout extends Component {
                 </div>
 
                 <div className={classes.bg}>
-                    <div className="container" style={{ padding: '20px 0' }}>
-                        <div style={{ padding: '0 20px'}}>
+                    <div className="container padding-heights">
+                        <div>
                             <Typography type="title" color="accent" className={classes.title} gutterBottom>
                                 Seja a Mudança
                             </Typography>

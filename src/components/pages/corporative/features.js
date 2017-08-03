@@ -15,6 +15,10 @@ const styleSheet = createStyleSheet('CorporativeFeatures', theme => ({
     listItem: {
         backgroundColor: theme.defaultDarken.color,
         marginBottom: 10,
+    },
+    icon: {
+        padding: 20,
+        fontSize: 40
     }
 }));
 
@@ -32,19 +36,19 @@ class CorporativeFeatures extends Component {
                     </Typography>
                     <List>
                         <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
+                            <Icon color="primary" className={classes.icon}>done</Icon>
                             <Typography type="subheading" color="inherit">
                                 Gestão completa de viagens para pequenas e médias empresas
                             </Typography>
                         </ListItem>
                         <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
+                            <Icon color="primary" className={classes.icon}>done</Icon>
                             <Typography type="subheading" color="inherit">
                                 Campanhas de premiação e viagens de incentivo
                             </Typography>
                         </ListItem>
                         <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
+                            <Icon color="primary" className={classes.icon}>done</Icon>
                             <Typography type="subheading" color="inherit">
                                 Grupos e eventos
                             </Typography>

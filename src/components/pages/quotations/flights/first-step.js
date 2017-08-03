@@ -12,7 +12,7 @@ class FlightFirstStep extends Component {
         const { previousPage, invalid, pristine, submitting, handleSubmit } = this.props;
 
         return (
-            <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '60px auto 0 auto' }}>
+            <form onSubmit={handleSubmit} className="quotation-form">
                 <Grid container gutter={16}>
                     <Grid item xs={12}>
                         <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
