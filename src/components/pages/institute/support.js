@@ -30,6 +30,9 @@ const styleSheet = createStyleSheet('InstituteSupport', theme => ({
     img: {
         marginBottom: 10,
         maxWidth: '100%'
+    },
+    bolder: {
+        fontWeight: 'bolder'
     }
 }));
 
@@ -55,7 +58,7 @@ class InstituteSupport extends Component {
                         <Typography type="subheading" color="inherit" className={classes.body} paragraph>
                             Seja um dos nosso patrocinadores, contribuindo mensalmente com a quantia que desejar.
                             <br/>
-                            Acesse <Link to="http://doa.re/vivala" target="_blank" style={{ fontWeight: 'bolder' }}>http://doa.re/vivala</Link> e saiba mais
+                            Acesse <Link to="http://doa.re/vivala" target="_blank" className={classes.bolder}>http://doa.re/vivala</Link> e saiba mais
                         </Typography>
                     </div>
                 </div>

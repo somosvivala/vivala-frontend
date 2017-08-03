@@ -25,13 +25,17 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
     slider: {
         width: '95%',
         margin: '20px auto'
+    },
+    applySizes: {
+        width: window.screen.width > 900 ? 900 : window.screen.width,
+        height: window.screen.width > 900 ? 420 : 250
     }
 }));
 
 class ExpeditionsRecord extends Component {
     renderPhotos = () => {
         return this.props.photos.map((photo, key) => {
-            return <div key={`expedicao-${key}`} style={{ width: window.screen.width > 900 ? 900 : window.screen.width, height: window.screen.width > 900 ? 420 : 250 }}>
+            return <div key={`expedicao-${key}`} className={this.props.classes.applySizes}>
                 <Image
                     cloudName="vivala"
                     publicId={photo.name}

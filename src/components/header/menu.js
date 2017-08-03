@@ -20,14 +20,6 @@ const styleSheet = createStyleSheet('Menu', theme => ({
     }
 }));
 
-const container = {
-    container: true,
-    gutter: 0,
-    align: "center",
-    direction: "row",
-    justify: "center",
-};
-
 class Menu extends Component {
     state = {
         open: false,
@@ -45,7 +37,7 @@ class Menu extends Component {
 
         return (
             <div className={ classes.bg }>
-                <Grid {...container} className="container">
+                <Grid container gutter={0} align="center" justify="center" className="container">
                     <Grid item xs={6} className={classes.img}>
                         <Link to="/"><img src={Logo} alt="Logo" width="150" height="60"/></Link>
                     </Grid>

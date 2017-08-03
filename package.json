@@ -8,11 +8,12 @@
   "dependencies": {
     "axios": "^0.16.2",
     "cloudinary-react": "^1.0.4",
-    "laravel-mix": "^1.2.2",
     "lodash": "^4.17.4",
     "material-design-icons": "^3.0.1",
     "material-ui": "next",
     "moment": "^2.18.1",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.0.2",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
@@ -34,14 +35,11 @@
     "webpack": "^3.2.0"
   },
   "scripts": {
-    "css-dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "css-watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "css-prod": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "start": "react-scripts start",
-    "run-dev": "yarn css-dev && react-scripts start",
-    "dev-build": "yarn css-dev && react-scripts build",
-    "build": "yarn css-prod && react-scripts build",
-    "heroku-postbuild": "NODE_ENV=production && npm run css-prod && react-scripts build",
+    "build-css": "node-sass-chokidar src/assets/sass/app.scss src/assets/css/app.css --output-style compressed",
+    "watch-css": "yarn build-css && node-sass-chokidar src/assets/sass/app.scss src/assets/css/app.css --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

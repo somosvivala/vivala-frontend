@@ -31,6 +31,12 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     align: {
         textAlign: window.screen.width < 900 ? 'center' : 'left',
         paddingLeft: window.screen.width < 900 ? 0 : 25
+    },
+    button: {
+        width: window.screen.width < 900 ? '100%' : 'auto'
+    },
+    alignCenter: {
+        textAlign: 'center'
     }
 }));
 
@@ -103,10 +109,12 @@ class AgentsList extends Component {
                         </div>
                     </Slider>
 
-                    <div style={{ textAlign: 'center' }}>
-                        <Button raised color="primary" style={{width: window.screen.width < 900 ? '100%' : 'auto'}}>
-                            <Link style={{ width: '100%' }} to="/agentes/seja-um-agente">Seja um Agente Vivalá!</Link>
-                        </Button>
+                    <div className={classes.alignCenter}>
+                        <Link to="/agentes/seja-um-agente">
+                            <Button raised color="primary" className={classes.button}>
+                                Seja um Agente Vivalá!
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

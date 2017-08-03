@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 import { Field, reduxForm, formValueSelector } from 'redux-form'
 import TextField from '../../../form-fields/text';
-import {required} from '../../../../utils/validations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
@@ -45,7 +44,7 @@ class CompletePackagesSixthStep extends Component {
     render() {
         const { invalid, total, previousPage, pristine, submitting, handleSubmit } = this.props;
         return (
-            <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: '60px auto 0 auto' }}>
+            <form onSubmit={handleSubmit} className="quotation-form">
                 <Grid container gutter={16}>
                     <Grid item xs={12}>
                         <Typography type="title" color="inherit" paragraph>

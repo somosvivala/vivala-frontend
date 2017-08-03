@@ -37,21 +37,21 @@ class QuotationsSearch extends Component {
                         <Typography type="title" color="inherit" paragraph className={classes.text}>
                             O que você está procurando?
                         </Typography>
-                        <Button raised color="primary" className={classes.button}>
-                            <Link to="/cotacao/pacotes-completos" style={{ width: '100%' }}>
+                        <Link to="/cotacao/pacotes-completos">
+                            <Button raised color="primary" className={classes.button}>
                                 Pacotes Completos
-                            </Link>
-                        </Button>
-                        <Button raised color="primary" className={classes.button}>
-                            <Link to="/cotacao/hospedagens" style={{ width: '100%' }}>
-                                Hospedagens
-                            </Link>
-                        </Button>
-                        <Button raised color="primary" className={classes.button}>
-                            <Link to="/cotacao/voos" style={{ width: '100%' }}>
+                            </Button>
+                        </Link>
+                        <Link to="/cotacao/hospedagens">
+                            <Button raised color="primary" className={classes.button}>
+                                    Hospedagens
+                            </Button>
+                        </Link>
+                        <Link to="/cotacao/voos">
+                            <Button raised color="primary" className={classes.button}>
                                 Voos
-                            </Link>
-                        </Button>
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

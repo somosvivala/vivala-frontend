@@ -20,6 +20,12 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     text: {
         margin: '0 0 20px 20px',
     },
+    fixFree: {
+        marginTop: 60
+    },
+    fixedDraft: {
+        marginTop: 20
+    }
 }));
 
 class MediaNews extends Component {
@@ -62,7 +68,7 @@ class MediaNews extends Component {
                                     width={200}
                                     height={150}
                                     crop="scale" alt="Logo Projeto Draft"
-                                    style={{ marginTop: 20 }}
+                                    className={classes.fixDraft}
                                 />
                             </a>
                         </div>
@@ -75,6 +81,7 @@ class MediaNews extends Component {
                                     height={60}
                                     crop="scale" alt="Logo Free The Esseence"
                                     style={{ marginTop: 60 }}
+                                    className={classes.fixFree}
                                 />
                             </a>
                         </div>

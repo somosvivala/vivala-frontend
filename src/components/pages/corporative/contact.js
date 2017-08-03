@@ -11,6 +11,7 @@ import ContactForm from '../../contact';
 const styleSheet = createStyleSheet('CorporativeContact', theme => ({
     button: {
         textAlign: 'center',
+        width: window.screen.width < 900 ? '100%' : 'auto'
     }
 }));
 
@@ -71,11 +72,9 @@ class CorporativeContact extends Component {
         }
 
         const renderButton = (
-            <div style={{ textAlign: 'center' }}>
-                <Button onClick={this.handleClick} raised color="primary" style={{width: window.screen.width < 900 ? '100%' : 'auto'}}>
-                    Quero Saber Mais
-                </Button>
-            </div>
+            <Button onClick={this.handleClick} raised color="primary" className={classes.button}>
+                Quero Saber Mais
+            </Button>
         )
 
         return (
