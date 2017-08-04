@@ -12,7 +12,6 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
         height: 190
     },
     bg: {
-
         backgroundColor: '#ECE9EA',
         //backgroundColor: theme.default.color
     },

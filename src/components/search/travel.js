@@ -24,7 +24,7 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
         color: 'white !important'
     },
     list: {
-        padding: 20,
+        //padding: 20,
     },
     listItem: {
         backgroundColor: 'rgba(255,255,255,0.1) !important',
@@ -83,7 +83,7 @@ class SearchTravel extends Component {
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[0].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/hotels" className={classes.listItem}>
-                                    <img src={HoteisSvg} className={classes.img}alt="Hospedagens Icone" />
+                                    <img src={HoteisSvg} className={classes.img} alt="Hospedagens Icone" />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[1].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.listItem}>
