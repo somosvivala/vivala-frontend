@@ -3,52 +3,82 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 import { Field, reduxForm, formValueSelector } from 'redux-form'
 import TextField from '../../../form-fields/text';
+import RadioInput from '../../../form-fields/radio';
 import {maskCurrency} from '../../../../utils/normalizations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
 import Checkbox from '../../../form-fields/checkbox';
+import {change, untouch} from 'redux-form';
 
 class CompletePackagesSixthStep extends Component {
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.transporteType === 'aluguel') {
+            nextProps.dispatch(change('completePackagesForm', 'carro_privativo', null));
+            nextProps.dispatch(change('completePackagesForm', 'carro_compartilhado', null));
+            nextProps.dispatch(change('completePackagesForm', 'van_compartilhada', null));
+            nextProps.dispatch(untouch('completePackagesForm', 'carro_privativo', 'carro_compartilhado', 'van_compartilhada'));
+        } else if (nextProps.transporteType === 'transfer') {
+            nextProps.dispatch(change('completePackagesForm', 'economico', null));
+            nextProps.dispatch(change('completePackagesForm', 'luxo', null));
+            nextProps.dispatch(change('completePackagesForm', 'compacto', null));
+            nextProps.dispatch(change('completePackagesForm', 'premium', null));
+            nextProps.dispatch(change('completePackagesForm', 'intermediario', null));
+            nextProps.dispatch(change('completePackagesForm', 'minivan', null));
+            nextProps.dispatch(change('completePackagesForm', 'suv', null));
+            nextProps.dispatch(change('completePackagesForm', 'ar', null));
+            nextProps.dispatch(change('completePackagesForm', 'radio', null));
+            nextProps.dispatch(change('completePackagesForm', 'direcao_hidraulica', null));
+            nextProps.dispatch(change('completePackagesForm', 'cd_usb', null));
+            nextProps.dispatch(change('completePackagesForm', 'vidro_eletrico', null));
+            nextProps.dispatch(change('completePackagesForm', 'quatro_portas', null));
+            nextProps.dispatch(change('completePackagesForm', 'automatico', null));
+            nextProps.dispatch(untouch('completePackagesForm', 'economico', 'luxo', 'compacto', 'premium', 'intermediario', 'minivan', 'suv', 'ar', 'radio', 'direcao_hidraulica', 'cd_usb', 'vidro_eletrico', 'quatro_portas', 'automatico'));
+        }
+    }
+
     render() {
-        const { invalid, previousPage, hasTransfer, hasAluguel, submitting, handleSubmit } = this.props;
+        const { invalid, previousPage, transporteType, submitting, handleSubmit } = this.props;
+
+        const radios = [
+            { value: 'transfer', label: 'Transfer Para o Hotel' },
+            { value: 'aluguel', label: 'Alguel de Carro' },
+        ]
+
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
+                <Grid container gutter={24}>
                     <Typography type="title" color="inherit">
                         Transporte Interno
                     </Typography>
 
                     <Grid item xs={12}>
-                        <Field
-                            name="transfer"
-                            component={Checkbox}
-                            label="Transfer Para o Hotel"
-                        />
+                        <Field name="carro_transporte_tipo" component={RadioInput} radios={radios} />
                     </Grid>
+
                     {
-                        hasTransfer &&
+                        transporteType === radios[0].value &&
                             <div style={{ marginLeft: 10, marginBottom: 30 }}>
                                 <Typography type="subheading" color="inherit">
                                     Tipo de transfer
                                 </Typography>
                                 <Grid item xs={12}>
                                     <Field
-                                        name="carro_privativo"
+                                        name="tipos_transfer[carro_privativo]"
                                         component={Checkbox}
                                         label="Carro Privativo"
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Field
-                                        name="carro_compartilhado"
+                                        name="tipos_transfer[carro_compartilhado]"
                                         component={Checkbox}
                                         label="Carro Compartilhado"
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Field
-                                        name="van_compartilhada"
+                                        name="tipos_transfer[van_compartilhada]"
                                         component={Checkbox}
                                         label="Van Compartilhada"
                                     />
@@ -56,15 +86,8 @@ class CompletePackagesSixthStep extends Component {
                             </div>
                     }
 
-                    <Grid item xs={12}>
-                        <Field
-                            name="aluguel"
-                            component={Checkbox}
-                            label="Aluguel de Carro"
-                        />
-                    </Grid>
                     {
-                        hasAluguel &&
+                        transporteType === radios[1].value &&
                         <Grid style={{ marginLeft: 10 }}>
                             <Grid container gutter={0}>
                                 <Grid item xs={12}>
@@ -74,49 +97,49 @@ class CompletePackagesSixthStep extends Component {
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="economico"
+                                        name="categorias_carro[economico]"
                                         component={Checkbox}
                                         label="Econômico"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="luxo"
+                                        name="categorias_carro[luxo]"
                                         component={Checkbox}
                                         label="Luxo"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="compacto"
+                                        name="categorias_carro[compacto]"
                                         component={Checkbox}
                                         label="Compacto"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="premium"
+                                        name="categorias_carro[premium]"
                                         component={Checkbox}
                                         label="Premium"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="intermediario"
+                                        name="categorias_carro[intermediario]"
                                         component={Checkbox}
                                         label="Intermediário"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="minivan"
+                                        name="categorias_carro[minivan]"
                                         component={Checkbox}
                                         label="Minivan"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="suv"
+                                        name="categorias_carro[suv]"
                                         component={Checkbox}
                                         label="SUV"
                                     />
@@ -130,49 +153,49 @@ class CompletePackagesSixthStep extends Component {
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="ar"
+                                        name="itens_carro[ar]"
                                         component={Checkbox}
                                         label="Ar"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="radio"
+                                        name="itens_carro[radio]"
                                         component={Checkbox}
                                         label="Rádio"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="direcao_hidraulica"
+                                        name="itens_carro[direcao_hidraulica]"
                                         component={Checkbox}
                                         label="Direção Hidráulica"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="cd_usb"
+                                        name="itens_carro[cd_usb]"
                                         component={Checkbox}
                                         label="CD ou USB"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="vidro_eletrico"
+                                        name="itens_carro[vidro_eletrico]"
                                         component={Checkbox}
                                         label="Vidro Elétrico"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="quatro_portas"
+                                        name="itens_carro[quatro_portas]"
                                         component={Checkbox}
                                         label="Quatro Portas"
                                     />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <Field
-                                        name="automatico"
+                                        name="itens_carro[automatico]"
                                         component={Checkbox}
                                         label="Automático"
                                     />
@@ -232,11 +255,9 @@ CompletePackagesSixthStep = reduxForm({
 
 const selector = formValueSelector('completePackagesForm')
 CompletePackagesSixthStep = connect(state => {
-    const hasTransfer = selector(state, 'transfer');
-    const hasAluguel = selector(state, 'aluguel');
+    const transporteType = selector(state, 'carro_transporte_tipo');
     return {
-        hasTransfer,
-        hasAluguel,
+        transporteType,
     }
 })(CompletePackagesSixthStep);
 

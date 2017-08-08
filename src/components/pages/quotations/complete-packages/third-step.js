@@ -13,7 +13,7 @@ class CompletePackagesThirdStep extends Component {
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
+                <Grid container gutter={24}>
                     <Typography type="subheading" color="inherit" style={{ marginBottom: 30 }}>
                         Com quem você quer ir?
                     </Typography>

@@ -15,6 +15,7 @@ import EigthStep from './eigth-step';
 import NinthStep from './ninth-step';
 import axios from '../../../../utils/axios';
 import Message from '../../../messages';
+import _ from 'lodash';
 
 const styleSheet = createStyleSheet('CompletePackagesFirstStep', theme => ({
     bg: {
@@ -30,7 +31,7 @@ class CompletePackagesIndex extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            page: 1,
+            page: 2,
             saved: false,
             error: false
         }
@@ -44,7 +45,7 @@ class CompletePackagesIndex extends Component {
     }
 
     handleSubmit = (values) => {
-        axios.post('/cotacoes/pacote', values)
+        axios.post('/cotacoes/pacote', _.omitBy(values, _.isNil))
             .then(response => {
                 this.setState({
                     saved: true,
@@ -68,7 +69,7 @@ class CompletePackagesIndex extends Component {
                 <div className={classes.bg}>
                     <div className="container padding">
                         <CompletePackagesHeader/>
-                        <Typography type="subheading" align="right" color="primary">{page} / 9</Typography>
+                        <Typography type="subheading" align="right">{page} / 9</Typography>
 
                         <LinearProgress
                             color="primary"
@@ -88,7 +89,7 @@ class CompletePackagesIndex extends Component {
             <div className={classes.bg}>
                 <div className="container padding-2x">
                     <CompletePackagesHeader/>
-                    <Typography type="subheading" align="right" color="primary">{page} / 9</Typography>
+                    <Typography type="subheading" align="right">{page} / 9</Typography>
 
                     <LinearProgress
                         color="primary"

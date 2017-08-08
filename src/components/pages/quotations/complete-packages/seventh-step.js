@@ -14,7 +14,7 @@ class CompletePackagesSeventhStep extends Component {
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
+                <Grid container gutter={24}>
                     <Grid item xs={12}>
                         <Typography type="title" color="inherit" paragraph>
                             Passeios e Experiências
@@ -30,14 +30,14 @@ class CompletePackagesSeventhStep extends Component {
                     <Grid container gutter={8}>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_aventura"
+                                name="passeios_interessses[aventura]"
                                 component={Checkbox}
                                 label="Aventura"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_exclusivo"
+                                name="passeios_interessses[exclusivo]"
                                 component={Checkbox}
                                 label="Exclusivo"
                             />
@@ -45,14 +45,14 @@ class CompletePackagesSeventhStep extends Component {
 
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_city_tour"
+                                name="passeios_interessses[city_tour]"
                                 component={Checkbox}
                                 label="City Tour"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_familia"
+                                name="passeios_interessses[familia]"
                                 component={Checkbox}
                                 label="Família"
                             />
@@ -60,35 +60,35 @@ class CompletePackagesSeventhStep extends Component {
 
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_comer_beber"
+                                name="passeios_interessses[comer_beber]"
                                 component={Checkbox}
                                 label="Comer e Beber"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_natureza"
+                                name="passeios_interessses[natureza]"
                                 component={Checkbox}
                                 label="natureza"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_cultural_local"
+                                name="passeios_interessses[cultural_local]"
                                 component={Checkbox}
                                 label="Cultura + Local"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_romantico"
+                                name="passeios_interessses[romantico]"
                                 component={Checkbox}
                                 label="Romântico"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_esporte"
+                                name="passeios_interessses[esporte]"
                                 component={Checkbox}
                                 label="Esporte"
                             />
