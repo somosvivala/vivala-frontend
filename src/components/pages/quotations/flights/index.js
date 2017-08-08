@@ -64,7 +64,7 @@ class FlightIndex extends Component {
                 <div className={classes.bg}>
                     <div className="container padding">
                         <LodgingHeader/>
-                        <Typography type="subheading" align="right" color="primary">{page} / 5</Typography>
+                        <Typography type="subheading" align="right">{page} / 5</Typography>
 
                         <LinearProgress
                             color="primary"
@@ -84,7 +84,7 @@ class FlightIndex extends Component {
             <div className={classes.bg}>
                 <div className="container padding-2x">
                     <LodgingHeader/>
-                    <Typography type="subheading" align="right" color="primary">{page} / 5</Typography>
+                    <Typography type="subheading" align="right">{page} / 5</Typography>
 
                     <LinearProgress
                         color="primary"

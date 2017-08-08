@@ -29,7 +29,7 @@ class CompletePackagesHeader extends Component {
             <div className={classes.flex}>
                 <img src={HospedagensSvg} className={classes.img} alt="Hospedagens Icone" />
                 <div className={classes.right}>
-                    <Typography type="subheading" color="primary" gutterbottom>
+                    <Typography type="subheading">
                         Pedido de Cotação
                     </Typography>
                     <Typography type="title" color="inherit" className={classes.title}>

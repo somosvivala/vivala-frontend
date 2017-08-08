@@ -43,7 +43,7 @@
 .rms-wrapper {
   display: block;
   position: relative;
-  height: auto;
+  height: 50px;
 
   &::after,
   &::before {
@@ -59,7 +59,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: rgba(0, 0, 0, 0.54);
   font-size: 12px;
-  top: 4px;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -93,7 +93,7 @@
     font-size: 16px;
     font-family: "Titillium Web";
     margin: 0;
-    padding: 20px 0 18px;
+    padding: 30px 0 18px;
     width: 100%;
     background: none;
     text-align: left;
@@ -129,7 +129,7 @@
   -webkit-font-smoothing: antialiased;
   position: absolute;
   right: 8px;
-  top: 5px;
+  top: 16px;
   color: rgba(0, 0, 0, 0.12);
 }
 

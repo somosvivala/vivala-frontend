@@ -40,17 +40,10 @@ class FlightFirstStep extends Component {
                         />
                     </Grid>
 
-                    <Grid gutter={0} container style={{ marginTop: 30}}>
-                        <Grid gutter={0} container item xs={6} justify="flex-start">
-                            <Button raised color="primary" type="button" onClick={previousPage}>
-                                Anterior
-                            </Button>
-                        </Grid>
-                        <Grid gutter={0} container item xs={6} justify="flex-end">
-                            <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting}>
-                                Próximo
-                            </Button>
-                        </Grid>
+                    <Grid gutter={0} container justify="flex-end" style={{ marginTop: 30 }}>
+                        <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting}>
+                            Próximo
+                        </Button>
                     </Grid>
                 </Grid>
             </form>
