@@ -33,7 +33,7 @@ class FlightsFourthStep extends Component {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12} style={{ margin: '10px 0'}}>
+                    <Grid item xs={12} >
                         <Field
                             name="periodo_voo_ida"
                             component={SelectInput}
@@ -42,7 +42,7 @@ class FlightsFourthStep extends Component {
                         />
                     </Grid>
 
-                    <Grid item xs={12} style={{ margin: '10px 0'}}>
+                    <Grid item xs={12} >
                         <Field
                             name="periodo_voo_volta"
                             component={SelectInput}
@@ -66,7 +66,7 @@ class FlightsFourthStep extends Component {
                         />
                     </Grid>
 
-                    <Grid item xs={12} style={{ margin: '10px 0'}}>
+                    <Grid item xs={12}>
                         <Field
                             name="numero_paradas"
                             component={SelectInput}

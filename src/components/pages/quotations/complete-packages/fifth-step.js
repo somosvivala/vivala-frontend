@@ -32,7 +32,7 @@ class CompletePackagesFifthStep extends Component {
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
+                <Grid container gutter={24}>
                     <Typography type="title" color="inherit" gutterBottom>
                         Hospedagem
                     </Typography>
@@ -73,14 +73,14 @@ class CompletePackagesFifthStep extends Component {
 
                         <Grid item xs={6}>
                             <Field
-                                name="cafe_manha"
+                                name="hospedagem_servicos[cafe_manha]"
                                 component={Checkbox}
                                 label="Café da Manhã"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="academia"
+                                name="hospedagem_servicos[academia]"
                                 component={Checkbox}
                                 label="Academia"
                             />
@@ -88,14 +88,14 @@ class CompletePackagesFifthStep extends Component {
 
                         <Grid item xs={6}>
                             <Field
-                                name="piscina"
+                                name="hospedagem_servicos[piscina]"
                                 component={Checkbox}
                                 label="Piscina"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="estacionamento"
+                                name="hospedagem_servicos[estacionamento]"
                                 component={Checkbox}
                                 label="Estacionamento"
                             />
@@ -103,14 +103,14 @@ class CompletePackagesFifthStep extends Component {
 
                         <Grid item xs={6}>
                             <Field
-                                name="wifi"
+                                name="hospedagem_servicos[wifi]"
                                 component={Checkbox}
                                 label="Wi-Fi"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="cancelamento_gratis"
+                                name="hospedagem_servicos[cancelamento_gratis]"
                                 component={Checkbox}
                                 label="Cancelamento Grátis"
                             />

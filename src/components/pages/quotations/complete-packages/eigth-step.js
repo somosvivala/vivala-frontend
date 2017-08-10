@@ -45,7 +45,7 @@ class CompletePackagesSixthStep extends Component {
         const { invalid, total, previousPage, pristine, submitting, handleSubmit } = this.props;
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
+                <Grid container gutter={24}>
                     <Grid item xs={12}>
                         <Typography type="title" color="inherit" paragraph>
                             Seguro Viagem

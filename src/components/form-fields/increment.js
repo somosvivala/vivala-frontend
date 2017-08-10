@@ -15,14 +15,12 @@ class Increment extends Component {
                     <Button raised
                             dense
                             onClick={(event, index, value) => input.onChange(parseInt(input.value, 10)-1)}
-                            stlye={{ width: 11, minWidth: '10px !important'}}
                     >
                         -
                     </Button>
                     <div style={{ backgroundColor: 'white', width: 25, height: 25, lineHeight: '25px', textAlign: 'center' }}>{input.value}</div>
                     <Button raised
                             dense
-                            stlye={{ width: 11, minWidth: '10px !important'}}
                             onClick={(event, index, value) => input.onChange(parseInt(input.value, 10)+1)}
                     >
                         +

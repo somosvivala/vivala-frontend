@@ -24,14 +24,14 @@ class CompletePackagesFourthStep extends Component {
         ]
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
+                <Grid container gutter={24}>
                     <Grid item xs={12}>
                         <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
                             Transporte Aéreo
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12} style={{ margin: '10px 0'}}>
+                    <Grid item xs={12}>
                         <Field
                             name="periodo_voo_ida"
                             component={SelectInput}
@@ -40,7 +40,7 @@ class CompletePackagesFourthStep extends Component {
                         />
                     </Grid>
 
-                    <Grid item xs={12} style={{ margin: '10px 0'}}>
+                    <Grid item xs={12}>
                         <Field
                             name="periodo_voo_volta"
                             component={SelectInput}
@@ -76,7 +76,7 @@ class CompletePackagesFourthStep extends Component {
                         />
                     </Grid>
 
-                    <Grid item xs={12} style={{ margin: '10px 0'}}>
+                    <Grid item xs={12}>
                         <Field
                             name="numero_paradas"
                             component={SelectInput}
