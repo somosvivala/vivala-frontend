@@ -18,15 +18,6 @@ class CompletePackagesSixthStep extends Component {
                         Passageiro {key+1}
                     </Typography>
 
-                    <Grid item xs={12} style={{ marginBottom: 10 }}>
-                        <Field
-                            type="text"
-                            name={`seguro_viagem_nome[${key}]`}
-                            component={TextField}
-                            label="Nome Completo"
-                        />
-                    </Grid>
-
                     <Grid item xs={12}>
                         <Field
                             type="date"
