@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
-import VoosSvg from '../../../../assets/svg/icons/vivala/voos.svg';
+import ExperienciaSvg from '../../../../assets/svg/icons/vivala/experiencia.svg';
 import Typography from 'material-ui/Typography';
 
 const styleSheet = createStyleSheet('TripHeader', theme => ({
@@ -27,7 +27,7 @@ class TripHeader extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.flex}>
-                <img src={VoosSvg} className={classes.img} alt="Voos Icone" />
+                <img src={ExperienciaSvg} className={classes.img} alt="Experiencia Icone" />
                 <div className={classes.right}>
                     <Typography type="subheading">
                         Pedido de Cotação

@@ -9,7 +9,7 @@ import Grid from 'material-ui/Grid';
 
 class FlightFirstStep extends Component {
     render() {
-        const { previousPage, invalid, pristine, submitting, handleSubmit } = this.props;
+        const { invalid, pristine, submitting, handleSubmit } = this.props;
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">

@@ -23,16 +23,6 @@ class TripFirstStep extends Component {
                     <Grid item xs={12}>
                         <Field
                             type="text"
-                            name="origem"
-                            component={TextField}
-                            label="Origem"
-                            validate={required}
-                        />
-                    </Grid>
-
-                    <Grid item xs={12}>
-                        <Field
-                            type="text"
                             name="destino"
                             component={TextField}
                             label="Destino"
