@@ -12,7 +12,7 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
         height: 190
     },
     bg: {
-        backgroundColor: '#ECE9EA',
+        backgroundColor: '#EFEDEE',
         //backgroundColor: theme.default.color
     },
     applyPadding: {

@@ -27,8 +27,9 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
         //padding: 20,
     },
     listItem: {
-        backgroundColor: 'rgba(255,255,255,0.1) !important',
-        marginBottom: 10,
+        backgroundColor: '#FF7D39 !important',
+        marginBottom: 10,        
+        boxSizing: 'border-box'
     },
     text: {
         color: 'white !important'
@@ -43,8 +44,11 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
         color: 'white',
         fontWeight: 200,
         padding: 20,
-        margin: 20,
-        backgroundColor: 'rgba(255,255,255,0.1) !important',
+        //margin: 20,
+        margin: window.screen.width < 900 ? '0px' : '10px',
+        width: '100%',
+        backgroundColor: '#FF7D39 !important',
+        boxSizing: 'border-box'
     },
     button: {
         display: 'flex',

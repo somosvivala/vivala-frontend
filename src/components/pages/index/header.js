@@ -6,6 +6,7 @@ import Button from 'material-ui/Button';
 import PropTypes from 'prop-types';
 import {Image} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
+import Icon from 'material-ui/Icon';
 
 const styleSheet = createStyleSheet('IndexHeader', theme => ({
     gridContainerBack: {
@@ -52,13 +53,15 @@ class IndexHeader extends Component {
                             width={window.screen.width > 900 ? 800 : 320}
                             crop="scale" alt="Conheça seu mundo"
                             className={classes.addMargin}
-                        />
+                        /> 
                         <Grid container gutter={0} item xs={12} sm={4} className={classes.headerBox}>
                             <Grid item xs={12}><Typography type="headline" gutterBottom className={classes.headerHeadline}>{title}</Typography></Grid>
                             <Grid item xs={12}><Typography type="body1" gutterBottom className={classes.headerText}>{text}</Typography></Grid>
                             <Grid item xs={12}>
                                 <Button raised color="primary">
-                                    <Link to="/cotacao"><b>{button}</b></Link>
+                                    <Link to="/cotacao">
+                                        <b>{button}</b>
+                                    </Link>                                 
                                 </Button>
                             </Grid>
                         </Grid>
