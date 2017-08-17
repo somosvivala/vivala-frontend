@@ -19,12 +19,6 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     },
     text: {
         margin: '0 0 20px 20px',
-    },
-    fixFree: {
-        marginTop: 60
-    },
-    fixedDraft: {
-        marginTop: 20
     }
 }));
 
@@ -64,11 +58,11 @@ class MediaNews extends Component {
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="http://projetodraft.com/viagens-com-voluntariado-essa-e-a-proposta-da-vivala-para-se-destacar-no-mercado-do-turismo-de-experiencia/">
                                 <Image
                                     cloudName="vivala"
-                                    publicId="projeto-draft_v1jezy"
+                                    publicId="logo-draft_rqzoyg.png"
                                     width={200}
-                                    height={150}
+                                    height={200}
                                     crop="scale" alt="Logo Projeto Draft"
-                                    className={classes.fixDraft}
+                                    className={classes.img}
                                 />
                             </a>
                         </div>
@@ -76,12 +70,11 @@ class MediaNews extends Component {
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="https://www.freetheessence.com.br/unplug/inspire-se/vivala-viajar-voluntariado/">
                                 <Image
                                     cloudName="vivala"
-                                    publicId="free-the-essence-footer-logo_2x_ijwzl4.png"
-                                    width={220}
-                                    height={60}
+                                    publicId="logo-freetheessence_bisca1.png"
+                                    width={200}
+                                    height={200}
                                     crop="scale" alt="Logo Free The Esseence"
-                                    style={{ marginTop: 60 }}
-                                    className={classes.fixFree}
+                                    className={classes.img}
                                 />
                             </a>
                         </div>

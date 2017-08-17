@@ -12,10 +12,18 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
         height: 190
     },
     bg: {
-        backgroundColor: theme.default.color
+        backgroundColor: '#EFEDEE',
+        //backgroundColor: theme.default.color
     },
     applyPadding: {
         padding: window.screen.width < 900 ? '0 20px' : '0'
+    },
+    text: {
+        fontWeight: 'bold',
+        fontSize: '18px',
+    },
+    button: {
+        boxShadow: 'inset 2px 2px 8px 1px rgba(203,200,202,1)'
     }
 }));
 
@@ -33,7 +41,7 @@ class SearchCallToAction extends Component {
                             </Typography>
                         </Grid>
                         <Grid gutter={24} container item xs={12} sm={6} justify="center" align="center">
-                            <Button raised color="contrast" onClick={click}>
+                            <Button raised color="contrast" onClick={click} className={classes.button}>
                                 <Icon color="contrast">search</Icon> {translations.button}
                             </Button>
                             <Social color="#ccc"
