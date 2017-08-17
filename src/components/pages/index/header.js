@@ -39,7 +39,8 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
         width: '100%',
         paddingLeft: 0,
         paddingRight: 0,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        textTransform:'none'
     }
 }));
 

@@ -13,6 +13,16 @@
   }
 }
 
+.home-instituto-slick-container {
+    .slick-slide {
+        min-width: 260px;
+    }
+    .slick-prev, .slick-next {
+        display: none!important;
+    }
+}
+
+
 .react-datepicker {
   border: none;
   width: 270px;
