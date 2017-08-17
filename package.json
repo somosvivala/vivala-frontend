@@ -8,6 +8,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "cloudinary-react": "^1.0.4",
+    "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
     "material-design-icons": "^3.0.1",
     "material-ui": "next",
@@ -19,6 +20,7 @@
     "react-addons-css-transition-group": "^15.6.0",
     "react-datepicker": "^0.52.0",
     "react-dom": "^15.6.1",
+    "react-fontawesome": "^1.6.1",
     "react-ga": "^2.2.0",
     "react-material-select": "^1.2.0",
     "react-redux": "^5.0.5",

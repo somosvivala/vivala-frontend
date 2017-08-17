@@ -37,7 +37,8 @@ class CorporativeBonus extends Component {
         const { classes } = this.props;
         const settings = {
             infinite: true,
-            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 2000,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
@@ -56,7 +57,9 @@ class CorporativeBonus extends Component {
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Teste Primeiro</Typography>
+                                <Typography type="subheading">
+                                    <strong>Teste Primeiro</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="corporativo_icone_1.png"
@@ -70,7 +73,9 @@ class CorporativeBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Reduza Custos</Typography>
+                                <Typography type="subheading">
+                                    <strong>Reduza Custos</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="corporativo_icone_2.png"
@@ -84,7 +89,9 @@ class CorporativeBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Economize Tempo</Typography>
+                                <Typography type="subheading">
+                                    <strong>Economize Tempo</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="corporativo_icone_3.png"
@@ -98,7 +105,9 @@ class CorporativeBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Melhore o controle</Typography>
+                                <Typography type="subheading">
+                                    <strong>Melhore o controle</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="corporativo_icone_4.png"
@@ -112,7 +121,9 @@ class CorporativeBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Valorize seus funcionários</Typography>
+                                <Typography type="subheading">
+                                    <strong>Valorize seus funcionários</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="corporativo_icone_5.png"

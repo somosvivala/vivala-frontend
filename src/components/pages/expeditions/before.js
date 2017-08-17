@@ -32,7 +32,8 @@ class ExpeditonsBefore extends Component {
         const { classes, translations, expeditions } = this.props;
         const settings = {
             infinite: true,
-            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 2000,
             slidesToShow: 1,
             slidesToScroll: 1,
         }

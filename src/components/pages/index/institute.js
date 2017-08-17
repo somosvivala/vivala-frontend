@@ -22,11 +22,12 @@ const styleSheet = createStyleSheet('Institute', theme => ({
         height: 100
     },
     subheading: {
-        color: 'white'
+        color: 'white',
+        textAlign: 'center'
     },
     slider: {
         width: '90%',
-        margin: '20px auto 0 auto'
+        margin: '20px auto'
     }
 }));
 
@@ -47,19 +48,22 @@ class Institute extends Component {
             <div className={classes.bg}>
                 <div className="container padding">
                     <Grid gutter={0} container className={classes.gridContainer} justify="space-around">
-                        <Grid gutter={0} container item xs={5} justify="center">
+                        <Grid gutter={0} container item xs={4} justify="center">
                             <img src={Logo} alt="Instituto Vivala" className={classes.img} />
                         </Grid>
-                        <Grid gutter={0} container item xs={5} justify="center">
+                        <Grid gutter={0} container item xs justify="center">
                             <Typography type="subheading" gutterBottom color="inherit" className={classes.subheading}>
                                 {text}
                             </Typography>
-                            <Social color="rgba(255,255,255, 0.5)"
-                                    facebook="https://www.facebook.com/institutovivala/"
-                                    linkedin="https://pt.linkedin.com/company/vivalá"
-                                    instagram="https://www.instagram.com/institutovivala/"
-                                    youtube="https://www.youtube.com/channel/UCF-Lv8two48zRLLd8_DOcGA"
-                            />
+                            {
+                                window.screen.width > 900 &&
+                                    <Social color="rgba(255,255,255, 0.5)"
+                                            facebook="https://www.facebook.com/institutovivala/"
+                                            linkedin="https://pt.linkedin.com/company/vivalá"
+                                            instagram="https://www.instagram.com/institutovivala/"
+                                            youtube="https://www.youtube.com/channel/UCF-Lv8two48zRLLd8_DOcGA"
+                                    />
+                            }
                         </Grid>
                     </Grid>
                     <Slider {...settings} className={classes.slider}>
@@ -68,6 +72,16 @@ class Institute extends Component {
                         <div><InstituteItem title='Expedição Amazônia #3' subtitle="O pulmão do mundo" link='/expedicoes/3' /></div>
                         <div><InstituteItem title='Expedição Mata Atlântica #1' subtitle="Sabedoria da floresta"  link='/expedicoes/4' /></div>
                     </Slider>
+
+                    {
+                        window.screen.width <= 900 &&
+                            <Social color="rgba(255,255,255, 0.5)"
+                                    facebook="https://www.facebook.com/institutovivala/"
+                                    linkedin="https://pt.linkedin.com/company/vivalá"
+                                    instagram="https://www.instagram.com/institutovivala/"
+                                    youtube="https://www.youtube.com/channel/UCF-Lv8two48zRLLd8_DOcGA"
+                            />
+                    }
                 </div>
             </div>
         );
