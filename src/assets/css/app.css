@@ -1,1 +1,207 @@
-@import url(~slick-carousel/slick/slick.css);@import url(~slick-carousel/slick/slick-theme.css);@import url(~react-datepicker/dist/react-datepicker.css);.slick-prev:before,.slick-next:before{color:rgba(255,109,32,0.7) !important}.fix-slider .slick-prev{z-index:99999;left:0 !important}.fix-slider .slick-next{z-index:99999;right:0 !important}.home-instituto-slick-container .slick-slide{min-width:260px}.home-instituto-slick-container .slick-prev,.home-instituto-slick-container .slick-next{display:none !important}.react-datepicker{border:none;width:270px}.react-datepicker__header{border-bottom:1px solid #eee;background-color:white}.react-datepicker__day--selected{background-color:#FF6D20 !important}.react-datepicker__month-container{float:none}.react-datepicker__day,.react-datepicker__day-name{padding:2px}.react-datepicker__current-month{padding:10px}.react-datepicker__navigation--next,.react-datepicker__navigation--previous{margin-top:10px}.rms-wrapper{display:block;position:relative;height:50px}.rms-wrapper::after,.rms-wrapper::before{display:table;content:"";clear:both}.rms-label{font-family:"Titillium Web";transition-duration:.2s;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);color:rgba(0,0,0,0.54);font-size:12px;top:0;bottom:0;left:0;right:0;visibility:visible;pointer-events:none;position:absolute;display:block;width:100%;overflow:hidden;white-space:nowrap;text-align:left}.rms-text{position:relative;font-size:16px;display:inline-block;box-sizing:border-box;width:100%;max-width:100%;margin:0;line-height:0;padding:0;cursor:pointer;height:0}.rms-text span{border:none;border-bottom:1px solid rgba(0,0,0,0.12);display:block;font-size:16px;font-family:"Titillium Web";margin:0;padding:30px 0 18px;width:100%;background:none;text-align:left;color:inherit}.rms-text__empty span{color:#c5c5c5;font-weight:100;height:0}.rms-text__empty+label{display:none}.rms-caret{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;word-wrap:normal;-moz-font-feature-settings:'liga';font-feature-settings:'liga';-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;position:absolute;right:8px;top:16px;color:rgba(0,0,0,0.12)}.rms-list{position:absolute;transition:.25s ease;top:10px;left:0;width:100%;list-style:none;margin:0;padding:0;background-color:white;box-shadow:0 3px 10px #adadad;z-index:1000;font-family:"Titillium Web"}.rms-list .rms-item{font-family:"Titillium Web";padding:0 8px;line-height:35px;cursor:pointer}.rms-list .rms-item:focus{outline:none}.rms-list .rms-item::selection,.rms-list .rms-item:hover{background-color:#eaeaea}.rms-list .rms-item__active{background:#eaeaea}.rms-list .rms-item__reset{opacity:.3}.container{position:relative}.container.padding{padding:20px}.container.padding-2x{padding:40px}.container.padding-heights{padding:20px 0}@media screen and (min-width: 900px){.container{margin:0 auto;max-width:900px;width:900px}}*{min-height:0;min-width:0}a{color:inherit;text-decoration:none;width:100%}.quotation-form{max-width:400px;margin:60px auto 0 auto}.slider-enter{height:0px}.slider-enter.slider-enter-active{height:200px;-webkit-transition:height .3s ease}.slider-leave.slider-leave-active{height:0px;-webkit-transition:height .3s ease}
+@import url(~slick-carousel/slick/slick.css);
+@import url(~slick-carousel/slick/slick-theme.css);
+@import url(~react-datepicker/dist/react-datepicker.css);
+.slick-prev:before, .slick-next:before {
+  color: rgba(255, 109, 32, 0.7) !important; }
+
+.fix-slider .slick-prev {
+  z-index: 99999;
+  left: 0 !important; }
+
+.fix-slider .slick-next {
+  z-index: 99999;
+  right: 0 !important; }
+
+.home-instituto-slick-container .slick-slide {
+  min-width: 260px; }
+
+.home-instituto-slick-container .slick-prev, .home-instituto-slick-container .slick-next {
+  display: none !important; }
+
+.sobre-instituto-slick-container ul.slick-dots {
+  bottom: 20px !important; }
+  .sobre-instituto-slick-container ul.slick-dots li button::before {
+    font-family: 'slick';
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '\2022';
+    text-align: center;
+    opacity: .25;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .sobre-instituto-slick-container ul.slick-dots li.slick-active button::before {
+    opacity: .75;
+    color: white; }
+
+.react-datepicker {
+  border: none;
+  width: 270px; }
+
+.react-datepicker__header {
+  border-bottom: 1px solid #eee;
+  background-color: white; }
+
+.react-datepicker__day--selected {
+  background-color: #FF6D20 !important; }
+
+.react-datepicker__month-container {
+  float: none; }
+
+.react-datepicker__day, .react-datepicker__day-name {
+  padding: 2px; }
+
+.react-datepicker__current-month {
+  padding: 10px; }
+
+.react-datepicker__navigation--next, .react-datepicker__navigation--previous {
+  margin-top: 10px; }
+
+.rms-wrapper {
+  display: block;
+  position: relative;
+  height: 50px; }
+  .rms-wrapper::after, .rms-wrapper::before {
+    display: table;
+    content: "";
+    clear: both; }
+
+.rms-label {
+  font-family: "Titillium Web";
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 12px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: visible;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left; }
+
+.rms-text {
+  position: relative;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  line-height: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 0; }
+  .rms-text span {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    display: block;
+    font-size: 16px;
+    font-family: "Titillium Web";
+    margin: 0;
+    padding: 30px 0 18px;
+    width: 100%;
+    background: none;
+    text-align: left;
+    color: inherit; }
+  .rms-text__empty span {
+    color: #c5c5c5;
+    font-weight: 100;
+    height: 0; }
+  .rms-text__empty + label {
+    display: none; }
+
+.rms-caret {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  word-wrap: normal;
+  -moz-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  right: 8px;
+  top: 16px;
+  color: rgba(0, 0, 0, 0.12); }
+
+.rms-list {
+  position: absolute;
+  transition: .25s ease;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  box-shadow: 0 3px 10px #adadad;
+  z-index: 1000;
+  font-family: "Titillium Web"; }
+  .rms-list .rms-item {
+    font-family: "Titillium Web";
+    padding: 0 8px;
+    line-height: 35px;
+    cursor: pointer; }
+    .rms-list .rms-item:focus {
+      outline: none; }
+    .rms-list .rms-item::selection, .rms-list .rms-item:hover {
+      background-color: #eaeaea; }
+    .rms-list .rms-item__active {
+      background: #eaeaea; }
+    .rms-list .rms-item__reset {
+      opacity: .3; }
+
+.container {
+  position: relative; }
+  .container.padding {
+    padding: 20px; }
+  .container.padding-2x {
+    padding: 40px; }
+  .container.padding-heights {
+    padding: 20px 0; }
+
+@media screen and (min-width: 900px) {
+  .container {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 900px; } }
+
+* {
+  min-height: 0;
+  min-width: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%; }
+
+.quotation-form {
+  max-width: 400px;
+  margin: 60px auto 0 auto; }
+
+.slider-enter {
+  height: 0px; }
+
+.slider-enter.slider-enter-active {
+  height: 200px;
+  -webkit-transition: height .3s ease; }
+
+.slider-leave.slider-leave-active {
+  height: 0px;
+  -webkit-transition: height .3s ease; }

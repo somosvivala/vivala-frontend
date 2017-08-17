@@ -22,6 +22,41 @@
     }
 }
 
+.sobre-instituto-slick-container {
+    ul.slick-dots  {
+        bottom: 20px!important;
+
+        li { 
+            button {
+                &::before {
+                    font-family: 'slick';
+                    font-size: 12px;
+                    line-height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    content: '\2022';
+                    text-align: center;
+                    opacity: .25;
+                    color: white;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+
+            &.slick-active button {
+                    &::before {
+                    opacity: .75;
+                    color: white;
+                }
+            }
+        }
+
+    }
+}
+
 
 .react-datepicker {
   border: none;
