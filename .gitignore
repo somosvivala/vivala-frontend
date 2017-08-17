@@ -24,3 +24,4 @@ yarn-error.log*
 
 # generated
  src/assets/css/app.css
+.env
