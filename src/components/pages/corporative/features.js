@@ -15,10 +15,15 @@ const styleSheet = createStyleSheet('CorporativeFeatures', theme => ({
     listItem: {
         backgroundColor: theme.defaultDarken.color,
         marginBottom: 10,
+        display: 'flex'
     },
     icon: {
-        padding: 20,
-        fontSize: 40
+        fontSize: 40,
+        maxWidth: '25%'
+    },
+    subheading: {
+        marginLeft: 20,
+        maxWidth: '75%'
     }
 }));
 
@@ -35,21 +40,21 @@ class CorporativeFeatures extends Component {
                         Tenha o melhor parceiro para sua empresa
                     </Typography>
                     <List>
-                        <ListItem button component="a" href="#simple-list" className={classes.listItem}>
+                        <ListItem className={classes.listItem}>
                             <Icon color="primary" className={classes.icon}>done</Icon>
-                            <Typography type="subheading" color="inherit">
+                            <Typography type="subheading" color="inherit" className={classes.subheading}>
                                 Gestão completa de viagens para pequenas e médias empresas
                             </Typography>
                         </ListItem>
-                        <ListItem button component="a" href="#simple-list" className={classes.listItem}>
+                        <ListItem className={classes.listItem}>
                             <Icon color="primary" className={classes.icon}>done</Icon>
-                            <Typography type="subheading" color="inherit">
+                            <Typography type="subheading" color="inherit" className={classes.subheading}>
                                 Campanhas de premiação e viagens de incentivo
                             </Typography>
                         </ListItem>
-                        <ListItem button component="a" href="#simple-list" className={classes.listItem}>
+                        <ListItem className={classes.listItem}>
                             <Icon color="primary" className={classes.icon}>done</Icon>
-                            <Typography type="subheading" color="inherit">
+                            <Typography type="subheading" color="inherit" className={classes.subheading}>
                                 Grupos e eventos
                             </Typography>
                         </ListItem>

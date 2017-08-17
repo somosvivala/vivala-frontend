@@ -7,7 +7,8 @@ import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('MediaNews', theme => ({
     bg: {
-        backgroundColor: '#e1e1e1'
+        backgroundColor: '#DCDCDC',
+        padding: '20px 0'
     },
     item: {
         display: 'flex',
@@ -19,6 +20,7 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     },
     text: {
         margin: '0 0 20px 20px',
+        fontWeight: 'bold'
     }
 }));
 
@@ -27,7 +29,6 @@ class MediaNews extends Component {
         const { classes, text } = this.props;
         const settings = {
             infinite: true,
-            speed: 500,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
@@ -35,7 +36,8 @@ class MediaNews extends Component {
                 { breakpoint: 480, settings: { slidesToShow: 1 } },
             ],
             adaptativeHeight: true,
-            autplay: true,
+            autoplay: true,
+            autoplaySpeed: 2000
         }
         return (
             <div className={classes.bg}>

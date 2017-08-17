@@ -33,13 +33,13 @@ class NewsletterIndex extends Component {
         }
 
         return (
-            <Grid gutter={0} container>
+            <Grid gutter={0} container style={{ backgroundColor: '#ECE9EA' }}>
                 <div className="container padding-2x">
                     <Grid gutter={16} container justify="center" align="center">
                         <Grid gutter={0} container item xs={12} sm={3}>
                             <Typography type="subheading" color="inherit">{text}</Typography>
                         </Grid>
-                        <Grid gutter={16} container item xs={12} sm={9}>
+                        <Grid gutter={16} container item xs={12} sm={9} justify="center">
                             <NewsletterForm onSubmit={this.handleSubmit}/>
                         </Grid>
                     </Grid>

@@ -42,11 +42,11 @@ class AboutIndex extends Component {
 
         const settings = {
             infinite: true,
-            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 2000,
             slidesToShow: 1,
             arrows: false,
             slidesToScroll: 1,
-            autoplay: true,
             adaptativeHeight: true,
         }
 
