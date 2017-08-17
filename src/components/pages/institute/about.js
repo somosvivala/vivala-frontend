@@ -157,10 +157,6 @@ class InstituteAbout extends Component {
                             <Typography type="title" color="accent" className={classes.titleTextoCentral} gutterBottom>
                                 Seja a Mudança
                             </Typography>
-                            <Typography type="body1" paragraph className={classes.textoCentral}>
-                                Para cada compra realizada no site, 5% do lucro é destinado
-                                a ações de sustentabilidade e capacitação profissional
-                            </Typography>
                         </div>
                         <br/>
                         <Link className={classes.button} to="/expedicoes">
