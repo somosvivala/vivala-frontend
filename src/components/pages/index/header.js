@@ -67,7 +67,7 @@ class IndexHeader extends Component {
                                 <Link to="/cotacao">
                                     <Button raised color="primary" className={classes.button}>
                                         {button}
-                                        <FontAwesome name='long-arrow-right' style={{ fontSize: 25, paddingLeft: 5 }} />
+                                        <FontAwesome name='long-arrow-right' style={{ fontSize: 25, paddingLeft: 20 }} />
                                     </Button>
                                 </Link>
                             </Grid>
