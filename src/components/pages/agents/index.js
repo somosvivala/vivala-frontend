@@ -5,17 +5,28 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import {Link} from 'react-router-dom';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
+import FontAwesome from 'react-fontawesome';
+
 
 const styleSheet = createStyleSheet('AgentsIndex', theme => ({
     bg: {
-        backgroundColor: theme.default.color,
+        backgroundColor: '#ddd',
         textAlign: 'center'
+    },
+    button: {
+        width: window.screen.width < 900 ? '100%' : '33%',
+        paddingLeft: 0,
+        paddingRight: 0,
+        fontWeight: 'bold',
+        textTransform:'none',
+        fontSize: window.screen.width < 900 ? '15px' : '17px'
     }
 }));
 
 class AgentsIndex extends Component {
     render() {
         const { classes } = this.props;
+        const button = 'Receba sua cotacao em 24H';
         return (
             <div>
                 <AgentsList />
@@ -25,11 +36,12 @@ class AgentsIndex extends Component {
                         <Typography type="body1" paragraph>
                             Quer uma proposta para sua viagem ágil, humanizada e gratuita?
                         </Typography>
-                        <Button raised color="primary">
-                            <Link to="/cotacao">
-                                Receba sua cotação em até 24 horas
-                            </Link>
-                        </Button>
+                        <Link to="/cotacao">
+                            <Button raised color="primary" className={classes.button}>
+                                {button}
+                                <FontAwesome name='long-arrow-right' style={{ fontSize: 25, paddingLeft: 20 }} />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

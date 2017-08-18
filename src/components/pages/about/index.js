@@ -9,6 +9,7 @@ import MediaNews from '../index/media-news';
 import {Image} from 'cloudinary-react';
 import trans from '../../../utils/translate';
 
+
 const styleSheet = createStyleSheet('AboutIndex', theme => ({
     bg: {
         backgroundColor: theme.default.color
