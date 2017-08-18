@@ -12,11 +12,12 @@ class LodgingFifthStep extends Component {
         const { invalid, previousPage, pristine, submitting, handleSubmit } = this.props;
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
-                    <Typography type="title" color="inherit" gutterBottom>
-                        Quantidade de Quartos
-                    </Typography>
-
+                <Grid container gutter={24}>
+                    <Grid item xs={12}>
+                        <Typography type="title" color="inherit" style={{ marginBottom: 30 }}>
+                            Quantidade de Quartos
+                        </Typography>
+                    </Grid>
 
                     <Grid item xs={12}>
                         <Field
@@ -28,7 +29,7 @@ class LodgingFifthStep extends Component {
                         />
                     </Grid>
 
-                    <Grid gutter={0} container style={{ marginTop: 30}}>
+                    <Grid gutter={0} container item xs={12} style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
                             <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior

@@ -15,48 +15,49 @@ class HighwaySecondStep extends Component {
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
                 <Grid container gutter={24}>
-                    <Typography type="title" color="inherit" style={{ marginBottom: 30 }}>
-                        Quando você quer ir?
-                    </Typography>
+                    <Grid item xs={12}>
+                        <Typography type="title" color="inherit" paragraph>
+                            Quando você quer ir?
+                        </Typography>
+                        <Field
+                            type="text"
+                            component={CalendarInput}
+                            name="data_ida"
+                            validate={required}
+                        />
+                    </Grid>
 
-                    <Field
-                        type="text"
-                        component={CalendarInput}
-                        name="data_ida"
-                        validate={required}
-                    />
+                    <Grid item xs={12} style={{ marginTop: 30 }}>
+                        <Typography type="title" color="inherit" paragraph>
+                            Quando você quer voltar?
+                        </Typography>
 
-                    <Typography type="title" color="inherit" style={{ marginTop: 40, marginBottom: 30 }}>
-                        Quando você quer voltar?
-                    </Typography>
+                        <Field
+                            type="text"
+                            component={CalendarInput}
+                            name="data_volta"
+                        />
+                    </Grid>
 
-                    <Field
-                        type="text"
-                        component={CalendarInput}
-                        name="data_volta"
-                        validate={required}
-                    />
-
-                    <div style={{ marginTop: 40, marginBottom: 30 }}>
+                    <Grid item xs={12} style={{ marginTop: 30 }}>
                         <Typography type="title" color="inherit" gutterBottom>
                             As datas são flexíveis?
                         </Typography>
-                        <Typography type="body1" color="inherit">
+                        <Typography type="body1" color="inherit" paragraph>
                             Nossa equipe irá planejar o mais próximo das datas sugeridas, caso afirmativo,
                             Caso contrário, manteremos as datas que você selecionou.
                         </Typography>
-                    </div>
+                        <Grid gutter={0} container item xs={12} justify="center" style={{ marginTop: 30}}>
+                            <Field
+                                type="text"
+                                component={ButtonBoolean}
+                                name="datas_flexiveis"
+                                validate={number}
+                            />
+                        </Grid>
+                    </Grid>
 
-                    <div style={{ margin: '0 auto'}}>
-                        <Field
-                            type="text"
-                            component={ButtonBoolean}
-                            name="datas_flexiveis"
-                            validate={number}
-                        />
-                    </div>
-
-                    <Grid gutter={0} container style={{ marginTop: 30}}>
+                    <Grid gutter={0} container item xs={12} style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
                             <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior

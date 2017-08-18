@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import TextField from '../../../form-fields/text';
-import SelectInput from '../../../form-fields/select';
+import {time} from '../../../../utils/validations';
+import {maskTime} from '../../../../utils/normalizations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
@@ -10,12 +11,6 @@ import Grid from 'material-ui/Grid';
 class HighwayFourthStep extends Component {
     render() {
         const { previousPage, invalid, pristine, submitting, handleSubmit } = this.props;
-        const options = [
-            { value: 'manha', text: 'Das 06:00 às 11:59'},
-            { value: 'tarde', text: 'Das 12:00 às 17:59'},
-            { value: 'noite', text: 'Das 18:00 às 23:59'},
-            { value: 'madrugada', text: 'Das 00:00 às 05:59'},
-        ];
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
                 <Grid container gutter={24}>
@@ -27,19 +22,25 @@ class HighwayFourthStep extends Component {
 
                     <Grid item xs={12}>
                         <Field
-                            name="periodo_ida"
-                            component={SelectInput}
-                            options={options}
-                            label="Ida"
+                            type="text"
+                            name="hora_ida"
+                            component={TextField}
+                            placeholder="HH:MM"
+                            label="Horário de Ida"
+                            validate={time}
+                            normalize={maskTime}
                         />
                     </Grid>
 
                     <Grid item xs={12}>
                         <Field
-                            name="periodo_volta"
-                            component={SelectInput}
-                            options={options}
-                            label="Volta"
+                            type="text"
+                            name="hora_volta"
+                            component={TextField}
+                            placeholder="HH:MM"
+                            label="Horário de Volta"
+                            validate={time}
+                            normalize={maskTime}
                         />
                     </Grid>
 
@@ -70,7 +71,7 @@ class HighwayFourthStep extends Component {
                         />
                     </Grid>
 
-                    <Grid gutter={0} container style={{ marginTop: 30}}>
+                    <Grid gutter={0} container item xs={12} style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
                             <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior

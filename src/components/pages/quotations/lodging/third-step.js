@@ -13,10 +13,12 @@ class LodgingThirdStep extends Component {
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
-                    <Typography type="subheading" color="inherit" style={{ marginBottom: 30 }}>
-                        Com quem você quer ir?
-                    </Typography>
+                <Grid container gutter={24}>
+                    <Grid item xs={12}>
+                        <Typography type="title" color="inherit" style={{ marginBottom: 30 }}>
+                            Com quem você quer ir?
+                        </Typography>
+                    </Grid>
 
                     <Grid item xs={12}>
                         <Field
@@ -48,7 +50,7 @@ class LodgingThirdStep extends Component {
                         />
                     </Grid>
 
-                    <Grid gutter={0} container style={{ marginTop: 30}}>
+                    <Grid gutter={0} container item xs={12} style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
                             <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior

@@ -19,6 +19,7 @@ import HighwayIndex from '../components/pages/quotations/highway';
 import CruiseIndex from '../components/pages/quotations/cruise';
 import TripIndex from '../components/pages/quotations/trip';
 import InsuranceIndex from '../components/pages/quotations/insurance';
+import CarIndex from '../components/pages/quotations/car';
 import PageNotFound from '../components/errors/404';
 
 export default [
@@ -122,6 +123,11 @@ export default [
         exact: true,
         component: InsuranceIndex,
         key: 'quotations.insurance'
+    }, {
+        path: '/cotacao/carro',
+        exact: true,
+        component: CarIndex,
+        key: 'quotations.car'
     }, {
         path: '/contato',
         exact: true,

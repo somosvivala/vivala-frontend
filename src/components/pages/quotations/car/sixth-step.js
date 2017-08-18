@@ -8,7 +8,7 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
 
-class CruiseFifthStep extends Component {
+class CarSixthStep extends Component {
     render() {
         const { previousPage, invalid, pristine, submitting, handleSubmit } = this.props;
 
@@ -16,7 +16,7 @@ class CruiseFifthStep extends Component {
             <form onSubmit={handleSubmit} className="quotation-form">
                 <Grid container gutter={24}>
                     <Grid item xs={12}>
-                        <Typography type="title" color="inherit" style={{ marginBottom: 30 }}>
+                        <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
                             Dados Para Contato
                         </Typography>
                     </Grid>
@@ -78,12 +78,12 @@ class CruiseFifthStep extends Component {
     }
 }
 
-CruiseFifthStep.propTypes = {
+CarSixthStep.propTypes = {
     handleSubmit: PropTypes.func.isRequired
 };
 
 export default reduxForm({
-    form: 'cruiseForm',
+    form: 'carForm',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
-})(CruiseFifthStep)
+})(CarSixthStep)

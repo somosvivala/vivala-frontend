@@ -9,10 +9,11 @@ import SecondStep from './second-step';
 import ThirdStep from './third-step';
 import FourthStep from './fourth-step';
 import FifthStep from './fifth-step';
+import SixthStep from './sixth-step';
 import axios from '../../../../utils/axios';
 import Message from '../../../messages';
 
-const styleSheet = createStyleSheet('CruiseIndex', theme => ({
+const styleSheet = createStyleSheet('CarIndex', theme => ({
     bg: {
         backgroundColor: theme.default.color,
     },
@@ -22,7 +23,7 @@ const styleSheet = createStyleSheet('CruiseIndex', theme => ({
     },
 }));
 
-class CruiseIndex extends Component {
+class CarIndex extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -40,7 +41,7 @@ class CruiseIndex extends Component {
     }
 
     handleSubmit = (values) => {
-        axios.post('/cotacoes/cruzeiro', values)
+        axios.post('/cotacoes/carro', values)
             .then(response => {
                 this.setState({
                     saved: true,
@@ -69,7 +70,7 @@ class CruiseIndex extends Component {
                         <LinearProgress
                             color="primary"
                             mode="determinate"
-                            value={page * 20}
+                            value={page * 16.67}
                             valueBuffer={100}
                         />
                         <div style={{ marginTop: 30 }}>
@@ -84,12 +85,12 @@ class CruiseIndex extends Component {
             <div className={classes.bg}>
                 <div className="container" style={{ padding: '40px 20px' }}>
                     <LodgingHeader/>
-                    <Typography type="subheading" align="right">{page} / 5</Typography>
+                    <Typography type="subheading" align="right">{page} / 6</Typography>
 
                     <LinearProgress
                         color="primary"
                         mode="determinate"
-                        value={page * 20}
+                        value={page * 16.67}
                         valueBuffer={100}
                     />
                     { page === 1 && <FirstStep onSubmit={this.nextPage} /> }
@@ -114,6 +115,12 @@ class CruiseIndex extends Component {
                     { page === 5 &&
                         <FifthStep
                             previousPage={this.previousPage}
+                            onSubmit={this.nextPage}
+                        />
+                    }
+                    { page === 6 &&
+                        <SixthStep
+                            previousPage={this.previousPage}
                             onSubmit={this.handleSubmit}
                         />
                     }
@@ -123,8 +130,8 @@ class CruiseIndex extends Component {
     }
 }
 
-CruiseIndex.propTypes = {
+CarIndex.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styleSheet)(CruiseIndex);
+export default withStyles(styleSheet)(CarIndex);

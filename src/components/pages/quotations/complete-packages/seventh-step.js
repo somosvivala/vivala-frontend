@@ -21,13 +21,13 @@ class CompletePackagesSeventhStep extends Component {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12}>
-                        <Typography type="subheading" color="inherit" paragraph>
-                            Interesses
-                        </Typography>
-                    </Grid>
+                    <Grid container gutter={0} item xs={12}>
+                        <Grid item xs={12}>
+                            <Typography type="subheading" color="inherit" paragraph>
+                                Interesses
+                            </Typography>
+                        </Grid>
 
-                    <Grid container gutter={8}>
                         <Grid item xs={6}>
                             <Field
                                 name="passeios_interessses[aventura]"
@@ -114,7 +114,7 @@ class CompletePackagesSeventhStep extends Component {
                         />
                     </Grid>
 
-                    <Grid gutter={0} container style={{ marginTop: 30}}>
+                    <Grid gutter={0} container item xs={12} style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
                             <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior

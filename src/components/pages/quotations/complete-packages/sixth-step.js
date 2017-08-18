@@ -48,9 +48,11 @@ class CompletePackagesSixthStep extends Component {
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
                 <Grid container gutter={24}>
-                    <Typography type="title" color="inherit">
-                        Transporte Interno
-                    </Typography>
+                    <Grid item xs={12}>
+                        <Typography type="title" color="inherit">
+                            Transporte Interno
+                        </Typography>
+                    </Grid>
 
                     <Grid item xs={12}>
                         <Field name="carro_transporte_tipo" component={RadioInput} radios={radios} />
@@ -224,7 +226,7 @@ class CompletePackagesSixthStep extends Component {
                     </Grid>
 
 
-                    <Grid gutter={0} container style={{ marginTop: 30}}>
+                    <Grid gutter={0} container item xs={12} style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
                             <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior

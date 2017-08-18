@@ -13,7 +13,7 @@ class HighwayFirstStep extends Component {
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
+                <Grid container gutter={24}>
                     <Grid item xs={12}>
                         <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
                             Para onde você quer ir?
@@ -40,7 +40,7 @@ class HighwayFirstStep extends Component {
                         />
                     </Grid>
 
-                    <Grid gutter={0} container justify="flex-end" style={{ marginTop: 30 }}>
+                    <Grid gutter={0} container item xs={12} justify="flex-end" style={{ marginTop: 30 }}>
                         <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting}>
                             Próximo
                         </Button>

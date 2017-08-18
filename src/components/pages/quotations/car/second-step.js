@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import TextField from '../../../form-fields/text';
-import {required} from '../../../../utils/validations';
+import CalendarInput from '../../../form-fields/calendar';
+import {required, time} from '../../../../utils/validations';
+import {maskTime} from '../../../../utils/normalizations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
 
-class InsuranceFirstStep extends Component {
+class CarFirstStep extends Component {
     render() {
         const { invalid, pristine, submitting, handleSubmit } = this.props;
 
@@ -15,32 +17,47 @@ class InsuranceFirstStep extends Component {
             <form onSubmit={handleSubmit} className="quotation-form">
                 <Grid container gutter={24}>
                     <Grid item xs={12}>
-                        <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
-                            Para onde você quer ir?
+                        <Typography type="title" color="inherit" paragraph>
+                            Devolução
                         </Typography>
                     </Grid>
 
                     <Grid item xs={12}>
                         <Field
                             type="text"
-                            name="origem"
+                            name="cidade_devolucao"
                             component={TextField}
-                            label="Origem"
+                            label="Cidade"
                             validate={required}
+                            style={{ marginBottom: 30 }}
                         />
                     </Grid>
 
                     <Grid item xs={12}>
+                        <Typography type="subheading" color="inherit" gutterBottom>Quando?</Typography>
                         <Field
                             type="text"
-                            name="destino"
-                            component={TextField}
-                            label="Destino"
+                            component={CalendarInput}
+                            name="data_devolucao"
                             validate={required}
                         />
                     </Grid>
 
-                    <Grid gutter={0} container item xs={12} justify="flex-end" style={{ marginTop: 30 }}>
+
+                    <Grid item xs={12}>
+                        <Field
+                            type="text"
+                            name="hora_devolucao"
+                            component={TextField}
+                            placeholder="HH:MM"
+                            label="Horário"
+                            validate={[ required, time ]}
+                            normalize={maskTime}
+                        />
+                    </Grid>
+
+
+                    <Grid gutter={0} container item xs={12} justify="flex-end" style={{ marginTop: 20 }}>
                         <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting}>
                             Próximo
                         </Button>
@@ -51,12 +68,12 @@ class InsuranceFirstStep extends Component {
     }
 }
 
-InsuranceFirstStep.propTypes = {
+CarFirstStep.propTypes = {
     handleSubmit: PropTypes.func.isRequired
 };
 
 export default reduxForm({
-    form: 'insuranceForm',
+    form: 'carForm',
     destroyOnUnmount: false,
     forceUnregisterOnUnmount: true,
-})(InsuranceFirstStep)
+})(CarFirstStep)
