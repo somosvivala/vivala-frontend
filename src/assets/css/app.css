@@ -4,10 +4,14 @@
 .slick-prev:before, .slick-next:before {
   color: rgba(255, 109, 32, 0.7) !important; }
 
-/*.slick-prev:before {
-  content: url(http://res.cloudinary.com/vivala/image/upload/v1503017512/left-arrow-orange_tu6qgw.png);
-  height: 10px;
-}*/
+.slick-next:before {
+  content: url(http://res.cloudinary.com/vivala/image/upload/v1503034817/right-arrow-orange_8x43.png); }
+
+.slick-prev {
+  left: -10px; }
+  .slick-prev:before {
+    content: url(http://res.cloudinary.com/vivala/image/upload/v1503034458/left-arrow-orange_8x43.png); }
+
 .fix-slider .slick-prev {
   z-index: 99999;
   left: 0 !important; }

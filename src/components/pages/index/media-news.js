@@ -21,6 +21,11 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     text: {
         margin: '0 0 20px 20px',
         fontWeight: 'bold'
+    },
+    logoMedia: {
+        marginTop: '22px',
+        width: '60%',
+        objectFit: 'contain'
     }
 }));
 
@@ -37,7 +42,7 @@ class MediaNews extends Component {
             ],
             adaptativeHeight: true,
             autoplay: true,
-            autoplaySpeed: 2500
+            autoplaySpeed: 4500
         }
         return (
             <div className={classes.bg}>
@@ -51,7 +56,7 @@ class MediaNews extends Component {
                                     publicId="catracalivre-icone_ilcoly.png"
                                     height={40}
                                     crop="scale" alt="Logo Catraca Livre"
-                                    className={classes.img}
+                                    className={classes.logoMedia}
                                 />
                             </a>
                         </div>
@@ -62,7 +67,7 @@ class MediaNews extends Component {
                                     publicId="draft-icone_eqejjv"
                                     height={40}
                                     crop="scale" alt="Logo Projeto Draft.png"
-                                    className={classes.img}
+                                    className={classes.logoMedia}
                                 />
                             </a>
                         </div>
@@ -73,7 +78,7 @@ class MediaNews extends Component {
                                     publicId="freetheessence-icone_artmgm"
                                     height={40}
                                     crop="scale" alt="Logo Free The Esseence.png"
-                                    className={classes.img}
+                                    className={classes.logoMedia}
                                 />
                             </a>
                         </div>
@@ -84,7 +89,7 @@ class MediaNews extends Component {
                                     publicId="startse-icone_qnheqy.png"
                                     height={40}
                                     crop="scale" alt="Logo StartSe"
-                                    className={classes.img}
+                                    className={classes.logoMedia}
                                 />
                             </a>
                         </div>
@@ -95,7 +100,7 @@ class MediaNews extends Component {
                                     publicId="fiesp-icone_oiocia"
                                     height={40}
                                     crop="scale" alt="Logo FIESP"
-                                    className={classes.img}
+                                    className={classes.logoMedia}
                                 />
                             </a>
                         </div>
@@ -106,7 +111,7 @@ class MediaNews extends Component {
                                     publicId="infomoney-icone_jguhcs"
                                     height={40}
                                     crop="scale" alt="Logo Infomoney"
-                                    className={classes.img}
+                                    className={classes.logoMedia}
                                 />
                             </a>
                         </div>
