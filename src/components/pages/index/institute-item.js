@@ -6,15 +6,23 @@ import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('InstituteItem', theme => ({
     item: {
-        backgroundColor: theme.institute.lightColor,
-        margin: '0 5px',
+        backgroundColor: '#35c9ca',
+        borderRadius: 2,
+        margin: '0 8px',
+        padding: '5px 20px',
         display: 'flex',
-        padding: 5,
-        flexDirection: 'column',
+        flexDirection: 'column',    
         justifyContent: 'space-around',
-        textAlign: 'center',
-        height: 100,
-        color: '#222'
+        textAlign: 'left',
+        height: 120,
+        color: 'white'
+    },
+    tituloCardExpedicao: {
+        fontWeight: 600
+    },
+    saibaMaisCardExpedicao: {
+        fontWeight: 400,
+        color: 'black',
     }
 }));
 
@@ -23,17 +31,17 @@ class InstituteItem extends Component {
         const { classes, title, subtitle, link } = this.props;
         return (
             <div className={classes.item}>
-                <Typography type="subheading" color="inherit">
+            <Link to={link}>
+                <Typography type="subheading" color="inherit" className={classes.tituloCardExpedicao}>
                     {title}
                 </Typography>
-                <Typography type="subheading" color="inherit">
+                <Typography type="subheading" color="inherit" >
                     {subtitle}
                 </Typography>
-                <Typography type="body1" color="inherit">
-                    <Link to={link}>
-                        <strong>Saiba Mais</strong>
-                    </Link>
+                <Typography type="body1" color="inherit" className={classes.saibaMaisCardExpedicao}>
+                        Saiba Mais
                 </Typography>
+            </Link>
             </div>
         );
     }

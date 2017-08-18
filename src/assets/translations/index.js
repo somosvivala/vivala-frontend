@@ -4,7 +4,7 @@ export default {
         text: `Não perca mais horas e horas procurando sua próxima viagem. 
                 Peça sua cotação de forma ágil e seja atendido por agentes 
                 profissionais de forma humanizada e gratuita.`,
-        button: 'Receba sua cotação em até 24 horas'
+        button: 'Receba sua cotação em até 24h'
     },
     imageMessage: {
         text: 'Transforme a sua vida e a realidade de pessoas e comunidades'

@@ -24,11 +24,12 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
         color: 'white !important'
     },
     list: {
-        padding: 20,
+        //padding: 20,
     },
     listItem: {
-        backgroundColor: 'rgba(255,255,255,0.1) !important',
-        marginBottom: 10,
+        backgroundColor: '#FF7D39 !important',
+        marginBottom: 10,        
+        boxSizing: 'border-box'
     },
     text: {
         color: 'white !important'
@@ -43,8 +44,11 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
         color: 'white',
         fontWeight: 200,
         padding: 20,
-        margin: 20,
-        backgroundColor: 'rgba(255,255,255,0.1) !important',
+        //margin: 20,
+        margin: window.screen.width < 900 ? '0px' : '10px',
+        width: '100%',
+        backgroundColor: '#FF7D39 !important',
+        boxSizing: 'border-box'
     },
     button: {
         display: 'flex',
@@ -83,7 +87,7 @@ class SearchTravel extends Component {
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[0].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/hotels" className={classes.listItem}>
-                                    <img src={HoteisSvg} className={classes.img}alt="Hospedagens Icone" />
+                                    <img src={HoteisSvg} className={classes.img} alt="Hospedagens Icone" />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[1].text}</Typography>
                                 </ListItem>
                                 <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.listItem}>

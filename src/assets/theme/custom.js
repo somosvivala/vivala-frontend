@@ -106,7 +106,6 @@ theme = {
             ...customTypography.display1,
             color: vivalaColor,
             textTransform: 'uppercase',
-            fontWeight: 'bold'
         },
         subheading: {
             ...customTypography.subheading,
@@ -115,7 +114,11 @@ theme = {
         title: {
             ...customTypography.title,
             color: vivalaColor,
-        }
+        },
+        body1: {
+            ...customTypography.body1,
+            fontSize: '16px',
+        },
     },
 };
 

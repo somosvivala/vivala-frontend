@@ -52,11 +52,11 @@ class ExpeditionsRecord extends Component {
 
         const settings = {
             infinite: true,
-            speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptativeHeight: true,
-            autoplay: true
+            autoplay: true,
+            autoplaySpeed: 2000
         }
 
         return (

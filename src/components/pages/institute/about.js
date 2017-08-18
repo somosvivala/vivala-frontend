@@ -14,7 +14,20 @@ const styleSheet = createStyleSheet('InstituteAbout', theme => ({
         textAlign: window.screen.width < 800 ? 'center' : 'left'
     },
     title: {
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        fontWeight: '700',
+        margin: '2rem 0 1rem 0'
+    },
+    headerSliderInstituto: {
+        textTransform: 'uppercase',
+        fontWeight: '500',
+        fontSize: '1.3em',
+        letterSpacing: 2
+    },
+    textoSliderInstituto: {
+        fontSize: '1.15em',
+        color: 'white',
+        lineHeight: '25px'
     },
     item: {
         position: 'relative',
@@ -46,7 +59,32 @@ const styleSheet = createStyleSheet('InstituteAbout', theme => ({
     },
     whiteColor: {
         color: 'white'
+    },
+    conteudoCentral: {
+        backgroundColor: '#fff',
+        textAlign: 'center'
+    },
+    titleTextoCentral: {
+        textTransform: 'uppercase',
+        maxWidth: window.screen.width > 900 ? '55%' : '100%',
+        margin: '2rem auto',
+        fontSize: '1.3em',
+        letterSpacing: 2
+    },
+    textoCentral: {
+        maxWidth: window.screen.width > 900 ? '50%' : '100%',
+        margin: '2rem auto',
+        fontSize: '1.15em'
+    },
+    textoCardInstituto: {
+        textTransform: 'none',
+        fontWeight: 700,
+        position: 'absolute',
+        textAlign: 'center',
+        color: 'white !important'
+        
     }
+
 }));
 
 class InstituteAbout extends Component {
@@ -67,11 +105,11 @@ class InstituteAbout extends Component {
                         </Grid>
                         <Grid gutter={0} container className={classes.text}>
                             <Grid item xs={8}>
-                                <Typography type="subheading" color="inherit" className={`${classes.title} ${classes.whiteColor}`} gutterBottom>
+                                <Typography type="subheading" color="inherit" className={`${classes.headerSliderInstituto} ${classes.whiteColor}`} gutterBottom>
                                     Melhore o seu Mundo
                                 </Typography>
-                                <Typography type="body1" color="inherit" className={classes.whiteColor}>
-                                    Projetos de capacitação <br/> profissional com microempreendedores
+                                <Typography type="body1" color="inherit" className={classes.textoSliderInstituto}>
+                                    Projetos de capacitação profissional <br/> com microempreendedores
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -84,39 +122,42 @@ class InstituteAbout extends Component {
     render() {
         const { classes } = this.props;
         const settings = {
+            dots: true,
             infinite: true,
-            speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
+            autoplaySpeed: 4500,
             arrows: false,
             adaptativeHeight: true,
         }
         return (
-            <div>
-                <div className={classes.bg}>
-                    <div className="container padding">
-                        <Typography type="headline" color="accent" className={classes.title}>
-                            Sobre o Instituto
-                        </Typography>
+            <div className={classes.bg}>
+                <div>
+                    <div className={classes.bg}>
+                        <div className="container padding">
+                            <Typography type="headline" color="accent" className={classes.title}>
+                                Sobre o Instituto
+                            </Typography>
+                        </div>
                     </div>
-                </div>
 
-                <div className="container">
+                <div className="container sobre-instituto-slick-container">
                     <div className={classes.item}>
                         <Slider {...settings} className={classes.slider}>
                             { this.renderHeader() }
                         </Slider>
                     </div>
                 </div>
-
-                <div className={classes.bg}>
+            </div>
+            <div className={classes.conteudoCentral}>
+                <div>
                     <div className="container padding-heights">
                         <div>
-                            <Typography type="title" color="accent" className={classes.title} gutterBottom>
+                            <Typography type="title" color="accent" className={classes.titleTextoCentral} gutterBottom>
                                 Seja a Mudança
                             </Typography>
-                            <Typography type="body1" paragraph>
+                            <Typography type="body1" paragraph className={classes.textoCentral}>
                                 Para cada compra realizada no site, 5% do lucro é destinado
                                 a ações de sustentabilidade e capacitação profissional
                             </Typography>
@@ -130,7 +171,7 @@ class InstituteAbout extends Component {
                                 height={window.screen.width > 900 ? 400 : 170}
                                 crop="fit" alt="Sobre Instituto"
                             />
-                            <Typography type="title" color="inherit" className={classes.text2}>
+                            <Typography type="title" color="inherit" className={classes.textoCardInstituto}>
                                 Expedições
                             </Typography>
                         </Link>
@@ -142,7 +183,7 @@ class InstituteAbout extends Component {
                                 height={window.screen.width > 900 ? 400 : 170}
                                 crop="fit" alt="Sobre Instituto Sustentável"
                             />
-                            <Typography type="title" color="inherit" className={classes.text2}>
+                            <Typography type="title" color="inherit" className={classes.textoCardInstituto}>
                                 Instituto Sustentável
                             </Typography>
                         </Link>
@@ -154,12 +195,13 @@ class InstituteAbout extends Component {
                                 height={window.screen.width > 900 ? 400 : 170}
                                 crop="fit" alt="Sobre Instituto Resultados"
                             />
-                            <Typography type="title" color="inherit" className={classes.text2}>
+                            <Typography type="title" color="inherit" className={classes.textoCardInstituto}>
                                 Resultados
                             </Typography>
                         </Link>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }

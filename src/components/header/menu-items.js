@@ -9,18 +9,18 @@ class MenuItems extends Component {
         const {direction, showContact} = this.props;
 
         return (
-            <Grid gutter={24} container align="flex-start" justify="space-around" direction={direction}>
-                <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
+            <Grid gutter={24} container align="flex-start" justify="space-around">
+                <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item>
                     <Grid item xs={12}>
                         <Typography type="subheading">
-                            <Link to="/contato">Saiba Mais</Link>
+                            <Link to="/contato"><strong>Saiba Mais</strong></Link>
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
+                <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item>
                     <Grid item xs={12}>
                         <Typography type="subheading" gutterBottom>
-                            Vivalá
+                            <strong>Vivalá</strong>
                         </Typography>
                     </Grid>
                     <Grid item xs={12}>
@@ -47,7 +47,7 @@ class MenuItems extends Component {
                 <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
                     <Grid item xs={12}>
                         <Typography type="subheading" color="accent" gutterBottom>
-                            Instituto Vivalá
+                            <strong>Instituto Vivalá</strong>
                         </Typography>
                     </Grid>
                     <Grid item xs={12}>
@@ -75,7 +75,7 @@ class MenuItems extends Component {
                     <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
                         <Grid item xs={12}>
                             <Typography type="subheading" gutterBottom>
-                                Contato
+                                <strong>Contato</strong>
                             </Typography>
                         </Grid>
                         <Grid item xs={12}>

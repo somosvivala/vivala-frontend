@@ -20,13 +20,13 @@ class IndexSearch extends Component {
             <ReactCSSTransitionGroup transitionName="slider" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
                 { !this.state.clicked ?
                     <SearchCallToAction key="search-call-to-action"
-                                        click={this.handleClick}
-                                        translations={trans('search.callToAction')}
+                        click={this.handleClick}
+                        translations={trans('search.callToAction')}
                     />
                     :
                     <SearchTravel key="search-travel"
-                                  click={this.handleClick}
-                                  translations={trans('search.travel')}
+                        click={this.handleClick}
+                        translations={trans('search.travel')}
                     />
                 }
             </ReactCSSTransitionGroup>
