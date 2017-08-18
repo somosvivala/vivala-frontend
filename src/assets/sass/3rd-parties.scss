@@ -7,6 +7,10 @@
   height: 10px;
 }*/
 
+.video span iframe {
+  display: block;
+}
+
 .fix-slider {
   .slick-prev {
     z-index: 99999;

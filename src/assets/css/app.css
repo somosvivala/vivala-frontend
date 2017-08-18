@@ -1,6 +1,3 @@
-@import url(~slick-carousel/slick/slick.css);
-@import url(~slick-carousel/slick/slick-theme.css);
-@import url(~react-datepicker/dist/react-datepicker.css);
 .slick-prev:before, .slick-next:before {
   color: rgba(255, 109, 32, 0.7) !important; }
 
@@ -8,6 +5,9 @@
   content: url(http://res.cloudinary.com/vivala/image/upload/v1503017512/left-arrow-orange_tu6qgw.png);
   height: 10px;
 }*/
+.video span iframe {
+  display: block; }
+
 .fix-slider .slick-prev {
   z-index: 99999;
   left: 0 !important; }
@@ -170,42 +170,3 @@
       background: #eaeaea; }
     .rms-list .rms-item__reset {
       opacity: .3; }
-
-.container {
-  position: relative; }
-  .container.padding {
-    padding: 20px; }
-  .container.padding-2x {
-    padding: 40px; }
-  .container.padding-heights {
-    padding: 20px 0; }
-
-@media screen and (min-width: 900px) {
-  .container {
-    margin: 0 auto;
-    max-width: 900px;
-    width: 900px; } }
-
-* {
-  min-height: 0;
-  min-width: 0; }
-
-a {
-  color: inherit;
-  text-decoration: none;
-  width: 100%; }
-
-.quotation-form {
-  max-width: 400px;
-  margin: 60px auto 0 auto; }
-
-.slider-enter {
-  height: 0px; }
-
-.slider-enter.slider-enter-active {
-  height: 200px;
-  -webkit-transition: height .3s ease; }
-
-.slider-leave.slider-leave-active {
-  height: 0px;
-  -webkit-transition: height .3s ease; }

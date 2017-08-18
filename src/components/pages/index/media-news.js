@@ -20,7 +20,8 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     },
     text: {
         margin: '0 0 20px 20px',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        textAlign: window.screen.width < 900 ? 'center' : 'left'
     }
 }));
 
@@ -37,7 +38,8 @@ class MediaNews extends Component {
             ],
             adaptativeHeight: true,
             autoplay: true,
-            autoplaySpeed: 2500
+            autoplaySpeed: 2500,
+            speed: 1500
         }
         return (
             <div className={classes.bg}>
