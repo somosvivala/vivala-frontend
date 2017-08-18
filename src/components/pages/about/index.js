@@ -17,7 +17,9 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
         backgroundColor: theme.vivala.color
     },
     headline: {
-        textTransform: 'uppercase'
+        marginTop: '2rem',
+        textTransform: 'uppercase',
+        fontWeight: 700,
     },
     gridContainer: {
         maxWidth: '100%',
@@ -25,7 +27,11 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
     },
     subheading: {
         color: 'white !important',
-        fontSize: window.screen.width < 900 ? '18px' : '24px'
+        fontSize: window.screen.width < 900 ? '18px' : '22px',
+        fontWeight: '500',
+        lineHeight: '28px',
+        maxWidth: '62%',
+        margin: '0 auto'
     },
     img: {
         position: 'absolute',
@@ -42,6 +48,9 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
         backgroundSize: 'cover',
         maxWidth: '900px',
         margin: '0 auto'
+    },
+    containerTextoSobre: {
+        width: '60%'
     }
 }));
 
@@ -86,7 +95,7 @@ class AboutIndex extends Component {
                                 <Slider {...settings} className={classes.slider}>
                                     <div>
                                         <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-                                            <Grid item xs={12} >
+                                            <Grid item xs={12}  >
                                                 <Typography type="subheading" className={classes.subheading}>
                                                     Não perca mais horas e horas procurando sua próxima viagem.
                                                     Peça sua cotação de forma ágil e seja atendido por agentes profissionais de forma humanizada e gratuita. Analisaremos seu perfil e iremos te sugerir opções em até 24 horas!

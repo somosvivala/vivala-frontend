@@ -20,7 +20,9 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     },
     text: {
         margin: '0 0 20px 20px',
-    },
+        fontWeight: 700,
+        letterSpacing: 1
+    },  
     logoMedia: {
         marginTop: '22px',
         width: '60%',
