@@ -24,7 +24,7 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     logoMedia: {
         marginTop: '22px',
         width: '60%',
-        objectFit: 'contain'
+        objectFit: 'contain',
         textAlign: window.screen.width < 900 ? 'center' : 'left'
     }
 }));
@@ -42,12 +42,8 @@ class MediaNews extends Component {
             ],
             adaptativeHeight: true,
             autoplay: true,
-<<<<<<< HEAD
-            autoplaySpeed: 4500
-=======
             autoplaySpeed: 2500,
             speed: 1500
->>>>>>> 9faed9326b063c2403d4c9f02d5ce1a83e57de4f
         }
         return (
             <div className={classes.bg}>
