@@ -23,4 +23,4 @@ yarn-error.log*
 .*.swp
 
 # generated
- src/assets/css/app.css
+src/assets/css/app.css
