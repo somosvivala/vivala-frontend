@@ -32,7 +32,7 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
         textAlign: 'left',
     },
     addMargin: {
-        marginLeft: window.screen.width > 900 ? 250 : 'auto',
+        marginLeft: window.screen.width > 900 ? 270 : 'auto',
         marginRight: window.screen.width > 900 ? 0 : 'auto',
     },
     button: {

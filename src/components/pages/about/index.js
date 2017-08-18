@@ -96,7 +96,7 @@ class AboutIndex extends Component {
 
                                 <Slider {...settings} className={classes.slider}>
                                     <div>
-                                        <div style={{ padding:  window.screen.width > 800 ? '' : '.5rem 20px', display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                                        <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                                             <Grid item xs={12}  >
                                                 <Typography type="subheading" className={classes.subheading}>
                                                     Não perca mais horas e horas procurando sua próxima viagem.
@@ -129,7 +129,7 @@ class AboutIndex extends Component {
 
                                     <div>
                                         <div style={{ 
-                                            padding:  window.screen.width > 700 ? '' : '.5rem 20px', 
+                                            padding, 
                                             display: 'flex', 
                                             alignItems: 'center', textAlign: 'center'}}>
                                             <Grid item xs={12} >
