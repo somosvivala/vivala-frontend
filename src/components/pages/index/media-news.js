@@ -21,7 +21,8 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
     text: {
         margin: '0 0 20px 20px',
         fontWeight: 700,
-        letterSpacing: 1
+        letterSpacing: 1,
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
     },  
     logoMedia: {
         marginTop: '22px',
@@ -36,16 +37,12 @@ class MediaNews extends Component {
         const { classes, text } = this.props;
         const settings = {
             infinite: true,
-            slidesToShow: 3,
+            slidesToShow: window.screen.width < 900 ? '2' : '3',
             slidesToScroll: 1,
-            responsive: [
-                { breakpoint: 768, settings: { slidesToShow: 2 } },
-                { breakpoint: 480, settings: { slidesToShow: 1 } },
-            ],
             adaptativeHeight: true,
             autoplay: true,
-            autoplaySpeed: 2500,
-            speed: 1500
+            autoplaySpeed: 5000,
+            speed: 500
         }
         return (
             <div className={classes.bg}>

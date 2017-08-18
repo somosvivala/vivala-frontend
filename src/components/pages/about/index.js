@@ -20,6 +20,7 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
         marginTop: '2rem',
         textTransform: 'uppercase',
         fontWeight: 700,
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
     },
     gridContainer: {
         maxWidth: '100%',
@@ -30,7 +31,7 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
         fontSize: window.screen.width < 900 ? '18px' : '22px',
         fontWeight: '500',
         lineHeight: '28px',
-        maxWidth: '62%',
+        maxWidth: window.screen.width < 900 ? '100%' : '62%',
         margin: '0 auto'
     },
     img: {
@@ -49,8 +50,8 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
         maxWidth: '900px',
         margin: '0 auto'
     },
-    containerTextoSobre: {
-        width: '60%'
+    subTitle: {
+        textAlign: window.screen.width < 900 ? 'center' : 'left'
     }
 }));
 
@@ -78,7 +79,7 @@ class AboutIndex extends Component {
                         <Typography type="headline" className={classes.headline} gutterBottom>
                             Sobre
                         </Typography>
-                        <Typography type="body1" paragraph>
+                        <Typography type="body1" paragraph className={classes.subTitle}>
                             Acreditamos que viagens melhoram pessoas
                             e pessoas melhoram o mundo
                         </Typography>
@@ -94,7 +95,7 @@ class AboutIndex extends Component {
 
                                 <Slider {...settings} className={classes.slider}>
                                     <div>
-                                        <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                                        <div style={{ padding:  window.screen.width > 800 ? '' : '.5rem 20px', display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                                             <Grid item xs={12}  >
                                                 <Typography type="subheading" className={classes.subheading}>
                                                     Não perca mais horas e horas procurando sua próxima viagem.
@@ -126,7 +127,10 @@ class AboutIndex extends Component {
                                     </div>
 
                                     <div>
-                                        <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center'}}>
+                                        <div style={{ 
+                                            padding:  window.screen.width > 700 ? '' : '.5rem 20px', 
+                                            display: 'flex', 
+                                            alignItems: 'center', textAlign: 'center'}}>
                                             <Grid item xs={12} >
                                                 <Typography type="subheading" className={classes.subheading}>
                                                     A Vivalá reverte 5% do seu lucro para o Instituto Vivalá,
