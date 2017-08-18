@@ -2,6 +2,11 @@
   color: rgba(255, 109, 32, 0.7) !important;
 }
 
+/*.slick-prev:before {
+  content: url(http://res.cloudinary.com/vivala/image/upload/v1503017512/left-arrow-orange_tu6qgw.png);
+  height: 10px;
+}*/
+
 .fix-slider {
   .slick-prev {
     z-index: 99999;

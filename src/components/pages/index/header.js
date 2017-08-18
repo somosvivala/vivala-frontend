@@ -40,7 +40,8 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
         paddingLeft: 0,
         paddingRight: 0,
         fontWeight: 'bold',
-        textTransform:'none'
+        textTransform:'none',
+        fontSize: window.screen.width < 900 ? '18px' : '17px'
     }
 }));
 

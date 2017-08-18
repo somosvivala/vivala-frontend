@@ -37,7 +37,7 @@ class MediaNews extends Component {
             ],
             adaptativeHeight: true,
             autoplay: true,
-            autoplaySpeed: 2000
+            autoplaySpeed: 2500
         }
         return (
             <div className={classes.bg}>
@@ -48,9 +48,8 @@ class MediaNews extends Component {
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="https://catracalivre.com.br/geral/agenda/indicacao/startup-conecta-pessoas-que-tem-interesse-de-viajar-e-realizar-voluntariado-no-brasil/">
                                 <Image
                                     cloudName="vivala"
-                                    publicId="logo-catracalivre_c9bijc.png"
-                                    width={200}
-                                    height={200}
+                                    publicId="catracalivre-icone_ilcoly.png"
+                                    height={40}
                                     crop="scale" alt="Logo Catraca Livre"
                                     className={classes.img}
                                 />
@@ -60,10 +59,9 @@ class MediaNews extends Component {
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="http://projetodraft.com/viagens-com-voluntariado-essa-e-a-proposta-da-vivala-para-se-destacar-no-mercado-do-turismo-de-experiencia/">
                                 <Image
                                     cloudName="vivala"
-                                    publicId="logo-draft_rqzoyg.png"
-                                    width={200}
-                                    height={200}
-                                    crop="scale" alt="Logo Projeto Draft"
+                                    publicId="draft-icone_eqejjv"
+                                    height={40}
+                                    crop="scale" alt="Logo Projeto Draft.png"
                                     className={classes.img}
                                 />
                             </a>
@@ -72,10 +70,9 @@ class MediaNews extends Component {
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="https://www.freetheessence.com.br/unplug/inspire-se/vivala-viajar-voluntariado/">
                                 <Image
                                     cloudName="vivala"
-                                    publicId="logo-freetheessence_bisca1.png"
-                                    width={200}
-                                    height={200}
-                                    crop="scale" alt="Logo Free The Esseence"
+                                    publicId="freetheessence-icone_artmgm"
+                                    height={40}
+                                    crop="scale" alt="Logo Free The Esseence.png"
                                     className={classes.img}
                                 />
                             </a>
@@ -84,9 +81,8 @@ class MediaNews extends Component {
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="https://conteudo.startse.com.br/startups/julia_miozzo/trabalho-voluntrio-para-viajar-startup-conecta-usurios-a-oportunidades/">
                                 <Image
                                     cloudName="vivala"
-                                    publicId="logo-startse_rrocmn.png"
-                                    width={200}
-                                    height={200}
+                                    publicId="startse-icone_qnheqy.png"
+                                    height={40}
                                     crop="scale" alt="Logo StartSe"
                                     className={classes.img}
                                 />
@@ -96,9 +92,8 @@ class MediaNews extends Component {
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="http://www.fiesp.com.br/mobile/noticia/?id=216115">
                                 <Image
                                     cloudName="vivala"
-                                    publicId="logo-fiesp_jzbcmw.png"
-                                    width={200}
-                                    height={200}
+                                    publicId="fiesp-icone_oiocia"
+                                    height={40}
                                     crop="scale" alt="Logo FIESP"
                                     className={classes.img}
                                 />
@@ -108,9 +103,8 @@ class MediaNews extends Component {
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="http://www1.folha.uol.com.br/turismo/2015/12/1717605-jovens-criam-rede-social-que-liga-turistas-a-projetos-sociais-pelo-brasil.shtml">
                                 <Image
                                     cloudName="vivala"
-                                    publicId="logo-infomoney_wlyjbp.png"
-                                    width={200}
-                                    height={200}
+                                    publicId="infomoney-icone_jguhcs"
+                                    height={40}
                                     crop="scale" alt="Logo Infomoney"
                                     className={classes.img}
                                 />
