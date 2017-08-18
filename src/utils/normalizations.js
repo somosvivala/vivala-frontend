@@ -16,3 +16,5 @@ export const maskCurrency = (value) => {
 
     return `R$ ${(number/100).toFixed(2).toLocaleString("pt-BR", { style: "currency" })}`;
 }
+
+export const maskTime = value => value.replace(/\D/g,"").slice(0, 4).replace(/(\d)(\d{2})$/,"$1:$2");

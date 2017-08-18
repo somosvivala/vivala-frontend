@@ -23,12 +23,14 @@ class LodgingSixthStep extends Component {
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
-                    <Typography type="title" color="inherit" style={{marginBottom: 30}}>
-                        Serviços incluídos desejados
-                    </Typography>
+                <Grid container gutter={24}>
+                    <Grid item xs={12}>
+                        <Typography type="title" color="inherit">
+                            Serviços incluídos desejados
+                        </Typography>
+                    </Grid>
 
-                    <Grid container gutter={0}>
+                    <Grid container gutter={0} item xs={12}>
                         <Grid item xs={6}>
                             <Field
                                 name="cafe_manha"
@@ -75,9 +77,11 @@ class LodgingSixthStep extends Component {
                         </Grid>
                     </Grid>
 
-                    <Typography type="title" color="inherit"  style={{marginTop: 50, marginBottom: 30}}>
-                        Opções Avançadas
-                    </Typography>
+                    <Grid item xs={12}>
+                        <Typography type="title" color="inherit"  style={{marginTop: 30}}>
+                            Opções Avançadas
+                        </Typography>
+                    </Grid>
 
                     <Grid item xs={12}>
                         <Field
@@ -107,7 +111,7 @@ class LodgingSixthStep extends Component {
                         />
                     </Grid>
 
-                    <Grid gutter={0} container style={{ marginTop: 30}}>
+                    <Grid gutter={0} container item xs={12} style={{ marginTop: 30}}>
                         <Grid gutter={0} container item xs={6} justify="flex-start">
                             <Button raised color="primary" type="button" onClick={previousPage}>
                                 Anterior

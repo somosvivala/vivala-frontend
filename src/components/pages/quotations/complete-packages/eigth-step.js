@@ -13,18 +13,11 @@ class CompletePackagesSixthStep extends Component {
     renderFields(total) {
         return _.range(total).map((item, key) => {
             return (
-                <Grid gutter={8} container key={`passageiro-${key}`} style={{ padding: 10, marginBottom: 30 }}>
-                    <Typography type="subheading" color="inherit">
-                        Passageiro {key+1}
-                    </Typography>
-
-                    <Grid item xs={12} style={{ marginBottom: 10 }}>
-                        <Field
-                            type="text"
-                            name={`seguro_viagem_nome[${key}]`}
-                            component={TextField}
-                            label="Nome Completo"
-                        />
+                <Grid gutter={24} container key={`passageiro-${key}`} style={{ padding: 10, marginBottom: 30 }}>
+                    <Grid item xs={12}>
+                        <Typography type="subheading" color="inherit">
+                            Passageiro {key+1}
+                        </Typography>
                     </Grid>
 
                     <Grid item xs={12}>
@@ -58,7 +51,7 @@ class CompletePackagesSixthStep extends Component {
 
                                 {this.renderFields(total)}
 
-                                <Grid gutter={0} container style={{ marginTop: 30}}>
+                                <Grid gutter={0} container item xs={12} style={{ marginTop: 30}}>
                                     <Grid gutter={0} container item xs={6} justify="flex-start">
                                         <Button raised color="primary" type="button" onClick={previousPage}>
                                             Anterior
@@ -72,13 +65,13 @@ class CompletePackagesSixthStep extends Component {
                                 </Grid>
                             </Grid>
                             :
-                            <Grid container>
+                            <Grid container gutter={0} item xs={12}>
                                 <Grid item xs={12}>
                                     <Typography type="body1" color="inherit">
                                         Você não selecionou acompanhantes. Siga para a próxima etapa.
                                     </Typography>
                                 </Grid>
-                                <Grid gutter={0} container style={{ marginTop: 30}}>
+                                <Grid gutter={0} container item xs={12} style={{ marginTop: 30}}>
                                     <Grid gutter={0} container item xs={6} justify="flex-start">
                                         <Button raised color="primary" type="button" onClick={previousPage}>
                                             Anterior

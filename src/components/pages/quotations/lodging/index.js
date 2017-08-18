@@ -87,7 +87,7 @@ class LodgingIndex extends Component {
 
         return (
             <div className={classes.bg}>
-                <div className="container padding-2x">
+                <div className="container" style={{ padding: '40px 20px' }}>
                     <LodgingHeader/>
                     <Typography type="subheading" align="right">{page} / 7</Typography>
 

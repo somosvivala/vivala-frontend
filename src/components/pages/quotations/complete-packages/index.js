@@ -87,7 +87,7 @@ class CompletePackagesIndex extends Component {
 
         return (
             <div className={classes.bg}>
-                <div className="container padding-2x">
+                <div className="container" style={{ padding: '40px 20px' }}>
                     <CompletePackagesHeader/>
                     <Typography type="subheading" align="right">{page} / 9</Typography>
 

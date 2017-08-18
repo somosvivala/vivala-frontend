@@ -52,6 +52,31 @@ class QuotationsSearch extends Component {
                                 Voos
                             </Button>
                         </Link>
+                        <Link to="/cotacao/carro">
+                            <Button raised color="primary" className={classes.button}>
+                               Carros
+                            </Button>
+                        </Link>
+                        <Link to="/cotacao/rodoviario">
+                            <Button raised color="primary" className={classes.button}>
+                               Onibus
+                            </Button>
+                        </Link>
+                        <Link to="/cotacao/cruzeiro">
+                            <Button raised color="primary" className={classes.button}>
+                              Cruzeiros 
+                            </Button>
+                        </Link>
+                        <Link to="/cotacao/passeio">
+                            <Button raised color="primary" className={classes.button}>
+                              Passeios 
+                            </Button>
+                        </Link>
+                        <Link to="/cotacao/seguro">
+                            <Button raised color="primary" className={classes.button}>
+                              Seguro 
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

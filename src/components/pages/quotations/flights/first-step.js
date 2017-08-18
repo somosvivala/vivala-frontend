@@ -9,11 +9,11 @@ import Grid from 'material-ui/Grid';
 
 class FlightFirstStep extends Component {
     render() {
-        const { previousPage, invalid, pristine, submitting, handleSubmit } = this.props;
+        const { invalid, pristine, submitting, handleSubmit } = this.props;
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
-                <Grid container gutter={16}>
+                <Grid container gutter={24}>
                     <Grid item xs={12}>
                         <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
                             Transporte Aéreo
