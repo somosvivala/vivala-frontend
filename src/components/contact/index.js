@@ -54,7 +54,7 @@ class ContactForm extends Component {
 
                         <Grid item xs={12}>
                             <Field
-                                type="text"
+                                type="tel"
                                 name="telefone"
                                 component={TextField}
                                 label="Telefone"
