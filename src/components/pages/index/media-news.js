@@ -19,13 +19,12 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
         margin: '20px auto'
     },
     text: {
-        margin: '0 0 20px 20px',
+        padding: '0 0 20px 20px',
         fontWeight: 700,
         letterSpacing: 1,
         textAlign: window.screen.width < 900 ? 'center' : 'left',
     },  
     logoMedia: {
-        marginTop: '22px',
         width: '60%',
         objectFit: 'contain',
         textAlign: window.screen.width < 900 ? 'center' : 'left'

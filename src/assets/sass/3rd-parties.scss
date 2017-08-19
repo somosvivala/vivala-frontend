@@ -6,12 +6,18 @@
   margin: 0 auto;
 }
 
-.slick-next:before {
-  content: url(http://res.cloudinary.com/vivala/image/upload/v1503034817/right-arrow-orange_8x43.png);
+.slick-next {
+  height: 60px;
+  &:before {
+    content: url(http://res.cloudinary.com/vivala/image/upload/v1503034817/right-arrow-orange_8x43.png);
+  }
 }
 
-.slick-prev:before {
-  content: url(http://res.cloudinary.com/vivala/image/upload/v1503034458/left-arrow-orange_8x43.png);
+.slick-prev {
+  height: 60px;
+  &:before {
+    content: url(http://res.cloudinary.com/vivala/image/upload/v1503034458/left-arrow-orange_8x43.png);
+  }
 }
 
 .slick-next.white {
