@@ -38,7 +38,7 @@ class AgentsBonus extends Component {
         const settings = {
             infinite: true,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 4000,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [

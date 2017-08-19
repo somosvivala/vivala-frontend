@@ -12,8 +12,7 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
         height: 190
     },
     bg: {
-        backgroundColor: '#EFEDEE',
-        //backgroundColor: theme.default.color
+        backgroundColor: '#DCDCDC',
     },
     applyPadding: {
         padding: window.screen.width < 900 ? '0 20px' : '0'
@@ -21,6 +20,7 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
     text: {
         fontWeight: 'bold',
         fontSize: '18px',
+        textAlign: window.screen.width < 900 ? "center" : "left"
     },
     button: {
         boxShadow: 'inset 2px 2px 8px 1px rgba(203,200,202,1)'
@@ -34,9 +34,9 @@ class SearchCallToAction extends Component {
         return (
             <div className={classes.bg}>
                 <div className={`container ${classes.applyPadding}`}>
-                    <Grid container gutter={0} align="center" justify="center" className={classes.container}>
-                        <Grid gutter={0} container item xs={12} sm={6} justify="center">
-                            <Typography type="subheading" align="center" className={classes.text}>
+                    <Grid container gutter={0} align="center" justify="space-between" className={classes.container}>
+                        <Grid gutter={0} container item xs={12} sm={6} justify="flex-start">
+                            <Typography type="subheading" className={classes.text}>
                                 {translations.text}
                             </Typography>
                         </Grid>

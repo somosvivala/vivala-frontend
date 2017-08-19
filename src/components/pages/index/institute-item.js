@@ -31,17 +31,17 @@ class InstituteItem extends Component {
         const { classes, title, subtitle, link } = this.props;
         return (
             <div className={classes.item}>
-            <Link to={link}>
-                <Typography type="subheading" color="inherit" className={classes.tituloCardExpedicao}>
-                    {title}
-                </Typography>
-                <Typography type="subheading" color="inherit" >
-                    {subtitle}
-                </Typography>
-                <Typography type="body1" color="inherit" className={classes.saibaMaisCardExpedicao}>
-                        Saiba Mais
-                </Typography>
-            </Link>
+                <Link to={link}>
+                    <Typography type="subheading" color="inherit" className={classes.tituloCardExpedicao}>
+                        {title}
+                    </Typography>
+                    <Typography type="subheading" color="inherit" >
+                        {subtitle}
+                    </Typography>
+                    <Typography type="body1" color="inherit" className={classes.saibaMaisCardExpedicao}>
+                            Saiba Mais
+                    </Typography>
+                </Link>
             </div>
         );
     }

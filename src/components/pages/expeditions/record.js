@@ -56,7 +56,7 @@ class ExpeditionsRecord extends Component {
             slidesToScroll: 1,
             adaptativeHeight: true,
             autoplay: true,
-            autoplaySpeed: 2000
+            autoplaySpeed: 4000
         }
 
         return (

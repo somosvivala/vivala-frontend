@@ -52,7 +52,7 @@ class SubscribeIndex extends Component {
         if (error || success) {
             return <div className={classes.bg}>
                 <div className="container">
-                    <Message type={error ? 'error' : 'success'} title={title} />
+                    <Message type={error ? 'error' : 'success'} title="Expedições" heading="Inscrição efetuada com sucesso!" subheading="Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos." />
                 </div>
             </div>
         }

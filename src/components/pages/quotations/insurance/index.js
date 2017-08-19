@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles, createStyleSheet } from 'material-ui/styles';
-import LodgingHeader from './header';
+import InsuranceHeader from './header';
 import {LinearProgress} from 'material-ui/Progress';
 import Typography from 'material-ui/Typography';
 import FirstStep from './first-step';
@@ -63,7 +63,7 @@ class InsuranceIndex extends Component {
             return (
                 <div className={classes.bg}>
                     <div className="container padding">
-                        <LodgingHeader/>
+                        <InsuranceHeader/>
                         <Typography type="subheading" align="right">{page} / 5</Typography>
 
                         <LinearProgress
@@ -73,7 +73,7 @@ class InsuranceIndex extends Component {
                             valueBuffer={100}
                         />
                         <div style={{ marginTop: 30 }}>
-                            <Message type={error ? 'error' : 'success'} title="Contato" />
+                            <Message type={error ? 'error' : 'success'} title="Cotação - Seguro" heading="Formulário enviado com sucesso!" subheading="Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos." />
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ class InsuranceIndex extends Component {
         return (
             <div className={classes.bg}>
                 <div className="container" style={{ padding: '40px 20px' }}>
-                    <LodgingHeader/>
+                    <InsuranceHeader/>
                     <Typography type="subheading" align="right">{page} / 5</Typography>
 
                     <LinearProgress

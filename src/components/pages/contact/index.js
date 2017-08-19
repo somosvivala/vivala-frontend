@@ -59,7 +59,7 @@ class ContactIndex extends Component {
         if (error || success) {
             return <div className={classes.bg}>
                 <div className="container padding">
-                    <Message type={error ? 'error' : 'success'} title="Contato" />
+                    <Message type={error ? 'error' : 'success'} title="Contato" heading="Recebemos seu contato!" subheading="Obrigado pelas informações. Retornaremos o mais breve possível." />
                 </div>
             </div>
         }

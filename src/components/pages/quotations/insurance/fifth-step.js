@@ -51,7 +51,7 @@ class InsuranceFifthStep extends Component {
 
                     <Grid item xs={12}>
                         <Field
-                            type="text"
+                            type="tel"
                             component={textInput}
                             name="telefone"
                             label="Telefone"

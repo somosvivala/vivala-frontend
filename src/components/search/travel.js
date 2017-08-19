@@ -59,7 +59,10 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
         paddingRight: 20
     },
     colorWhite: {
-        color: 'white'
+        color: 'white',
+    },
+    bold: {
+        fontWeight: 'bold'
     }
 }));
 
@@ -97,16 +100,18 @@ class SearchTravel extends Component {
                             </List>
                         </Grid>
                         <Grid xs={12} sm={6} item>
-                            <div className={classes.bordered}>
-                                <Typography type="body1" paragraph className={classes.colorWhite}>
-                                    {translations.boxRight.text}
-                                </Typography>
-                                <Typography type="subheading" paragraph className={classes.colorWhite}>
-                                    <Link to="/cotacao" className={classes.button}>
-                                        {translations.boxRight.button} <Icon>arrow_forward</Icon>
-                                    </Link>
-                                </Typography>
-                            </div>
+                            <Link to="/cotacao" className={classes.button}>
+                                <div className={`${classes.bordered} ${classes.colorWhite}`}>
+                                    <Typography type="body1" paragraph color="inherit" >
+                                        {translations.boxRight.text}
+                                    </Typography>
+                                    <Typography type="subheading" color="inherit" paragraph className={classes.bold}>
+                                        <Grid container gutter={0} item xs={12} justify="space-between">
+                                            {translations.boxRight.button} <Icon>arrow_forward</Icon>
+                                        </Grid>
+                                    </Typography>
+                                </div>
+                            </Link>
                         </Grid>
                     </Grid>
                 </div>

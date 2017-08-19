@@ -25,7 +25,7 @@ class ExpeditionsShow extends Component {
         return (
             <div>
                 <ExpeditionsRecord {...expedition} />
-                <SubscribeIndex title="Expedições" record={{ type: 'expedicoes', id: match.params.id}} />
+                <SubscribeIndex record={{ type: 'expedicoes', id: match.params.id}} />
             </div>
         );
     }

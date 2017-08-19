@@ -74,7 +74,7 @@ class CarIndex extends Component {
                             valueBuffer={100}
                         />
                         <div style={{ marginTop: 30 }}>
-                            <Message type={error ? 'error' : 'success'} title="Contato" />
+                            <Message type={error ? 'error' : 'success'} title="Cotação - Carro" heading="Formulário enviado com sucesso!" subheading="Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos." />
                         </div>
                     </div>
                 </div>

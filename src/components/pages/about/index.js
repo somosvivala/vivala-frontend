@@ -27,13 +27,21 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
         maxWidth: '100%',
         position: 'relative',
     },
+    box: {
+        position: 'relative',
+        height: window.screen.width > 900 ? 300 : 250,
+        textAlign: 'center'
+    },
     subheading: {
         color: 'white !important',
         fontSize: window.screen.width < 900 ? '18px' : '22px',
         fontWeight: '500',
         lineHeight: '28px',
-        maxWidth: window.screen.width < 900 ? '100%' : '62%',
-        margin: '0 auto'
+        display: 'inline-flex',
+        alignItems: 'center',
+        height: window.screen.width > 900 ? 300 : 250,
+        margin: 'auto',
+        width: '80%'
     },
     img: {
         position: 'absolute',
@@ -56,19 +64,31 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
     }
 }));
 
+class PrevArrow extends Component {
+    render() {
+        return <button {...this.props} className="slick-arrow slick-prev white" />
+    }
+}
+class NextArrow extends Component {
+    render() {
+        return <button {...this.props} className="slick-arrow slick-next white" />
+    }
+}
+
+
 class AboutIndex extends Component {
     render() {
         const { classes } = this.props;
 
         const settings = {
             infinite: true,
-            autoplay: true,
-            autoplaySpeed: 10500,
-            speed: 4000,
+            speed: 1000,
             slidesToShow: 1,
-            arrows: false,
+            arrows: true,
             slidesToScroll: 1,
             adaptativeHeight: true,
+            prevArrow: <PrevArrow />,
+            nextArrow: <NextArrow />
         }
 
         const padding = window.screen.width < 900 ? '70px 20px' : '100px 20px';
@@ -96,49 +116,38 @@ class AboutIndex extends Component {
 
                                 <Slider {...settings} className={classes.slider}>
                                     <div>
-                                        <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-                                            <Grid item xs={12}  >
-                                                <Typography type="subheading" className={classes.subheading}>
-                                                    Não perca mais horas e horas procurando sua próxima viagem.
-                                                    Peça sua cotação de forma ágil e seja atendido por agentes profissionais de forma humanizada e gratuita. Analisaremos seu perfil e iremos te sugerir opções em até 24 horas!
-                                                </Typography>
-                                            </Grid>
+                                        <div className={classes.box}>
+                                            <Typography type="subheading" className={classes.subheading}>
+                                                Não perca mais horas e horas procurando sua próxima viagem.
+                                                Peça sua cotação de forma ágil e seja atendido por agentes profissionais de forma humanizada e gratuita. Analisaremos seu perfil e iremos te sugerir opções em até 24 horas!
+                                            </Typography>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center'}}>
-                                            <Grid item xs={12} >
-                                                <Typography type="subheading" className={classes.subheading}>
-                                                    Se preferir, busque e compre suas próximas experiências comparando mais de 500.000 fornecedores no mundo
-                                                </Typography>
-                                            </Grid>
+                                        <div className={classes.box}>
+                                            <Typography type="subheading" className={classes.subheading}>
+                                                Se preferir, busque e compre suas próximas experiências comparando mais de 500.000 fornecedores no mundo
+                                            </Typography>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <div style={{ padding, display: 'flex', alignItems: 'center', textAlign: 'center'}}>
-                                            <Grid item xs={12} >
-                                                <Typography type="subheading" className={classes.subheading}>
-                                                    Buscando soluções corporativas?
-                                                    Realizamos a gestão corporativa de viagens e programas de incentivo de viagens para seus funcionários.
-                                                    </Typography>
-                                            </Grid>
+                                        <div className={classes.box}>
+                                            <Typography type="subheading" className={classes.subheading}>
+                                                Buscando soluções corporativas?
+                                                Realizamos a gestão corporativa de viagens e programas de incentivo de viagens para seus funcionários.
+                                            </Typography>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <div style={{ 
-                                            padding, 
-                                            display: 'flex', 
-                                            alignItems: 'center', textAlign: 'center'}}>
-                                            <Grid item xs={12} >
-                                                <Typography type="subheading" className={classes.subheading}>
-                                                    A Vivalá reverte 5% do seu lucro para o Instituto Vivalá,
-                                                    fortalecendo o trabalho de Expedições de capacitação profissional realizado com microempreendedores brasileiros,
-                                                    ou seja, comprando conosco você estará ajudando o Instituto a se manter e expandir suas atividades.
-                                                </Typography>
-                                            </Grid>
+                                        <div className={classes.box}>
+                                            <Typography type="subheading" className={classes.subheading}>
+                                                A Vivalá reverte 5% do seu lucro para o Instituto Vivalá,
+                                                fortalecendo o trabalho de Expedições de capacitação profissional realizado com microempreendedores brasileiros,
+                                                ou seja, comprando conosco você estará ajudando o Instituto a se manter e expandir suas atividades.
+                                            </Typography>
                                         </div>
                                     </div>
                                 </Slider>

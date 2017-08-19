@@ -15,7 +15,7 @@ const styleSheet = createStyleSheet('InstituteResults', theme => ({
     },
     text: {
         maxWidth: '100%',
-        flex: 10
+        flex: 5
     },
     icon: {
         fontWeight: 'bold',
@@ -41,40 +41,28 @@ class InstituteResults extends Component {
                         Resultados
                     </Typography>
                     <List>
-                        <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.icon}>3</Typography>
+                        <ListItem className={classes.listItem}>
+                            <Typography className={classes.icon}>+2</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Expedições
                             </Typography>
                         </ListItem>
-                        <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.icon}>15</Typography>
-                            <Typography type="subheading" color="inherit" className={classes.text}>
-                                Instituições sociais ajudadas em 5 estados
-                            </Typography>
-                        </ListItem>
-                        <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.icon}>18</Typography>
+                        <ListItem className={classes.listItem}>
+                            <Typography className={classes.icon}>+40</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Microempreendedores capacitados
                             </Typography>
                         </ListItem>
-                        <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.icon}>25</Typography>
+                        <ListItem className={classes.listItem}>
+                            <Typography className={classes.icon}>+50</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Transformadores de expedição
+                                Voluntários (Transformadores)
                             </Typography>
                         </ListItem>
-                        <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.icon}>500</Typography>
+                        <ListItem className={classes.listItem}>
+                            <Typography className={classes.icon}>+R$ 40.000</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Inscrições voluntárias
-                            </Typography>
-                        </ListItem>
-                        <ListItem href="#simple-list" className={classes.listItem}>
-                            <Typography className={classes.icon}>RIO</Typography>
-                            <Typography type="subheading" color="inherit" className={classes.text}>
-                                Único parceiro global na capacitação de voluntários para os jogos RIO 2016
+                                Injetados na economia local
                             </Typography>
                         </ListItem>
                     </List>

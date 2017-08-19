@@ -25,7 +25,6 @@ const styleSheet = createStyleSheet('Institute', theme => ({
     subheading: {
         color: 'white',
         textAlign: 'center',
-        padding: window.screen.width < 900 ? 0 : "5px 0px 0px 20px"
     },
     slider: {
         width:  '90%',
@@ -55,13 +54,15 @@ class Institute extends Component {
         return (
             <div className={classes.bg}>
                 <div className="container padding">
-                    <Grid gutter={0} container className={classes.gridContainer} justify="space-around">
+                    <Grid gutter={8} container className={classes.gridContainer} justify="space-between">
                         <Grid gutter={0} container item xs={4} justify="center">
                             <img src={Logo} alt="Instituto Vivala" className={classes.logoInstituto} />
                         </Grid>
                         <Grid gutter={0} container item xs={8} justify="center">
                             <Typography type="subheading" gutterBottom color="inherit" className={classes.subheading}>
-                                {text}
+                                Participe de viagens <br/>
+                                de capacitação profissional <br/>
+                                em comunidades brasileiras
                             </Typography>
                             {
                                 window.screen.width > 900 &&
@@ -77,7 +78,7 @@ class Institute extends Component {
                     <div className="home-instituto-slick-container">
                     <Slider {...settings} className={classes.slider}>
                         <div><InstituteItem title='Expedição Amazônia #3' subtitle="O pulmão do mundo" link='/expedicoes/3' /></div>
-                        <div><InstituteItem title='Expedição Mata Atlântica #1' subtitle="Sabedoria da floresta"  link='/expedicoes/4' /></div>
+                        <div><InstituteItem title='Expedição Mata Atlântica #4' subtitle="Sabedoria da floresta"  link='/expedicoes/4' /></div>
                     </Slider>
                     </div>
 

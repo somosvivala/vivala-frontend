@@ -27,7 +27,7 @@ class NewsletterIndex extends Component {
         if (error || success) {
             return <div>
                 <div className="container padding">
-                    <Message type={error ? 'error' : 'success'} title="Newsletter" />
+                    <Message type={error ? 'error' : 'success'} title="Newsletter" heading="Obrigado por se cadastrar!" subheading="Agora você começará a receber conteúdos exclusivos da Vivalá e do Instituto Vivalá." />
                 </div>
             </div>
         }

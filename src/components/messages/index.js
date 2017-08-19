@@ -24,16 +24,16 @@ const styleSheet = createStyleSheet('MessagesIndex', theme => ({
 
 class MessagesIndex extends Component {
     render() {
-        const { classes, type, title } = this.props;
+        const { classes, type, title, heading, subheading } = this.props;
 
         const successMessage = (
             <div className={classes.message}>
                 <Icon className={classes[type]}>done</Icon>
                 <Typography type="body1">
-                    <strong>Formulário enviado com sucesso!</strong>
+                    <strong>{heading}</strong>
                 </Typography>
                 <Typography type="body1">
-                    Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos.
+                    {subheading}
                 </Typography>
 
             </div>
@@ -43,10 +43,10 @@ class MessagesIndex extends Component {
             <div className={classes.message}>
                 <Icon className={classes[type]}>block</Icon>
                 <Typography type="body1" paragraph>
-                    <strong>Erro ao enviar formulário!</strong>
+                    <strong>Ops!</strong>
                 </Typography>
                 <Typography type="body1" paragraph>
-                    Houve um problema ao guardar as informações.
+                    Houve um problema ao enviar as informações.
                 </Typography>
             </div>
         )
@@ -61,7 +61,11 @@ class MessagesIndex extends Component {
 }
 
 MessagesIndex.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    type: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    heading: PropTypes.string.isRequired,
+    subheading: PropTypes.string.isRequired,
 };
 
 export default withStyles(styleSheet)(MessagesIndex);

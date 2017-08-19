@@ -56,19 +56,19 @@ class InstituteSupport extends Component {
                             className={classes.img}
                         />
                         <Typography type="subheading" color="inherit" className={classes.body} paragraph>
-                            Seja um dos nosso patrocinadores, contribuindo mensalmente com a quantia que desejar.
+                            Ajude a expandir o trabalho do Instituto contribuindo mensalmente com a quantia que desejar.
                             <br/>
-                            Acesse <Link to="http://doa.re/vivala" target="_blank" className={classes.bolder}>http://doa.re/vivala</Link> e saiba mais
+                            Acesse <Link to="http://doa.re/vivala" target="_blank" className={classes.bolder}>http://doa.re/vivala</Link> e saiba mais.
                         </Typography>
                     </div>
                 </div>
                 <div className={classes.bg2}>
                     <div className="container padding-2x">
                         <Typography type="title" color="accent" paragraph className={classes.title2}>
-                            Apoio Com Recursos
+                            Apoio Com Outros Recursos
                         </Typography>
                         <Typography type="subheading" color="inherit">
-                            Se você acredita que pode ajudar o instituto, entre em <Link to="/contato" className={classes.contact}>contato</Link>
+                            Se você acredita que pode ajudar o Instituto com outros recursos que não financeiros, entre em <Link to="/contato" className={classes.contact}>contato</Link>.
                         </Typography>
                     </div>
                 </div>

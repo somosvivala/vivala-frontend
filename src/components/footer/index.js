@@ -6,15 +6,23 @@ import MenuItems from "../header/menu-items";
 class Footer extends Component {
     render() {
         const footerMobile = (
-            <div className="container padding-2x">
-                <Grid container align="center" justify="center" direction="column">
-                    <Typography type="subheading">© 2017 Vivala</Typography>
-                    <Typography type="body1">
-                        <a href="mailto:contato@vivala.com.br">contato@vivala.com.br</a>
-                    </Typography>
-                    <Typography type="body1">
-                        <a href="tel:+551126452632">11 2645-2632</a>
-                    </Typography>
+            <div className="container padding">
+                <Grid gutter={0} container align="flex-start" justify="center">
+                    <Grid item xs={8}>
+                        <Typography type="body1">
+                            <a href="mailto:contato@vivala.com.br">contato@vivala.com.br</a>
+                        </Typography>
+                        <Typography type="body1">
+                            <a href="tel:+551126452632">11 2645-2632</a>
+                        </Typography>
+                        <Typography type="body1">
+                            Segunda à Sexta das 9h às 18h
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={4}>
+                        <Typography type="subheading" color="inherit" style={{ textAlign: 'right', fontWeight: 'bold' }}>© 2017 Vivala</Typography>
+                    </Grid>
                 </Grid>
             </div>
         );

@@ -18,25 +18,13 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
         fontWeight: 700
     },
     slider: {
-        width: '90%',
-        margin: '20px auto'
+        margin: '20px auto',
+        width: '90%'
     },
     item: {
         textAlign: 'center',
-        maxWidth: '90%',
-        margin: '0 0 0 8%',
         width: '100%',
         overflow: 'hidden'
-    },
-    img: {
-        borderRadius: '2px',
-        filter: 'grayscale(100%)',
-        margin: '10px auto',
-        transform: 'scale(1.3)',
-        maxWidth: '100%',
-        width: '100%',
-        marginBottom: '3rem',
-        objectFit: 'cover',
     },
     subTitle: {
         textAlign: window.screen.width < 900 ? 'center' : 'left',
@@ -51,16 +39,20 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     button: {
         width: window.screen.width < 900 ? '100%' : '33%',
         textTransform: 'none',
-        fontWeight:700,
+        fontWeight: 700,
         paddingLeft: 0,
         paddingRight: 0,
-        fontWeight: 'bold',
         fontSize: window.screen.width < 900 ? '15px' : '17px'
     },
     alignCenter: {
         textAlign: 'center',
         textTransform: 'none',
-        fontWeight:600
+        fontWeight:600,
+        marginTop: 40
+    },
+    img: {
+        margin: '0 auto',
+        marginBottom: 10
     }
 }));
 

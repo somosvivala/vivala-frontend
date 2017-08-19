@@ -42,14 +42,19 @@ class QuotationsSearch extends Component {
                                 Pacotes Completos
                             </Button>
                         </Link>
-                        <Link to="/cotacao/hospedagens">
-                            <Button raised color="primary" className={classes.button}>
-                                    Hospedagens
-                            </Button>
-                        </Link>
                         <Link to="/cotacao/voos">
                             <Button raised color="primary" className={classes.button}>
                                 Voos
+                            </Button>
+                        </Link>
+                        <Link to="/cotacao/hospedagens">
+                            <Button raised color="primary" className={classes.button}>
+                                Hospedagens
+                            </Button>
+                        </Link>
+                        <Link to="/cotacao/seguro">
+                            <Button raised color="primary" className={classes.button}>
+                                Seguro
                             </Button>
                         </Link>
                         <Link to="/cotacao/carro">
@@ -57,24 +62,19 @@ class QuotationsSearch extends Component {
                                Carros
                             </Button>
                         </Link>
-                        <Link to="/cotacao/rodoviario">
+                        <Link to="/cotacao/passeio">
                             <Button raised color="primary" className={classes.button}>
-                               Onibus
+                              Passeios
                             </Button>
                         </Link>
                         <Link to="/cotacao/cruzeiro">
                             <Button raised color="primary" className={classes.button}>
-                              Cruzeiros 
+                              Cruzeiros
                             </Button>
                         </Link>
-                        <Link to="/cotacao/passeio">
+                        <Link to="/cotacao/rodoviario">
                             <Button raised color="primary" className={classes.button}>
-                              Passeios 
-                            </Button>
-                        </Link>
-                        <Link to="/cotacao/seguro">
-                            <Button raised color="primary" className={classes.button}>
-                              Seguro 
+                               Onibus
                             </Button>
                         </Link>
                     </div>

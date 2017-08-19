@@ -81,8 +81,17 @@ class MenuItems extends Component {
                         <Grid item xs={12}>
                             <Typography type="body1">
                                 <a href="mailto:contato@vivala.com.br">contato@vivala.com.br</a> <br/>
-                                <a href="tel://+551126452632"><strong>11 2645-2632</strong></a> <br/>
+                                <a href="tel://+551126452632">11 2645-2632</a> <br/>
                                 Segunda a Sexta das 9h às 18h
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                }
+                { window.screen.width < 900 &&
+                    <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
+                        <Grid item xs={12}>
+                            <Typography type="subheading" color="primary">
+                                <Link to="/expedicoes"><strong>Contato</strong></Link>
                             </Typography>
                         </Grid>
                     </Grid>
