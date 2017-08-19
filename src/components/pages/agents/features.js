@@ -21,6 +21,9 @@ const styleSheet = createStyleSheet('AgentsFeatures', theme => ({
         width: 70,
         height: 50,
     },
+    fixMargin: {
+        marginLeft: 40
+    }
 }));
 
 class AgentsFeatures extends Component {
@@ -33,36 +36,37 @@ class AgentsFeatures extends Component {
                         Seja um agente
                     </Typography>
                     <List>
-                        <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
-                            <div>
+                        <ListItem href="#simple-list" className={classes.listItem}>
+                            <Icon color="primary" style={{ fontSize: 40 }} >done</Icon>
+                            <div className={classes.fixMargin }>
                                 <Typography type="subheading">
-                                    Sem investimento inicial
+                                    <strong>Sem investimento inicial</strong>
                                 </Typography>
                                 <Typography type="body1">
                                     Junte-se ao nosso time de agentes já presente em 11 estados brasileiros
                                 </Typography>
                             </div>
                         </ListItem>
-                        <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
-                            <div>
+                        <ListItem href="#simple-list" className={classes.listItem}>
+                            <Icon color="primary" style={{ fontSize: 40 }} >done</Icon>
+                            <div className={classes.fixMargin }>
                                 <Typography type="subheading">
-                                    Trabalhe quando e onde quiser
+                                    <strong>Trabalhe quando e onde quiser</strong>
                                 </Typography>
                                 <Typography type="body1">
                                     Basta ter um computador e muita vontade de crescer
                                 </Typography>
                             </div>
                         </ListItem>
-                        <ListItem button component="a" href="#simple-list" className={classes.listItem}>
-                            <Icon color="primary" style={{ padding: 20, fontSize: 40 }} >done</Icon>
-                            <div>
+                        <ListItem href="#simple-list" className={classes.listItem}>
+                            <Icon color="primary" style={{ fontSize: 40 }} >done</Icon>
+                            <div className={classes.fixMargin }>
                                 <Typography type="subheading">
-                                    Ganhe dinheiro
+                                    <strong>Ganhe dinheiro</strong>
                                 </Typography>
                                 <Typography type="body1">
-                                    Quer trabalhar só com turismo ou fazer renda extra? Ganhe até R$ 1.000,00 por semana
+                                    Quer trabalhar só com turismo ou fazer renda extra?
+                                    Ganhe até R$ 1.000,00 por semana
                                 </Typography>
                             </div>
                         </ListItem>

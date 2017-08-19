@@ -2,6 +2,23 @@
   color: rgba(255, 109, 32, 0.7) !important;
 }
 
+.slick-next:before {
+  content: url(http://res.cloudinary.com/vivala/image/upload/v1503034817/right-arrow-orange_8x43.png);
+  //content: url(http://res.cloudinary.com/vivala/image/upload/v1503034784/right-arrow-white_8x43.png);
+  }
+.slick-prev {
+    left: -10px;
+    &:before {
+        content: url(http://res.cloudinary.com/vivala/image/upload/v1503034458/left-arrow-orange_8x43.png);
+    //  content: url(http://res.cloudinary.com/vivala/image/upload/v1503034791/left-arrow-white_8x43.png);
+    }
+}
+
+
+.video span iframe {
+  display: block;
+}
+
 .fix-slider {
   .slick-prev {
     z-index: 99999;
@@ -12,6 +29,51 @@
     right: 0 !important;
   }
 }
+
+.home-instituto-slick-container {
+    .slick-slide {
+        min-width: 260px;
+    }
+    .slick-prev, .slick-next {
+        display: none!important;
+    }
+}
+
+.sobre-instituto-slick-container {
+    ul.slick-dots  {
+        bottom: 20px!important;
+
+        li { 
+            button {
+                &::before {
+                    font-family: 'slick';
+                    font-size: 12px;
+                    line-height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    content: '\2022';
+                    text-align: center;
+                    opacity: .25;
+                    color: white;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+
+            &.slick-active button {
+                    &::before {
+                    opacity: .75;
+                    color: white;
+                }
+            }
+        }
+
+    }
+}
+
 
 .react-datepicker {
   border: none;

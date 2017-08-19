@@ -6,21 +6,42 @@ import Button from 'material-ui/Button';
 import PropTypes from 'prop-types';
 import {Image} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
+import FontAwesome from 'react-fontawesome';
 
 const styleSheet = createStyleSheet('IndexHeader', theme => ({
-    gridContainer: {
-        marginBottom: 20,
-        padding: '0 20px'
+    gridContainerBack: {
+        backgroundColor: '#F7F7F7',
+        width: '100%',
+        paddingBottom: '25px',
     },
-    gridItem: {
+    container: {
+        padding: window.screen.width < 900 ? '0 20px' : '',
+    },
+    headerBox: {
         position: window.screen.width > 900 ? 'absolute' : 'relative',
-        textAlign: window.screen.width < 900 ? 'center' : 'left'
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
     },
-    margin: {
+    headerHeadline: {
+        fontSize: window.screen.width < 900 ? '32px' : 'default',
+    },
+    headerText: {
         marginBottom: 25,
+        maxWidth: window.screen.width < 900 ? '300px' : 'default',
+        marginLeft:  window.screen.width < 900 ? 'auto' : 'default',
+        marginRight:  window.screen.width < 900 ? 'auto' : 'default',
+        textAlign: 'left',
     },
     addMargin: {
-        marginLeft: window.screen.width > 900 ? 250 : 0
+        marginLeft: window.screen.width > 900 ? 270 : 'auto',
+        marginRight: window.screen.width > 900 ? 0 : 'auto',
+    },
+    button: {
+        width: '100%',
+        paddingLeft: 0,
+        paddingRight: 0,
+        fontWeight: 'bold',
+        textTransform:'none',
+        fontSize: window.screen.width < 900 ? '18px' : '17px'
     }
 }));
 
@@ -30,26 +51,30 @@ class IndexHeader extends Component {
 
         return (
             <Grid gutter={0} container>
+                <div className={classes.gridContainerBack}>
                 <div className="container">
-                    <Grid gutter={0} container align="center" className={classes.gridContainer}>
+                    <Grid gutter={0} container align="center" className={classes.container}>
                         <Image
                             cloudName="vivala"
                             publicId="home_1.png"
-                            width={window.screen.width > 800 ? 800 : 400}
-                            height={window.screen.width > 800 ? 400 : 250}
+                            width={window.screen.width > 900 ? 800 : 320}
                             crop="scale" alt="Conheça seu mundo"
                             className={classes.addMargin}
-                        />
-                        <Grid container gutter={0} item xs={12} sm={4} className={classes.gridItem}>
-                            <Grid item xs={12}><Typography type="headline" gutterBottom>{title}</Typography></Grid>
-                            <Grid item xs={12}><Typography type="body1" gutterBottom className={classes.margin}>{text}</Typography></Grid>
+                        /> 
+                        <Grid container gutter={0} item xs={12} sm={4} className={classes.headerBox}>
+                            <Grid item xs={12}><Typography type="headline" gutterBottom className={classes.headerHeadline}>{title}</Typography></Grid>
+                            <Grid item xs={12}><Typography type="body1" gutterBottom className={classes.headerText}>{text}</Typography></Grid>
                             <Grid item xs={12}>
-                                <Button raised color="primary">
-                                    <Link to="/cotacao">{button}</Link>
-                                </Button>
+                                <Link to="/cotacao">
+                                    <Button raised color="primary" className={classes.button}>
+                                        {button}
+                                        <FontAwesome name='long-arrow-right' style={{ fontSize: 25, paddingLeft: 20 }} />
+                                    </Button>
+                                </Link>
                             </Grid>
                         </Grid>
                     </Grid>
+                </div>
                 </div>
             </Grid>
         );

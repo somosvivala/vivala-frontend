@@ -37,7 +37,8 @@ class AgentsBonus extends Component {
         const { classes } = this.props;
         const settings = {
             infinite: true,
-            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 2000,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
@@ -59,7 +60,9 @@ class AgentsBonus extends Component {
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Treinamento</Typography>
+                                <Typography type="subheading">
+                                    <strong>Treinamento</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="agentes_icone_1.png"
@@ -72,7 +75,9 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Melhores valores de mercado</Typography>
+                                <Typography type="subheading">
+                                    <strong>Melhores valores de mercado</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="agentes_icone_2.png"
@@ -85,7 +90,9 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Material de divulgação diário</Typography>
+                                <Typography type="subheading">
+                                    <strong>Material de divulgação diário</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="agentes_icone_6.png"
@@ -98,7 +105,9 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Suporte para vendas e pós vendas</Typography>
+                                <Typography type="subheading">
+                                    <strong>Suporte para vendas e pós vendas</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="agentes_icone_3.png"
@@ -111,7 +120,9 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Operação global para mais de 160 países</Typography>
+                                <Typography type="subheading">
+                                    <strong>Operação global para mais de 160 países</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="agentes_icone_4.png"
@@ -124,7 +135,9 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">Controle de comissões</Typography>
+                                <Typography type="subheading">
+                                    <strong>Controle de comissões</strong>
+                                </Typography>
                                 <Image
                                     cloudName="vivala"
                                     publicId="agentes_icone_5.png"

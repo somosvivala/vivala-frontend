@@ -5,21 +5,21 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 
 const styleSheet = createStyleSheet('Social', theme => ({
     social: {
-        display: 'flex',
-        justifyContent: 'space-around',
-        width: 200,
-    },
+        display: 'inline-block',
+        width: 30,
+        padding: 10
+    }
 }));
 
 class Social extends Component {
     render() {
         const { classes, color, facebook, instagram, youtube, linkedin } = this.props;
         return (
-            <Grid item className={classes.social}>
-                { instagram ? <a target="_blank" href={instagram}><i className="fa fa-2x fa-instagram" style={{ color }}></i></a> : null }
-                { facebook ? <a target="_blank" href={facebook}><i className="fa fa-2x fa-facebook-square" style={{ color }}></i></a> : null }
-                { youtube ? <a target="_blank" href={youtube}><i className="fa fa-2x fa-youtube-square" style={{ color }}></i></a> : null }
-                { linkedin ? <a target="_blank" href={linkedin}><i className="fa fa-2x fa-linkedin-square" style={{ color }}></i></a> : null }
+            <Grid container gutter={0} item xs={12} justify="center">
+                { instagram ? <a target="_blank" href={instagram} className={classes.social}><i className="fa fa-2x fa-instagram" style={{ color }}></i></a> : null }
+                { facebook ? <a target="_blank" href={facebook} className={classes.social}><i className="fa fa-2x fa-facebook-square" style={{ color }}></i></a> : null }
+                { youtube ? <a target="_blank" href={youtube} className={classes.social}><i className="fa fa-2x fa-youtube-square" style={{ color }}></i></a> : null }
+                { linkedin ? <a target="_blank" href={linkedin} className={classes.social}><i className="fa fa-2x fa-linkedin-square" style={{ color }}></i></a> : null }
             </Grid>
         );
     }

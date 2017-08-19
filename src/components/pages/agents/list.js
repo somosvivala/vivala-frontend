@@ -14,29 +14,53 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     subheading: {
         textTransform: 'uppercase',
         textAlign: window.screen.width < 900 ? 'center' : 'left',
-        paddingLeft: window.screen.width < 900 ? 0 : 25
+        paddingLeft: window.screen.width < 900 ? 0 : 25,
+        fontWeight: 700
     },
     slider: {
         width: '90%',
         margin: '20px auto'
     },
     item: {
-        padding: 20,
-        margin: 10,
         textAlign: 'center',
+        maxWidth: '90%',
+        margin: '0 0 0 8%',
+        width: '100%',
+        overflow: 'hidden'
     },
     img: {
-        margin: '10px auto'
+        borderRadius: '2px',
+        filter: 'grayscale(100%)',
+        margin: '10px auto',
+        transform: 'scale(1.3)',
+        maxWidth: '100%',
+        width: '100%',
+        marginBottom: '3rem',
+        objectFit: 'cover',
+    },
+    subTitle: {
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        paddingLeft: window.screen.width < 900 ? 0 : 25,
+        maxWidth: window.screen.width < 900 ? '60%' : '100%',
+        margin: '0 auto'
     },
     align: {
         textAlign: window.screen.width < 900 ? 'center' : 'left',
         paddingLeft: window.screen.width < 900 ? 0 : 25
     },
     button: {
-        width: window.screen.width < 900 ? '100%' : 'auto'
+        width: window.screen.width < 900 ? '100%' : '33%',
+        textTransform: 'none',
+        fontWeight:700,
+        paddingLeft: 0,
+        paddingRight: 0,
+        fontWeight: 'bold',
+        fontSize: window.screen.width < 900 ? '15px' : '17px'
     },
     alignCenter: {
-        textAlign: 'center'
+        textAlign: 'center',
+        textTransform: 'none',
+        fontWeight:600
     }
 }));
 
@@ -45,7 +69,8 @@ class AgentsList extends Component {
         const { classes } = this.props;
         const settings = {
             infinite: true,
-            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 7000,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
@@ -60,7 +85,7 @@ class AgentsList extends Component {
                     <Typography type="headline" align="center" className={classes.subheading} gutterBottom>
                         Agentes
                     </Typography>
-                    <Typography type="body1" align="center" gutterBottom className={classes.align}>
+                    <Typography type="body1" align="center" gutterBottom className={classes.subTitle}>
                         Conheça algumas pessoas do nosso time de agentes
                     </Typography>
 
