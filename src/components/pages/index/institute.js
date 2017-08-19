@@ -36,7 +36,7 @@ const styleSheet = createStyleSheet('Institute', theme => ({
 
 class Institute extends Component {
     render() {
-        const { classes, text } = this.props;
+        const { classes } = this.props;
         const settings = {
             infinite: false,
             slidesToShow: 3,

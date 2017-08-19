@@ -6,7 +6,6 @@ import Grid from 'material-ui/Grid';
 import Youtube from 'react-youtube';
 import Slider from 'react-slick';
 import MediaNews from '../index/media-news';
-import {Image} from 'cloudinary-react';
 import trans from '../../../utils/translate';
 
 
@@ -92,8 +91,6 @@ class AboutIndex extends Component {
             prevArrow: <PrevArrow />,
             nextArrow: <NextArrow />
         }
-
-        const padding = window.screen.width < 900 ? '70px 20px' : '100px 20px';
 
         return (
             <div>

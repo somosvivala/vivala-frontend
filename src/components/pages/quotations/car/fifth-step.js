@@ -9,7 +9,7 @@ import Grid from 'material-ui/Grid';
 
 class CarFifthStep extends Component {
     render() {
-        const { previousPage, invalid, pristine, submitting, handleSubmit } = this.props;
+        const { previousPage, invalid, submitting, handleSubmit } = this.props;
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">

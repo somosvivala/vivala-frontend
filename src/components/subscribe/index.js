@@ -38,7 +38,7 @@ class SubscribeIndex extends Component {
     }
 
     render() {
-        const { classes, requesting, error, success, title } = this.props;
+        const { classes, requesting, error, success } = this.props;
         const { open } = this.state;
 
         if (requesting) {
