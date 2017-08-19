@@ -87,15 +87,6 @@ class MenuItems extends Component {
                         </Grid>
                     </Grid>
                 }
-                { window.screen.width < 900 &&
-                    <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
-                        <Grid item xs={12}>
-                            <Typography type="subheading" color="primary">
-                                <Link to="/expedicoes"><strong>Contato</strong></Link>
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                }
             </Grid>
         );
     }
