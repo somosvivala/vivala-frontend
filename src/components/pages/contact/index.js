@@ -69,7 +69,7 @@ class ContactIndex extends Component {
                 <div className="container padding">
                     <Grid gutter={24} container>
                         <Grid xs={12} item >
-                            <Typography type="headline" color="primary">
+                            <Typography type="headline">
                                 Contato
                             </Typography>
                         </Grid>

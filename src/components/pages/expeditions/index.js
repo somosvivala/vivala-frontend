@@ -38,7 +38,6 @@ class ExpeditionsIndex extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state);
     return {
         expeditions: state.expeditions.all,
         fetching: state.expeditions.fetching,

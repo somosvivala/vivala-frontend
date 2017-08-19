@@ -50,7 +50,7 @@ class AgentsBonus extends Component {
         return (
             <div className={classes.bg}>
                 <div className="container padding">
-                    <Typography type="title" color="primary" align="center" className={classes.subheading} gutterBottom>
+                    <Typography type="title" align="center" className={classes.subheading} gutterBottom>
                         Benefícios
                     </Typography>
                     <Typography type="body1" align="center" gutterBottom>

@@ -47,7 +47,7 @@ class ExpeditionsListItem extends Component {
                         />
                     </Link>
                 </Grid>
-                <Grid gutter={0} container item xs={12} sm={6} className={[classes[color], classes.padding]} align={align} justify="center" direction="column">
+                <Grid gutter={0} container item xs={12} sm={6} className={`${classes[color]} ${classes.padding}`} align={align} justify="center" direction="column">
                     <Typography type="title" color="inherit" className={classes.subheading} gutterBottom>
                         {expedition.title}
                     </Typography>
@@ -62,7 +62,7 @@ class ExpeditionsListItem extends Component {
 
 ExpeditionsListItem.propTypes = {
     classes: PropTypes.object.isRequired,
-    expedition: PropTypes.objectOf({
+    expedition: PropTypes.shape({
         id: PropTypes.number,
         title: PropTypes.string,
     }).isRequired,

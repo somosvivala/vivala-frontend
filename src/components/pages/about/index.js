@@ -66,12 +66,14 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
 
 class PrevArrow extends Component {
     render() {
-        return <button {...this.props} className="slick-arrow slick-prev white" />
+        const { currentSlide, slideCount, ...remainingProps } = this.props;
+        return <button {...remainingProps} className="slick-arrow slick-prev white" />
     }
 }
 class NextArrow extends Component {
     render() {
-        return <button {...this.props} className="slick-arrow slick-next white" />
+        const { currentSlide, slideCount, ...remainingProps } = this.props;
+        return <button {...remainingProps} className="slick-arrow slick-next white" />
     }
 }
 
