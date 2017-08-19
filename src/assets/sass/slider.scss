@@ -1,13 +1,17 @@
 .slider-enter {
-  height: 0px;
+  opacity: 0.01;
+  transition: all .5s ease-in;
 }
 
 .slider-enter.slider-enter-active {
-  height: 200px;
-  -webkit-transition: height .3s ease;
+  opacity: 1;
+}
+
+.slider-leave {
+  opacity: 1;
+  transition: all .5s ease-in;
 }
 
 .slider-leave.slider-leave-active {
-  height: 0px;
-  -webkit-transition: height .3s ease;
+  display: none;
 }

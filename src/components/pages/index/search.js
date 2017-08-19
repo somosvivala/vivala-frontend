@@ -17,7 +17,7 @@ class IndexSearch extends Component {
 
     render() {
         return (
-            <ReactCSSTransitionGroup transitionName="slider" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+            <ReactCSSTransitionGroup transitionName="slider" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
                 { !this.state.clicked ?
                     <SearchCallToAction key="search-call-to-action"
                         click={this.handleClick}
