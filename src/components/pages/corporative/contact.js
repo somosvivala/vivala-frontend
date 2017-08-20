@@ -72,20 +72,20 @@ class CorporativeContact extends Component {
         }
 
         const renderButton = (
-            <Button onClick={this.handleClick} raised color="primary" className={classes.button}>
-                Quero Saber Mais
-            </Button>
+            <div style={{ textAlign: 'center' }}>
+                <Button onClick={this.handleClick} raised color="primary" className={classes.button}>
+                    Quero Saber Mais
+                </Button>
+            </div>
         )
 
-        return (
+        const renderForm = (
             <div className="container padding">
-                { clicked ?
-                    <ContactForm key="corporative-contact" type="corporative" onSubmit={this.handleSubmit} />
-                    :
-                    renderButton
-                }
+                <ContactForm key="corporative-contact" type="corporative" onSubmit={this.handleSubmit} />
             </div>
         );
+
+        return clicked ? renderForm : renderButton;
     }
 }
 

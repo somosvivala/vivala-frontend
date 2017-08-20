@@ -23,7 +23,10 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
         textAlign: window.screen.width < 900 ? "center" : "left"
     },
     button: {
-        boxShadow: 'inset 2px 2px 8px 1px rgba(203,200,202,1)'
+        boxShadow: 'inset 2px 2px 4px 1px rgba(0,0,0,0.3)',
+        borderRadius: 5,
+        fontWeight: 400,
+
     }
 }));
 
@@ -44,7 +47,7 @@ class SearchCallToAction extends Component {
                             <Button raised color="contrast" onClick={click} className={classes.button}>
                                 <Icon color="contrast">search</Icon> {translations.button}
                             </Button>
-                            <Social color="#ccc"
+                            <Social color="#aaa"
                                     facebook="https://www.facebook.com/SomosVivala/"
                                     linkedin="https://pt.linkedin.com/company/vivalá"
                                     instagram="https://www.instagram.com/somosvivala/"

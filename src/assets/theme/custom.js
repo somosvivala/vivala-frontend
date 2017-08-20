@@ -123,6 +123,7 @@ theme = {
             ...customTypography.button,
             textTransform: 'none',
             fontSize: 17,
+            fontWeight: 600,
         }
     },
 };

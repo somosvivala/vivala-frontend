@@ -17,7 +17,7 @@ class ContactForm extends Component {
 
         return (
             <div>
-                { !common && <Typography type="subheading" align="center" gutterBottom style={{ textTransform: 'uppercase'}}>Contato</Typography> }
+                { !common && <Typography type="title" align="center" gutterBottom style={{ textTransform: 'uppercase'}}>Contato</Typography> }
                 <form onSubmit={handleSubmit} style={{ width: '100%'}}>
                     <Grid container gutter={16} justify="center">
                         <Grid item xs={12}>
