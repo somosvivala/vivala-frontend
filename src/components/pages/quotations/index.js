@@ -30,17 +30,17 @@ class QuotationsIndex extends Component {
                         <Typography type="headline" paragraph className={classes.text}>
                             Monte sua viagem sozinho
                         </Typography>
-                        <Button raised color="primary" target="_blank" href="https://www.e-agencias.com.br/vivala/home/packages" className={classes.button}>
+                        <Button raised color="primary" rel="noopener noreferrer" target="_blank" href="https://www.e-agencias.com.br/vivala/home/packages" className={classes.button}>
                             <Typography className={classes.text} color="inherit">
                                 Pacotes Completos
                             </Typography>
                         </Button>
-                        <Button raised color="primary" target="_blank" href="https://www.e-agencias.com.br/vivala/home/hotels" className={classes.button}>
+                        <Button raised color="primary" rel="noopener noreferrer" target="_blank" href="https://www.e-agencias.com.br/vivala/home/hotels" className={classes.button}>
                             <Typography className={classes.text} color="inherit">
                                 Hospedagens
                             </Typography>
                         </Button>
-                        <Button raised color="primary" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.button}>
+                        <Button raised color="primary" rel="noopener noreferrer" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.button}>
                             <Typography className={classes.text} color="inherit">
                                 Voos
                             </Typography>

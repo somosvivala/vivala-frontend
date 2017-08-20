@@ -85,15 +85,15 @@ class SearchTravel extends Component {
                         </Grid>
                         <Grid xs={12} sm={6} item>
                             <List className={classes.list}>
-                                <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/packages" className={classes.listItem}>
+                                <ListItem button component="a" rel="noopener noreferrer" target="_blank" href="https://www.e-agencias.com.br/vivala/home/packages" className={classes.listItem}>
                                     <img src={PacotesCompletosSvg} className={classes.img} alt="Pacotes Completos Icone"/>
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[0].text}</Typography>
                                 </ListItem>
-                                <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/hotels" className={classes.listItem}>
+                                <ListItem button component="a" rel="noopener noreferrer" target="_blank" href="https://www.e-agencias.com.br/vivala/home/hotels" className={classes.listItem}>
                                     <img src={HoteisSvg} className={classes.img} alt="Hospedagens Icone" />
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[1].text}</Typography>
                                 </ListItem>
-                                <ListItem button component="a" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.listItem}>
+                                <ListItem button component="a" rel="noopener noreferrer" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.listItem}>
                                     <img src={VoosSvg} className={classes.img} alt="Voos Icone"/>
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[2].text}</Typography>
                                 </ListItem>

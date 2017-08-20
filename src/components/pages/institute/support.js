@@ -58,7 +58,7 @@ class InstituteSupport extends Component {
                         <Typography type="subheading" color="inherit" className={classes.body} paragraph>
                             Ajude a expandir o trabalho do Instituto contribuindo mensalmente com a quantia que desejar.
                             <br/>
-                            Acesse <Link to="http://doa.re/vivala" target="_blank" className={classes.bolder}>http://doa.re/vivala</Link> e saiba mais.
+                            Acesse <Link to="http://doa.re/vivala" rel="noopener noreferrer" target="_blank" className={classes.bolder}>http://doa.re/vivala</Link> e saiba mais.
                         </Typography>
                     </div>
                 </div>
