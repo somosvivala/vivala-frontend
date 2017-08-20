@@ -15,11 +15,11 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
         justifyContent: 'center'
     },
     slider: {
-        width: '90%',
+        width: '95%',
         margin: '20px auto'
     },
     text: {
-        padding: '0 0 20px 20px',
+        paddingBottom: 20,
         fontWeight: 700,
         letterSpacing: 1,
         textAlign: window.screen.width < 900 ? 'center' : 'left',
@@ -46,7 +46,7 @@ class MediaNews extends Component {
         return (
             <div className={classes.bg}>
                 <div className="container padding">
-                    <Typography type="title" gutterBottom className={classes.text}>{text}</Typography>
+                    <Typography type="title" paragraph className={classes.text}>{text}</Typography>
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="https://catracalivre.com.br/geral/agenda/indicacao/startup-conecta-pessoas-que-tem-interesse-de-viajar-e-realizar-voluntariado-no-brasil/">

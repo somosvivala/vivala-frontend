@@ -8,6 +8,7 @@
 
 .slick-next {
   height: 60px;
+  right: -15px;
   &:before {
     content: url(http://res.cloudinary.com/vivala/image/upload/v1503034817/right-arrow-orange_8x43.png);
   }
@@ -15,6 +16,7 @@
 
 .slick-prev {
   height: 60px;
+  left: -15px;
   &:before {
     content: url(http://res.cloudinary.com/vivala/image/upload/v1503034458/left-arrow-orange_8x43.png);
   }
@@ -22,7 +24,6 @@
 
 .slick-next.white {
   z-index: 99999999;
-  right: 0;
   &:before {
     content: url(http://res.cloudinary.com/vivala/image/upload/v1503034784/right-arrow-white_8x43.png);
   }
@@ -30,10 +31,17 @@
 
 .slick-prev.white {
   z-index: 999999999;
-  left: 0;
   &:before {
     content: url(http://res.cloudinary.com/vivala/image/upload/v1503034791/left-arrow-white_8x43.png);
   }
+}
+
+.slick-next.inside {
+  right: 10px;
+}
+
+.slick-prev.inside {
+  left: 10px;
 }
 
 

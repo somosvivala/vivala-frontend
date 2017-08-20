@@ -7,7 +7,7 @@ import Youtube from 'react-youtube';
 import Slider from 'react-slick';
 import MediaNews from '../index/media-news';
 import trans from '../../../utils/translate';
-
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('AboutIndex', theme => ({
     bg: {
@@ -63,19 +63,6 @@ const styleSheet = createStyleSheet('AboutIndex', theme => ({
     }
 }));
 
-class PrevArrow extends Component {
-    render() {
-        const { currentSlide, slideCount, ...remainingProps } = this.props;
-        return <button {...remainingProps} className="slick-arrow slick-prev white" />
-    }
-}
-class NextArrow extends Component {
-    render() {
-        const { currentSlide, slideCount, ...remainingProps } = this.props;
-        return <button {...remainingProps} className="slick-arrow slick-next white" />
-    }
-}
-
 class AboutIndex extends Component {
     render() {
         const { classes } = this.props;
@@ -87,8 +74,8 @@ class AboutIndex extends Component {
             arrows: true,
             slidesToScroll: 1,
             adaptativeHeight: true,
-            prevArrow: <PrevArrow />,
-            nextArrow: <NextArrow />
+            prevArrow: <PrevArrow white inside />,
+            nextArrow: <NextArrow white inside />,
         }
 
         return (

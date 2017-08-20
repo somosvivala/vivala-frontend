@@ -31,7 +31,7 @@ class ExpeditionsListItem extends Component {
     render() {
         const { classes, expedition, color } = this.props;
         const align = window.screen.width > 800 ? 'flex-start' : 'center';
-        const url = `/expedicoes/${expedition.id}`;
+        const url = `expedicoes/${expedition.id}`;
 
         return (
             <Grid container gutter={16} align="flex-start" justify="center" className={classes.padding}>
@@ -48,12 +48,14 @@ class ExpeditionsListItem extends Component {
                     </Link>
                 </Grid>
                 <Grid gutter={0} container item xs={12} sm={6} className={`${classes[color]} ${classes.padding}`} align={align} justify="center" direction="column">
-                    <Typography type="title" color="inherit" className={classes.subheading} gutterBottom>
+                    <Typography type="title" color="inherit" className={classes.subheading} paragraph>
                         {expedition.title}
                     </Typography>
-                    <Button raised color="contrast" href={url}>
-                        Saiba Mais
-                    </Button>
+                    <Link to={url}>
+                        <Button raised color="contrast" >
+                            Saiba Mais
+                        </Button>
+                    </Link>
                 </Grid>
             </Grid>
         );

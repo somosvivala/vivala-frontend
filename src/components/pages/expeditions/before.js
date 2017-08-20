@@ -16,8 +16,8 @@ const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
     },
     slider: {
         width: '95%',
-        margin: '20px auto 0 auto'
-    }
+        margin: '20px auto'
+    },
 }));
 
 class ExpeditonsBefore extends Component {

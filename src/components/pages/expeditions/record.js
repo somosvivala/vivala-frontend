@@ -5,6 +5,7 @@ import Grid from "material-ui/Grid";
 import Typography from "material-ui/Typography";
 import Slider from 'react-slick';
 import {Image} from  'cloudinary-react';
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
     bg: {
@@ -32,19 +33,6 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
     }
 }));
 
-class PrevArrow extends Component {
-    render() {
-        const { currentSlide, slideCount, ...remainingProps } = this.props;
-        return <button {...remainingProps} className="slick-arrow slick-prev white" />
-    }
-}
-class NextArrow extends Component {
-    render() {
-        const { currentSlide, slideCount, ...remainingProps } = this.props;
-        return <button {...remainingProps} className="slick-arrow slick-next white" />
-    }
-}
-
 class ExpeditionsRecord extends Component {
     renderPhotos = () => {
         return this.props.photos.map((photo, key) => {
@@ -70,8 +58,8 @@ class ExpeditionsRecord extends Component {
             adaptativeHeight: true,
             autoplay: true,
             autoplaySpeed: 4000,
-            prevArrow: <PrevArrow />,
-            nextArrow: <NextArrow />,
+            prevArrow: <PrevArrow white inside />,
+            nextArrow: <NextArrow white inside />,
         }
 
         return (
