@@ -15,11 +15,11 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
         width: '100%',
         textAlign: 'center'
     },
-    title: {
+    headline: {
         textTransform: 'uppercase',
         fontWeight: 'bold'
     },
-    subheading: {
+    title: {
         textTransform: 'uppercase',
     },
     slider: {
@@ -31,6 +31,19 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
         height: window.screen.width > 900 ? 420 : 250
     }
 }));
+
+class PrevArrow extends Component {
+    render() {
+        const { currentSlide, slideCount, ...remainingProps } = this.props;
+        return <button {...remainingProps} className="slick-arrow slick-prev white" />
+    }
+}
+class NextArrow extends Component {
+    render() {
+        const { currentSlide, slideCount, ...remainingProps } = this.props;
+        return <button {...remainingProps} className="slick-arrow slick-next white" />
+    }
+}
 
 class ExpeditionsRecord extends Component {
     renderPhotos = () => {
@@ -56,14 +69,16 @@ class ExpeditionsRecord extends Component {
             slidesToScroll: 1,
             adaptativeHeight: true,
             autoplay: true,
-            autoplaySpeed: 4000
+            autoplaySpeed: 4000,
+            prevArrow: <PrevArrow />,
+            nextArrow: <NextArrow />,
         }
 
         return (
             <div className={classes.bg}>
                 <div className="container">
                     <Grid gutter={24} container align="center" justify="center">
-                        <Typography type="title" color="accent" className={classes.title}>
+                        <Typography type="headline" color="accent" className={classes.headline}>
                             {title}
                         </Typography>
 
@@ -72,7 +87,7 @@ class ExpeditionsRecord extends Component {
                         </Slider>
 
                         <Grid container gutter={0} item xs={12} align="center" justify="center">
-                            <Typography type="subheading" color="accent" className={classes.subheading} gutterBottom>
+                            <Typography type="title" color="accent" className={classes.title} gutterBottom>
                                 Propósito
                             </Typography>
                             <Typography type="body1">
@@ -80,7 +95,7 @@ class ExpeditionsRecord extends Component {
                             </Typography>
                         </Grid>
                         <Grid container gutter={0} item xs={12} align="center" justify="center">
-                            <Typography type="subheading" color="accent" className={classes.subheading} gutterBottom>
+                            <Typography type="title" color="accent" className={classes.title} gutterBottom>
                                 Roteiro
                             </Typography>
                             <Typography type="body1">

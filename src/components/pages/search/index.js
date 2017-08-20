@@ -36,6 +36,12 @@ const styleSheet = createStyleSheet('SearchPageIndex', theme => ({
     },
     button: {
         width: window.screen.width < 900 ? '100%' : 'auto'
+    },
+    title: {
+        textTransform: 'uppercase'
+    },
+    alignCenter: {
+        textAlign: 'center'
     }
 }));
 
@@ -45,7 +51,7 @@ class SearchPageIndex extends Component {
         return (
             <div>
                 <div className={classes.bg}>
-                    <div className="container padding">
+                    <div className="container padding-2x">
                         <Typography type="headline" gutterBottom>Busque sua viagem</Typography>
                         <Typography type="body1">
                             Encontre pacotes completos, hospedagens, voos, ônibus
@@ -56,7 +62,7 @@ class SearchPageIndex extends Component {
 
                 <div className={classes.bg2}>
                     <div className="container padding">
-                        <Typography type="title" gutterBottom>Como funciona</Typography>
+                        <Typography type="title" gutterBottom  className={classes.title}>Como funciona</Typography>
                         <List>
                             <ListItem className={classes.listItem}>
                                 <Typography className={classes.circle} type="title" color="inherit" component="span"><strong>1</strong></Typography>

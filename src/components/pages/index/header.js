@@ -39,9 +39,6 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
         width: '100%',
         paddingLeft: 0,
         paddingRight: 0,
-        fontWeight: 'bold',
-        textTransform:'none',
-        fontSize: window.screen.width < 900 ? '18px' : '17px'
     }
 }));
 

@@ -117,8 +117,13 @@ theme = {
         },
         body1: {
             ...customTypography.body1,
-            fontSize: '16px',
+            fontSize: 16,
         },
+        button: {
+            ...customTypography.button,
+            textTransform: 'none',
+            fontSize: 17,
+        }
     },
 };
 

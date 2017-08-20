@@ -76,7 +76,6 @@ class NextArrow extends Component {
     }
 }
 
-
 class AboutIndex extends Component {
     render() {
         const { classes } = this.props;

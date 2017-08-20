@@ -8,11 +8,17 @@ import {Link} from 'react-router-dom';
 const styleSheet = createStyleSheet('SearchButton', theme => ({
     bg: {
         backgroundColor: theme.default.color,
-        textAlign: window.screen.width < 900 ? 'center' : 'left'
+        textAlign: 'center',
     },
     bg2: {
         backgroundColor: theme.defaultDarken.color,
-        textAlign: window.screen.width < 900 ? 'center' : 'left'
+        textAlign: 'center',
+    },
+    button: {
+        width: window.screen.width < 900 ? '100%' : 'auto'
+    },
+    title: {
+        textTransform: 'uppercase'
     }
 }));
 
@@ -21,15 +27,18 @@ class SearchButton extends Component {
         const { classes, darkBg } = this.props;
         return (
             <div className={ darkBg ? classes.bg2 : classes.bg }>
-                <div className="container padding">
-                    <Typography type="subheading" color="inherit" paragraph className={classes.text}>
+                <div className="container padding-2x">
+                    <Typography type="title" className={classes.title} gutterBottom>
+                        Precisa de ajuda?
+                    </Typography>
+                    <Typography type="subheading" color="inherit" paragraph>
                         Ou se preferir, seja atendido de forma ágil, humanizada e gratuita
                     </Typography>
-                    <Button raised color="primary">
-                        <Link to="/cotacao">
-                            Receba sua cotação em até 24 horas
-                        </Link>
-                    </Button>
+                    <Link to="/cotacao">
+                        <Button raised color="primary"  className={classes.button}>
+                                Receba sua cotação em até 24 horas
+                        </Button>
+                    </Link>
                 </div>
             </div>
         );
