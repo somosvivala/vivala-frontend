@@ -64,17 +64,17 @@ class CorporativeBonus extends Component {
                             <div>
                                 <div className={classes.item}>
                                     <Typography type="subheading" className={classes.cardSubheading}>
-                                        Teste Primeiro
+                                        Campanhas de Incentivo
                                     </Typography>
                                     <Image
                                         cloudName="vivala"
-                                        publicId="corporativo_icone_1.png"
+                                        publicId="corporativo_icone_4.png"
                                         width={120}
                                         height={120}
-                                        crop="fit" alt="Ícone - Teste Primeiro"
+                                        crop="fit" alt="Ícone - Campanhas de Incentivo"
                                         className={classes.img}
                                     />
-                                    <Typography type="body1">Faça um mês de teste sem contrato</Typography>
+                                    <Typography type="body1">Realize campanhas atreladas as suas metas</Typography>
                                 </div>
                             </div>
                             <div>
@@ -116,7 +116,7 @@ class CorporativeBonus extends Component {
                                     </Typography>
                                     <Image
                                         cloudName="vivala"
-                                        publicId="corporativo_icone_4.png"
+                                        publicId="corporativo_icone_1.png"
                                         width={120}
                                         height={120}
                                         crop="fit" alt="Ícone - Melhore o Controle"

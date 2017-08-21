@@ -12,7 +12,8 @@ const styleSheet = createStyleSheet('CorporativeFeatures', theme => ({
     title: {
         fontWeight: 'bold',
         textTransform: 'uppercase',
-        textAlign: window.screen.width < 900 ? 'center' : 'left'
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        marginTop: '2rem',
     },
     subtitle: {
         textAlign: window.screen.width < 900 ? 'center' : 'left',

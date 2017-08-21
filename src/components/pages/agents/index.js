@@ -14,6 +14,7 @@ const styleSheet = createStyleSheet('AgentsIndex', theme => ({
         textAlign: 'center'
     },
     button: {
+        marginTop: '1rem',
         width: window.screen.width < 900 ? '100%' : '33%',
         paddingLeft: 0,
         paddingRight: 0,
@@ -32,7 +33,7 @@ class AgentsIndex extends Component {
                 <AgentsList />
 
                 <div className={classes.bg}>
-                    <div className="container padding">
+                    <div className="container padding-2x">
                         <Typography type="body1" paragraph>
                             Quer uma proposta para sua viagem ágil, humanizada e gratuita?
                         </Typography>

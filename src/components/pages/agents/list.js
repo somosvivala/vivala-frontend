@@ -15,7 +15,8 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
         textTransform: 'uppercase',
         textAlign: window.screen.width < 900 ? 'center' : 'left',
         paddingLeft: window.screen.width < 900 ? 0 : 25,
-        fontWeight: 700
+        fontWeight: 700,
+        marginTop: '2rem'
     },
     slider: {
         margin: '20px auto',
@@ -30,7 +31,7 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
         textAlign: window.screen.width < 900 ? 'center' : 'left',
         paddingLeft: window.screen.width < 900 ? 0 : 25,
         maxWidth: window.screen.width < 900 ? '60%' : '100%',
-        margin: '0 auto'
+        marginBottom: '3rem'
     },
     align: {
         textAlign: window.screen.width < 900 ? 'center' : 'left',
