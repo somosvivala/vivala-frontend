@@ -16,7 +16,8 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
     },
     subheading: {
         color: 'white !important',
-        paddingLeft: 20
+        paddingLeft: 20,
+        fontWeight: 'bold'
     },
     click: {
         cursor: 'pointer',
@@ -32,7 +33,7 @@ const styleSheet = createStyleSheet('SearchTravel', theme => ({
         boxSizing: 'border-box'
     },
     text: {
-        color: 'white !important'
+        color: 'white !important',
     },
     img: {
         marginRight: 20,
