@@ -20,6 +20,7 @@ const styleSheet = createStyleSheet('AgentsBonus', theme => ({
     },
     slider: {
         width: '90%',
+        maxWidth: 600,
         margin: '20px auto'
     },
     item: {

@@ -15,9 +15,14 @@ const styleSheet = createStyleSheet('QuotationsSearch', theme => ({
         textAlign: 'center'
     },
     text: {
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
+        marginTop: '2rem'
+    },
+    subtext: {
     },
     button: {
+        fontWeight: 'bold',
         width: '100%',
         color: 'white !important',
         marginTop: 30,
@@ -34,7 +39,7 @@ class QuotationsSearch extends Component {
                         <Typography type="headline" paragraph className={classes.text}>
                             Seja atendido por agentes apaixonados por viagens
                         </Typography>
-                        <Typography type="title" color="inherit" paragraph className={classes.text}>
+                        <Typography type="title" color="inherit" paragraph className={classes.subtext}>
                             O que você está procurando?
                         </Typography>
                         <Link to="/cotacao/pacotes-completos">
