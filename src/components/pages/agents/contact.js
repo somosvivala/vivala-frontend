@@ -10,7 +10,14 @@ import ContactForm from '../../contact';
 
 const styleSheet = createStyleSheet('AgentsContact', theme => ({
     button: {
+        fontWeight: 'bold',
         textAlign: 'center',
+        width: window.screen.width < 900 ? '100%' : '50%',
+        margin: 'auto'
+    },
+    btnFix: {
+        width: '100%',
+        fontWeight: 'bold'
     }
 }));
 
@@ -72,7 +79,7 @@ class AgentsContact extends Component {
 
         const renderButton = (
             <div className={classes.button}>
-                <Button raised color="primary" onClick={this.handleClick}>
+                <Button raised color="primary" className={classes.btnFix} onClick={this.handleClick}>
                     Seja um agente!
                 </Button>
             </div>

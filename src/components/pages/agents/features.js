@@ -7,13 +7,16 @@ import List, { ListItem } from 'material-ui/List';
 
 const styleSheet = createStyleSheet('AgentsFeatures', theme => ({
     bg: {
-        backgroundColor: theme.default.color
+        backgroundColor: '#f7f7f7'
     },
     title: {
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        marginTop: '2rem'
     },
     listItem: {
-        backgroundColor: 'white',
+        backgroundColor: '#eceaeb',
         marginBottom: 10,
     },
     img: {

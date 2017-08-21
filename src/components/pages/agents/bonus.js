@@ -8,10 +8,15 @@ import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('AgentsBonus', theme => ({
     bg: {
-        backgroundColor: theme.defaultDarken.color
+        backgroundColor: '#dddddd'
     },
     subheading: {
         textTransform: 'uppercase'
+    },
+    cardSubheading: {
+        lineHeight: '16px',
+        fontSize: '16px',
+        fontWeight: 'bold'
     },
     slider: {
         width: '90%',
@@ -20,15 +25,17 @@ const styleSheet = createStyleSheet('AgentsBonus', theme => ({
     item: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: theme.default.color,
+        justifyContent: 'space-between',
+        backgroundColor: '#eceaeb',
         padding: 20,
-        margin: 10,
+        margin: 8,
         textAlign: 'center',
         height: 150,
     },
     img: {
-        marginTop: 'auto'
+        margin: 'auto',
+        objectFit: 'contain',
+        maxHeight: '100px'
     },
 }));
 
@@ -39,12 +46,8 @@ class AgentsBonus extends Component {
             infinite: true,
             autoplay: true,
             autoplaySpeed: 4000,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            responsive: [
-                { breakpoint: 480, settings: { slidesToShow: 1 } },
-            ],
-            adaptativeHeight: true
+            adaptativeHeight: true,
+            variableWidth: true
         }
 
         return (
@@ -54,14 +57,15 @@ class AgentsBonus extends Component {
                         Benefícios
                     </Typography>
                     <Typography type="body1" align="center" gutterBottom>
-                        Exlusivos para agentes vivalá
+                        Exlusivos para agentes de viagens Vivalá
                     </Typography>
 
+                    <div className="agentes-slider-container">
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Treinamento</strong>
+                                <Typography type="subheading" className={classes.cardSubheading}>
+                                    Treinamento
                                 </Typography>
                                 <Image
                                     cloudName="vivala"
@@ -75,8 +79,8 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Melhores valores de mercado</strong>
+                                <Typography type="subheading" className={classes.cardSubheading}>
+                                    Melhores valores de mercado
                                 </Typography>
                                 <Image
                                     cloudName="vivala"
@@ -90,8 +94,8 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Material de divulgação diário</strong>
+                                <Typography type="subheading" className={classes.cardSubheading}>
+                                    Material de divulgação diário
                                 </Typography>
                                 <Image
                                     cloudName="vivala"
@@ -105,8 +109,8 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Suporte para vendas e pós vendas</strong>
+                                <Typography type="subheading" className={classes.cardSubheading}>
+                                    Suporte para vendas e pós vendas
                                 </Typography>
                                 <Image
                                     cloudName="vivala"
@@ -120,8 +124,8 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Operação global para mais de 160 países</strong>
+                                <Typography type="subheading" className={classes.cardSubheading}>
+                                    Operação global para mais de 160 países
                                 </Typography>
                                 <Image
                                     cloudName="vivala"
@@ -135,8 +139,8 @@ class AgentsBonus extends Component {
                         </div>
                         <div>
                             <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Controle de comissões</strong>
+                                <Typography type="subheading" className={classes.cardSubheading}>
+                                    Controle de comissões
                                 </Typography>
                                 <Image
                                     cloudName="vivala"
@@ -149,6 +153,7 @@ class AgentsBonus extends Component {
                             </div>
                         </div>
                     </Slider>
+                    </div>
 
                     <AgentsContact />
                 </div>
