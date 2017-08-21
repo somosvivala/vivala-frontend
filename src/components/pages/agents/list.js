@@ -52,7 +52,8 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     },
     img: {
         margin: '0 auto',
-        marginBottom: 10
+        marginBottom: 10,
+        filter: 'grayscale(100%)'
     }
 }));
 
