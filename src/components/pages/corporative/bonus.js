@@ -8,27 +8,36 @@ import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('CorporativeBonus', theme => ({
     bg: {
-        backgroundColor: theme.defaultDarken.color
+        backgroundColor: '#dddddd'
     },
     subheading: {
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        fontSize: '1.3rem'
+    },
+    cardSubheading: {
+        lineHeight: '16px',
+        fontSize: '16px',
+        fontWeight: 'bold'
     },
     slider: {
         width: '90%',
+        maxWidth: 560,
         margin: '20px auto'
     },
     item: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        backgroundColor: theme.default.color,
+        backgroundColor: '#eceaeb',
         padding: 20,
-        margin: 10,
+        margin: 8,
         textAlign: 'center',
-        height: 200,
+        height: 170,
     },
     img: {
-        margin: 'auto'
+        margin: 'auto',
+        objectFit: 'contain',
+        maxHeight: '80px'
     },
 }));
 
@@ -39,12 +48,8 @@ class CorporativeBonus extends Component {
             infinite: true,
             autoplay: true,
             autoplaySpeed: 4000,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            responsive: [
-                { breakpoint: 480, settings: { slidesToShow: 1 } },
-            ],
-            adaptativeHeight: true
+            adaptativeHeight: true,
+            variableWidth: true
         }
 
         return (
@@ -54,88 +59,90 @@ class CorporativeBonus extends Component {
                         Vantagens oferecidas para nossos <br/> clientes corporativos
                     </Typography>
 
-                    <Slider {...settings} className={classes.slider}>
-                        <div>
-                            <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Teste Primeiro</strong>
-                                </Typography>
-                                <Image
-                                    cloudName="vivala"
-                                    publicId="corporativo_icone_1.png"
-                                    width={120}
-                                    height={120}
-                                    crop="fit" alt="Ícone - Teste Primeiro"
-                                    className={classes.img}
-                                />
-                                <Typography type="body1">Faça um mês de teste sem contrato</Typography>
+                    <div className="corporativo-slider-container">
+                        <Slider {...settings} className={classes.slider}>
+                            <div>
+                                <div className={classes.item}>
+                                    <Typography type="subheading" className={classes.cardSubheading}>
+                                        Teste Primeiro
+                                    </Typography>
+                                    <Image
+                                        cloudName="vivala"
+                                        publicId="corporativo_icone_1.png"
+                                        width={120}
+                                        height={120}
+                                        crop="fit" alt="Ícone - Teste Primeiro"
+                                        className={classes.img}
+                                    />
+                                    <Typography type="body1">Faça um mês de teste sem contrato</Typography>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Reduza Custos</strong>
-                                </Typography>
-                                <Image
-                                    cloudName="vivala"
-                                    publicId="corporativo_icone_2.png"
-                                    width={120}
-                                    height={120}
-                                    crop="fit" alt="Ícone - Reduza Custos"
-                                    className={classes.img}
-                                />
-                                <Typography type="body1">Os melhores preços do mercado</Typography>
+                            <div>
+                                <div className={classes.item}>
+                                    <Typography type="subheading" className={classes.cardSubheading}>
+                                        Reduza Custos
+                                    </Typography>
+                                    <Image
+                                        cloudName="vivala"
+                                        publicId="corporativo_icone_2.png"
+                                        width={120}
+                                        height={120}
+                                        crop="fit" alt="Ícone - Reduza Custos"
+                                        className={classes.img}
+                                    />
+                                    <Typography type="body1">Os melhores preços do mercado</Typography>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Economize Tempo</strong>
-                                </Typography>
-                                <Image
-                                    cloudName="vivala"
-                                    publicId="corporativo_icone_3.png"
-                                    width={120}
-                                    height={100}
-                                    crop="scale" alt="Ícone - Economize Tempo"
-                                    className={classes.img}
-                                />
-                                <Typography type="body1">Seja atendido de forma ágil e personalizada</Typography>
+                            <div>
+                                <div className={classes.item}>
+                                    <Typography type="subheading" className={classes.cardSubheading}>
+                                        Economize Tempo
+                                    </Typography>
+                                    <Image
+                                        cloudName="vivala"
+                                        publicId="corporativo_icone_3.png"
+                                        width={120}
+                                        height={100}
+                                        crop="scale" alt="Ícone - Economize Tempo"
+                                        className={classes.img}
+                                    />
+                                    <Typography type="body1">Seja atendido de forma ágil e personalizada</Typography>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Melhore o controle</strong>
-                                </Typography>
-                                <Image
-                                    cloudName="vivala"
-                                    publicId="corporativo_icone_4.png"
-                                    width={120}
-                                    height={120}
-                                    crop="fit" alt="Ícone - Melhore o Controle"
-                                    className={classes.img}
-                                />
-                                <Typography type="body1">Receba relatórios mensais com seus ganhos</Typography>
+                            <div>
+                                <div className={classes.item}>
+                                    <Typography type="subheading" className={classes.cardSubheading}>
+                                        Melhore o controle
+                                    </Typography>
+                                    <Image
+                                        cloudName="vivala"
+                                        publicId="corporativo_icone_4.png"
+                                        width={120}
+                                        height={120}
+                                        crop="fit" alt="Ícone - Melhore o Controle"
+                                        className={classes.img}
+                                    />
+                                    <Typography type="body1">Receba relatórios mensais com seus ganhos</Typography>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div className={classes.item}>
-                                <Typography type="subheading">
-                                    <strong>Valorize seus funcionários</strong>
-                                </Typography>
-                                <Image
-                                    cloudName="vivala"
-                                    publicId="corporativo_icone_5.png"
-                                    width={120}
-                                    height={120}
-                                    crop="fit" alt="Ícone - Valorize seus funcionários"
-                                    className={classes.img}
-                                />
-                                <Typography type="body1">Atendimento e descontos em sua viagem de lazer</Typography>
+                            <div>
+                                <div className={classes.item}>
+                                    <Typography type="subheading" className={classes.cardSubheading}>
+                                        Valorize seus funcionários
+                                    </Typography>
+                                    <Image
+                                        cloudName="vivala"
+                                        publicId="corporativo_icone_5.png"
+                                        width={120}
+                                        height={120}
+                                        crop="fit" alt="Ícone - Valorize seus funcionários"
+                                        className={classes.img}
+                                    />
+                                    <Typography type="body1">Atendimento e descontos em sua viagem de lazer</Typography>
+                                </div>
                             </div>
-                        </div>
-                    </Slider>
+                        </Slider>
+                    </div>
 
                     <CorporativeContact />
                 </div>

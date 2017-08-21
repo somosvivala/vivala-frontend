@@ -7,13 +7,19 @@ import Icon from 'material-ui/Icon';
 
 const styleSheet = createStyleSheet('CorporativeFeatures', theme => ({
     bg: {
-        backgroundColor: theme.default.color
+        backgroundColor: '#f7f7f7'
     },
     title: {
-        textTransform: 'uppercase'
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+        textAlign: window.screen.width < 900 ? 'center' : 'left'
+    },
+    subtitle: {
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        margin: '0 0 2rem 0'
     },
     listItem: {
-        backgroundColor: theme.defaultDarken.color,
+        backgroundColor: '#eceaeb',
         marginBottom: 10,
         display: 'flex'
     },
@@ -36,7 +42,7 @@ class CorporativeFeatures extends Component {
                     <Typography type="headline" className={classes.title} gutterBottom>
                         Corporativo
                     </Typography>
-                    <Typography type="body1" gutterBottom>
+                    <Typography type="body1" className={classes.subtitle} gutterBottom>
                         Tenha o melhor parceiro para sua empresa
                     </Typography>
                     <List>

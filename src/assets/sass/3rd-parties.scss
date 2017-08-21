@@ -104,6 +104,17 @@
     }
 }
 
+.corporativo-slider-container {
+    .slick-slide {
+        max-width: 190px;
+    }
+    .slick-prev {
+        left: -20px!important;
+    }
+    .slick-next {
+        right: -30px!important;
+    }
+}
 
 .react-datepicker {
   border: none;
