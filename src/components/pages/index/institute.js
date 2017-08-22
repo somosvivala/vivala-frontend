@@ -78,7 +78,7 @@ class Institute extends Component {
                     <div className="home-instituto-slick-container">
                     <Slider {...settings} className={classes.slider}>
                         <div><InstituteItem title='Expedição Amazônia #3' subtitle="O pulmão do mundo" link='/expedicoes/3' /></div>
-                        <div><InstituteItem title='Expedição Mata Atlântica #4' subtitle="Sabedoria da floresta"  link='/expedicoes/4' /></div>
+                        <div><InstituteItem title='Expedição Mata Atlântica #1' subtitle="Sabedoria da floresta"  link='/expedicoes/4' /></div>
                     </Slider>
                     </div>
 
