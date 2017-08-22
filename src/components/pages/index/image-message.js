@@ -22,7 +22,9 @@ const styleSheet = createStyleSheet('ImageMessage', theme => ({
         maxWidth: window.screen.width < 900 ? '160px' : 'default',
     },
     massageImage: {
-        marginLeft: window.screen.width < 900 ? '-40px' : 'default',
+        marginLeft: window.screen.width < 900 ? '-40px' : '',
+        objectFit: 'cover',
+        height: window.screen.width < 900 ? '190px' : '400px',
     }
 }));
 
