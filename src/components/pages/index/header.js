@@ -12,10 +12,12 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
     gridContainerBack: {
         backgroundColor: '#F7F7F7',
         width: '100%',
-        paddingBottom: '25px',
     },
     container: {
         padding: window.screen.width < 900 ? '0 20px' : '',
+    },
+    containerButtonHeaderHome: {
+        marginBottom: window.screen.width < 900 ? '1rem' : '',
     },
     headerBox: {
         position: window.screen.width > 900 ? 'absolute' : 'relative',
@@ -34,23 +36,29 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
     addMargin: {
         marginLeft: window.screen.width > 900 ? 270 : 'auto',
         marginRight: window.screen.width > 900 ? 0 : 'auto',
+        objectFit: 'contain',
     },
     button: {
         width: '100%',
         paddingLeft: 0,
         paddingRight: 0,
+    },
+    containerPrimeiraSecao: {
+        width: '100%',
+        height: window.screen.width > 900 ? '430px' : 'auto'
     }
+    
 }));
 
 class IndexHeader extends Component {
    render() {
-        const { classes, title, text, button } = this.props;
+        const { classes, title, text, textSegudo, button } = this.props;
 
         return (
             <Grid gutter={0} container>
                 <div className={classes.gridContainerBack}>
                 <div className="container">
-                    <Grid gutter={0} container align="center" className={classes.container}>
+                    <Grid gutter={0} container align="center" className={classes.containerPrimeiraSecao}>
                         <Image
                             cloudName="vivala"
                             publicId="home_1.png"
@@ -60,8 +68,10 @@ class IndexHeader extends Component {
                         /> 
                         <Grid container gutter={0} item xs={12} sm={4} className={classes.headerBox}>
                             <Grid item xs={12}><Typography type="headline" gutterBottom className={classes.headerHeadline}>{title}</Typography></Grid>
-                            <Grid item xs={12}><Typography type="body1" gutterBottom className={classes.headerText}>{text}</Typography></Grid>
                             <Grid item xs={12}>
+                            <Typography type="body1" gutterBottom className={classes.headerText}>{text}</Typography>
+                            </Grid>
+                            <Grid item xs={12} className={classes.containerButtonHeaderHome}>
                                 <Link to="/cotacao">
                                     <Button raised color="primary" className={classes.button}>
                                         {button}
