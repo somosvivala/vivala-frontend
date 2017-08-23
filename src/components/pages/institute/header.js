@@ -9,7 +9,10 @@ const styleSheet = createStyleSheet('InstituteHeader', theme => ({
         textAlign: window.screen.width < 800 ? 'center' : 'left'
     },
     title: {
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        fontWeight: 700,
+        marginTop: '2rem'
     }
 }));
 
@@ -18,7 +21,7 @@ class InstituteHeader extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.bg}>
-                <div className="container padding-2x">
+                <div className="container padding">
                     <Typography type="headline" color="accent" gutterBottom className={classes.title}>
                         Instituto Sustentável
                     </Typography>

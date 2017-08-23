@@ -14,7 +14,6 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     subheading: {
         textTransform: 'uppercase',
         textAlign: window.screen.width < 900 ? 'center' : 'left',
-        paddingLeft: window.screen.width < 900 ? 0 : 25,
         fontWeight: 700,
         marginTop: '2rem'
     },
