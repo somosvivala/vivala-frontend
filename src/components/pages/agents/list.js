@@ -31,7 +31,7 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
         textAlign: window.screen.width < 900 ? 'center' : 'left',
         paddingLeft: window.screen.width < 900 ? 0 : 25,
         maxWidth: window.screen.width < 900 ? '60%' : '100%',
-        marginBottom: '3rem'
+        margin: '0 auto 3rem auto'
     },
     align: {
         textAlign: window.screen.width < 900 ? 'center' : 'left',
@@ -54,7 +54,8 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     img: {
         margin: '0 auto',
         marginBottom: 10,
-        filter: 'grayscale(100%)'
+        width: '90%',
+        height: 'auto'
     }
 }));
 

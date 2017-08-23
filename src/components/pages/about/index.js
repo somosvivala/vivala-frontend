@@ -91,10 +91,10 @@ class AboutIndex extends Component {
                         </Typography>
                     </div>
                     <div className="container video">
-                        <Youtube videoId="kaIRH4Uh7nw" opts={{ width: window.screen.width < 900 ? '100%' : '900px' }}/>
+                        <Youtube videoId="kaIRH4Uh7nw" opts={{ width: window.screen.width < 900 ? '100%' : '900px', height: window.screen.width < 900 ? '300px' : '450px' }}/>
                     </div>
                 </div>
-                <div className={classes.bgOrange}>
+                <div>
                     <div className={classes.imagemBackground}>
                         <div className="container">
                             <Grid gutter={0} container className={classes.gridContainer}>
