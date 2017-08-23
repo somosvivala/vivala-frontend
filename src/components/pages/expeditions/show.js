@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ExpeditionsRecord from './record';
 import SubscribeIndex from '../../subscribe';
-import BadRequestError from '../../errors/500';
+import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
 import { requestExpedition } from '../../../actions/expeditions';
 
@@ -24,7 +24,7 @@ class ExpeditionsShow extends Component {
 
         return (
             <div>
-                <ExpeditionsRecord {...expedition} />
+                <ExpeditionsRecord {...expedition} id={match.params.id} />
                 <SubscribeIndex record={{ type: 'expedicoes', id: match.params.id}} />
             </div>
         );

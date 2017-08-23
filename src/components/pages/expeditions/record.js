@@ -6,6 +6,7 @@ import Typography from "material-ui/Typography";
 import Slider from 'react-slick';
 import {Image} from  'cloudinary-react';
 import {PrevArrow, NextArrow} from '../../arrows';
+import Youtube from 'react-youtube';
 
 const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
     bg: {
@@ -34,12 +35,25 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
 }));
 
 class ExpeditionsRecord extends Component {
+    createMarkup(markup) {
+        return {__html: markup};
+    }
+
     renderPhotos = () => {
-        return this.props.photos.map((photo, key) => {
+        return this.props.itens_slider.map((item, key) => {
+            if (item.type === 'photo') {
+                return <div key={`expedicao-${key}`} className={this.props.classes.applySizes}>
+                    <Youtube
+                        videoId={"kaIRH4Uh7nw"}
+                        opts={{ width: '100%', height: window.screen.width > 900 ? 420 : 250 }}
+                    />
+                </div>
+            }
+
             return <div key={`expedicao-${key}`} className={this.props.classes.applySizes}>
                 <Image
                     cloudName="vivala"
-                    publicId={photo.name}
+                    publicId={item.code}
                     width={window.screen.width > 900 ? 900 : window.screen.width}
                     height={window.screen.width > 900 ? 420 : 250}
                     crop="scale" alt={`Expedição Foto ${key+1}`}
@@ -48,8 +62,22 @@ class ExpeditionsRecord extends Component {
             </div>
         })
     }
+
+    renderDescriptions = () => {
+        return this.props.descricoes.map((description, key) => {
+            return <Grid container gutter={0} item xs={12} align="center" justify="center" key={`description-${key}`}>
+                <Typography type="title" color="accent" className={this.props.classes.title} gutterBottom>
+                    {description.titulo}
+                </Typography>
+                <Typography type="body1">
+                    <span dangerouslySetInnerHTML={this.createMarkup(description.texto)} />
+                </Typography>
+            </Grid>
+        });
+    }
+
     render() {
-        const { classes, title, text, text2 } = this.props;
+        const { classes, titulo } = this.props;
 
         const settings = {
             infinite: true,
@@ -57,7 +85,7 @@ class ExpeditionsRecord extends Component {
             slidesToScroll: 1,
             adaptativeHeight: true,
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 5000,
             prevArrow: <PrevArrow white inside />,
             nextArrow: <NextArrow white inside />,
         }
@@ -67,29 +95,15 @@ class ExpeditionsRecord extends Component {
                 <div className="container">
                     <Grid gutter={24} container align="center" justify="center">
                         <Typography type="headline" color="accent" className={classes.headline}>
-                            {title}
+                            {titulo}
                         </Typography>
 
                         <Slider {...settings} className={classes.slider}>
                             {this.renderPhotos()}
                         </Slider>
 
-                        <Grid container gutter={0} item xs={12} align="center" justify="center">
-                            <Typography type="title" color="accent" className={classes.title} gutterBottom>
-                                Propósito
-                            </Typography>
-                            <Typography type="body1">
-                                {text}
-                            </Typography>
-                        </Grid>
-                        <Grid container gutter={0} item xs={12} align="center" justify="center">
-                            <Typography type="title" color="accent" className={classes.title} gutterBottom>
-                                Roteiro
-                            </Typography>
-                            <Typography type="body1">
-                                {text2}
-                            </Typography>
-                        </Grid>
+
+                        {this.renderDescriptions()}
                     </Grid>
                 </div>
             </div>
@@ -99,10 +113,9 @@ class ExpeditionsRecord extends Component {
 
 ExpeditionsRecord.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: PropTypes.string,
-    text: PropTypes.string,
-    text2: PropTypes.string,
-    photos: PropTypes.array,
+    titulo: PropTypes.string,
+    descricoes: PropTypes.array,
+    itens_slider: PropTypes.array,
 };
 
 export default withStyles(styleSheet)(ExpeditionsRecord);

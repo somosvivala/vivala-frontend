@@ -5,16 +5,17 @@ import {
     REQUEST_REJECTED_EXPEDITION
 } from './action';
 import records from './_records';
+import axios from '../../utils/axios';
 
 export function requestExpedition(id) {
-    requestLoading();
-    const item = records.filter(record => record.id === parseInt(id, 10))[0];
+    return dispatch => {
+        dispatch(requestLoading());
 
-    return function(dispatch) {
-        if (!item) return dispatch(requestRejected('erro!'));
-
-        return dispatch(fetchExpedition(item));
-    };
+        return axios
+            .get('conteudo/expedicoes/' + id)
+            .then(response => dispatch(fetchExpedition(response.data)))
+            .catch(error => dispatch(requestRejected(error.message)));
+    }
 }
 
 export function requestExpeditions() {
