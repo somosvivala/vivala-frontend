@@ -1,0 +1,21 @@
+== Baixar Firefox v34
+https://ftp.mozilla.org/pub/firefox/releases/34.0/linux-x86_64/pt-BR/firefox-34.0.tar.bz2
+
+== abra o diretorio onde foi baixado
+cd ~/Downloads
+
+== descompacte o arquivo
+tar xjf firefox-34.0.tar.bz2
+
+== abra a pasta criada
+cd ~/Downloads/firefox
+
+== abra o firefox pela pasta
+./firefox
+
+== Baixar Selenium IDE
+https://addons.mozilla.org/pt-BR/firefox/addon/selenium-ide/
+
+== Rodar o ambiente de desenvolvimento local ( yarn start ) 
+
+== Abrir Selenium IDE, gravar testes / reproduzir
