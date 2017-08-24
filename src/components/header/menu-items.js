@@ -13,7 +13,7 @@ class MenuItems extends Component {
                 <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item>
                     <Grid item xs={12}>
                         <Typography type="subheading">
-                            <Link to="/contato"><strong>Saiba Mais</strong></Link>
+                            <strong>Saiba Mais</strong>
                         </Typography>
                     </Grid>
                 </Grid>

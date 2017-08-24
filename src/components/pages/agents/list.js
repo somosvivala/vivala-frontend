@@ -28,13 +28,11 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     },
     subTitle: {
         textAlign: window.screen.width < 900 ? 'center' : 'left',
-        paddingLeft: window.screen.width < 900 ? 0 : 25,
         maxWidth: window.screen.width < 900 ? '60%' : '100%',
         margin: '0 auto 3rem auto'
     },
     align: {
         textAlign: window.screen.width < 900 ? 'center' : 'left',
-        paddingLeft: window.screen.width < 900 ? 0 : 25
     },
     button: {
         width: window.screen.width < 900 ? '100%' : '33%',
@@ -55,6 +53,11 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
         marginBottom: 10,
         width: '90%',
         height: 'auto'
+    },
+    textoCardAgente: {
+        textAlign: 'left',
+        marginLeft: '5%',
+        width: '90%'
     }
 }));
 
@@ -94,8 +97,8 @@ class AgentsList extends Component {
                                     crop="scale" alt="Luiza Celidonio"
                                     className={classes.img}
                                 />
-                                <Typography type="body1">Luiza Celidonio</Typography>
-                                <Typography type="body1">São Paulo, São Paulo</Typography>
+                                <Typography className={classes.textoCardAgente} type="body1">Luiza Celidonio</Typography>
+                                <Typography className={classes.textoCardAgente} type="body1">São Paulo, São Paulo</Typography>
                             </div>
                         </div>
                         <div>
@@ -108,8 +111,8 @@ class AgentsList extends Component {
                                     crop="scale" alt="Lara Magnago"
                                     className={classes.img}
                                 />
-                                <Typography type="body1">Lara Magnago</Typography>
-                                <Typography type="body1">Vitória, Espírito Santo</Typography>
+                                <Typography  className={classes.textoCardAgente}  type="body1">Lara Magnago</Typography>
+                                <Typography  className={classes.textoCardAgente}  type="body1">Vitória, Espírito Santo</Typography>
                             </div>
                         </div>
                         <div>
@@ -122,8 +125,8 @@ class AgentsList extends Component {
                                     crop="scale" alt="Cristiane Schuh"
                                     className={classes.img}
                                 />
-                                <Typography type="body1">Cristiane Schuh</Typography>
-                                <Typography type="body1">Dois Irmãos, Rio Grande do Sul</Typography>
+                                <Typography className={classes.textoCardAgente} type="body1">Cristiane Schuh</Typography>
+                                <Typography className={classes.textoCardAgente} type="body1">Dois Irmãos, Rio Grande do Sul</Typography>
                             </div>
                         </div>
                     </Slider>

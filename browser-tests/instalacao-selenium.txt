@@ -16,6 +16,9 @@ cd ~/Downloads/firefox
 == Baixar Selenium IDE
 https://addons.mozilla.org/pt-BR/firefox/addon/selenium-ide/
 
-== Rodar o ambiente de desenvolvimento local ( yarn start ) 
+== Rodar o ambiente de desenvolvimento local ( yarn start )
+ 
+== Arquivo TesteFULL rodando todos os testes
 
-== Abrir Selenium IDE, gravar testes / reproduzir
+== TODO:
+- Selecao de campos campos select?

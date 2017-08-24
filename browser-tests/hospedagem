@@ -48,6 +48,26 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>css=a.react-datepicker__navigation.react-datepicker__navigation--next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.react-datepicker__navigation.react-datepicker__navigation--next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.react-datepicker__navigation.react-datepicker__navigation--next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div/div/div/div[2]/div[2]/div[4]/div[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>//div[@id='root']/div/div[2]/div/form/div/div/div/div/div[2]/div[2]/div[4]/div[4]</td>
 	<td></td>
 </tr>
@@ -63,7 +83,27 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//div[@id='root']/div/div[2]/div/form/div/div[2]/div/div/div[2]/div[2]/div[2]/div[6]</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[2]/div/div/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[2]/div/div/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[2]/div/div/div[2]/div[2]/div[5]/div[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div/div/div/div[2]/div[2]/div[4]/div[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[2]/div/div/a</td>
 	<td></td>
 </tr>
 <tr>
@@ -108,7 +148,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=div.rms-text.rms-text__empty &gt; span</td>
+	<td>css=div.rms-text &gt; span</td>
 	<td></td>
 </tr>
 <tr>
@@ -201,7 +241,6 @@
 	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
