@@ -18,13 +18,25 @@ const styleSheet = createStyleSheet('ExpeditionsListItem', theme => ({
         color: 'inherit'
     },
     img: {
-        maxWidth: '100%',
-        textAlign: 'center'
+        maxWidth: window.screen.width >  800 ? '100%' : '95%',
+        textAlign: 'center',
+        objectFit: 'contain',
+        margin:  window.screen.width >  800 ? 'auto 0 auto 1.6rem' : 'auto',
+        borderRadius: '2px'
+    },
+    textoDescricao: {
+        fontSize: '1.2rem',
+        marginBottom: '2rem',
+        marginLeft: window.screen.width >  800 ? '1rem' : '0',
     },
     subheading: {
-        fontWeight: 'bold',
-        textTransform: 'uppercase'
-    }
+        fontWeight: '600',
+        lineHeight: '0.1rem',
+        marginLeft: window.screen.width >  800 ? '1rem' : '0',
+    },
+    ancoraBotao: {
+        marginLeft: window.screen.width >  800 ? '1rem' : '0',
+    },
 }));
 
 class ExpeditionsListItem extends Component {
@@ -34,7 +46,7 @@ class ExpeditionsListItem extends Component {
         const url = `expedicoes/${expedition.id}`;
 
         return (
-            <Grid container gutter={16} align="flex-start" justify="center" className={classes.padding}>
+            <Grid container gutter={16} justify="center" >
                 <Grid gutter={0} container item xs={12} sm={6} align={align}>
                     <Link to={url}>
                         <Image
@@ -47,13 +59,16 @@ class ExpeditionsListItem extends Component {
                         />
                     </Link>
                 </Grid>
-                <Grid gutter={0} container item xs={12} sm={6} className={`${classes[color]} ${classes.padding}`} align={align} justify="center" direction="column">
+                <Grid gutter={0} container item xs={12} sm={6} className={`${classes[color]}`} align={align} justify="center" direction="column">
                     <Typography type="title" color="inherit" className={classes.subheading} paragraph>
                         {expedition.title}
                     </Typography>
-                    <Link to={url}>
+                    <Typography color="inherit" className={classes.textoDescricao} paragraph>
+                        Sabedoria da floresta
+                    </Typography>
+                    <Link to={url} className={classes.ancoraBotao}>
                         <Button raised color="contrast" >
-                            Saiba Mais
+                            Saiba mais
                         </Button>
                     </Link>
                 </Grid>
@@ -67,6 +82,7 @@ ExpeditionsListItem.propTypes = {
     expedition: PropTypes.shape({
         id: PropTypes.number,
         title: PropTypes.string,
+        description: PropTypes.string,
     }).isRequired,
     color: PropTypes.string.isRequired,
 };

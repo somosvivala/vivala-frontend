@@ -10,14 +10,21 @@ const styleSheet = createStyleSheet('ExpeditonsAfter', theme => ({
     bg: {
         backgroundColor: theme.institute.color,
         padding: 30,
-        textAlign: window.screen.width < 900 ? 'center' : 'left'
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        paddingBottom: '3rem'
     },
     headline: {
-        color: theme.default.color
+        color: 'white',
+        marginBottom: '2rem',
+        textAlign: 'center',
+        fontSize: '1.4em',
+        fontWeight: '300',
+        textTransform: 'uppercase',
+        letterSpacing: '1px'
     },
     slider: {
         width: '95%',
-        margin: '20px auto 0 auto'
+        margin: 'auto'
     }
 }));
 
