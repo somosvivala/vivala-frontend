@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:3000/" />
+<title>carro</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">carro</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Busque Sua Viagem')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=cidade_retirada</td>
+	<td>Teste Cidade</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[3]/div/div/div[2]/div[2]/div[5]/div[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=hora_retirada</td>
+	<td>18:32</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=cidade_devolucao</td>
+	<td>Teste Cidade</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.react-datepicker__navigation.react-datepicker__navigation--next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.react-datepicker__navigation.react-datepicker__navigation--next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[3]/div/div/div[2]/div[2]/div[3]/div[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=hora_devolucao</td>
+	<td>23:59</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=categorias_carro[economico]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=categorias_carro[compacto]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=categorias_carro[intermediario]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=categorias_carro[suv]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=categorias_carro[luxo]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=categorias_carro[premium]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=categorias_carro[minivan]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=itens_carro[ar]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=itens_carro[direcao_hidraulica]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=itens_carro[vidro_eletrico]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=itens_carro[automatico]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=itens_carro[radio]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=itens_carro[cd_usb]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=itens_carro[quatro_portas]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=solicitacoes_carro</td>
+	<td>Teste Solicitações</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=preco_desejado_carro</td>
+	<td>R$ 5622.22</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=nome_completo</td>
+	<td>Teste Nome Completo</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=nome_preferencia</td>
+	<td>Teste Como Quer Ser Chamado</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>teste@email.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=telefone</td>
+	<td>(15) 99988-6662</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
