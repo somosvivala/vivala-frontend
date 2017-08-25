@@ -52,7 +52,7 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
 
 class IndexHeader extends Component {
    render() {
-        const { classes, title, text, textSegudo, button } = this.props;
+        const { classes, title, text, button } = this.props;
 
         return (
             <Grid gutter={0} container>

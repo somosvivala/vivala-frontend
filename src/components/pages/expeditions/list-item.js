@@ -28,6 +28,7 @@ const styleSheet = createStyleSheet('ExpeditionsListItem', theme => ({
         fontSize: '1.2rem',
         marginBottom: '2rem',
         marginLeft: window.screen.width >  800 ? '1rem' : '0',
+        maxWidth: '90%'
     },
     subheading: {
         fontWeight: '600',
@@ -51,20 +52,20 @@ class ExpeditionsListItem extends Component {
                     <Link to={url}>
                         <Image
                             cloudName="vivala"
-                            publicId={expedition.photos[0].name}
+                            publicId={expedition.foto}
                             width={window.screen.width > 900 ? 400 : 300}
                             height={window.screen.width > 900 ? 300 : 200}
-                            crop="scale" alt={`${expedition.title}`}
+                            crop="scale" alt={`${expedition.titulo}`}
                             className={classes.img}
                         />
                     </Link>
                 </Grid>
                 <Grid gutter={0} container item xs={12} sm={6} className={`${classes[color]}`} align={align} justify="center" direction="column">
                     <Typography type="title" color="inherit" className={classes.subheading} paragraph>
-                        {expedition.title}
+                        {expedition.titulo}
                     </Typography>
                     <Typography color="inherit" className={classes.textoDescricao} paragraph>
-                        Sabedoria da floresta
+                        {expedition.descricao}
                     </Typography>
                     <Link to={url} className={classes.ancoraBotao}>
                         <Button raised color="contrast" >
@@ -81,8 +82,9 @@ ExpeditionsListItem.propTypes = {
     classes: PropTypes.object.isRequired,
     expedition: PropTypes.shape({
         id: PropTypes.number,
-        title: PropTypes.string,
-        description: PropTypes.string,
+        titulo: PropTypes.string,
+        descricao: PropTypes.string,
+        foto: PropTypes.string
     }).isRequired,
     color: PropTypes.string.isRequired,
 };

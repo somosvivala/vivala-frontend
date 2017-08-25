@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
@@ -6,6 +7,9 @@ import Button from 'material-ui/Button';
 import Slider from 'react-slick';
 import {Image} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
+import {requestAgents} from '../../../actions/agents';
+import BadRequestError from '../../errors/404';
+import LoadingInfinite from '../../loadings/infinite';
 
 const styleSheet = createStyleSheet('AgentsList', theme => ({
     bg: {
@@ -62,8 +66,35 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
 }));
 
 class AgentsList extends Component {
+    componentWillMount() {
+        this.props.requestAgents();
+    }
+
+    renderItems = () => {
+        const {agents, classes} = this.props;
+        return agents.map((agent, key) => {
+            return (
+                <div  key={`agente-${key}`}>
+                    <div className={classes.item}>
+                        <Image
+                            cloudName="vivala"
+                            publicId={agent.foto}
+                            width={window.screen.width < 480 ? 250 : 180}
+                            height={window.screen.width < 480 ? 180 : 120}
+                            crop="scale" alt={agent.nome}
+                            className={classes.img}
+                        />
+                        <Typography className={classes.textoCardAgente} type="body1">{agent.nome}</Typography>
+                        <Typography className={classes.textoCardAgente} type="body1">{agent.local}</Typography>
+                    </div>
+                </div>
+            )
+        })
+    }
+
+
     render() {
-        const { classes } = this.props;
+        const { classes, agents, fetching, error, fetched } = this.props;
         const settings = {
             infinite: true,
             autoplay: true,
@@ -76,6 +107,14 @@ class AgentsList extends Component {
             adaptativeHeight: true
         }
 
+        if (fetching) {
+            return <LoadingInfinite />;
+        }
+
+        if (fetched && error) {
+            return <BadRequestError />;
+        }
+
         return (
             <div className={classes.bg}>
                 <div className="container padding">
@@ -86,50 +125,12 @@ class AgentsList extends Component {
                         Conheça algumas pessoas do nosso time de agentes
                     </Typography>
 
-                    <Slider {...settings} className={classes.slider}>
-                        <div>
-                            <div className={classes.item}>
-                                <Image
-                                    cloudName="vivala"
-                                    publicId="luiza_celidonio.png"
-                                    width={window.screen.width < 480 ? 250 : 180}
-                                    height={window.screen.width < 480 ? 180 : 120}
-                                    crop="scale" alt="Luiza Celidonio"
-                                    className={classes.img}
-                                />
-                                <Typography className={classes.textoCardAgente} type="body1">Luiza Celidonio</Typography>
-                                <Typography className={classes.textoCardAgente} type="body1">São Paulo, São Paulo</Typography>
-                            </div>
-                        </div>
-                        <div>
-                            <div className={classes.item}>
-                                <Image
-                                    cloudName="vivala"
-                                    publicId="lara_magnago.png"
-                                    width={window.screen.width < 480 ? 250 : 180}
-                                    height={window.screen.width < 480 ? 180 : 120}
-                                    crop="scale" alt="Lara Magnago"
-                                    className={classes.img}
-                                />
-                                <Typography  className={classes.textoCardAgente}  type="body1">Lara Magnago</Typography>
-                                <Typography  className={classes.textoCardAgente}  type="body1">Vitória, Espírito Santo</Typography>
-                            </div>
-                        </div>
-                        <div>
-                            <div className={classes.item}>
-                                <Image
-                                    cloudName="vivala"
-                                    publicId="cristiane_schuh.png"
-                                    width={window.screen.width < 480 ? 250 : 180}
-                                    height={window.screen.width < 480 ? 180 : 120}
-                                    crop="scale" alt="Cristiane Schuh"
-                                    className={classes.img}
-                                />
-                                <Typography className={classes.textoCardAgente} type="body1">Cristiane Schuh</Typography>
-                                <Typography className={classes.textoCardAgente} type="body1">Dois Irmãos, Rio Grande do Sul</Typography>
-                            </div>
-                        </div>
-                    </Slider>
+
+                    { agents.length > 0  &&
+                        <Slider {...settings} className={classes.slider}>
+                            {this.renderItems()}
+                        </Slider>
+                    }
 
                     <div className={classes.alignCenter}>
                         <Link to="/agentes/seja-um-agente">
@@ -148,4 +149,13 @@ AgentsList.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styleSheet)(AgentsList);
+function mapStateToProps(state) {
+    return {
+        agents: state.agents.all,
+        fetching: state.agents.fetching,
+        error: state.agents.error,
+        fetched: state.agents.fetched
+    }
+}
+
+export default connect(mapStateToProps, {requestAgents})(withStyles(styleSheet)(AgentsList));

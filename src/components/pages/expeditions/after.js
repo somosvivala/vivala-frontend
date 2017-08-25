@@ -29,9 +29,9 @@ const styleSheet = createStyleSheet('ExpeditonsAfter', theme => ({
 }));
 
 class ExpeditonsAfter extends Component {
-    renderListItems(expeditions) {
-        return expeditions.map(expedition => {
-            return <div key={expedition.title}>
+    renderListItems = () => {
+        return this.props.expeditions.map((expedition, key) => {
+            return <div key={`${expedition.title}-${key}`}>
                 <ExpeditionsListItem expedition={expedition} color="default" />
             </div>
         })
@@ -56,7 +56,7 @@ class ExpeditonsAfter extends Component {
                         {translations.title}
                     </Typography>
                     <Slider {...settings} className={classes.slider}>
-                        { this.renderListItems(expeditions) }
+                        { this.renderListItems() }
                     </Slider>
                 </div>
             </div>

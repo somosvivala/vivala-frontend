@@ -42,16 +42,12 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
 }));
 
 class ExpeditionsRecord extends Component {
-    createMarkup(markup) {
-        return {__html: markup};
-    }
-
     renderPhotos = () => {
         return this.props.itens_slider.map((item, key) => {
-            if (item.type === 'photo') {
+            if (item.type === 'video') {
                 return <div key={`expedicao-${key}`} className={this.props.classes.applySizes}>
                     <Youtube
-                        videoId={"kaIRH4Uh7nw"}
+                        videoId={item.code}
                         opts={{ width: '100%', height: window.screen.width > 900 ? 420 : 250 }}
                     />
                 </div>
@@ -76,9 +72,7 @@ class ExpeditionsRecord extends Component {
                 <Typography type="title" color="accent" className={this.props.classes.title} gutterBottom>
                     {description.titulo}
                 </Typography>
-                <Typography type="body1">
-                    <span dangerouslySetInnerHTML={this.createMarkup(description.texto)} />
-                </Typography>
+                <Typography type="body1" dangerouslySetInnerHTML={{__html: description.texto }} component="div" />
             </Grid>
         });
     }

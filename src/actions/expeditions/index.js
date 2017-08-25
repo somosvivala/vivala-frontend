@@ -19,13 +19,14 @@ export function requestExpedition(id) {
 }
 
 export function requestExpeditions() {
-    return function(dispatch) {
+    return dispatch => {
         dispatch(requestLoading());
 
-        if (!records.length) return dispatch(requestRejected('erro!'));
-
-        return dispatch(fetchExpeditions(records));
-    };
+        return axios
+            .get('conteudo/expedicoes')
+            .then(response => dispatch(fetchExpeditions(response.data)))
+            .catch(error => dispatch(requestRejected(error.message)));
+    }
 }
 
 export function requestLoading() {

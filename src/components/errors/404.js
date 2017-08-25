@@ -28,7 +28,7 @@ class PageNotFound extends Component {
                     <Typography type="display1" color="inherit" gutterBottom className={classes.title}>
                         Página não encontrada (404)
                     </Typography>
-                    <Typography type="display2" color="primary" paragraph>
+                    <Typography type="display2" paragraph>
                         : (
                     </Typography>
                     <Typography type="title" color="inherit" className={classes.message}>
