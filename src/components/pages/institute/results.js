@@ -29,6 +29,12 @@ const styleSheet = createStyleSheet('InstituteResults', theme => ({
         marginRight: 20,
         flex: 1
     },
+    title: {
+        textTransform: 'uppercase',
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        fontWeight: 700,
+        marginTop: '2rem'
+    }
 }));
 
 class InstituteResults extends Component {
@@ -37,7 +43,7 @@ class InstituteResults extends Component {
         return (
             <div className={classes.bg}>
                 <div className="container padding">
-                    <Typography type="headline" color="accent" gutterBottom>
+                    <Typography type="headline" color="accent" className={classes.title} gutterBottom>
                         Resultados
                     </Typography>
                     <List>

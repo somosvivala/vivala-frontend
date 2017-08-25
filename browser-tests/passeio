@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:3000/" />
+<title>passeio</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">passeio</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Busque Sua Viagem')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=destino</td>
+	<td>Teste Destino</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div/div/div/div[2]/div[2]/div[5]/div[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[2]/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[2]/div/div/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[2]/div/div/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='root']/div/div[2]/div/form/div/div[2]/div/div/div[2]/div[2]/div[4]/div[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=passeios_interessses[aventura]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=passeios_interessses[city_tour]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=passeios_interessses[comer_beber]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=passeios_interessses[cultural_local]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=passeios_interessses[esporte]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=passeios_interessses[exclusivo]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=passeios_interessses[familia]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=passeios_interessses[natureza]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=passeios_interessses[romantico]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=preco_desejado</td>
+	<td>R$ 15333.33</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=solicitacoes</td>
+	<td>Teste Solicitações Especiais</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=nome_completo</td>
+	<td>Teste Nome Completo</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=nome_preferencia</td>
+	<td>Teste Como Quer Ser Chamado</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=email</td>
+	<td>teste@email.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=telefone</td>
+	<td>(95) 66666-2222</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -9,10 +9,12 @@ import Social from '../social';
 
 const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
     container: {
-        height: window.screen.width < 900 ? '180px' : '150px'
+        height: window.screen.width < 900 ? '180px' : '150px',
+        margin: 'auto'
     },
     containerBotaoSearch: {
-        height: window.screen.width < 900 ? '120px' : '100px'
+        height: window.screen.width < 900 ? '120px' : '100px',
+        margin: 'auto'
     },
     bg: {
         backgroundColor: '#DCDCDC',
@@ -29,7 +31,8 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
         fontWeight: 'bold',
         fontSize: '18px',
         textAlign: window.screen.width < 900 ? "center" : "left",
-        marginBottom: window.screen.width < 900 ? "0" : "11%"
+        marginBottom: window.screen.width < 900 ? "0" : "12%",
+        margin: '10px auto'
     },
     button: {
         boxShadow: 'inset 2px 2px 4px 1px rgba(0,0,0,0.3)',

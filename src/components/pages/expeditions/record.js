@@ -19,10 +19,12 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
     },
     headline: {
         textTransform: 'uppercase',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
     title: {
         textTransform: 'uppercase',
+        textAlign: 'left'
     },
     slider: {
         width: '95%',
@@ -31,7 +33,12 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
     applySizes: {
         width: window.screen.width > 900 ? 900 : window.screen.width,
         height: window.screen.width > 900 ? 420 : 250
-    }
+    },
+    containerTexto: {
+        maxWidth: window.screen.width > 900 ? '85%' : '100%',
+        margin: 'auto',
+        textAlign: 'left'
+    },
 }));
 
 class ExpeditionsRecord extends Component {
@@ -101,7 +108,6 @@ class ExpeditionsRecord extends Component {
                         <Slider {...settings} className={classes.slider}>
                             {this.renderPhotos()}
                         </Slider>
-
 
                         {this.renderDescriptions()}
                     </Grid>

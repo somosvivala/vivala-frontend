@@ -12,7 +12,13 @@ const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
         textAlign: window.screen.width < 900 ? 'center' : 'left'
     },
     headline: {
-        color: theme.institute.color
+        color: theme.institute.color,
+        marginBottom: '2rem',
+        textAlign: 'center',
+        fontSize: '1.4em',
+        fontWeight: '300',
+        textTransform: 'uppercase',
+        letterSpacing: '1px'
     },
     slider: {
         width: '95%',

@@ -7,8 +7,19 @@ import Typography from "material-ui/Typography";
 const styleSheet = createStyleSheet('ExpeditionsHeader', theme => ({
     bg: {
         backgroundColor: theme.default.color,
-        padding: 30
     },
+    title: {
+        textTransform: 'uppercase',
+        fontWeight: '700',
+        margin: '2rem 0 1rem 0',
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+    },
+    subTitle: {
+        marginBottom: '1rem',
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        fontSize: '1.2rem'
+    }
+    
 }));
 
 class ExpeditionsHeader extends Component {
@@ -16,13 +27,13 @@ class ExpeditionsHeader extends Component {
         const { classes, translations } = this.props;
         return (
             <div className={classes.bg}>
-                <div className="container">
+                <div className="container padding">
                     <Grid container gutter={0} align="center" justify="center">
                         <Grid item xs={12}>
-                            <Typography type="headline" color="accent" gutterBottom>
+                            <Typography type="headline" color="accent" className={classes.title} gutterBottom>
                                 {translations.title}
                             </Typography>
-                            <Typography type="body1">
+                            <Typography type="body1" className={classes.subTitle}>
                                 {translations.text}
                             </Typography>
                         </Grid>
