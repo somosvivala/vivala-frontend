@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from'material-ui/Typography';
 import Slider from 'react-slick';
-import ExpeditionsListItem from './list-item';
-import {PrevArrow, NextArrow} from '../../arrows';
+import ExperiencesListItem from './list-item';
 
-const styleSheet = createStyleSheet('ExpeditonsAfter', theme => ({
+const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
     bg: {
-        backgroundColor: theme.institute.color,
+        backgroundColor: theme.defaultDarken.color,
         padding: 30,
-        textAlign: window.screen.width < 900 ? 'center' : 'left',
-        paddingBottom: '3rem'
+        textAlign: window.screen.width < 900 ? 'center' : 'left'
     },
     headline: {
-        color: 'white',
+        color: theme.institute.color,
         marginBottom: '2rem',
         textAlign: 'center',
         fontSize: '1.4em',
@@ -24,52 +22,48 @@ const styleSheet = createStyleSheet('ExpeditonsAfter', theme => ({
     },
     slider: {
         width: '95%',
-        margin: 'auto'
-    }
+        margin: '20px auto'
+    },
 }));
 
-class ExpeditonsAfter extends Component {
+class ExpeditonsBefore extends Component {
     renderListItems = () => {
-        return this.props.expeditions.map((expedition, key) => {
-            return <div key={`${expedition.title}-${key}`}>
-                <ExpeditionsListItem expedition={expedition} color="default" />
+        return this.props.experiences.map((experience, key) => {
+            return <div key={`${experience.title}-${key}`}>
+                <ExperiencesListItem experience={experience} color="inherit" />
             </div>
         })
     }
-
     render() {
-        const { classes, expeditions } = this.props;
+        const { classes, experiences } = this.props;
         const settings = {
             infinite: true,
             autoplay: true,
             autoplaySpeed: 4000,
             slidesToShow: 1,
             slidesToScroll: 1,
-            prevArrow: <PrevArrow white />,
-            nextArrow: <NextArrow white />,
         }
 
         return (
             <div className={classes.bg}>
                 <div className="container">
                     <Typography type="headline" color="inherit" className={classes.headline} gutterBottom>
-                        Próximas Edições
+                        Próximas Anteriores
                     </Typography>
-                    { expeditions.length > 0 &&
+                    { experiences.length &&
                         <Slider {...settings} className={classes.slider}>
                             { this.renderListItems() }
                         </Slider>
                     }
-                </div>
+                    </div>
             </div>
         );
     }
 }
 
-ExpeditonsAfter.propTypes = {
+ExpeditonsBefore.propTypes = {
     classes: PropTypes.object.isRequired,
-    translations: PropTypes.object.isRequired,
-    expeditions: PropTypes.array.isRequired
+    experiences: PropTypes.array.isRequired
 };
 
-export default withStyles(styleSheet)(ExpeditonsAfter);
+export default withStyles(styleSheet)(ExpeditonsBefore);

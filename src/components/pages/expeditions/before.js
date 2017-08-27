@@ -27,15 +27,16 @@ const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
 }));
 
 class ExpeditonsBefore extends Component {
-    renderListItems(expeditions) {
-        return expeditions.map(expedition => {
-            return <div key={expedition.title}>
+    renderListItems = () => {
+        return this.props.expeditions.map((expedition, key) => {
+            return <div key={`${expedition.title}-${key}`}>
                 <ExpeditionsListItem expedition={expedition} color="inherit" />
             </div>
         })
     }
+
     render() {
-        const { classes, translations, expeditions } = this.props;
+        const { classes, expeditions } = this.props;
         const settings = {
             infinite: true,
             autoplay: true,
@@ -48,11 +49,13 @@ class ExpeditonsBefore extends Component {
             <div className={classes.bg}>
                 <div className="container">
                     <Typography type="headline" color="inherit" className={classes.headline} gutterBottom>
-                        {translations.title}
+                        Edições Anteriores
                     </Typography>
+                    { expeditions.length > 0 &&
                     <Slider {...settings} className={classes.slider}>
-                        { this.renderListItems(expeditions) }
+                        { this.renderListItems() }
                     </Slider>
+                    }
                 </div>
             </div>
         );
@@ -61,7 +64,6 @@ class ExpeditonsBefore extends Component {
 
 ExpeditonsBefore.propTypes = {
     classes: PropTypes.object.isRequired,
-    translations: PropTypes.object.isRequired,
     expeditions: PropTypes.array.isRequired
 };
 

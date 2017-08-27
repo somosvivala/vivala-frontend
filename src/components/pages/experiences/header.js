@@ -4,7 +4,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Grid from "material-ui/Grid";
 import Typography from "material-ui/Typography";
 
-const styleSheet = createStyleSheet('ExpeditionsHeader', theme => ({
+const styleSheet = createStyleSheet('ExperiencesHeader', theme => ({
     bg: {
         backgroundColor: theme.default.color,
     },
@@ -22,7 +22,7 @@ const styleSheet = createStyleSheet('ExpeditionsHeader', theme => ({
     
 }));
 
-class ExpeditionsHeader extends Component {
+class ExperiencesHeader extends Component {
     render() {
         const { classes } = this.props;
         return (
@@ -30,11 +30,11 @@ class ExpeditionsHeader extends Component {
                 <div className="container padding">
                     <Grid container gutter={0} align="center" justify="center">
                         <Grid item xs={12}>
-                            <Typography type="headline" color="accent" className={classes.title} gutterBottom>
-                                Expedições
+                            <Typography type="headline" className={classes.title} gutterBottom>
+                                Experiências
                             </Typography>
                             <Typography type="body1" className={classes.subTitle}>
-                                Quando a capacitação profissional e o turismo ecológico se juntam.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             </Typography>
                         </Grid>
                     </Grid>
@@ -44,8 +44,8 @@ class ExpeditionsHeader extends Component {
     }
 }
 
-ExpeditionsHeader.propTypes = {
+ExperiencesHeader.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styleSheet)(ExpeditionsHeader);
+export default withStyles(styleSheet)(ExperiencesHeader);

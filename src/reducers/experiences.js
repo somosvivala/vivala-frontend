@@ -1,9 +1,9 @@
 import {
-    FETCH_EXPEDITION,
-    FETCH_EXPEDITIONS,
-    REQUEST_LOADING_EXPEDITION,
-    REQUEST_REJECTED_EXPEDITION
-} from '../actions/expeditions/action';
+    FETCH_EXPERIENCE,
+    FETCH_EXPERIENCES,
+    REQUEST_LOADING_EXPERIENCE,
+    REQUEST_REJECTED_EXPERIENCE
+} from '../actions/experiences/action';
 
 const INITIAL_STATE = {
     edicoes_passadas: [],
@@ -16,27 +16,27 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
-        case REQUEST_LOADING_EXPEDITION:
+        case REQUEST_LOADING_EXPERIENCE:
             return {
                 ...state,
                 fetching: true,
                 fetched: INITIAL_STATE.fetched
             };
-        case REQUEST_REJECTED_EXPEDITION:
+        case REQUEST_REJECTED_EXPERIENCE:
             return {
                 ...state,
                 fetching: INITIAL_STATE.fetching,
                 fetched: INITIAL_STATE.fetched,
                 error: action.payload
             };
-        case FETCH_EXPEDITION:
+        case FETCH_EXPERIENCE:
             return {
                 ...state,
                 one: action.payload,
                 fetching: INITIAL_STATE.fetching,
                 fetched: true
             };
-        case FETCH_EXPEDITIONS:
+        case FETCH_EXPERIENCES:
             return {
                 ...state,
                 edicoes_passadas: action.payload.edicoes_passadas,

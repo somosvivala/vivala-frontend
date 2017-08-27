@@ -43,42 +43,55 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
 
 class ExpeditionsRecord extends Component {
     renderPhotos = () => {
-        return this.props.itens_slider.map((item, key) => {
+        const {classes, itens_slider} = this.props;
+        return itens_slider.map((item, key) => {
             if (item.type === 'video') {
-                return <div key={`expedicao-${key}`} className={this.props.classes.applySizes}>
-                    <Youtube
-                        videoId={item.code}
-                        opts={{ width: '100%', height: window.screen.width > 900 ? 420 : 250 }}
-                    />
-                </div>
+                return (
+                    <div key={`expedicao-${key}`}>
+                        <div className={classes.applySizes}>
+                            <Youtube
+                                videoId={item.code}
+                                opts={{ width: '100%', height: window.screen.width > 900 ? 420 : 250 }}
+                            />
+                        </div>
+                    </div>
+                );
             }
 
-            return <div key={`expedicao-${key}`} className={this.props.classes.applySizes}>
-                <Image
-                    cloudName="vivala"
-                    publicId={item.code}
-                    width={window.screen.width > 900 ? 900 : window.screen.width}
-                    height={window.screen.width > 900 ? 420 : 250}
-                    crop="scale" alt={`Expedição Foto ${key+1}`}
-                    className={this.props.classes.img}
-                />
-            </div>
+            return (
+                <div key={`expedicao-${key}`}>
+                    <div className={classes.applySizes}>
+                        <Image
+                            cloudName="vivala"
+                            publicId={item.code}
+                            width={window.screen.width > 900 ? 900 : window.screen.width}
+                            height={window.screen.width > 900 ? 420 : 250}
+                            crop="scale" alt={`Expedição Foto ${key+1}`}
+                            className={classes.img}
+                        />
+                    </div>
+                </div>
+            );
         })
     }
 
     renderDescriptions = () => {
-        return this.props.descricoes.map((description, key) => {
-            return <Grid container gutter={0} item xs={12} align="center" justify="center" key={`description-${key}`}>
-                <Typography type="title" color="accent" className={this.props.classes.title} gutterBottom>
-                    {description.titulo}
-                </Typography>
-                <Typography type="body1" dangerouslySetInnerHTML={{__html: description.texto }} component="div" />
-            </Grid>
+        const {classes, descricoes} = this.props;
+        if (!descricoes.length) return null;
+        return descricoes.map((description, key) => {
+            return (
+                <Grid container gutter={0} item xs={12} align="center" justify="center" key={`description-${key}`}>
+                    <Typography type="title" color="accent" className={classes.title} gutterBottom>
+                        {description.titulo}
+                    </Typography>
+                    <Typography type="body1" dangerouslySetInnerHTML={{__html: description.texto }} component="div" />
+                </Grid>
+            );
         });
     }
 
     render() {
-        const { classes, titulo } = this.props;
+        const { classes, titulo, itens_slider } = this.props;
 
         const settings = {
             infinite: true,
@@ -99,9 +112,11 @@ class ExpeditionsRecord extends Component {
                             {titulo}
                         </Typography>
 
-                        <Slider {...settings} className={classes.slider}>
-                            {this.renderPhotos()}
-                        </Slider>
+                        { itens_slider.length > 0 &&
+                            <Slider {...settings} className={classes.slider}>
+                                {this.renderPhotos()}
+                            </Slider>
+                        }
 
                         {this.renderDescriptions()}
                     </Grid>

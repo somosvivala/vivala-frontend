@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from'material-ui/Typography';
 import Slider from 'react-slick';
-import ExpeditionsListItem from './list-item';
+import ExperiencesListItem from './list-item';
 import {PrevArrow, NextArrow} from '../../arrows';
 
-const styleSheet = createStyleSheet('ExpeditonsAfter', theme => ({
+const styleSheet = createStyleSheet('ExperiencesAfter', theme => ({
     bg: {
-        backgroundColor: theme.institute.color,
+        backgroundColor: theme.vivala.color,
         padding: 30,
         textAlign: window.screen.width < 900 ? 'center' : 'left',
         paddingBottom: '3rem'
@@ -28,17 +28,17 @@ const styleSheet = createStyleSheet('ExpeditonsAfter', theme => ({
     }
 }));
 
-class ExpeditonsAfter extends Component {
+class ExperiencesAfter extends Component {
     renderListItems = () => {
-        return this.props.expeditions.map((expedition, key) => {
-            return <div key={`${expedition.title}-${key}`}>
-                <ExpeditionsListItem expedition={expedition} color="default" />
+        return this.props.experiences.map((experience, key) => {
+            return <div key={`${experience.title}-${key}`}>
+                <ExperiencesListItem experience={experience} color="default" />
             </div>
         })
     }
 
     render() {
-        const { classes, expeditions } = this.props;
+        const { classes, experiences } = this.props;
         const settings = {
             infinite: true,
             autoplay: true,
@@ -55,7 +55,7 @@ class ExpeditonsAfter extends Component {
                     <Typography type="headline" color="inherit" className={classes.headline} gutterBottom>
                         Próximas Edições
                     </Typography>
-                    { expeditions.length > 0 &&
+                    { experiences.length &&
                         <Slider {...settings} className={classes.slider}>
                             { this.renderListItems() }
                         </Slider>
@@ -66,10 +66,10 @@ class ExpeditonsAfter extends Component {
     }
 }
 
-ExpeditonsAfter.propTypes = {
+ExperiencesAfter.propTypes = {
     classes: PropTypes.object.isRequired,
     translations: PropTypes.object.isRequired,
-    expeditions: PropTypes.array.isRequired
+    experiences: PropTypes.array.isRequired
 };
 
-export default withStyles(styleSheet)(ExpeditonsAfter);
+export default withStyles(styleSheet)(ExperiencesAfter);

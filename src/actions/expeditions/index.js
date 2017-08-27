@@ -4,7 +4,6 @@ import {
     REQUEST_LOADING_EXPEDITION,
     REQUEST_REJECTED_EXPEDITION
 } from './action';
-import records from './_records';
 import axios from '../../utils/axios';
 
 export function requestExpedition(id) {
