@@ -23,7 +23,7 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     },
     slider: {
         margin: '20px auto',
-        width: '90%'
+        width: '94%'
     },
     item: {
         textAlign: 'center',
@@ -53,9 +53,8 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
         marginTop: 40
     },
     img: {
-        margin: '0 auto',
-        marginBottom: 10,
-        height: 180,
+        margin: '0 auto 10px 5%',
+        height: window.screen.width < 480 ? 135 : 190,
         objectFit: 'contain'
     },
     textoCardAgente: {
@@ -79,7 +78,8 @@ class AgentsList extends Component {
                         <Image
                             cloudName="vivala"
                             publicId={agent.foto}
-                            height={180}
+                            height={window.screen.width < 480 ? 135 : 190}
+                            width={window.screen.width < 480 ? 135 : 190}
                             crop="scale" alt={agent.nome}
                             className={classes.img}
                         />
@@ -98,10 +98,10 @@ class AgentsList extends Component {
             infinite: true,
             autoplay: true,
             autoplaySpeed: 7000,
-            slidesToShow: 3,
+            slidesToShow: 4,
             slidesToScroll: 1,
             responsive: [
-                { breakpoint: 480, settings: { slidesToShow: 1 } },
+                { breakpoint: 480, settings: { slidesToShow: 2 } },
             ],
             adaptativeHeight: true
         }
