@@ -55,8 +55,8 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     img: {
         margin: '0 auto',
         marginBottom: 10,
-        width: '90%',
-        height: 'auto'
+        height: 180,
+        objectFit: 'contain'
     },
     textoCardAgente: {
         textAlign: 'left',
@@ -79,8 +79,7 @@ class AgentsList extends Component {
                         <Image
                             cloudName="vivala"
                             publicId={agent.foto}
-                            width={window.screen.width < 480 ? 250 : 180}
-                            height={window.screen.width < 480 ? 180 : 120}
+                            height={180}
                             crop="scale" alt={agent.nome}
                             className={classes.img}
                         />

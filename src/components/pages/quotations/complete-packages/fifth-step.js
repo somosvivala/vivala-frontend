@@ -24,7 +24,7 @@ class CompletePackagesFifthStep extends Component {
 
         const type1 = [
             { value: 'hostel', text: 'Hostel' },
-            { value: 'pousada', text: 'Pousda' },
+            { value: 'pousada', text: 'Pousada' },
             { value: 'casa-ap', text: 'Casa/AP' },
             { value: 'hotel', text: 'Hotel' },
             { value: 'todos', text: 'Todos' },
