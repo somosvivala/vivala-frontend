@@ -69,7 +69,7 @@ class CompletePackagesSeventhStep extends Component {
                             <Field
                                 name="passeios_interessses[natureza]"
                                 component={Checkbox}
-                                label="natureza"
+                                label="Natureza"
                             />
                         </Grid>
                         <Grid item xs={6}>

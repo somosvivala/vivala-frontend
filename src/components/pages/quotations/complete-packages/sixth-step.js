@@ -42,7 +42,7 @@ class CompletePackagesSixthStep extends Component {
 
         const radios = [
             { value: 'transfer', label: 'Transfer Para o Hotel' },
-            { value: 'aluguel', label: 'Alguel de Carro' },
+            { value: 'aluguel', label: 'Aluguel de Carro' },
         ]
 
         return (
