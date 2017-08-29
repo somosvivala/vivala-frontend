@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://localhost:3000/" />
+<link rel="selenium.base" href="https://dev.vivala.com.br" />
 <title>seguro</title>
 </head>
 <body>
@@ -79,7 +79,7 @@
 <tr>
 	<td>type</td>
 	<td>name=datas_nascimento_seguro_viagem[0]</td>
-	<td>Teste Nome 1</td>
+	<td>04/04/1992</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -89,7 +89,7 @@
 <tr>
 	<td>type</td>
 	<td>name=datas_nascimento_seguro_viagem[1]</td>
-	<td>Teste Nome 2</td>
+	<td>04/02/1993</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -99,7 +99,7 @@
 <tr>
 	<td>type</td>
 	<td>name=datas_nascimento_seguro_viagem[2]</td>
-	<td>Teste Nome 3</td>
+	<td>21/08/1990</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -109,7 +109,7 @@
 <tr>
 	<td>type</td>
 	<td>name=datas_nascimento_seguro_viagem[3]</td>
-	<td>Teste Nome 4</td>
+	<td>07/06/1992</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -119,7 +119,7 @@
 <tr>
 	<td>type</td>
 	<td>name=datas_nascimento_seguro_viagem[4]</td>
-	<td>Teste Nome 5</td>
+	<td>28/12/2000</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -129,7 +129,7 @@
 <tr>
 	<td>type</td>
 	<td>name=datas_nascimento_seguro_viagem[5]</td>
-	<td>Teste Nome 6</td>
+	<td>0/04/1991</td>
 </tr>
 <tr>
 	<td>click</td>
