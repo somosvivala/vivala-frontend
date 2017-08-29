@@ -58,7 +58,7 @@ class AgentsBonus extends Component {
                         Benefícios
                     </Typography>
                     <Typography type="body1" align="center" gutterBottom>
-                        Exlusivos para agentes de viagens Vivalá
+                        Exclusivos para agentes de viagens Vivalá
                     </Typography>
 
                     <div className="agentes-slider-container">
@@ -70,7 +70,7 @@ class AgentsBonus extends Component {
                                 </Typography>
                                 <Image
                                     cloudName="vivala"
-                                    publicId="agentes_icone_1.png"
+                                    publicId="agentes_treinamento_2.png"
                                     width={120}
                                     height={120}
                                     crop="fit" alt="Ícone - Treinamento"
@@ -130,7 +130,7 @@ class AgentsBonus extends Component {
                                 </Typography>
                                 <Image
                                     cloudName="vivala"
-                                    publicId="agentes_icone_4.png"
+                                    publicId="agentes_operacao_global_2.png"
                                     width={120}
                                     height={120}
                                     crop="fit" alt="Ícone - Operação Global"
@@ -145,7 +145,7 @@ class AgentsBonus extends Component {
                                 </Typography>
                                 <Image
                                     cloudName="vivala"
-                                    publicId="agentes_icone_5.png"
+                                    publicId="agentes_controle_comissoes.png"
                                     width={120}
                                     height={120}
                                     crop="fit" alt="Ícone - Controle de comissões"

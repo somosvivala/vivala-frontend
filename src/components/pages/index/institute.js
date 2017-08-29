@@ -7,6 +7,7 @@ import Social from '../../social';
 import Slider from 'react-slick';
 import InstituteItem from './institute-item';
 import Logo from '../../../assets/svg/logo_instituto.svg';
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('Institute', theme => ({
     bg: {
@@ -46,7 +47,6 @@ class Institute extends Component {
     render() {
         const { classes } = this.props;
         const settings = {
-            infinite: false,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
@@ -56,8 +56,10 @@ class Institute extends Component {
             adaptativeHeight: false,
             variableWidth: true,
             autoplay: false,
-            autoplaySpeed: 2500,
-            speed: 1500
+            autoplaySpeed: 500,
+            prevArrow: <PrevArrow white />,
+            nextArrow: <NextArrow white />,
+            speed: 500
         }
 
         return (

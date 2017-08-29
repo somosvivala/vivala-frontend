@@ -17,7 +17,8 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
         padding: window.screen.width < 900 ? '0 20px' : '',
     },
     containerButtonHeaderHome: {
-        marginBottom: window.screen.width < 900 ? '1rem' : '',
+        maxWidth:  window.screen.width < 900 ? '90%' : '',
+        margin: window.screen.width < 900 ? 'auto auto 1rem auto' : '',
     },
     headerBox: {
         position: window.screen.width > 900 ? 'absolute' : 'relative',

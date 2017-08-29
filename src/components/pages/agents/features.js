@@ -4,6 +4,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Icon from 'material-ui/Icon';
 import List, { ListItem } from 'material-ui/List';
+import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('AgentsFeatures', theme => ({
     bg: {
@@ -20,13 +21,9 @@ const styleSheet = createStyleSheet('AgentsFeatures', theme => ({
         marginBottom: 10,
     },
     img: {
-        marginRight: 20,
-        width: 70,
-        height: 50,
+        marginRight: 20,    
+        maxWidth: 40
     },
-    fixMargin: {
-        marginLeft: 40
-    }
 }));
 
 class AgentsFeatures extends Component {
@@ -40,8 +37,14 @@ class AgentsFeatures extends Component {
                     </Typography>
                     <List>
                         <ListItem href="#simple-list" className={classes.listItem}>
-                            <Icon color="primary" style={{ fontSize: 40 }} >done</Icon>
-                            <div className={classes.fixMargin }>
+                            <Image
+                                cloudName="vivala"
+                                publicId="check_laranja.png"
+                                width={100}
+                                crop="scale" alt="Ícone - Check Vivalá"
+                                className={classes.img}
+                            />
+                            <div>
                                 <Typography type="subheading">
                                     <strong>Sem investimento inicial</strong>
                                 </Typography>
@@ -51,8 +54,14 @@ class AgentsFeatures extends Component {
                             </div>
                         </ListItem>
                         <ListItem href="#simple-list" className={classes.listItem}>
-                            <Icon color="primary" style={{ fontSize: 40 }} >done</Icon>
-                            <div className={classes.fixMargin }>
+                            <Image
+                                cloudName="vivala"
+                                publicId="check_laranja.png"
+                                width={100}
+                                crop="scale" alt="Ícone - Check Vivalá"
+                                className={classes.img}
+                            />
+                            <div>
                                 <Typography type="subheading">
                                     <strong>Trabalhe quando e onde quiser</strong>
                                 </Typography>
@@ -62,8 +71,14 @@ class AgentsFeatures extends Component {
                             </div>
                         </ListItem>
                         <ListItem href="#simple-list" className={classes.listItem}>
-                            <Icon color="primary" style={{ fontSize: 40 }} >done</Icon>
-                            <div className={classes.fixMargin }>
+                            <Image
+                                cloudName="vivala"
+                                publicId="check_laranja.png"
+                                width={100}
+                                crop="scale" alt="Ícone - Check Vivalá"
+                                className={classes.img}
+                            />
+                            <div>
                                 <Typography type="subheading">
                                     <strong>Ganhe dinheiro</strong>
                                 </Typography>

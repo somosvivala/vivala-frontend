@@ -53,8 +53,7 @@ class ExpeditionsListItem extends Component {
                         <Image
                             cloudName="vivala"
                             publicId={expedition.foto}
-                            width={window.screen.width > 900 ? 400 : 300}
-                            height={window.screen.width > 900 ? 300 : 200}
+                            height={window.screen.width > 900 ? 215 : 168}
                             crop="scale" alt={`${expedition.titulo}`}
                             className={classes.img}
                         />

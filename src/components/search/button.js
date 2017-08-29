@@ -45,7 +45,7 @@ class SearchButton extends Component {
                     </Typography>
                     <Link to="/cotacao">
                         <Button raised color="primary" className={classes.button}>
-                            Receba sua cotação em até 24 horas
+                            Receba sua cotação em até 24H
                             <FontAwesome name='long-arrow-right' style={{ fontSize: 25, paddingLeft: 20 }} />
                         </Button>
                     </Link>

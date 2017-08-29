@@ -4,6 +4,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from'material-ui/Typography';
 import Slider from 'react-slick';
 import ExpeditionsListItem from './list-item';
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
     bg: {
@@ -43,6 +44,8 @@ class ExpeditonsBefore extends Component {
             autoplaySpeed: 4000,
             slidesToShow: 1,
             slidesToScroll: 1,
+            prevArrow: <PrevArrow instituto />,
+            nextArrow: <NextArrow instituto />,
         }
 
         return (

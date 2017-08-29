@@ -10,31 +10,45 @@
   height: 60px;
   right: -25px;
   &:before {
-    content: url(http://res.cloudinary.com/vivala/image/upload/v1503034817/right-arrow-orange_8x43.png);
+    content: url(//res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958623/arrow-right-laranja_lct3ic.png);
   }
 }
+
 
 .slick-prev {
   height: 60px;
   left: -25px;
   &:before {
-    content: url(http://res.cloudinary.com/vivala/image/upload/v1503034458/left-arrow-orange_8x43.png);
+    content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958623/arrow-left-laranja_zssrmh.png);
   }
 }
 
 .slick-next.white {
   z-index: 99999999;
   &:before {
-    content: url(http://res.cloudinary.com/vivala/image/upload/v1503034784/right-arrow-white_8x43.png);
+    content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958269/arrow-right-branco_cqtzam.png);
   }
 }
 
 .slick-prev.white {
   z-index: 999999999;
   &:before {
-    content: url(http://res.cloudinary.com/vivala/image/upload/v1503034791/left-arrow-white_8x43.png);
+    content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958269/arrow-left-branco_zzg8ao.png);
   }
 }
+.slick-prev.instituto {
+  z-index: 999999999;
+  &:before {
+    content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958269/arrow-left-instituto_c027pe.png);
+  }
+}
+.slick-next.instituto {
+  z-index: 999999999;
+  &:before {
+    content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958269/arrow-right-instituto_i0c0ko.png);
+  }
+}
+
 
 .slick-next.inside {
   right: 10px;
@@ -61,11 +75,17 @@
 }
 
 .home-instituto-slick-container {
+    .slick-list {
+        height: 130px;
+    }
+
     .slick-slide {
         min-width: 260px;
     }
     .slick-prev, .slick-next {
-        display: none!important;
+        ////res.cloudinary.com/vivala/image/upload/c_scale,w_20/v1503958269/arrow-left-instituto_c027pe.png
+        ////res.cloudinary.com/vivala/image/upload/c_scale,w_20/v1503958269/arrow-right-instituto_i0c0ko.png
+        //display: none!important;
     }
 }
 
@@ -109,9 +129,6 @@
         max-width: 200px;
         width: 200px;
     }
-    .slick-prev {
-        left: -20px!important;
-    }
     .slick-next {
         right: -30px!important;
     }
@@ -121,9 +138,6 @@
     .slick-slide {
         max-width: 190px;
         width: 190px;
-    }
-    .slick-prev {
-        left: -20px!important;
     }
     .slick-next {
         right: -30px!important;

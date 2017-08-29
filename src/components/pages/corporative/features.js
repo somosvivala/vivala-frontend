@@ -4,6 +4,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import List, { ListItem } from 'material-ui/List';
 import Icon from 'material-ui/Icon';
+import {Image} from 'cloudinary-react';
 
 const styleSheet = createStyleSheet('CorporativeFeatures', theme => ({
     bg: {
@@ -31,6 +32,10 @@ const styleSheet = createStyleSheet('CorporativeFeatures', theme => ({
     subheading: {
         marginLeft: 20,
         maxWidth: '75%'
+    },
+    img: {
+        marginLeft: '20px',
+        maxWidth: '40px',
     }
 }));
 
@@ -48,19 +53,43 @@ class CorporativeFeatures extends Component {
                     </Typography>
                     <List>
                         <ListItem className={classes.listItem}>
-                            <Icon color="primary" className={classes.icon}>done</Icon>
+
+                            <Image
+                                cloudName="vivala"
+                                publicId="check_laranja.png"
+                                width={100}
+                                crop="scale" alt="Ícone - Check Vivalá"
+                                className={classes.img}
+                            />
+
                             <Typography type="subheading" color="inherit" className={classes.subheading}>
                                 Gestão completa de viagens para pequenas e médias empresas
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Icon color="primary" className={classes.icon}>done</Icon>
+
+                            <Image
+                                cloudName="vivala"
+                                publicId="check_laranja.png"
+                                width={100}
+                                crop="scale" alt="Ícone - Check Vivalá"
+                                className={classes.img}
+                            />
+
                             <Typography type="subheading" color="inherit" className={classes.subheading}>
                                 Campanhas de premiação e viagens de incentivo
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Icon color="primary" className={classes.icon}>done</Icon>
+
+                            <Image
+                                cloudName="vivala"
+                                publicId="check_laranja.png"
+                                width={100}
+                                crop="scale" alt="Ícone - Check Vivalá"
+                                className={classes.img}
+                            />
+
                             <Typography type="subheading" color="inherit" className={classes.subheading}>
                                 Grupos e eventos
                             </Typography>
