@@ -18,10 +18,11 @@ const styleSheet = createStyleSheet('ExpeditionsListItem', theme => ({
         color: 'inherit'
     },
     img: {
+        float: window.screen.width >  800 ? 'right' : 'none',
+        margin: window.screen.width >  800 ? '0' : 'auto',
         maxWidth: window.screen.width >  800 ? '100%' : '95%',
         textAlign: 'center',
         objectFit: 'contain',
-        margin:  window.screen.width >  800 ? 'auto 0 auto 1.6rem' : 'auto',
         borderRadius: '2px'
     },
     textoDescricao: {
@@ -32,7 +33,7 @@ const styleSheet = createStyleSheet('ExpeditionsListItem', theme => ({
     },
     subheading: {
         fontWeight: '600',
-        lineHeight: '0.1rem',
+        lineHeight: '1.4rem',
         marginLeft: window.screen.width >  800 ? '1rem' : '0',
     },
     ancoraBotao: {
@@ -53,7 +54,7 @@ class ExpeditionsListItem extends Component {
                         <Image
                             cloudName="vivala"
                             publicId={expedition.foto}
-                            height={window.screen.width > 900 ? 215 : 168}
+                            height={window.screen.width > 900 ? 330 : 280}
                             crop="scale" alt={`${expedition.titulo}`}
                             className={classes.img}
                         />

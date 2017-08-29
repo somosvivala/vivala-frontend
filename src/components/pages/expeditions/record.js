@@ -20,24 +20,22 @@ const styleSheet = createStyleSheet('ExpeditionsRecord', theme => ({
     headline: {
         textTransform: 'uppercase',
         fontWeight: 'bold',
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: '2rem'
     },
     title: {
         textTransform: 'uppercase',
-        textAlign: 'left'
+        textAlign: window.screen.width > 900 ? 'left' : 'center',
+        width: window.screen.width > 900 ? '80%' : '100%',
     },
     slider: {
         width: '95%',
         margin: '20px auto'
     },
-    applySizes: {
-        width: window.screen.width > 900 ? 900 : window.screen.width,
-        height: window.screen.width > 900 ? 420 : 250
-    },
     containerTexto: {
-        maxWidth: window.screen.width > 900 ? '85%' : '100%',
+        width: window.screen.width > 900 ? '80%' : '100%',
         margin: 'auto',
-        textAlign: 'left'
+        textAlign: window.screen.width > 900 ? 'left' : 'center',
     },
 }));
 
@@ -48,10 +46,10 @@ class ExpeditionsRecord extends Component {
             if (item.type === 'video') {
                 return (
                     <div key={`expedicao-${key}`}>
-                        <div className={classes.applySizes}>
+                        <div >
                             <Youtube
                                 videoId={item.code}
-                                opts={{ width: '100%', height: window.screen.width > 900 ? 420 : 250 }}
+                                opts={{ width: '100%', height: window.screen.width > 900 ? 400 : 250 }}
                             />
                         </div>
                     </div>
@@ -60,12 +58,11 @@ class ExpeditionsRecord extends Component {
 
             return (
                 <div key={`expedicao-${key}`}>
-                    <div className={classes.applySizes}>
+                    <div >
                         <Image
                             cloudName="vivala"
                             publicId={item.code}
-                            width={window.screen.width > 900 ? 900 : window.screen.width}
-                            height={window.screen.width > 900 ? 420 : 250}
+                            height={window.screen.width > 900 ? 400 : 250}
                             crop="scale" alt={`Expedição Foto ${key+1}`}
                             className={classes.img}
                         />
@@ -74,6 +71,8 @@ class ExpeditionsRecord extends Component {
             );
         })
     }
+
+
 
     renderDescriptions = () => {
         const {classes, descricoes} = this.props;
@@ -84,7 +83,7 @@ class ExpeditionsRecord extends Component {
                     <Typography type="title" color="accent" className={classes.title} gutterBottom>
                         {description.titulo}
                     </Typography>
-                    <Typography type="body1" dangerouslySetInnerHTML={{__html: description.texto }} component="div" />
+                    <Typography type="body1" dangerouslySetInnerHTML={{__html: description.texto }} component="div" className={classes.containerTexto} />
                 </Grid>
             );
         });
