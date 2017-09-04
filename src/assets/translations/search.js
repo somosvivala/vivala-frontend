@@ -5,8 +5,8 @@ export default {
             {text: 'Pacotes Completos'},
             {text: 'Hotéis'},
             {text: 'Vôos'},
-            {text: 'Ônibus'},
             {text: 'Experiências Vivalá'},
+            {text: 'Ônibus'},
         ],
         boxRight: {
             text: 'Ou, se preferir, seja atendido de forma ágil, humanizada e gratuita.',

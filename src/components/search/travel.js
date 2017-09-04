@@ -8,6 +8,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import PacotesCompletosSvg from '../../assets/svg/icons/pacotes.svg';
 import HoteisSvg from '../../assets/svg/icons/hoteis.svg';
 import VoosSvg from '../../assets/svg/icons/voos.svg';
+import ExperienciasSvg from '../../assets/svg/icons/experiencia.svg';
 import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('SearchTravel', theme => ({
@@ -97,6 +98,10 @@ class SearchTravel extends Component {
                                 <ListItem button component="a" rel="noopener noreferrer" target="_blank" href="https://www.e-agencias.com.br/vivala/home/flights" className={classes.listItem}>
                                     <img src={VoosSvg} className={classes.img} alt="Voos Icone"/>
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[2].text}</Typography>
+                                </ListItem>
+                                <ListItem button component="a" href="/experiencias" className={classes.listItem}>
+                                    <img src={ExperienciasSvg} className={classes.img} alt="Experiencias Icone"/>
+                                    <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[3].text}</Typography>
                                 </ListItem>
                             </List>
                         </Grid>
