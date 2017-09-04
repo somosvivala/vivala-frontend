@@ -35,8 +35,8 @@ class ExperiencesIndex extends Component {
 
 function mapStateToProps(state) {
     return {
-        future: state.expeditions.edicoes_futuras,
-        past: state.expeditions.edicoes_passadas,
+        future: state.experiences.edicoes_futuras,
+        past: state.experiences.edicoes_passadas,
         fetching: state.experiences.fetching,
         error: state.experiences.error,
     }

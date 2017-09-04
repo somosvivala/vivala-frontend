@@ -12,7 +12,7 @@ const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
         textAlign: window.screen.width < 900 ? 'center' : 'left'
     },
     headline: {
-        color: theme.institute.color,
+        color: theme.vivala.color,
         marginBottom: '2rem',
         textAlign: 'center',
         fontSize: '1.4em',
@@ -48,7 +48,7 @@ class ExpeditonsBefore extends Component {
             <div className={classes.bg}>
                 <div className="container">
                     <Typography type="headline" color="inherit" className={classes.headline} gutterBottom>
-                        Próximas Anteriores
+                        Edições Anteriores
                     </Typography>
                     { experiences.length &&
                         <Slider {...settings} className={classes.slider}>

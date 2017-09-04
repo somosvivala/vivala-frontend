@@ -24,7 +24,8 @@ const styleSheet = createStyleSheet('ExperiencesRecord', theme => ({
     },
     title: {
         textTransform: 'uppercase',
-        textAlign: 'left'
+        textAlign: window.screen.width > 900 ? 'left' : 'center',
+        width: window.screen.width > 900 ? '80%' : '100%',
     },
     slider: {
         width: '95%',
@@ -35,9 +36,9 @@ const styleSheet = createStyleSheet('ExperiencesRecord', theme => ({
         height: window.screen.width > 900 ? 420 : 250
     },
     containerTexto: {
-        maxWidth: window.screen.width > 900 ? '85%' : '100%',
+        width: window.screen.width > 900 ? '80%' : '100%',
         margin: 'auto',
-        textAlign: 'left'
+        textAlign: window.screen.width > 900 ? 'left' : 'center',
     },
 }));
 
@@ -72,7 +73,7 @@ class ExperiencesRecord extends Component {
                 <Typography type="title" className={this.props.classes.title} gutterBottom>
                     {description.titulo}
                 </Typography>
-                <Typography type="body1" dangerouslySetInnerHTML={{__html: description.texto }} component="div" />
+                <Typography type="body1" dangerouslySetInnerHTML={{__html: description.texto }} component="div"  className={this.props.classes.containerTexto}  />
             </Grid>
         });
     }
