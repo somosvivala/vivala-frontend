@@ -35,9 +35,10 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
         textAlign: 'left',
     },
     addMargin: {
-        marginLeft: window.screen.width > 900 ? 270 : 'auto',
+        marginLeft: window.screen.width > 900 ? 280 : 'auto',
         marginRight: window.screen.width > 900 ? 0 : 'auto',
         objectFit: 'contain',
+        position: 'absolute',
     },
     button: {
         width: '100%',
@@ -63,7 +64,7 @@ class IndexHeader extends Component {
                         <Image
                             cloudName="vivala"
                             publicId="home_1.png"
-                            width={window.screen.width > 900 ? 800 : 320}
+                            width={window.screen.width > 900 ? 600 : 320}
                             crop="scale" alt="Conheça seu mundo"
                             className={classes.addMargin}
                         /> 
