@@ -16,6 +16,9 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
         height: window.screen.width < 900 ? '120px' : '100px',
         margin: 'auto'
     },
+    addMinHeight: {
+        minHeight: window.screen.width > 900 ? 100 : 60,
+    },
     bg: {
         backgroundColor: '#DCDCDC',
     },
@@ -50,7 +53,7 @@ class SearchCallToAction extends Component {
             <div className={classes.bg}>
                 <div className={`container ${classes.applyPadding}`}>
                     <Grid container gutter={0} align="center" justify="space-between" className={classes.container}>
-                        <Grid gutter={0} container item xs={12} sm={6} justify="flex-start">
+                        <Grid gutter={0} container item xs={12} sm={6} justify="flex-start" align="flex-start" className={classes.addMinHeight}>
                             <Typography type="subheading" className={classes.textoSegundaSecaoHome}>
                                 {translations.text}
                             </Typography>

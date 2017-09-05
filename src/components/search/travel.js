@@ -99,10 +99,12 @@ class SearchTravel extends Component {
                                     <img src={VoosSvg} className={classes.img} alt="Voos Icone"/>
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[2].text}</Typography>
                                 </ListItem>
-                                <ListItem button component="a" href="/experiencias" className={classes.listItem}>
-                                    <img src={ExperienciasSvg} className={classes.img} alt="Experiencias Icone"/>
-                                    <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[3].text}</Typography>
-                                </ListItem>
+                                <Link to="/experiencias">
+                                    <ListItem button component="div" className={classes.listItem}>
+                                        <img src={ExperienciasSvg} className={classes.img} alt="Experiencias Icone"/>
+                                        <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[3].text}</Typography>
+                                    </ListItem>
+                                </Link>
                             </List>
                         </Grid>
                         <Grid xs={12} sm={6} item>

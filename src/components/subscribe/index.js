@@ -74,7 +74,7 @@ class SubscribeIndex extends Component {
     }
 }
 
-PropTypes.required = {
+SubscribeIndex.propTypes = {
     classes: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
     record: PropTypes.objectOf({
