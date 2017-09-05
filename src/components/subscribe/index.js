@@ -38,7 +38,7 @@ class SubscribeIndex extends Component {
     }
 
     render() {
-        const { classes, requesting, error, success, btnColor } = this.props;
+        const { classes, title, requesting, error, success, btnColor } = this.props;
         const { open } = this.state;
 
         if (requesting) {
@@ -52,7 +52,7 @@ class SubscribeIndex extends Component {
         if (error || success) {
             return <div className={classes.bg}>
                 <div className="container">
-                    <Message type={error ? 'error' : 'success'} title="Expedições" heading="Inscrição efetuada com sucesso!" subheading="Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos." />
+                    <Message type={error ? 'error' : 'success'} title={ title ? title : "Expedições" } heading="Inscrição efetuada com sucesso!" subheading="Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos." />
                 </div>
             </div>
         }

@@ -29,7 +29,7 @@ class ExperiencesShow extends Component {
         return (
             <div>
                 <ExperiencesRecord {...experience} id={match.params.id} />
-                { experience.inscricoes_abertas && <SubscribeIndex record={{ type: 'experiencias', id: match.params.id}} /> }
+                { experience.inscricoes_abertas && <SubscribeIndex title="Experiências" record={{ type: 'experiencias', id: match.params.id}} /> }
             </div>
         );
     }
