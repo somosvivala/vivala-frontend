@@ -43,7 +43,7 @@ class LodgingFourthStep extends Component {
                             </Button>
                         </Grid>
                         <Grid gutter={0} container item xs={6} justify="flex-end">
-                            <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting}>
+                            <Button raised color="primary" type="submit" disabled={invalid || submitting}>
                                 Próximo
                             </Button>
                         </Grid>

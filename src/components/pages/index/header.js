@@ -38,7 +38,7 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
         marginLeft: window.screen.width > 900 ? 280 : 'auto',
         marginRight: window.screen.width > 900 ? 0 : 'auto',
         objectFit: 'contain',
-        position: 'absolute',
+        position: window.screen.width < 900 ? 'relative' : 'absolute',
     },
     button: {
         width: '100%',
@@ -54,7 +54,7 @@ const styleSheet = createStyleSheet('IndexHeader', theme => ({
 
 class IndexHeader extends Component {
    render() {
-        const { classes, title, text, button } = this.props;
+        const { classes, title, button } = this.props;
 
         return (
             <Grid gutter={0} container>
@@ -69,9 +69,15 @@ class IndexHeader extends Component {
                             className={classes.addMargin}
                         /> 
                         <Grid container gutter={0} item xs={12} sm={4} className={classes.headerBox}>
-                            <Grid item xs={12}><Typography type="headline" gutterBottom className={classes.headerHeadline}>{title}</Typography></Grid>
                             <Grid item xs={12}>
-                            <Typography type="body1" gutterBottom className={classes.headerText}>{text}</Typography>
+                                <Typography type="headline" gutterBottom className={classes.headerHeadline}>{title}</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography type="body1" gutterBottom className={classes.headerText}>
+                                    Não perca mais horas e horas procurando sua próxima viagem.
+                                    <br/>
+                                    Peça sua cotação de forma ágil e seja atendido por agentes profissionais de forma humanizada e gratuita.
+                                </Typography>
                             </Grid>
                             <Grid item xs={12} className={classes.containerButtonHeaderHome}>
                                 <Link to="/cotacao">

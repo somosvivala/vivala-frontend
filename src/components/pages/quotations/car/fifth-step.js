@@ -31,7 +31,7 @@ class CarFifthStep extends Component {
 
                     <Grid item xs={12}>
                         <Field
-                            type="text"
+                            type="tel"
                             name="preco_desejado_carro"
                             component={textInput}
                             label="Preço Máximo"

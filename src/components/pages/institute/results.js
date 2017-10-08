@@ -48,25 +48,31 @@ class InstituteResults extends Component {
                     </Typography>
                     <List>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+2</Typography>
+                            <Typography className={classes.icon}>+4</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Expedições
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+40</Typography>
+                            <Typography className={classes.icon}>+3</Typography>
+                            <Typography type="subheading" color="inherit" className={classes.text}>
+                                Regiões brasileiras
+                            </Typography>
+                        </ListItem>
+                        <ListItem className={classes.listItem}>
+                            <Typography className={classes.icon}>+100</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Microempreendedores capacitados
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+50</Typography>
+                            <Typography className={classes.icon}>+100</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Voluntários (Transformadores)
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+R$ 40.000</Typography>
+                            <Typography className={classes.icon}>+R$ 70.000</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Injetados na economia local
                             </Typography>

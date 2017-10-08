@@ -64,22 +64,6 @@ class CorporativeBonus extends Component {
                             <div>
                                 <div className={classes.item}>
                                     <Typography type="subheading" className={classes.cardSubheading}>
-                                        Campanhas de Incentivo
-                                    </Typography>
-                                    <Image
-                                        cloudName="vivala"
-                                        publicId="corporativo_icone_4.png"
-                                        width={120}
-                                        height={120}
-                                        crop="fit" alt="Ícone - Campanhas de Incentivo"
-                                        className={classes.img}
-                                    />
-                                    <Typography type="body1">Realize campanhas atreladas as suas metas</Typography>
-                                </div>
-                            </div>
-                            <div>
-                                <div className={classes.item}>
-                                    <Typography type="subheading" className={classes.cardSubheading}>
                                         Reduza Custos
                                     </Typography>
                                     <Image
@@ -112,6 +96,22 @@ class CorporativeBonus extends Component {
                             <div>
                                 <div className={classes.item}>
                                     <Typography type="subheading" className={classes.cardSubheading}>
+                                        Campanhas de Incentivo
+                                    </Typography>
+                                    <Image
+                                        cloudName="vivala"
+                                        publicId="corporativo_icone_4.png"
+                                        width={120}
+                                        height={120}
+                                        crop="fit" alt="Ícone - Campanhas de Incentivo"
+                                        className={classes.img}
+                                    />
+                                    <Typography type="body1">Realize campanhas atreladas as suas metas</Typography>
+                                </div>
+                            </div>
+                            <div>
+                                <div className={classes.item}>
+                                    <Typography type="subheading" className={classes.cardSubheading}>
                                         Melhore o controle
                                     </Typography>
                                     <Image
@@ -122,7 +122,7 @@ class CorporativeBonus extends Component {
                                         crop="fit" alt="Ícone - Melhore o Controle"
                                         className={classes.img}
                                     />
-                                    <Typography type="body1">Receba relatórios mensais com seus ganhos</Typography>
+                                    <Typography type="body1">Receba relatórios mensais com seus gastos</Typography>
                                 </div>
                             </div>
                             <div>

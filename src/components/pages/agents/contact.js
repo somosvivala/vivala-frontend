@@ -72,7 +72,7 @@ class AgentsContact extends Component {
         if (error || success) {
             return <div className={classes.bg}>
                 <div className="container padding">
-                    <Message type={error ? 'error' : 'success'} title="Contato" heading="Recebemos seu contato!" subheading="Obrigado pelas informações. Retornaremos o mais breve possível." />
+                    <Message type={error ? 'error' : 'success'} title="Contato" heading="Pronto!" subheading="Agora entraremos em contato para falar sobre você nesse time vencedor." />
                 </div>
             </div>
         }

@@ -63,14 +63,14 @@ class TripFourthStep extends Component {
                             <Field
                                 name="passeios_interessses[natureza]"
                                 component={Checkbox}
-                                label="natureza"
+                                label="Natureza"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
                                 name="passeios_interessses[cultural_local]"
                                 component={Checkbox}
-                                label="Cultura + Local"
+                                label="Cultura Local"
                             />
                         </Grid>
                         <Grid item xs={6}>
@@ -97,7 +97,7 @@ class TripFourthStep extends Component {
 
                     <Grid item xs={12}>
                         <Field
-                            type="text"
+                            type="tel"
                             name="preco_desejado"
                             component={TextField}
                             label="Preço Máximo"

@@ -76,7 +76,7 @@ class CompletePackagesSeventhStep extends Component {
                             <Field
                                 name="passeios_interesses[cultural_local]"
                                 component={Checkbox}
-                                label="Cultura + Local"
+                                label="Cultura Local"
                             />
                         </Grid>
                         <Grid item xs={6}>
@@ -106,7 +106,7 @@ class CompletePackagesSeventhStep extends Component {
 
                     <Grid item xs={12}>
                         <Field
-                            type="text"
+                            type="tel"
                             name="passeios_preco_desejado"
                             component={TextField}
                             label="Preço Máximo"

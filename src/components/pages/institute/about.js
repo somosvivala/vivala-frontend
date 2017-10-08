@@ -163,7 +163,7 @@ class InstituteAbout extends Component {
                             </Typography>
                             <Typography type="body1" paragraph className={classes.textoCentral}>
                                 Para cada compra realizada no site, 5% do lucro é destinado
-                                a ações de sustentabilidade e capacitação profissional
+                                a ações de capacitação profissional
                             </Typography>
                         </div>
                         <br/>

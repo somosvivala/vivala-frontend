@@ -47,7 +47,7 @@ class TripSecondStep extends Component {
                             As datas são flexíveis?
                         </Typography>
                         <Typography type="body1" color="inherit" paragraph>
-                            Nossa equipe irá planejar o mais próximo das datas sugeridas, caso afirmativo,
+                            Nossa equipe irá planejar o mais próximo das datas sugeridas, caso afirmativo.
                             Caso contrário, manteremos as datas que você selecionou.
                         </Typography>
                         <Grid gutter={0} container item xs={12} justify="center" style={{ marginTop: 30}}>

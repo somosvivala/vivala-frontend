@@ -7,7 +7,7 @@ const TextField = ({ input, date, type, meta: { touched, error }, ...other }) =>
         error={Boolean(touched && error)}
         {...input}
         type={type === 'area' ? 'text' : type}
-        rows={type === 'area' ? 3 : 1}
+        rowsMax={type === 'area' ? 4 : 1}
         multiline={type === 'area'}
         {...other}
         helperText={touched ? error : ''}

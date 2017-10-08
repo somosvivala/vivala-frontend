@@ -40,7 +40,7 @@ class CruiseFourthStep extends Component {
 
                     <Grid item xs={12}>
                         <Field
-                            type="text"
+                            type="tel"
                             name="preco_desejado"
                             component={TextField}
                             label="Preço Máximo"

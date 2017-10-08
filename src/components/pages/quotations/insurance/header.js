@@ -18,7 +18,6 @@ const styleSheet = createStyleSheet('InsuranceHeader', theme => ({
     },
     flex: {
         display: 'flex',
-        marginBottom: 20
     }
 }));
 
