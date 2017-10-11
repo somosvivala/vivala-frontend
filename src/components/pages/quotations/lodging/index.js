@@ -83,7 +83,7 @@ class LodgingIndex extends Component {
                             valueBuffer={100}
                         />
                         <div className={classes.fixMargin}>
-                            <Message type={error ? 'error' : 'success'} title="Cotação - Hospedagem" heading="Formulário enviado com sucesso!" subheading="Formulário enviado com sucesso! Em até 24 h entraremos em contato com as melhores soluções para sua experiência" />
+                            <Message type={error ? 'error' : 'success'} title="Cotação - Hospedagem" heading="Formulário enviado com sucesso!" subheading="Em até 24 h entraremos em contato com as melhores soluções para sua experiência" />
                         </div>
                     </div>
                 </div>
