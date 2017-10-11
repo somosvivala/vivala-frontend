@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import Increment from '../../../form-fields/increment';
-import {min} from '../../../../utils/validations';
+import {min0} from '../../../../utils/validations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
@@ -24,7 +24,7 @@ class CruiseThirdStep extends Component {
                         <Field
                             component={Increment}
                             name="qnt_adultos"
-                            validate={min(0)}
+                            validate={min0}
                             title="Adultos"
                             helper="A partir de 12 anos"
                         />

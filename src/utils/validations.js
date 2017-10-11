@@ -6,7 +6,7 @@ export const email = value => !value || !/[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/
 
 export const required = value => (value ? undefined : 'Campo obrigatório!');
 
-export const min = min => value => (parseInt(min, 10) <= parseInt(value, 10) ? undefined : `Este campo não pode ser menor que ${min}!`);
+export const min0 = value => value >= 0 ? undefined : `Este campo não pode ser menor que 0!`;
 
 export const number = value => (_.isNumber(value) ? undefined : 'Número inválido!');
 
