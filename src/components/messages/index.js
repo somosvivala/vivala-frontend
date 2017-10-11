@@ -29,7 +29,7 @@ class MessagesIndex extends Component {
         const successMessage = (
             <div className={classes.message}>
                 <Icon className={classes[type]}>done</Icon>
-                <Typography type="body1">
+                <Typography type="body1" paragraph>
                     <strong>{heading}</strong>
                 </Typography>
                 <Typography type="body1">
