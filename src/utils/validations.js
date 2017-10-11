@@ -12,4 +12,4 @@ export const number = value => (_.isNumber(value) ? undefined : 'Número inváli
 
 export const time = value => !value || /([01]\d|2[0-3]):([0-5]\d)/.test(value) ? undefined : 'Formato de horário incorreto! Formato: "HH:MM"';
 
-export const positive = value => (value > 0 ? undefined : 'O valor mínimo para este campo é 1!');
+export const min1 = value => (value > 0 ? undefined : 'O valor mínimo para este campo é 1!');

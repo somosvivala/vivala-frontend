@@ -34,6 +34,7 @@ class TripThirdStep extends Component {
                         <Field
                             component={Increment}
                             name="qnt_criancas"
+                            validate={min0}
                             title="Crianças"
                             helper="De 2 a 11 anos"
                         />
@@ -43,6 +44,7 @@ class TripThirdStep extends Component {
                         <Field
                             component={Increment}
                             name="qnt_bebes"
+                            validate={min0}
                             title="Bebês"
                             helper="Até 2 anos"
                         />
