@@ -14,7 +14,7 @@ export default {
         },
     },
     callToAction: {
-        text: 'Ou se preferir, pesquise sua viagem sozinho',
+        text: 'Ou pesquise sua viagem sozinho',
         button: 'Encontre pacotes, hotéis, voos e mais'
     },
 }

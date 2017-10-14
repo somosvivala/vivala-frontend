@@ -103,17 +103,6 @@ class MediaNews extends Component {
                                 />
                             </a>
                         </div>
-                        <div>
-                            <a className={classes.item} rel="noopener noreferrer" target="_blank" href="http://www1.folha.uol.com.br/turismo/2015/12/1717605-jovens-criam-rede-social-que-liga-turistas-a-projetos-sociais-pelo-brasil.shtml">
-                                <Image
-                                    cloudName="vivala"
-                                    publicId="infomoney-icone_jguhcs"
-                                    height={40}
-                                    crop="scale" alt="Logo Infomoney"
-                                    className={classes.logoMedia}
-                                />
-                            </a>
-                        </div>
                     </Slider>
                 </div>
             </div>
