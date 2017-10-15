@@ -34,7 +34,7 @@ class ExperiencesHeader extends Component {
                                 Experiências
                             </Typography>
                             <Typography type="body1" className={classes.subTitle}>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Quando capacitação profissional e imersão cultural se juntam.
                             </Typography>
                         </Grid>
                     </Grid>
