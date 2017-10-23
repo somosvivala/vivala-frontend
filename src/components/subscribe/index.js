@@ -38,7 +38,7 @@ class SubscribeIndex extends Component {
     }
 
     render() {
-        const { classes, requesting, error, success } = this.props;
+        const { classes, title, requesting, error, success, btnColor } = this.props;
         const { open } = this.state;
 
         if (requesting) {
@@ -52,7 +52,7 @@ class SubscribeIndex extends Component {
         if (error || success) {
             return <div className={classes.bg}>
                 <div className="container">
-                    <Message type={error ? 'error' : 'success'} title="Expedições" heading="Inscrição efetuada com sucesso!" subheading="Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos." />
+                    <Message type={error ? 'error' : 'success'} title={ title ? title : "Expedições" } heading="Inscrição efetuada com sucesso!" subheading="Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos." />
                 </div>
             </div>
         }
@@ -66,7 +66,7 @@ class SubscribeIndex extends Component {
                             <SubscribeForm onSubmit={this.handleSubmit} />
                         </div>
                         :
-                        <SubscribeButton click={this.handleClick} />
+                        <SubscribeButton click={this.handleClick} btnColor={btnColor} />
                     }
                 </div>
             </div>
@@ -74,13 +74,14 @@ class SubscribeIndex extends Component {
     }
 }
 
-PropTypes.required = {
+SubscribeIndex.propTypes = {
     classes: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
     record: PropTypes.objectOf({
         type: PropTypes.string.isRequired,
         id: PropTypes.number.isRequired
     }).isRequired,
+    btnColor: PropTypes.string,
 }
 
 function mapStateToProps(state) {

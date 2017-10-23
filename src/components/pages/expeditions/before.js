@@ -4,6 +4,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from'material-ui/Typography';
 import Slider from 'react-slick';
 import ExpeditionsListItem from './list-item';
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
     bg: {
@@ -12,7 +13,13 @@ const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
         textAlign: window.screen.width < 900 ? 'center' : 'left'
     },
     headline: {
-        color: theme.institute.color
+        color: theme.institute.color,
+        marginBottom: '2rem',
+        textAlign: 'center',
+        fontSize: '1.4em',
+        fontWeight: '300',
+        textTransform: 'uppercase',
+        letterSpacing: '1px'
     },
     slider: {
         width: '95%',
@@ -21,32 +28,37 @@ const styleSheet = createStyleSheet('ExpeditonsBefore', theme => ({
 }));
 
 class ExpeditonsBefore extends Component {
-    renderListItems(expeditions) {
-        return expeditions.map(expedition => {
-            return <div key={expedition.title}>
+    renderListItems = () => {
+        return this.props.expeditions.map((expedition, key) => {
+            return <div key={`${expedition.title}-${key}`}>
                 <ExpeditionsListItem expedition={expedition} color="inherit" />
             </div>
         })
     }
+
     render() {
-        const { classes, translations, expeditions } = this.props;
+        const { classes, expeditions } = this.props;
         const settings = {
             infinite: true,
             autoplay: true,
             autoplaySpeed: 4000,
             slidesToShow: 1,
             slidesToScroll: 1,
+            prevArrow: <PrevArrow instituto />,
+            nextArrow: <NextArrow instituto />,
         }
 
         return (
             <div className={classes.bg}>
                 <div className="container">
                     <Typography type="headline" color="inherit" className={classes.headline} gutterBottom>
-                        {translations.title}
+                        Edições Anteriores
                     </Typography>
+                    { expeditions.length > 0 &&
                     <Slider {...settings} className={classes.slider}>
-                        { this.renderListItems(expeditions) }
+                        { this.renderListItems() }
                     </Slider>
+                    }
                 </div>
             </div>
         );
@@ -55,7 +67,6 @@ class ExpeditonsBefore extends Component {
 
 ExpeditonsBefore.propTypes = {
     classes: PropTypes.object.isRequired,
-    translations: PropTypes.object.isRequired,
     expeditions: PropTypes.array.isRequired
 };
 

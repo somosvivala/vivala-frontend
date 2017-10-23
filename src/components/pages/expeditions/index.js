@@ -4,8 +4,7 @@ import {requestExpeditions} from '../../../actions/expeditions';
 import ExpeditionsHeader from "./header";
 import ExpeditionsAfter from "./after";
 import ExpeditionsBefore from "./before";
-import trans from '../../../utils/translate';
-import BadRequestError from '../../errors/500';
+import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
 
 class ExpeditionsIndex extends Component {
@@ -14,24 +13,21 @@ class ExpeditionsIndex extends Component {
     }
 
     render() {
-        const { expeditions, fetching, fetched, error } = this.props;
+        const { future, past, fetching, error } = this.props;
 
-        if (fetching || !fetched) {
-            return <LoadingInfinite />;
-        }
-
-        if (fetched && error) {
+        if (error) {
             return <BadRequestError />;
         }
 
-        const future = expeditions.filter(expedition => expedition.id === 3 || expedition.id === 4);
-        const past = expeditions.filter(expedition => expedition.id === 1 || expedition.id === 2);
+        if (fetching) {
+            return <LoadingInfinite />;
+        }
 
         return (
             <div>
-                <ExpeditionsHeader translations={trans('expeditions.header')}/>
-                <ExpeditionsAfter expeditions={future} translations={trans('expeditions.after')}/>
-                <ExpeditionsBefore expeditions={past} translations={trans('expeditions.before')}/>
+                <ExpeditionsHeader />
+                { future.length > 0 && <ExpeditionsAfter expeditions={future} key="expeditions-future" /> }
+                { past.length > 0 && <ExpeditionsBefore expeditions={past} key="expeditions-past" /> }
             </div>
         );
     }
@@ -39,9 +35,9 @@ class ExpeditionsIndex extends Component {
 
 function mapStateToProps(state) {
     return {
-        expeditions: state.expeditions.all,
+        future: state.expeditions.edicoes_futuras,
+        past: state.expeditions.edicoes_passadas,
         fetching: state.expeditions.fetching,
-        fetched: state.expeditions.fetched,
         error: state.expeditions.error,
     }
 }

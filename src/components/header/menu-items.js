@@ -13,7 +13,7 @@ class MenuItems extends Component {
                 <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item>
                     <Grid item xs={12}>
                         <Typography type="subheading">
-                            <Link to="/contato"><strong>Saiba Mais</strong></Link>
+                            <strong>Saiba Mais</strong>
                         </Typography>
                     </Grid>
                 </Grid>
@@ -75,14 +75,15 @@ class MenuItems extends Component {
                     <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
                         <Grid item xs={12}>
                             <Typography type="subheading" gutterBottom>
-                                <strong>Contato</strong>
+                                <Link to="/contato"><strong>Contato</strong></Link>
+
                             </Typography>
                         </Grid>
                         <Grid item xs={12}>
                             <Typography type="body1">
-                                <a href="mailto:contato@vivala.com.br">contato@vivala.com.br</a> <br/>
                                 <a href="tel://+551126452632">11 2645-2632</a> <br/>
-                                Segunda a Sexta das 9h às 18h
+                                <a href="mailto:contato@vivala.com.br">contato@vivala.com.br</a> <br/>
+                                Seg a Sexta das 9h às 18h
                             </Typography>
                         </Grid>
                     </Grid>

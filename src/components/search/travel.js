@@ -8,6 +8,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import PacotesCompletosSvg from '../../assets/svg/icons/pacotes.svg';
 import HoteisSvg from '../../assets/svg/icons/hoteis.svg';
 import VoosSvg from '../../assets/svg/icons/voos.svg';
+import ExperienciasSvg from '../../assets/svg/icons/experiencia.svg';
 import {Link} from 'react-router-dom';
 
 const styleSheet = createStyleSheet('SearchTravel', theme => ({
@@ -98,6 +99,12 @@ class SearchTravel extends Component {
                                     <img src={VoosSvg} className={classes.img} alt="Voos Icone"/>
                                     <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[2].text}</Typography>
                                 </ListItem>
+                                <Link to="/experiencias">
+                                    <ListItem button component="div" className={classes.listItem}>
+                                        <img src={ExperienciasSvg} className={classes.img} alt="Experiencias Icone"/>
+                                        <Typography type="subheading" color="inherit" className={classes.text}>{translations.boxLeft[3].text}</Typography>
+                                    </ListItem>
+                                </Link>
                             </List>
                         </Grid>
                         <Grid xs={12} sm={6} item>

@@ -18,7 +18,6 @@ const styleSheet = createStyleSheet('CruiseHeader', theme => ({
     },
     flex: {
         display: 'flex',
-        marginBottom: 20
     }
 }));
 

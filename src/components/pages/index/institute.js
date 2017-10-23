@@ -7,6 +7,7 @@ import Social from '../../social';
 import Slider from 'react-slick';
 import InstituteItem from './institute-item';
 import Logo from '../../../assets/svg/logo_instituto.svg';
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('Institute', theme => ({
     bg: {
@@ -35,10 +36,17 @@ const styleSheet = createStyleSheet('Institute', theme => ({
 }));
 
 class Institute extends Component {
+    renderItems = () => {
+        return this.props.expeditions.map((expedition, key) => {
+            return <div key={`expedicao-${key}`}>
+                <InstituteItem title={expedition.titulo} subtitle={expedition.descricao} link={`/expedicoes/${expedition.id}`} />
+            </div>
+        })
+    }
+
     render() {
         const { classes } = this.props;
         const settings = {
-            infinite: false,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
@@ -48,9 +56,12 @@ class Institute extends Component {
             adaptativeHeight: false,
             variableWidth: true,
             autoplay: false,
-            autoplaySpeed: 2500,
-            speed: 1500
+            autoplaySpeed: 500,
+            prevArrow: <PrevArrow white />,
+            nextArrow: <NextArrow white />,
+            speed: 500
         }
+
         return (
             <div className={classes.bg}>
                 <div className="container padding">
@@ -77,8 +88,7 @@ class Institute extends Component {
                     </Grid>
                     <div className="home-instituto-slick-container">
                     <Slider {...settings} className={classes.slider}>
-                        <div><InstituteItem title='Expedição Amazônia #3' subtitle="O pulmão do mundo" link='/expedicoes/3' /></div>
-                        <div><InstituteItem title='Expedição Mata Atlântica #4' subtitle="Sabedoria da floresta"  link='/expedicoes/4' /></div>
+                        {this.renderItems()}
                     </Slider>
                     </div>
 
@@ -98,7 +108,8 @@ class Institute extends Component {
 }
 
 Institute.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    expeditions: PropTypes.array,
 };
 
 export default withStyles(styleSheet)(Institute);

@@ -42,7 +42,7 @@ class CompletePackagesSixthStep extends Component {
 
         const radios = [
             { value: 'transfer', label: 'Transfer Para o Hotel' },
-            { value: 'aluguel', label: 'Alguel de Carro' },
+            { value: 'aluguel', label: 'Aluguel de Carro' },
         ]
 
         return (
@@ -217,7 +217,7 @@ class CompletePackagesSixthStep extends Component {
 
                     <Grid item xs={12}>
                         <Field
-                            type="text"
+                            type="tel"
                             name="transporte_interno_preco_desejado"
                             component={TextField}
                             label="Preço Máximo"

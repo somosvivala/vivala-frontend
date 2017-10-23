@@ -6,7 +6,8 @@ import {
 } from '../actions/expeditions/action';
 
 const INITIAL_STATE = {
-    all: [],
+    edicoes_passadas: [],
+    edicoes_futuras: [],
     one: null,
     fetching: false,
     fetched: false,
@@ -38,7 +39,8 @@ export default function (state = INITIAL_STATE, action) {
         case FETCH_EXPEDITIONS:
             return {
                 ...state,
-                all: action.payload,
+                edicoes_passadas: action.payload.edicoes_passadas,
+                edicoes_futuras: action.payload.edicoes_futuras,
                 fetching: INITIAL_STATE.fetching,
                 fetched: true
             };

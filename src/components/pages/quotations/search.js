@@ -59,7 +59,7 @@ class QuotationsSearch extends Component {
                         </Link>
                         <Link to="/cotacao/seguro">
                             <Button raised color="primary" className={classes.button}>
-                                Seguro
+                                Seguro Viagem
                             </Button>
                         </Link>
                         <Link to="/cotacao/carro">
@@ -79,7 +79,7 @@ class QuotationsSearch extends Component {
                         </Link>
                         <Link to="/cotacao/rodoviario">
                             <Button raised color="primary" className={classes.button}>
-                               Onibus
+                               Ônibus
                             </Button>
                         </Link>
                     </div>

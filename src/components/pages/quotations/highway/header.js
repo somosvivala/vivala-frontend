@@ -18,7 +18,6 @@ const styleSheet = createStyleSheet('HighwayHeader', theme => ({
     },
     flex: {
         display: 'flex',
-        marginBottom: 20
     }
 }));
 

@@ -18,7 +18,6 @@ const styleSheet = createStyleSheet('CompletePackagesHeader', theme => ({
     },
     flex: {
         display: 'flex',
-        marginBottom: 20
     }
 }));
 

@@ -29,6 +29,12 @@ const styleSheet = createStyleSheet('InstituteResults', theme => ({
         marginRight: 20,
         flex: 1
     },
+    title: {
+        textTransform: 'uppercase',
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        fontWeight: 700,
+        marginTop: '2rem'
+    }
 }));
 
 class InstituteResults extends Component {
@@ -37,30 +43,36 @@ class InstituteResults extends Component {
         return (
             <div className={classes.bg}>
                 <div className="container padding">
-                    <Typography type="headline" color="accent" gutterBottom>
+                    <Typography type="headline" color="accent" className={classes.title} gutterBottom>
                         Resultados
                     </Typography>
                     <List>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+2</Typography>
+                            <Typography className={classes.icon}>+4</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Expedições
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+40</Typography>
+                            <Typography className={classes.icon}>+3</Typography>
+                            <Typography type="subheading" color="inherit" className={classes.text}>
+                                Regiões brasileiras
+                            </Typography>
+                        </ListItem>
+                        <ListItem className={classes.listItem}>
+                            <Typography className={classes.icon}>+100</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Microempreendedores capacitados
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+50</Typography>
+                            <Typography className={classes.icon}>+100</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Voluntários (Transformadores)
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+R$ 40.000</Typography>
+                            <Typography className={classes.icon}>+R$ 70.000</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Injetados na economia local
                             </Typography>

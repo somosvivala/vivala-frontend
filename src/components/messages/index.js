@@ -29,7 +29,7 @@ class MessagesIndex extends Component {
         const successMessage = (
             <div className={classes.message}>
                 <Icon className={classes[type]}>done</Icon>
-                <Typography type="body1">
+                <Typography type="body1" paragraph>
                     <strong>{heading}</strong>
                 </Typography>
                 <Typography type="body1">
@@ -46,7 +46,7 @@ class MessagesIndex extends Component {
                     <strong>Ops!</strong>
                 </Typography>
                 <Typography type="body1" paragraph>
-                    Houve um problema ao enviar as informações.
+                    Houve um problema no sistema. Envie a falha para <a href="mailto:dev@vivala.com.br">dev@vivala.com.br</a> e arrumaremos o mais rápido possivel.
                 </Typography>
             </div>
         )

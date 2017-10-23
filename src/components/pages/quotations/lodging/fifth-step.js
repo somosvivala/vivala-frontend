@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import TextField from '../../../form-fields/text';
-import {min} from '../../../../utils/validations';
+import {min1} from '../../../../utils/validations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
@@ -25,7 +25,7 @@ class LodgingFifthStep extends Component {
                             name="qnt_quartos"
                             component={TextField}
                             label="Quantidade de Quartos"
-                            validate={min(0)}
+                            validate={min1}
                         />
                     </Grid>
 

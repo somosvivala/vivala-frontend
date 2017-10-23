@@ -18,7 +18,6 @@ const styleSheet = createStyleSheet('InsuranceHeader', theme => ({
     },
     flex: {
         display: 'flex',
-        marginBottom: 20
     }
 }));
 
@@ -33,7 +32,7 @@ class InsuranceHeader extends Component {
                         Pedido de Cotação
                     </Typography>
                     <Typography type="title" color="inherit" className={classes.title}>
-                        Seguro
+                        Seguro Viagem
                     </Typography>
                 </div>
             </div>

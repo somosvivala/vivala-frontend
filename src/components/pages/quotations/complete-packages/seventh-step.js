@@ -30,14 +30,14 @@ class CompletePackagesSeventhStep extends Component {
 
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_interessses[aventura]"
+                                name="passeios_interesses[aventura]"
                                 component={Checkbox}
                                 label="Aventura"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_interessses[exclusivo]"
+                                name="passeios_interesses[exclusivo]"
                                 component={Checkbox}
                                 label="Exclusivo"
                             />
@@ -45,14 +45,14 @@ class CompletePackagesSeventhStep extends Component {
 
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_interessses[city_tour]"
+                                name="passeios_interesses[city_tour]"
                                 component={Checkbox}
                                 label="City Tour"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_interessses[familia]"
+                                name="passeios_interesses[familia]"
                                 component={Checkbox}
                                 label="Família"
                             />
@@ -60,35 +60,35 @@ class CompletePackagesSeventhStep extends Component {
 
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_interessses[comer_beber]"
+                                name="passeios_interesses[comer_beber]"
                                 component={Checkbox}
                                 label="Comer e Beber"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_interessses[natureza]"
+                                name="passeios_interesses[natureza]"
                                 component={Checkbox}
-                                label="natureza"
+                                label="Natureza"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_interessses[cultural_local]"
+                                name="passeios_interesses[cultural_local]"
                                 component={Checkbox}
-                                label="Cultura + Local"
+                                label="Cultura Local"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_interessses[romantico]"
+                                name="passeios_interesses[romantico]"
                                 component={Checkbox}
                                 label="Romântico"
                             />
                         </Grid>
                         <Grid item xs={6}>
                             <Field
-                                name="passeios_interessses[esporte]"
+                                name="passeios_interesses[esporte]"
                                 component={Checkbox}
                                 label="Esporte"
                             />
@@ -106,7 +106,7 @@ class CompletePackagesSeventhStep extends Component {
 
                     <Grid item xs={12}>
                         <Field
-                            type="text"
+                            type="tel"
                             name="passeios_preco_desejado"
                             component={TextField}
                             label="Preço Máximo"

@@ -7,23 +7,34 @@ import Typography from "material-ui/Typography";
 const styleSheet = createStyleSheet('ExpeditionsHeader', theme => ({
     bg: {
         backgroundColor: theme.default.color,
-        padding: 30
     },
+    title: {
+        textTransform: 'uppercase',
+        fontWeight: '700',
+        margin: '2rem 0 1rem 0',
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+    },
+    subTitle: {
+        marginBottom: '1rem',
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        fontSize: '1.2rem'
+    }
+    
 }));
 
 class ExpeditionsHeader extends Component {
     render() {
-        const { classes, translations } = this.props;
+        const { classes } = this.props;
         return (
             <div className={classes.bg}>
-                <div className="container">
+                <div className="container padding">
                     <Grid container gutter={0} align="center" justify="center">
                         <Grid item xs={12}>
-                            <Typography type="headline" color="accent" gutterBottom>
-                                {translations.title}
+                            <Typography type="headline" color="accent" className={classes.title} gutterBottom>
+                                Expedições
                             </Typography>
-                            <Typography type="body1">
-                                {translations.text}
+                            <Typography type="body1" className={classes.subTitle}>
+                                Quando a capacitação profissional e o turismo ecológico se juntam.
                             </Typography>
                         </Grid>
                     </Grid>
@@ -35,7 +46,6 @@ class ExpeditionsHeader extends Component {
 
 ExpeditionsHeader.propTypes = {
     classes: PropTypes.object.isRequired,
-    translations: PropTypes.object.isRequired,
 };
 
 export default withStyles(styleSheet)(ExpeditionsHeader);

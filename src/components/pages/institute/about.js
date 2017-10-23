@@ -7,6 +7,8 @@ import {Link} from 'react-router-dom';
 import {Image} from 'cloudinary-react';
 import Slider from "react-slick";
 import _ from 'lodash';
+import {PrevArrow, NextArrow} from '../../arrows';
+
 
 const styleSheet = createStyleSheet('InstituteAbout', theme => ({
     bg: {
@@ -128,9 +130,11 @@ class InstituteAbout extends Component {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 4500,
-            arrows: false,
             adaptativeHeight: true,
+            prevArrow: <PrevArrow white inside />,
+            nextArrow: <NextArrow white inside />,
         }
+
         return (
             <div className={classes.bg}>
                 <div>
@@ -159,7 +163,7 @@ class InstituteAbout extends Component {
                             </Typography>
                             <Typography type="body1" paragraph className={classes.textoCentral}>
                                 Para cada compra realizada no site, 5% do lucro é destinado
-                                a ações de sustentabilidade e capacitação profissional
+                                a ações de capacitação profissional
                             </Typography>
                         </div>
                         <br/>

@@ -9,7 +9,15 @@ import Social from '../social';
 
 const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
     container: {
-        height: 190
+        height: window.screen.width < 900 ? '180px' : '150px',
+        margin: 'auto'
+    },
+    containerBotaoSearch: {
+        height: window.screen.width < 900 ? '120px' : '100px',
+        margin: 'auto'
+    },
+    addMinHeight: {
+        minHeight: window.screen.width > 900 ? 100 : 60,
     },
     bg: {
         backgroundColor: '#DCDCDC',
@@ -21,6 +29,13 @@ const styleSheet = createStyleSheet('SearchCallToAction', theme => ({
         fontWeight: 'bold',
         fontSize: '18px',
         textAlign: window.screen.width < 900 ? "center" : "left"
+    },
+    textoSegundaSecaoHome: {
+        fontWeight: 'bold',
+        fontSize: '18px',
+        textAlign: window.screen.width < 900 ? "center" : "left",
+        marginBottom: window.screen.width < 900 ? "0" : "12%",
+        margin: '10px auto'
     },
     button: {
         boxShadow: 'inset 2px 2px 4px 1px rgba(0,0,0,0.3)',
@@ -38,12 +53,12 @@ class SearchCallToAction extends Component {
             <div className={classes.bg}>
                 <div className={`container ${classes.applyPadding}`}>
                     <Grid container gutter={0} align="center" justify="space-between" className={classes.container}>
-                        <Grid gutter={0} container item xs={12} sm={6} justify="flex-start">
-                            <Typography type="subheading" className={classes.text}>
+                        <Grid gutter={0} container item xs={12} sm={6} justify="flex-start" align="flex-start" className={classes.addMinHeight}>
+                            <Typography type="subheading" className={classes.textoSegundaSecaoHome}>
                                 {translations.text}
                             </Typography>
                         </Grid>
-                        <Grid gutter={24} container item xs={12} sm={6} justify="center" align="center">
+                        <Grid gutter={24} container item xs={12} sm={6} justify="center" align="center" className={classes.containerBotaoSearch}>
                             <Button raised color="contrast" onClick={click} className={classes.button}>
                                 <Icon color="contrast">search</Icon> {translations.button}
                             </Button>

@@ -10,28 +10,35 @@ const styleSheet = createStyleSheet('ExpeditonsAfter', theme => ({
     bg: {
         backgroundColor: theme.institute.color,
         padding: 30,
-        textAlign: window.screen.width < 900 ? 'center' : 'left'
+        textAlign: window.screen.width < 900 ? 'center' : 'left',
+        paddingBottom: '3rem'
     },
     headline: {
-        color: theme.default.color
+        color: 'white',
+        marginBottom: '2rem',
+        textAlign: 'center',
+        fontSize: '1.4em',
+        fontWeight: '300',
+        textTransform: 'uppercase',
+        letterSpacing: '1px'
     },
     slider: {
         width: '95%',
-        margin: '20px auto 0 auto'
+        margin: 'auto'
     }
 }));
 
 class ExpeditonsAfter extends Component {
-    renderListItems(expeditions) {
-        return expeditions.map(expedition => {
-            return <div key={expedition.title}>
+    renderListItems = () => {
+        return this.props.expeditions.map((expedition, key) => {
+            return <div key={`${expedition.title}-${key}`}>
                 <ExpeditionsListItem expedition={expedition} color="default" />
             </div>
         })
     }
 
     render() {
-        const { classes, translations, expeditions } = this.props;
+        const { classes, expeditions } = this.props;
         const settings = {
             infinite: true,
             autoplay: true,
@@ -46,11 +53,13 @@ class ExpeditonsAfter extends Component {
             <div className={classes.bg}>
                 <div className="container">
                     <Typography type="headline" color="inherit" className={classes.headline} gutterBottom>
-                        {translations.title}
+                        Próximas Edições
                     </Typography>
-                    <Slider {...settings} className={classes.slider}>
-                        { this.renderListItems(expeditions) }
-                    </Slider>
+                    { expeditions.length > 0 &&
+                        <Slider {...settings} className={classes.slider}>
+                            { this.renderListItems() }
+                        </Slider>
+                    }
                 </div>
             </div>
         );

@@ -36,6 +36,11 @@ class LodgingIndex extends Component {
             error: false
         }
     }
+
+    componentDidUpdate() {
+        window.scrollTo(0, 0)
+    }
+
     nextPage = () => {
         this.setState({ page: parseInt(this.state.page, 10) + 1 })
     }
@@ -78,7 +83,7 @@ class LodgingIndex extends Component {
                             valueBuffer={100}
                         />
                         <div className={classes.fixMargin}>
-                            <Message type={error ? 'error' : 'success'} title="Cotação - Hospedagem" heading="Formulário enviado com sucesso!" subheading="Obrigado pelas informações. Em breve entraremos em contato para confirmação e próximos passos." />
+                            <Message type={error ? 'error' : 'success'} title="Cotação - Hospedagem" heading="Formulário enviado com sucesso!" subheading="Em até 24 h entraremos em contato com as melhores soluções para sua experiência" />
                         </div>
                     </div>
                 </div>

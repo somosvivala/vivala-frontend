@@ -29,7 +29,8 @@ const styleSheet = createStyleSheet('InstituteSupport', theme => ({
     },
     img: {
         marginBottom: 10,
-        maxWidth: '100%'
+        maxWidth: '100%',
+        objectFit: 'cover'
     },
     bolder: {
         fontWeight: 'bolder'
