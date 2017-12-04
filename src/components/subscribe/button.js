@@ -4,9 +4,9 @@ import Button from 'material-ui/Button';
 
 class SubscribeButton extends Component {
     render() {
-        const { click, btnColor } = this.props;
+        const { click, title, style, btnColor } = this.props;
 
-        return <Button raised color={ btnColor ? btnColor : "accent" } onClick={click} style={{ width: '100%' }}>Inscreva-se</Button>;
+        return <Button raised color={ btnColor ? btnColor : "accent" } onClick={click} style={{ textAlign: 'center', width: '100%', ...style }}>{ title || "Inscreva-se"}</Button>;
     }
 }
 
