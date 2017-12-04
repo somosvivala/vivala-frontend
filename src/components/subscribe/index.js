@@ -19,9 +19,9 @@ const styleSheet = createStyleSheet('ExpeditionsHeader', theme => ({
         color: theme.vivala.color,
         textTransform: 'uppercase'
     },
-    btnContainer: { display: 'flex' },
-    btnMoreInfo: { flex: 1, width: 'auto' },
-    btnSubscribe: { textAlign: 'center', flex: 1, width: 'auto', marginLeft: '2em' }
+    btnContainer: { display: 'flex', justifyContent: 'center' },
+    btnMoreInfo: { flex: 1 },
+    btnSubscribe: { flex: 1, textAlign: 'center', marginLeft: '2em' }
 }));
 
 class SubscribeIndex extends Component {
@@ -42,7 +42,7 @@ class SubscribeIndex extends Component {
     }
 
     render() {
-        const { classes, title, record: {pagSeguroUrl}, requesting, error, success, btnColor } = this.props;
+        const { classes, type, title, record: {pagSeguroUrl}, requesting, error, success, btnColor } = this.props;
         const { open } = this.state;
 
         if (requesting) {
@@ -71,10 +71,14 @@ class SubscribeIndex extends Component {
                         </div>
                         :
                         <div className={classes.btnContainer}>
-                          <SubscribeButton className={`${classes.btnMoreInfo} botao-saber-mais`} title="Quero saber mais..." click={this.handleClick} btnColor={btnColor} />
+                          <SubscribeButton
+                            className={`${classes.btnMoreInfo} botao-saber-mais`}
+                            title="Quero saber mais..."
+                            click={this.handleClick}
+                            btnColor={btnColor} />
                           { pagSeguroUrl &&
                             <Button
-                              color="accent"
+                              color={btnColor}
                               raised
                               href={pagSeguroUrl}
                               target="_blank"

@@ -34,6 +34,7 @@ class ExpeditionsShow extends Component {
                     <SubscribeIndex
                       title="Quero saber mais..."
                       record={{ type: 'expedicoes', id: match.params.id, pagSeguroUrl: expedition.url_pagseguro }}
+                      btnColor="accent"
                     />
                 }
             </div>
