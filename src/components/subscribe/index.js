@@ -8,6 +8,7 @@ import { CircularProgress } from 'material-ui/Progress';
 import Typography from 'material-ui/Typography';
 import Message from '../messages';
 import { storeSubscription } from '../../actions/subscribe';
+import Button from 'material-ui/Button'
 
 const styleSheet = createStyleSheet('ExpeditionsHeader', theme => ({
     bg: {
@@ -17,7 +18,10 @@ const styleSheet = createStyleSheet('ExpeditionsHeader', theme => ({
     title: {
         color: theme.vivala.color,
         textTransform: 'uppercase'
-    }
+    },
+    btnContainer: { display: 'flex', justifyContent: 'center' },
+    btnMoreInfo: { flex: 1 },
+    btnSubscribe: { flex: 1, textAlign: 'center', marginLeft: '2em' }
 }));
 
 class SubscribeIndex extends Component {
@@ -38,7 +42,7 @@ class SubscribeIndex extends Component {
     }
 
     render() {
-        const { classes, title, requesting, error, success, btnColor } = this.props;
+        const { classes, type, title, record: {pagSeguroUrl}, requesting, error, success, btnColor } = this.props;
         const { open } = this.state;
 
         if (requesting) {
@@ -62,11 +66,28 @@ class SubscribeIndex extends Component {
                 <div className="container">
                     { open ?
                         <div>
-                            <Typography type="title" align="center" className={classes.title}>Inscrição</Typography>
+                            <Typography type="title" align="center" className={classes.title}>{title || 'Inscrição'}</Typography>
                             <SubscribeForm onSubmit={this.handleSubmit} />
                         </div>
                         :
-                        <SubscribeButton click={this.handleClick} btnColor={btnColor} />
+                        <div className={classes.btnContainer}>
+                          <SubscribeButton
+                            className={`${classes.btnMoreInfo} botao-saber-mais`}
+                            title="Quero saber mais..."
+                            click={this.handleClick}
+                            btnColor={btnColor} />
+                          { pagSeguroUrl &&
+                            <Button
+                              color={btnColor}
+                              raised
+                              href={pagSeguroUrl}
+                              target="_blank"
+                              className={`${classes.btnSubscribe} botao-pagseguro`}
+                            >
+                                Quero me inscrever!
+                            </Button>
+                          }
+                        </div>
                     }
                 </div>
             </div>

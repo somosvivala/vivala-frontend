@@ -25,11 +25,18 @@ class ExpeditionsShow extends Component {
         if (!expedition) {
             return null;
         }
-
+      
         return (
             <div>
                 <ExpeditionsRecord {...expedition} id={match.params.id} />
-                { expedition.inscricoes_abertas && <SubscribeIndex record={{ type: 'expedicoes', id: match.params.id}} /> }
+
+                { expedition.inscricoes_abertas &&
+                    <SubscribeIndex
+                      title="Quero saber mais..."
+                      record={{ type: 'expedicoes', id: match.params.id, pagSeguroUrl: expedition.url_pagseguro }}
+                      btnColor="accent"
+                    />
+                }
             </div>
         );
     }
