@@ -59,7 +59,7 @@ class InstituteSupport extends Component {
                         <Typography type="subheading" color="inherit" className={classes.body} paragraph>
                             Ajude a expandir o trabalho do Instituto contribuindo mensalmente com a quantia que desejar.
                             <br/>
-                            <Link to="https://doare.org/br/doacao/1792/instituto-vivala" rel="noopener noreferrer" target="_blank" className={classes.bolder}>CLIQUE AQUI</Link> e saiba mais.
+                            <Link to="https://paybox.doare.org/br/paybox?lang=br&amount=50&currency=BRL&values=30,50,150,300,500&orgId=a66bd958-8227-11e7-a51d-f23c913baafa&subscribe=&subscriptionAmount=50&showSubscription=1" rel="noopener noreferrer" target="_blank" className={classes.bolder}>CLIQUE AQUI</Link> e saiba mais.
                         </Typography>
                     </div>
                 </div>
