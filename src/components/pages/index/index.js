@@ -36,7 +36,7 @@ class IndexPage extends Component {
                         youtube="https://www.youtube.com/channel/UCT8bbWeVmbaDDMxvWlI8bBA"
                 />
                 <CotacaoSection />
-                <Institute text={trans('index.institute.text')} expeditions={expeditions.edicoes_futuras} />
+                <Institute text={trans('index.institute.text')} expeditions={expeditions.edicoes_passadas} />
                 <Newsletter text={trans('newsletter.text')}
                             placeholderName={trans('newsletter.placeholderName')}
                 />

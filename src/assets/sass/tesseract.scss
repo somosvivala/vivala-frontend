@@ -33,7 +33,7 @@ body {
         &.servicos {
             .section-header {
                 h2 {
-                    font-size: 56px;
+                    font-size: 5rem;
                 }
             }
             .item {
@@ -144,7 +144,14 @@ body {
                     #aviaozinho {
                         position: absolute;
                         bottom: 0;
-                        right: 0;
+                        right: 200px;
+                        transform: scale(0.1);
+                        transition: all 0.3s ease;
+
+                        &.animate {
+                            right: 0;
+                            transform: scale(1);
+                        }
                     }
                 }
             }
@@ -162,6 +169,9 @@ body {
 
                     &.left {
                         .box-header {
+                            text-align: left;
+                            padding-left: 35px;
+
                             &:before {
                                 transform: skew(2deg, 2deg);
                             }
@@ -201,30 +211,63 @@ body {
                             border: 2px solid $vivala-orange;
                             border-bottom: none;
                         }
+                        &.has-link {
+                            &:hover {
+                                box-shadow: 14px 4px 8px 5px rgba(0, 0, 0, 0.5);
+                            }
+                        }
                     }
                     .box-content {
                         color: #fff;
                         width: calc(100% - 20px);
                         background-color: $vivala-orange;
                         margin: auto;
-                        height: 11rem;
+                        height: 10rem;
                         font-size: 20px;
-                        padding: 10px 35px;
+                        padding: 0 5px;
                         font-weight: 300;
+                        display: flex;
+                        align-items: center;
 
-                        ul {
-                            list-style: none;
-                            padding-left: 0;
+                        .diy-item, .lodify-item {
+                            padding-top: 0;
+                            padding-bottom: 0;
+                            text-align: center;
+
+                            &:hover {
+                                .diy-item-text {
+                                    font-weight: 700;
+                                    color: #fff;
+                                    text-decoration: none;
+                                }
+                                .lodify-item-text {
+                                    color: #fff;
+                                }
+                            }
+                            a {
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                            }
+                            .diy-item-icon {
+                                width: 50px;
+                                margin-right: 5px;
+                            }
+                            .diy-item-text, .lodify-item-text {
+                                font-size: 1.2rem;
+
+                                strong {
+                                    display: flex;
+                                }
+                            }
+                            .lodify-item-text {
+                                margin: auto;
+                            }
                         }
-                        .cotacao-icon {
-                            width: 50px;
-                            margin-right: 5px;
-                        }
-                        span {
-                            vertical-align: middle;
-                        }
-                        strong {
-                            font-weight: 600;
+                        .lodify-item {
+                            display: inline-flex;
+                            width: auto;
+                            padding: 15px 40px;
                         }
                     }
                 }
