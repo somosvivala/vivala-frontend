@@ -1,0 +1,244 @@
+body {
+    .menu-wrapper {
+        height: 80px;
+        border-bottom: 2px solid $vivala-darkgrey;
+
+        button {
+            &:focus, &:active {
+                outline: none;
+            }
+            .material-icons {
+                font-size: 36px;
+            }
+        }
+    }
+    .container {
+        @include desktop-1920 {
+            max-width: 1920px;
+            width: 86vw;
+        }
+        .section-header {
+            text-align: center;
+            padding: 30px 0;
+            width: 100%;
+
+            @include phone {
+                text-align: left;
+            }
+            h2 {
+                font-family: $main-font;
+                color: $vivala-orange;
+            }
+        }
+        &.servicos {
+            .section-header {
+                h2 {
+                    font-size: 56px;
+                }
+            }
+            .item {
+                width: 49%;
+                height: 75vh;
+                float: left;
+                position: relative;
+                margin-bottom: 2%;
+                overflow: hidden;
+
+                @include phone {
+                    width: 100%;
+                }
+                &.big {
+                    width: 100%;
+                    // height: 80vh;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+                &.volunturismo {
+                    background-image: url('../images/home/home-volunturismo-desktop.png');
+
+                    .meta-content {
+                        &:before {
+                            background-color: rgba($vivala-orange, .6);
+                        }
+                    }
+                }
+                &.ecoturismo {
+                    background-image: url('../images/home/home-ecoturismo-desktop.png');
+                    margin-right: 1%;
+
+                    @include phone {
+                        margin-right: 0;
+                    }
+                    .meta-content {
+                        &:before {
+                            background-color: rgba($vivala-orange, .6);
+                        }
+                    }
+                }
+                &.imersoes {
+                    background-image: url('../images/home/home-imersoes-desktop.png');
+                    margin-left: 1%;
+
+                    @include phone {
+                        margin-left: 0;
+                    }
+                    .meta-content {
+                        &:before {
+                            background-color: rgba($vivala-orange, .6);
+                        }
+                    }
+                }
+                .meta-content {
+                    background-blend-mode: multiply;
+                    padding: 15px 20px;
+                    color: #fff;
+                    font-family: $secondary-font;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+
+                    &:before {
+                        @extend %bfaf;
+                        position: absolute;
+                        width: 100%;
+                        height: 500px;
+                        top: 0;
+                        left: 0;
+                        transform: skewY(2.5deg);
+                        z-index: 0;
+                    }
+                    .title {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        z-index: 1;
+                        position: relative;
+                        font-size: 32px;
+                        margin-bottom: 0;
+                        letter-spacing: 2;
+                    }
+                    .subtitle {
+                        position: relative;
+                        z-index: 1;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+        &.cotacoes {
+            background-image: url('../images/home/Background-Agencia-HOME-12.png');
+            background-size: 90vw auto;
+            background-repeat: no-repeat;
+            background-position: center -30vh;
+            padding: 6rem 0 6rem;
+
+            .box-frase {
+                text-align: center;
+
+                .frase-destaque {
+                    position: relative;
+                    display: inline-flex;
+                    margin: auto;
+
+                    #aviaozinho {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+            .box-container {
+                text-align: center;
+                width: 60vw;
+                margin: auto;
+                position: relative;
+                bottom: -3rem;
+
+                .orange-box {
+                    // display: inline-flex;
+                    margin: auto;
+                    width: 420px;
+
+                    &.left {
+                        .box-header {
+                            &:before {
+                                transform: skew(2deg, 2deg);
+                            }
+                        }
+                        .box-content {
+                            text-align: left;
+                        }
+                    }
+                    &.right {
+                        .box-header {
+                            &:before {
+                                transform: skew(-2deg, -2deg);
+                            }
+                        }
+                    }
+                    .box-header {
+                        background-color: #fff;
+                        border: 2px solid $vivala-orange;
+                        border-top: none;
+                        display: flex;
+                        font-family: $secondary-font;
+                        color: $vivala-orange;
+                        font-weight: 700;
+                        padding: 0 0 10px;
+                        position: relative;
+                        z-index: 5;
+                        font-size: 26px;
+
+                        &:before {
+                            @extend %bfaf;
+                            background-color: #fff;
+                            width: 100.9%;
+                            height: 22px;
+                            z-index: -1;
+                            top: -10px;
+                            left: -0.07rem;
+                            border: 2px solid $vivala-orange;
+                            border-bottom: none;
+                        }
+                    }
+                    .box-content {
+                        color: #fff;
+                        width: calc(100% - 20px);
+                        background-color: $vivala-orange;
+                        margin: auto;
+                        height: 11rem;
+                        font-size: 20px;
+                        padding: 10px 35px;
+                        font-weight: 300;
+
+                        ul {
+                            list-style: none;
+                            padding-left: 0;
+                        }
+                        .cotacao-icon {
+                            width: 50px;
+                            margin-right: 5px;
+                        }
+                        span {
+                            vertical-align: middle;
+                        }
+                        strong {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .social-container {
+        text-align: center;
+        background-color: $vivala-midgrey;
+        padding: 20px 0;
+
+        a {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+}

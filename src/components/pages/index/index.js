@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import IndexHeader from './header';
-import IndexSearch from './search';
-import ImageMessage from './image-message';
+import Servicos from './servicos';
+import Social from '../../social/index';
+import CotacaoSection from './cotacao-section';
 import Institute from './institute';
 import Newsletter from '../../newsletter';
 import MediaNews from './media-news';
@@ -25,12 +25,17 @@ class IndexPage extends Component {
 
         return (
             <div>
-                <IndexHeader title={trans('index.header.title')}
+                <Servicos title={trans('index.header.title')}
                              text={trans('index.header.text')}
                             button={trans('index.header.button')}
                 />
-                <IndexSearch />
-                <ImageMessage text={trans('index.imageMessage.text')} />
+                <Social color="#aaa"
+                        facebook="https://www.facebook.com/SomosVivala/"
+                        linkedin="https://pt.linkedin.com/company/vivalá"
+                        instagram="https://www.instagram.com/somosvivala/"
+                        youtube="https://www.youtube.com/channel/UCT8bbWeVmbaDDMxvWlI8bBA"
+                />
+                <CotacaoSection />
                 <Institute text={trans('index.institute.text')} expeditions={expeditions.edicoes_futuras} />
                 <Newsletter text={trans('newsletter.text')}
                             placeholderName={trans('newsletter.placeholderName')}
