@@ -21,7 +21,7 @@ class Servicos extends Component {
             <div className="container servicos">
                 <div className="row">
                     <div className="section-header">
-                        <h2>Viaje pelo Brasil com roteiros especiais</h2>
+                        <h2><span className="viaje">Viaje pelo Brasil</span> <span className="roteiros">com roteiros especiais</span></h2>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">

@@ -6,6 +6,8 @@ import CotacaoSection from './cotacao-section';
 import Institute from './institute';
 import Newsletter from '../../newsletter';
 import MediaNews from './media-news';
+import HighlightSection from './highlight';
+import AssociadoSection from './associado'
 import trans from '../../../utils/translate';
 import {requestIndex} from '../../../actions/index';
 import LoadingInfinite from '../../loadings/infinite';
@@ -37,6 +39,8 @@ class IndexPage extends Component {
                 />
                 <CotacaoSection />
                 <Institute text={trans('index.institute.text')} expeditions={expeditions.edicoes_passadas} />
+                <HighlightSection />
+                <AssociadoSection />
                 <Newsletter text={trans('newsletter.text')}
                             placeholderName={trans('newsletter.placeholderName')}
                 />

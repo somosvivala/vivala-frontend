@@ -22,6 +22,12 @@
     }
 }
 
+@mixin desktop-1200 {
+    @media (max-width: #{$desktop-1200-width - 1px}) {
+        @content;
+    }
+}
+
 @mixin desktop-1366 {
     @media (max-width: #{$desktop-1366-width - 1px}) {
         @content;
@@ -30,6 +36,12 @@
 
 @mixin desktop-1440 {
     @media (max-width: #{$desktop-1440-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop-1600 {
+    @media (max-width: #{$desktop-1600-width - 1px}) {
         @content;
     }
 }

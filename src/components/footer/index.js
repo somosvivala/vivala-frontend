@@ -21,7 +21,7 @@ class Footer extends Component {
                     </Grid>
 
                     <Grid item xs={4}>
-                        <Typography type="subheading" color="inherit" style={{ textAlign: 'right', fontWeight: 'bold' }}>© 2017 Vivala</Typography>
+                        <Typography type="subheading" color="inherit" style={{ textAlign: 'right', fontWeight: 'bold' }}>© 2018 Vivala</Typography>
                     </Grid>
                 </Grid>
             </div>

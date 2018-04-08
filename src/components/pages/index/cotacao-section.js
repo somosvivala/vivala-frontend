@@ -43,7 +43,8 @@ class CotacaoSection extends Component
             <div className="container cotacoes">
                 <div className="row box-frase">
                     <div className="frase-destaque">
-                        <img src={FraseConhecaPng} alt="conheça mais de 160 países"/>
+                        {/*<img src={FraseConhecaPng} alt="conheça mais de 160 países"/>*/}
+                        <Typography type="title" color="inherit" className="frase-destaque-text"><span className="conheca">Conheça</span> <span className="plus">+</span> de <span className="number">160</span> países</Typography>
                         <img src={AviaozinhoPng} id="aviaozinho" alt="aviãozinho"/>
                     </div>
                 </div>
@@ -68,6 +69,9 @@ class CotacaoSection extends Component
                                 </ListItem>
                             </List>
                         </div>
+                    </div>
+                    <div className="optional-ou">
+                        <Typography type="body2" variant="body2" color="inherit" className="optional-ou-text">Ou</Typography>
                     </div>
                     <div className="orange-box right">
                         <div className="box-header has-link">
