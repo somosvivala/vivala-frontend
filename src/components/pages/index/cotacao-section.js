@@ -12,29 +12,6 @@ import VoosIcon from '../../../assets/svg/icons/voos.svg';
 import FraseConhecaPng from '../../../assets/images/home/Frase-aviso-conheca.png';
 import AviaozinhoPng from '../../../assets/images/home/airplane.png';
 
-const styleSheet = createStyleSheet('ImageMessage', theme => ({
-    gridContainerBack: {
-        backgroundColor: '#F7F7F7',
-        width: '100%',
-    },
-    gridContainer: {
-        margin: 0,
-        maxWidth: '100%'
-    },
-    gridItem: {
-        right: 20,
-        padding: '0 !important',
-        position: 'absolute',
-        fontSize: '20px !important',
-        maxWidth: window.screen.width < 900 ? '160px' : 'default',
-    },
-    massageImage: {
-        marginLeft: window.screen.width < 900 ? '-40px' : '',
-        objectFit: 'cover',
-        height: window.screen.width < 900 ? '190px' : '400px',
-    }
-}));
-
 class CotacaoSection extends Component
 {
     render() {

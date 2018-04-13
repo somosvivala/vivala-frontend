@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
-import Grid from 'material-ui/Grid';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import PropTypes from 'prop-types';
 import {Image} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
-import FontAwesome from 'react-fontawesome';
 
 class Servicos extends Component {
    render() {
         const { classes, title, button } = this.props;
 
         return (
-            // <Grid container gutter={0} className="container">
-            //   <Grid item xs={12} className="section-header">
-            //     <h2>{"Viaje pelo Brasil com roteiros especiais"/*this.props.title*/}</h2>
-            //   </Grid>
-            // </Grid>
             <div className="container servicos">
                 <div className="row">
                     <div className="section-header">
@@ -25,30 +17,30 @@ class Servicos extends Component {
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
-                    <a href="">
+                    <Link to="/volunturismo">
                         <div className="item big volunturismo" id="volunturismo">
                             <div className="meta-content">
-                                <h3 className="title">Volunturismo</h3>
-                                <p className="subtitle">Expedições de turismo e voluntariado</p>
+                                <Typography variant="title" className="title">Volunturismo</Typography>
+                                <Typography variant="subheading" className="subtitle">Expedições de turismo e voluntariado</Typography>
                             </div>
                         </div>
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="ecoturismo">
                         <div className="item ecoturismo" id="ecoturismo">
                             <div className="meta-content">
-                                <h3 className="title">Ecoturismo</h3>
-                                <p className="subtitle">Experiências de conexão com a natureza</p>
+                                <Typography variant="title" className="title">Ecoturismo</Typography>
+                                <Typography variant="subheading" className="subtitle">Experiências de conexão com a natureza</Typography>
                             </div>
                         </div>
-                    </a>
-                    <a href="">
+                    </Link>
+                    <Link to="/imersoes">
                         <div className="item imersoes" id="imersoes">
                             <div className="meta-content">
-                                <h3 className="title">Imersões</h3>
-                                <p className="subtitle">Expedições de turismo e voluntariado</p>
+                                <Typography variant="title" className="title">Imersões</Typography>
+                                <Typography variant="subheading" className="subtitle">Roteiros incríveis para ir quando quiser</Typography>
                             </div>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
         );

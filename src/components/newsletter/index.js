@@ -34,7 +34,7 @@ class NewsletterIndex extends Component {
 
         return (
             <div className="newsletter">
-                <div className="container padding-2x">
+                <div className="newsletter-container">
                     <Typography type="subheading" color="inherit" className="newsletter-highlight-text">{text}</Typography>
                     <NewsletterForm onSubmit={this.handleSubmit}/>
                 </div>

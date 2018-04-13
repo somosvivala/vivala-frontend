@@ -3,11 +3,11 @@ import {connect} from 'react-redux';
 import Servicos from './servicos';
 import Social from '../../social/index';
 import CotacaoSection from './cotacao-section';
-import Institute from './institute';
 import Newsletter from '../../newsletter';
 import MediaNews from './media-news';
 import HighlightSection from './highlight';
-import AssociadoSection from './associado'
+import AssociadoSection from './associado';
+import InstitutoSlider from './instituto-slider';
 import trans from '../../../utils/translate';
 import {requestIndex} from '../../../actions/index';
 import LoadingInfinite from '../../loadings/infinite';
@@ -25,12 +25,33 @@ class IndexPage extends Component {
             return <LoadingInfinite />;
         }
 
+        const photos = [
+            {
+                image: 'https://i.imgur.com/iK34j42.png'
+            },
+            {
+                image: 'https://i.imgur.com/HZCmy5j.jpg'
+            },
+            {
+                image: 'https://i.imgur.com/SCfosvN.png'
+            },
+            {
+                image: 'https://i.imgur.com/pkaSVNA.jpg'
+            },
+            {
+                image: 'https://i.imgur.com/eoC6rVA.jpg'
+            },
+            {
+                image: 'https://i.imgur.com/PlCbwAs.jpg'
+            },
+            {
+                image: 'https://img00.deviantart.net/2602/i/2016/184/a/b/minimalist_wallpaper___yukihira_souma_by_agenfneptunus-da8l3ya.png'
+            }
+        ];
+
         return (
             <div>
-                <Servicos title={trans('index.header.title')}
-                             text={trans('index.header.text')}
-                            button={trans('index.header.button')}
-                />
+                <Servicos />
                 <Social color="#aaa"
                         facebook="https://www.facebook.com/SomosVivala/"
                         linkedin="https://pt.linkedin.com/company/vivalá"
@@ -38,7 +59,8 @@ class IndexPage extends Component {
                         youtube="https://www.youtube.com/channel/UCT8bbWeVmbaDDMxvWlI8bBA"
                 />
                 <CotacaoSection />
-                <Institute text={trans('index.institute.text')} expeditions={expeditions.edicoes_passadas} />
+                {/*<Institute text={trans('index.institute.text')} expeditions={expeditions.edicoes_passadas} />*/}
+                <InstitutoSlider expeditions={photos} />
                 <HighlightSection />
                 <AssociadoSection />
                 <Newsletter text={trans('newsletter.text')}

@@ -59,10 +59,6 @@ class NewsletterForm extends Component {
     }
 }
 
-NewsletterForm.propTypes = {
-    classes: PropTypes.object.isRequired
-};
-
 export default reduxForm({
     form: 'newsletterForm',
-})(withStyles(styleSheet)(NewsletterForm))
+})(NewsletterForm)

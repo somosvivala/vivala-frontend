@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import {Image} from 'cloudinary-react';
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('MediaNews', theme => ({
     bg: {
@@ -23,7 +24,7 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
         fontWeight: 700,
         letterSpacing: 1,
         textAlign: window.screen.width < 900 ? 'center' : 'left',
-    },  
+    },
     logoMedia: {
         width: '60%',
         objectFit: 'contain',
@@ -41,7 +42,9 @@ class MediaNews extends Component {
             adaptativeHeight: true,
             autoplay: true,
             autoplaySpeed: 5000,
-            speed: 500
+            speed: 500,
+            prevArrow: <PrevArrow white />,
+            nextArrow: <NextArrow white />,
         }
         return (
             <div className={classes.bg}>
