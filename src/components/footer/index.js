@@ -16,12 +16,12 @@ class Footer extends Component {
                             <a href="tel:+551126452632">11 2645-2632</a>
                         </Typography>
                         <Typography type="body1">
-                            Segunda à Sexta das 9h às 18h
+                            Segunda à Sexta <br />9h às 18h
                         </Typography>
                     </Grid>
 
                     <Grid item xs={4}>
-                        <Typography type="subheading" color="inherit" style={{ textAlign: 'right', fontWeight: 'bold' }}>© 2018 Vivala</Typography>
+                        <Typography type="subheading" color="inherit" style={{ textAlign: 'right', fontWeight: 'bold' }}>Vivala <br />© 2018</Typography>
                     </Grid>
                 </Grid>
             </div>

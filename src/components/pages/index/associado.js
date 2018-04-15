@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Typography from 'material-ui/Typography';
-import Grid from 'material-ui/Grid';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
-import List, { ListItem } from 'material-ui/List';
-import {Image} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
 import Button from 'material-ui/Button';
 

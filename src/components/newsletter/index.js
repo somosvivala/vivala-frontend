@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Typography from 'material-ui/Typography';
 import NewsletterForm from './form';
-import Grid from 'material-ui/Grid';
 import { CircularProgress } from 'material-ui/Progress';
 import Message from '../messages';
 import { storeNewsletter } from '../../actions/newsletter';
@@ -34,7 +33,7 @@ class NewsletterIndex extends Component {
 
         return (
             <div className="newsletter">
-                <div className="newsletter-container">
+                <div className="newsletter-container container">
                     <Typography type="subheading" color="inherit" className="newsletter-highlight-text">{text}</Typography>
                     <NewsletterForm onSubmit={this.handleSubmit}/>
                 </div>

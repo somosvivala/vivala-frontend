@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
-import PropTypes from 'prop-types';
 import {Image} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
 
 class Servicos extends Component {
    render() {
-        const { classes, title, button } = this.props;
-
         return (
             <div className="container servicos">
                 <div className="row">

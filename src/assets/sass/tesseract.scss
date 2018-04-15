@@ -59,13 +59,16 @@ body {
                         font-size: 1.7rem;
                         display: inline-flex;
                         flex-direction: column;
+                        width: 100%;
+                        padding: 0 15px;
                     }
                     .viaje {
                         @include tablet-portrait {
                             padding-right: 6.5rem;
                         }
                         @include phone {
-                            padding-right: 4.5rem;
+                            padding-right: 0;
+                            text-align: left;
                         }
                     }
                     .roteiros {
@@ -73,7 +76,8 @@ body {
                             padding-left: 6.5rem;
                         }
                         @include phone {
-                            padding-left: 4.5rem;
+                            padding-left: 0;
+                            text-align: right;
                         }
                     }
                 }
@@ -124,8 +128,7 @@ body {
                     }
                 }
                 .meta-content {
-                    background-blend-mode: multiply;
-                    padding: 15px 20px;
+                    padding: 15px 20px 30px;
                     color: #fff;
                     font-family: $secondary-font;
                     position: absolute;
@@ -151,7 +154,7 @@ body {
                         z-index: 1;
                         position: relative;
                         font-size: 2.3rem;
-                        margin-bottom: 12px;
+                        margin-bottom: 16px;
                         letter-spacing: 0.5px;
                         color: inherit;
 
@@ -320,6 +323,10 @@ body {
                             @include desktop-1440 {
                                 padding-left: 30px;
                             }
+                            @include phone {
+                                padding-left: 15px;
+                                text-align: center;
+                            }
                             &:before {
                                 transform: skew(2deg, 2deg);
                             }
@@ -420,7 +427,7 @@ body {
                                 }
                             }
                             .diy-item-icon {
-                                width: 50px;
+                                width: 42px;
                                 margin-right: 5px;
                             }
                             .diy-item-text, .lodify-item-text {
@@ -462,6 +469,10 @@ body {
                         text-transform: lowercase;
                         font-weight: 700;
                         font-size: 2rem;
+
+                        @include phone {
+                            font-size: 1.5rem;
+                        }
                     }
                 }
             }
@@ -477,8 +488,8 @@ body {
             .frase-destaque-text {
                 color: $vivala-darkgrey;
                 font-style: italic;
-                font-weight: 700;
-                font-size: 2.5rem;
+                font-weight: 900;
+                font-size: 2.8rem;
 
                 @include phone {
                     font-size: 1.4rem;
@@ -520,6 +531,7 @@ body {
             font-size: 2.5rem;
             max-width: 46vw;
             margin: 0 auto 50px;
+            line-height: 3rem;
 
             @include desktop-1600 {
                 max-width: 57vw;
@@ -539,11 +551,12 @@ body {
             }
             @include phone {
                 max-width: 100%;
-                font-size: 1.2rem;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
             }
         }
         .seje-um-associado-btn {
-            background-color: $vivala-lightturquoise;
+            background-color: transparent;
             border: 1px solid #fff;
             border-radius: 8px;
             display: inline-flex;
@@ -552,24 +565,43 @@ body {
             color: #fff;
             font-size: 1.2rem;
             padding: 8px 60px 12px;
+
+            &:hover {
+                background-color: $vivala-lightturquoise;
+            }
+            @include phone {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
         }
     }
     .instituto-vivala {
         @include linearGradient(#fff, $vivala-darkturquoise);
-        height: 75vh;
+        height: 95vh;
         overflow: hidden;
 
+        @include phone {
+            margin-top: 60px;
+        }
         .container {
             height: 100%;
+
+            @include phone {
+                padding: 0;
+            }
         }
         .home-instituto-slick-container {
-            width: 55vw;
+            width: 80vw;
             height: calc(100% - 120px);
             margin: 60px auto;
             position: relative;
 
             @include desktop-1200 {
                 width: 75vw;
+            }
+            @include phone {
+                width: 100vw;
+                margin-top: 0;
             }
             .instituto-vivala-logo-container {
                 position: absolute;
@@ -582,8 +614,16 @@ body {
                 border-radius: 4px;
 
                 @include phone {
-                    right: 20px;
-                    padding-top: 25px;
+                    position: relative;
+                    top: 0;
+                    right: auto;
+                    padding: 15px 10px;
+                    box-shadow: none;
+                    border-radius: 0;
+                    margin-bottom: 20px;
+                    border-top: 2px solid $vivala-darkgrey;
+                    border-bottom: 2px solid $vivala-darkgrey;
+                    text-align: center;
                 }
                 img {
                     max-width: 180px;
@@ -598,6 +638,10 @@ body {
                 border: 2px solid #fff;
                 border-radius: 4px;
 
+                @include phone {
+                    width: 75vw;
+                    margin: 0 auto;
+                }
                 .slick-list {
                     height: 100%;
 
@@ -605,7 +649,7 @@ body {
                         height: 100%;
                     }
                     .slick-slide {
-                        width: 55vw;
+                        width: 80vw;
                         text-align: center;
                         background-size: cover;
 
@@ -633,7 +677,6 @@ body {
             justify-content: center;
             flex-wrap: wrap;
             margin: 0 auto;
-            width: 60vw;
 
             @include tablet-landscape {
                 width: 80vw;
@@ -646,6 +689,7 @@ body {
             font-weight: 700;
             width: 15%;
             color: $vivala-darkgrey;
+            font-size: 1.2rem;
 
             @include desktop-1600 {
                 width: 23%;
@@ -680,12 +724,26 @@ body {
             .newsletter-form-input {
                 margin-left: 8px;
                 margin-right: 8px;
-                width: 200px;
+                width: 20vw;
                 margin-bottom: 20px;
+
+                &:first-of-type {
+                    width: 100%;
+                }
             }
             .newsletter-form-btn {
                 margin-left: 10px;
             }
+        }
+    }
+    .media-news {
+        background-color: $vivala-midgrey;
+
+        .media-news-title {
+            padding-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1;
+            text-align: center;
         }
     }
 }
