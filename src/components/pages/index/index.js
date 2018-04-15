@@ -50,7 +50,7 @@ class IndexPage extends Component {
         ];
 
         return (
-            <div>
+            <div className="content-wrapper">
                 <Servicos />
                 <Social color="#aaa"
                         facebook="https://www.facebook.com/SomosVivala/"

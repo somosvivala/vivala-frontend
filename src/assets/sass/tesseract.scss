@@ -2,6 +2,11 @@ body {
     .menu-wrapper {
         height: 80px;
         border-bottom: 2px solid $vivala-darkgrey;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 55;
 
         button {
             &:focus, &:active {
@@ -11,6 +16,9 @@ body {
                 font-size: 36px;
             }
         }
+    }
+    .content-wrapper {
+        margin-top: 80px;
     }
     .container {
         @include desktop-1920 {
@@ -110,6 +118,13 @@ body {
                 &.volunturismo {
                     background-image: url('../images/home/home-volunturismo-desktop.png');
 
+                    .meta-content {
+                        .subtitle {
+                            @include phone {
+                                padding-right: 60px;
+                            }
+                        }
+                    }
                 }
                 &.ecoturismo {
                     background-image: url('../images/home/home-ecoturismo-desktop.png');
@@ -136,6 +151,9 @@ body {
                     left: 0;
                     width: 100%;
 
+                    @include phone {
+                        padding: 15px 20px 13px;
+                    }
                     &:before {
                         @extend %bfaf;
                         position: absolute;
@@ -147,6 +165,11 @@ body {
                         z-index: 0;
                         mix-blend-mode: multiply;
                         background-color: rgba($vivala-orange, 1);
+
+                        @include phone {
+                            transform: skewY(4deg);
+                            top: -1vw;
+                        }
                     }
                     .title {
                         text-transform: uppercase;
@@ -160,6 +183,7 @@ body {
 
                         @include phone {
                             font-size: 1.8rem;
+                            margin-bottom: 10px;
                         }
                     }
                     .subtitle {
@@ -170,6 +194,7 @@ body {
 
                         @include phone {
                             font-size: 1.2rem;
+                            padding-right: 30px;
                         }
                     }
                 }
@@ -194,11 +219,9 @@ body {
             }
             .box-frase {
                 text-align: center;
+                margin-left: 0;
+                margin-right: 0;
 
-                @include phone {
-                    margin-left: 0;
-                    margin-right: 0;
-                }
                 .frase-destaque {
                     position: relative;
                     display: inline-flex;
@@ -494,20 +517,6 @@ body {
                 @include phone {
                     font-size: 1.4rem;
                 }
-                &:first-of-type {
-                    margin-right: 7rem;
-
-                    @include phone {
-                        margin-right: 2rem;
-                    }
-                }
-                &:last-of-type {
-                    margin-left: 7rem;
-
-                    @include phone {
-                        margin-left: 2rem;
-                    }
-                }
             }
         }
     }
@@ -580,12 +589,21 @@ body {
         height: 95vh;
         overflow: hidden;
 
+        @include tablet-portrait {
+            margin-top: 60px;
+            height: 52vh;
+        }
         @include phone {
             margin-top: 60px;
+            height: 52vh;
         }
         .container {
             height: 100%;
 
+            @include tablet-portrait {
+                padding: 0;
+                width: 100vw;
+            }
             @include phone {
                 padding: 0;
             }
@@ -599,8 +617,14 @@ body {
             @include desktop-1200 {
                 width: 75vw;
             }
+            @include tablet-portrait {
+                width: 100vw;
+                height: calc(100% - 145px);
+                margin-top: 0;
+            }
             @include phone {
                 width: 100vw;
+                height: calc(100% - 145px);
                 margin-top: 0;
             }
             .instituto-vivala-logo-container {
@@ -613,6 +637,18 @@ body {
                 box-shadow: 2px 2px 1px 1px $vivala-darkturquoise;
                 border-radius: 4px;
 
+                @include tablet-portrait {
+                    position: relative;
+                    top: 0;
+                    right: auto;
+                    padding: 15px 10px;
+                    box-shadow: none;
+                    border-radius: 0;
+                    margin-bottom: 20px;
+                    border-top: 2px solid $vivala-darkgrey;
+                    border-bottom: 2px solid $vivala-darkgrey;
+                    text-align: center;
+                }
                 @include phone {
                     position: relative;
                     top: 0;
@@ -638,6 +674,11 @@ body {
                 border: 2px solid #fff;
                 border-radius: 4px;
 
+                @include tablet-portrait {
+                    width: 75vw;
+                    margin: 0 auto;
+                    height: 32vh;
+                }
                 @include phone {
                     width: 75vw;
                     margin: 0 auto;
@@ -655,6 +696,11 @@ body {
 
                         @include desktop-1200 {
                             width: 75vw;
+                        }
+                        @include tablet-portrait{
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
                         }
                         @include phone {
                             background-size: contain;
@@ -697,8 +743,13 @@ body {
             @include desktop-1200 {
                 width: 30%;
             }
+            @include tablet-portrait {
+                width: 100%;
+                text-align: center;
+            }
             @include phone {
                 width: 100%;
+                text-align: left;
             }
         }
         .newsletter-form {
@@ -727,6 +778,9 @@ body {
                 width: 20vw;
                 margin-bottom: 20px;
 
+                @include phone {
+                    width: 100%;
+                }
                 &:first-of-type {
                     width: 100%;
                 }
