@@ -29,14 +29,14 @@ class NewsletterForm extends Component {
         const { classes, handleSubmit, invalid, pristine, submitting } = this.props;
 
         return (
-            <form onSubmit={handleSubmit} className={classes.form}>
+            <form onSubmit={handleSubmit} className="newsletter-form">
                 <Field
                     type="text"
                     name="nome"
                     component={TextField}
                     label="Como quer ser chamado?"
                     validate={required}
-                    className={classes.input}
+                    className="newsletter-form-input"
                 />
                 <Field
                     type="text"
@@ -44,12 +44,12 @@ class NewsletterForm extends Component {
                     component={TextField}
                     label="E-mail"
                     validate={email}
-                    className={classes.input}
+                    className="newsletter-form-input"
                 />
                 <Button type="submit"
                         raised
                         color="primary"
-                        className={classes.button}
+                        className="newsletter-form-btn"
                         disabled={invalid || pristine || submitting}
                 >
                     Cadastrar
@@ -59,10 +59,6 @@ class NewsletterForm extends Component {
     }
 }
 
-NewsletterForm.propTypes = {
-    classes: PropTypes.object.isRequired
-};
-
 export default reduxForm({
     form: 'newsletterForm',
-})(withStyles(styleSheet)(NewsletterForm))
+})(NewsletterForm)

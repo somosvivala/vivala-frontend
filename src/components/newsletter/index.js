@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Typography from 'material-ui/Typography';
 import NewsletterForm from './form';
-import Grid from 'material-ui/Grid';
 import { CircularProgress } from 'material-ui/Progress';
 import Message from '../messages';
 import { storeNewsletter } from '../../actions/newsletter';
@@ -33,18 +32,12 @@ class NewsletterIndex extends Component {
         }
 
         return (
-            <Grid gutter={0} container style={{ backgroundColor: '#ECE9EA' }}>
-                <div className="container padding-2x">
-                    <Grid gutter={16} container justify="center" align="center">
-                        <Grid gutter={0} container item xs={12} sm={3}>
-                            <Typography type="subheading" color="inherit">{text}</Typography>
-                        </Grid>
-                        <Grid gutter={16} container item xs={12} sm={9} justify="center">
-                            <NewsletterForm onSubmit={this.handleSubmit}/>
-                        </Grid>
-                    </Grid>
+            <div className="newsletter">
+                <div className="newsletter-container container">
+                    <Typography type="subheading" color="inherit" className="newsletter-highlight-text">{text}</Typography>
+                    <NewsletterForm onSubmit={this.handleSubmit}/>
                 </div>
-            </Grid>
+            </div>
         );
     }
 }
@@ -63,4 +56,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {storeNewsletter})(NewsletterIndex);
-

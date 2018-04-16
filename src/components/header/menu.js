@@ -36,7 +36,7 @@ class Menu extends Component {
         const {classes} = this.props;
 
         return (
-            <div className={ classes.bg }>
+            <div className="menu-wrapper">
                 <Grid container gutter={0} align="center" justify="center" className="container">
                     <Grid item xs={6} className={classes.img}>
                         <Link to="/"><img src={Logo} alt="Logo" width="150" height="60"/></Link>
