@@ -499,6 +499,81 @@ body {
                 }
             }
         }
+        &.servicos-page {
+            .servicos-header {
+                padding: 50px 20px 25px;
+
+                .header-content {
+                    align-items: normal;
+                    margin-bottom: 30px;
+
+                    .section-title {
+                        font-weight: 700;
+                        color: $vivala-orange;
+                        font-size: 2.5rem;
+                        letter-spacing: -.5px;
+                        margin-bottom: 5px;
+                    }
+                    .section-subtitle {
+                        font-size: 1.2rem;
+                        color: $vivala-darkgrey;
+                    }
+                }
+                .video-wrapper {
+                    height: 70vh;
+                }
+            }
+        }
+    }
+    .frase-impacto {
+
+    }
+    .servicos-items {
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: 15px;
+
+            .item {
+                height: 50vh;
+                margin-bottom: 2rem;
+
+                .inner-item {
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    display: flex;
+
+                    .item-content {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 0 15px;
+
+                        &:before {
+                            content: '';
+                            background-color: rgba($vivala-orange, 1);
+                            mix-blend-mode: multiply;
+                            width: calc(100% - 30px);
+                            height: 100%;
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 15px;
+                            z-index: 0;
+                        }
+                        .item-title {
+                            color: #fff;
+                            position: relative;
+                            z-index: 1;
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
     }
     .social-container {
         text-align: center;
