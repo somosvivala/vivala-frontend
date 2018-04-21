@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import expeditions from './expeditions';
 import volunturismo from './volunturismo';
+import ecoturismo from './ecoturismo';
 import subscribe from './subscribe';
 import newsletter from './newsletter';
 import contact from './contact';
@@ -13,6 +14,7 @@ export default combineReducers({
     form: formReducer,
     expeditions,
     volunturismo,
+    ecoturismo,
     subscribe,
     newsletter,
     contact,

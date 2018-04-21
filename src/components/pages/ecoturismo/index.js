@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {requestVolunturismos} from '../../../actions/volunturismo';
+import {requestEcoturismos} from '../../../actions/ecoturismo';
 import EcoturismoHeader from "./header";
 import ServicosItems from '../../servicos-items';
 import BadRequestError from '../../errors/404';
@@ -9,7 +9,7 @@ import Typography from "material-ui/Typography";
 
 class EcoturismoIndex extends Component {
     componentWillMount() {
-        this.props.requestVolunturismos();
+        this.props.requestEcoturismos();
     }
 
     render() {
@@ -44,10 +44,10 @@ class EcoturismoIndex extends Component {
 
 function mapStateToProps(state) {
     return {
-        fetching: state.volunturismo.fetching,
-        error: state.volunturismo.error,
-        items: state.volunturismo.items
+        fetching: state.ecoturismo.fetching,
+        error: state.ecoturismo.error,
+        items: state.ecoturismo.items
     }
 }
 
-export default connect(mapStateToProps, {requestVolunturismos})(EcoturismoIndex);
+export default connect(mapStateToProps, {requestEcoturismos})(EcoturismoIndex);
