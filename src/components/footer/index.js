@@ -6,7 +6,7 @@ import MenuItems from "../header/menu-items";
 class Footer extends Component {
     render() {
         const footerMobile = (
-            <div className="container padding">
+            <div className="footer container padding">
                 <Grid gutter={0} container align="flex-start" justify="center">
                     <Grid item xs={8}>
                         <Typography type="body1">
