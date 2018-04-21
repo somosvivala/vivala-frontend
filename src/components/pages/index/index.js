@@ -27,25 +27,10 @@ class IndexPage extends Component {
 
         const photos = [
             {
-                image: 'https://i.imgur.com/iK34j42.png'
+                image: 'https://i.imgur.com/q2H12iW.png'
             },
             {
-                image: 'https://i.imgur.com/HZCmy5j.jpg'
-            },
-            {
-                image: 'https://i.imgur.com/SCfosvN.png'
-            },
-            {
-                image: 'https://i.imgur.com/pkaSVNA.jpg'
-            },
-            {
-                image: 'https://i.imgur.com/eoC6rVA.jpg'
-            },
-            {
-                image: 'https://i.imgur.com/PlCbwAs.jpg'
-            },
-            {
-                image: 'https://img00.deviantart.net/2602/i/2016/184/a/b/minimalist_wallpaper___yukihira_souma_by_agenfneptunus-da8l3ya.png'
+                image: 'https://i.imgur.com/q2H12iW.png'
             }
         ];
 
