@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Typography from 'material-ui/Typography';
-import Social from '../../social';
 import Slider from 'react-slick';
-import InstituteItem from './institute-item';
 import Logo from '../../../assets/images/home/logo_instituto.png';
 import {PrevArrow, NextArrow} from '../../arrows';
 
@@ -27,7 +24,6 @@ class InstitutoSlider extends Component {
             variableWidth: true,
             autoplay: true,
             autoplaySpeed: 3000,
-            arrows: false,
             prevArrow: <PrevArrow white />,
             nextArrow: <NextArrow white />,
             speed: 500

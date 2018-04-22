@@ -10,7 +10,7 @@ import registerServiceWorker from './registerServiceWorker';
 import customMuiTheme from './assets/theme/custom';
 import 'typeface-titillium-web';
 import ScrollTop from './components/app/scroll-top';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css'
 import './assets/css/app.css';
 
 const history = createBrowserHistory();

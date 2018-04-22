@@ -43,13 +43,14 @@ class MediaNews extends Component {
             autoplay: true,
             autoplaySpeed: 5000,
             speed: 500,
+            arrows: false,
             prevArrow: <PrevArrow white />,
             nextArrow: <NextArrow white />,
         }
         return (
-            <div className={classes.bg}>
+            <div className="media-news">
                 <div className="container padding">
-                    <Typography type="title" paragraph className={classes.text}>{text}</Typography>
+                    <Typography type="title" paragraph className="media-news-title">{text}</Typography>
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="https://catracalivre.com.br/geral/agenda/indicacao/startup-conecta-pessoas-que-tem-interesse-de-viajar-e-realizar-voluntariado-no-brasil/">

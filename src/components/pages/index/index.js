@@ -37,7 +37,7 @@ class IndexPage extends Component {
         document.title = "Vivalá | Somos Todos Vivalá"
 
         return (
-            <div>
+            <div className="content-wrapper">
                 <Servicos />
                 <Social color="#aaa"
                         facebook="https://www.facebook.com/SomosVivala/"
