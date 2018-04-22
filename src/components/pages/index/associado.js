@@ -6,7 +6,6 @@ import Button from 'material-ui/Button';
 class AssociadoSection extends Component
 {
     render() {
-        const { classes, text } = this.props;
         return (
             <div className="associado-container">
                 <Typography type="title" color="inherit" className="seje-um-associado-frase">

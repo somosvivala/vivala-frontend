@@ -1,4 +1,5 @@
 import Index from '../components/pages/index';
+import VolunturismoIndex from '../components/pages/volunturismo';
 import EcoturismoIndex from '../components/pages/ecoturismo';
 import ExpeditionsIndex from '../components/pages/expeditions';
 import ExpeditionsShow from '../components/pages/expeditions/show';
@@ -31,6 +32,12 @@ export default [
         exact: true,
         component: Index,
         key: 'index.index'
+    },
+    {
+        path: '/volunturismo',
+        exact: true,
+        component: VolunturismoIndex,
+        key: 'volunturismo.index'
     },
     {
         path: '/ecoturismo',
