@@ -34,6 +34,8 @@ class IndexPage extends Component {
             }
         ];
 
+        document.title = "Vivalá | Somos Todos Vivalá"
+
         return (
             <div>
                 <Servicos />

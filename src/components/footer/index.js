@@ -28,7 +28,7 @@ class Footer extends Component {
         );
 
         const footerDesktop = (
-            <Grid gutter={0} container>
+            <Grid gutter={0} container className="footer">
                 <div className="container padding-2x">
                     <MenuItems direction={"row"} showContact={true}  />
                     <Grid container align="center" justify="center" style={{ marginTop: 40 }}>

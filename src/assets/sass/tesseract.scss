@@ -542,9 +542,9 @@ body {
                 }
             }
         }
-        &.footer {
-            border-top: 2px solid $vivala-darkgrey;
-        }
+    }
+    .footer {
+        border-top: 2px solid $vivala-midgrey;
     }
     .frase-impacto {
         text-align: center;
@@ -646,7 +646,7 @@ body {
                             color: #fff;
                             position: relative;
                             z-index: 1;
-                            font-size: 2.2rem;
+                            font-size: 1.8rem;
                             line-height: 3rem;
                             padding: 10px 30px;
                             font-weight: 600;

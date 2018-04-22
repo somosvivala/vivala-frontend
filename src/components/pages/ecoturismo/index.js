@@ -23,6 +23,8 @@ class EcoturismoIndex extends Component {
             return <LoadingInfinite />;
         }
 
+        document.title = "Ecoturismo | Vivalá"
+
         return (
             <div className="content-wrapper">
                 <div className="servicos-page container">
