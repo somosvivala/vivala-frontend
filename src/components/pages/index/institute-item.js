@@ -4,28 +4,6 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import {Link} from 'react-router-dom';
 
-const styleSheet = createStyleSheet('InstituteItem', theme => ({
-    item: {
-        backgroundColor: '#35c9ca',
-        borderRadius: 2,
-        margin: '0 8px',
-        padding: '5px 20px',
-        display: 'flex',
-        flexDirection: 'column',    
-        justifyContent: 'space-around',
-        textAlign: 'left',
-        height: 120,
-        color: 'white'
-    },
-    tituloCardExpedicao: {
-        fontWeight: 600
-    },
-    saibaMaisCardExpedicao: {
-        fontWeight: 400,
-        color: 'black',
-    }
-}));
-
 class InstituteItem extends Component {
     render() {
         const { classes, title, subtitle, link } = this.props;
@@ -54,4 +32,4 @@ InstituteItem.propTypes = {
     link: PropTypes.string.isRequired,
 };
 
-export default withStyles(styleSheet)(InstituteItem);
+export default InstituteItem;
