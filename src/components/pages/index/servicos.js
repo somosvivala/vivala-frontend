@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Typography from 'material-ui/Typography';
-import {Image} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
 
 class Servicos extends Component {
@@ -16,24 +15,24 @@ class Servicos extends Component {
                     <Link to="/volunturismo">
                         <div className="item big volunturismo" id="volunturismo">
                             <div className="meta-content">
-                                <Typography variant="title" className="title">Volunturismo</Typography>
-                                <Typography variant="subheading" className="subtitle">Expedições de turismo e voluntariado</Typography>
+                                <Typography className="title">Volunturismo</Typography>
+                                <Typography className="subtitle">Expedições de turismo e voluntariado</Typography>
                             </div>
                         </div>
                     </Link>
-                    <Link to="ecoturismo">
+                    <Link to="/ecoturismo">
                         <div className="item ecoturismo" id="ecoturismo">
                             <div className="meta-content">
-                                <Typography variant="title" className="title">Ecoturismo</Typography>
-                                <Typography variant="subheading" className="subtitle">Experiências de conexão com a natureza</Typography>
+                                <Typography className="title">Ecoturismo</Typography>
+                                <Typography className="subtitle">Experiências de conexão com a natureza</Typography>
                             </div>
                         </div>
                     </Link>
                     <Link to="/imersoes">
                         <div className="item imersoes" id="imersoes">
                             <div className="meta-content">
-                                <Typography variant="title" className="title">Imersões</Typography>
-                                <Typography variant="subheading" className="subtitle">Roteiros incríveis para ir quando quiser</Typography>
+                                <Typography className="title">Imersões</Typography>
+                                <Typography className="subtitle">Roteiros incríveis para ir quando quiser</Typography>
                             </div>
                         </div>
                     </Link>
