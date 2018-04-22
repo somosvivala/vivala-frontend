@@ -21,7 +21,7 @@ class Servicos extends Component {
                             </div>
                         </div>
                     </Link>
-                    <Link to="ecoturismo">
+                    <Link to="/ecoturismo">
                         <div className="item ecoturismo" id="ecoturismo">
                             <div className="meta-content">
                                 <Typography variant="title" className="title">Ecoturismo</Typography>
