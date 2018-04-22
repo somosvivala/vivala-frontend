@@ -42,7 +42,7 @@ class CotacaoSection extends Component
                         </div>
                     </div>
                     <div className="optional-ou">
-                        <Typography type="body2" variant="body2" color="inherit" className="optional-ou-text">Ou</Typography>
+                        <Typography type="body2" color="inherit" className="optional-ou-text">Ou</Typography>
                     </div>
                     <div className="orange-box right">
                         <div className="box-header has-link">
