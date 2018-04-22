@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import IndexHeader from './header';
-import IndexSearch from './search';
-import ImageMessage from './image-message';
-import Institute from './institute';
+import Servicos from './servicos';
+import Social from '../../social/index';
+import CotacaoSection from './cotacao-section';
 import Newsletter from '../../newsletter';
 import MediaNews from './media-news';
+import HighlightSection from './highlight';
+import AssociadoSection from './associado';
+import InstitutoSlider from './instituto-slider';
 import trans from '../../../utils/translate';
 import {requestIndex} from '../../../actions/index';
 import LoadingInfinite from '../../loadings/infinite';
@@ -23,15 +25,29 @@ class IndexPage extends Component {
             return <LoadingInfinite />;
         }
 
+        const photos = [
+            {
+                image: 'https://i.imgur.com/2z9sWWo.png'
+            },
+            {
+                image: 'https://i.imgur.com/2z9sWWo.png'
+            }
+        ];
+
         return (
-            <div>
-                <IndexHeader title={trans('index.header.title')}
-                             text={trans('index.header.text')}
-                            button={trans('index.header.button')}
+            <div className="content-wrapper">
+                <Servicos />
+                <Social color="#aaa"
+                        facebook="https://www.facebook.com/SomosVivala/"
+                        linkedin="https://pt.linkedin.com/company/vivalá"
+                        instagram="https://www.instagram.com/somosvivala/"
+                        youtube="https://www.youtube.com/channel/UCT8bbWeVmbaDDMxvWlI8bBA"
                 />
-                <IndexSearch />
-                <ImageMessage text={trans('index.imageMessage.text')} />
-                <Institute text={trans('index.institute.text')} expeditions={expeditions.edicoes_futuras} />
+                <CotacaoSection />
+                {/*<Institute text={trans('index.institute.text')} expeditions={expeditions.edicoes_passadas} />*/}
+                <InstitutoSlider expeditions={photos} />
+                <HighlightSection />
+                <AssociadoSection />
                 <Newsletter text={trans('newsletter.text')}
                             placeholderName={trans('newsletter.placeholderName')}
                 />

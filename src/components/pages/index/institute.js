@@ -69,38 +69,12 @@ class Institute extends Component {
                         <Grid gutter={0} container item xs={4} justify="center">
                             <img src={Logo} alt="Instituto Vivala" className={classes.logoInstituto} />
                         </Grid>
-                        <Grid gutter={0} container item xs={8} justify="center">
-                            <Typography type="subheading" gutterBottom color="inherit" className={classes.subheading}>
-                                Participe de viagens <br/>
-                                de capacitação profissional <br/>
-                                em comunidades brasileiras
-                            </Typography>
-                            {
-                                window.screen.width > 900 &&
-                                    <Social color="rgba(255,255,255, 0.5)"
-                                            facebook="https://www.facebook.com/institutovivala/"
-                                            linkedin="https://pt.linkedin.com/company/vivalá"
-                                            instagram="https://www.instagram.com/institutovivala/"
-                                            youtube="https://www.youtube.com/channel/UCF-Lv8two48zRLLd8_DOcGA"
-                                    />
-                            }
-                        </Grid>
                     </Grid>
                     <div className="home-instituto-slick-container">
-                    <Slider {...settings} className={classes.slider}>
-                        {this.renderItems()}
-                    </Slider>
+                        <Slider {...settings} className={classes.slider}>
+                            {this.renderItems()}
+                        </Slider>
                     </div>
-
-                    {
-                        window.screen.width <= 900 &&
-                            <Social color="rgba(255,255,255, 0.5)"
-                                    facebook="https://www.facebook.com/institutovivala/"
-                                    linkedin="https://pt.linkedin.com/company/vivalá"
-                                    instagram="https://www.instagram.com/institutovivala/"
-                                    youtube="https://www.youtube.com/channel/UCF-Lv8two48zRLLd8_DOcGA"
-                            />
-                    }
                 </div>
             </div>
         );

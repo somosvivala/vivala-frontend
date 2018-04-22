@@ -1,0 +1,803 @@
+body {
+    .menu-wrapper {
+        height: 80px;
+        border-bottom: 2px solid $vivala-darkgrey;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 55;
+
+        button {
+            &:focus, &:active {
+                outline: none;
+            }
+            .material-icons {
+                font-size: 36px;
+            }
+        }
+    }
+    .content-wrapper {
+        margin-top: 80px;
+    }
+    .container {
+        @include desktop-1920 {
+            max-width: 1920px;
+            width: 86vw;
+        }
+        @include desktop-1600 {
+            max-width: 1600px;
+        }
+        @include desktop-1440 {
+            max-width: 1200px;
+        }
+        @include phone {
+            width: 100%;
+        }
+        .section-header {
+            text-align: center;
+            padding: 30px 0;
+            width: 100%;
+
+            @include phone {
+                text-align: center;
+            }
+            h2 {
+                font-family: $main-font;
+                color: $vivala-orange;
+            }
+        }
+        &.servicos {
+            .section-header {
+                h2 {
+                    font-size: 5rem;
+
+                    @include desktop-1440 {
+                        font-size: 4rem;
+                    }
+                    @include tablet-landscape {
+                        font-size: 3.2rem;
+                    }
+                    @include tablet-portrait {
+                        font-size: 3.2rem;
+                        display: inline-flex;
+                        flex-direction: column;
+                    }
+                    @include phone {
+                        font-size: 1.7rem;
+                        display: inline-flex;
+                        flex-direction: column;
+                        width: 100%;
+                        padding: 0 15px;
+                    }
+                    .viaje {
+                        @include tablet-portrait {
+                            padding-right: 6.5rem;
+                        }
+                        @include phone {
+                            padding-right: 0;
+                            text-align: left;
+                        }
+                    }
+                    .roteiros {
+                        @include tablet-portrait {
+                            padding-left: 6.5rem;
+                        }
+                        @include phone {
+                            padding-left: 0;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .item {
+                width: 49%;
+                height: 73vh;
+                float: left;
+                position: relative;
+                margin-bottom: 2%;
+                overflow: hidden;
+
+                @include tablet-landscape {
+                    height: 60vh;
+                }
+                @include tablet-portrait {
+                    width: 100%;
+                    height: 50vh;
+                }
+                @include phone {
+                    width: 100%;
+                }
+                &.big {
+                    width: 100%;
+                    // height: 80vh;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+                &.volunturismo {
+                    background-image: url('../images/home/home-volunturismo-desktop.png');
+
+                    .meta-content {
+                        .subtitle {
+                            @include phone {
+                                padding-right: 60px;
+                            }
+                        }
+                    }
+                }
+                &.ecoturismo {
+                    background-image: url('../images/home/home-ecoturismo-desktop.png');
+                    margin-right: 1%;
+
+                    @include phone {
+                        margin-right: 0;
+                    }
+                }
+                &.imersoes {
+                    background-image: url('../images/home/home-imersoes-desktop.png');
+                    margin-left: 1%;
+
+                    @include phone {
+                        margin-left: 0;
+                    }
+                }
+                .meta-content {
+                    padding: 15px 20px 30px;
+                    color: #fff;
+                    font-family: $secondary-font;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+
+                    @include phone {
+                        padding: 15px 20px 13px;
+                    }
+                    &:before {
+                        @extend %bfaf;
+                        position: absolute;
+                        width: 100%;
+                        height: 500px;
+                        top: 0;
+                        left: 0;
+                        transform: skewY(2.5deg);
+                        z-index: 0;
+                        mix-blend-mode: multiply;
+                        background-color: rgba($vivala-orange, 1);
+
+                        @include phone {
+                            transform: skewY(4deg);
+                            top: -1vw;
+                        }
+                    }
+                    .title {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        z-index: 1;
+                        position: relative;
+                        font-size: 2.3rem;
+                        margin-bottom: 16px;
+                        letter-spacing: 0.5px;
+                        color: inherit;
+
+                        @include phone {
+                            font-size: 1.8rem;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .subtitle {
+                        position: relative;
+                        z-index: 1;
+                        font-size: 1.5rem;
+                        color: inherit;
+
+                        @include phone {
+                            font-size: 1.2rem;
+                            padding-right: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        &.cotacoes {
+            background-image: url('../images/home/Background-Agencia-HOME-12.png');
+            background-size: 90vw auto;
+            background-repeat: no-repeat;
+            background-position: center -30vh;
+            padding: 6rem 0;
+
+            @include tablet-portrait {
+                width: 100%;
+                background-size: 110vw auto;
+                background-position: center -7vh;
+            }
+            @include phone {
+                background-size: 135% auto;
+                background-position: center -10vh;
+                padding: 3rem 0;
+            }
+            .box-frase {
+                text-align: center;
+                margin-left: 0;
+                margin-right: 0;
+
+                .frase-destaque {
+                    position: relative;
+                    display: inline-flex;
+                    margin: auto;
+                    margin-bottom: 8rem;
+
+                    @include tablet-portrait {
+                        margin-bottom: 1rem;
+                    }
+                    @include phone {
+                        margin-bottom: 1rem;
+                    }
+                    .frase-destaque-text {
+                        font-family: $main-font;
+                        font-size: 90px;
+                        color: $vivala-orange;
+                        text-shadow: -3px 2px #fff;
+                        text-align: left;
+                        letter-spacing: -.5px;
+
+                        @include tablet-portrait {
+                            font-size: 50px;
+                        }
+                        @include phone {
+                            font-size: 40px;
+                        }
+                        .conheca {
+                            display: flex;
+                            margin-left: 55px;
+                            font-size: 115px;
+
+                            @include tablet-portrait {
+                                font-size: 85px;
+                                margin-left: 30px;
+                            }
+                            @include phone {
+                                font-size: 60px;
+                                margin-left: 20px;
+                            }
+                        }
+                        .plus {
+                            position: relative;
+                            left: 20px;
+                            font-size: 105px;
+
+                            @include tablet-portrait {
+                                font-size: 65px;
+                                left: 10px;
+                            }
+                            @include phone {
+                                font-size: 40px;
+                                left: 10px;
+                            }
+                        }
+                        .number {
+                            font-size: 135px;
+                            font-weight: 700;
+                            vertical-align: middle;
+
+                            @include tablet-portrait {
+                                font-size: 95px;
+                            }
+                            @include phone {
+                                font-size: 60px;
+                            }
+                        }
+                    }
+                    #aviaozinho {
+                        position: absolute;
+                        bottom: -6.5rem;
+                        right: -8rem;
+                        width: 15rem;
+
+                        @include tablet-portrait {
+                            width: 8rem;
+                            bottom: -3rem;
+                            right: -5rem;
+                        }
+                        @include phone {
+                            width: 4rem;
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .box-container {
+                text-align: center;
+                width: 55vw;
+                margin: auto;
+                position: relative;
+                bottom: -3rem;
+
+                @include desktop-1366 {
+                    width: 65vw;
+                }
+                @include desktop-1200 {
+                    width: 75vw;
+                }
+                @include tablet-landscape {
+                    width: 85vw;
+                }
+                @include tablet-portrait {
+                    display: flex;
+                    flex-direction: column;
+                }
+                @include phone {
+                    width: 85vw;
+                }
+                .orange-box {
+                    // display: inline-flex;
+                    margin: auto;
+                    width: 420px;
+
+                    @include desktop-1440 {
+                        width: 375px;
+                    }
+                    &.left {
+                        .box-header {
+                            text-align: left;
+                            padding-left: 35px;
+
+                            @include desktop-1440 {
+                                padding-left: 30px;
+                            }
+                            @include phone {
+                                padding-left: 15px;
+                                text-align: center;
+                            }
+                            &:before {
+                                transform: skew(2deg, 2deg);
+                            }
+                        }
+                        .box-content {
+                            text-align: left;
+                        }
+                    }
+                    &.right {
+                        .box-header {
+                            &:before {
+                                transform: skew(-2deg, -2deg);
+                            }
+                        }
+                    }
+                    .box-header {
+                        background-color: #fff;
+                        border: 2px solid $vivala-orange;
+                        border-top: none;
+                        display: flex;
+                        font-family: $secondary-font;
+                        color: $vivala-orange;
+                        font-weight: 700;
+                        padding: 0 15px 10px;
+                        position: relative;
+                        z-index: 5;
+                        font-size: 26px;
+
+                        @include desktop-1440 {
+                            font-size: 24px;
+                        }
+                        &:before {
+                            @extend %bfaf;
+                            background-color: #fff;
+                            width: 101%;
+                            height: 22px;
+                            z-index: -1;
+                            top: -10px;
+                            left: -0.12rem;
+                            border: 2px solid $vivala-orange;
+                            border-bottom: none;
+
+                            @include desktop-1440 {
+                                left: -0.12rem;
+                                width: 101.02%
+                            }
+                            @include desktop-1366 {
+                                left: -0.125rem;
+                            }
+                            @include phone {
+                                width: 101.5%;
+                            }
+                        }
+                        &.has-link {
+                            transition: all 0.3s ease;
+
+                            &:hover {
+                                box-shadow: 6px 5px 8px 2px rgba(0, 0, 0, 0.5);
+                            }
+                            a {
+                                &:hover {
+                                    color: $vivala-darkgrey;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .box-content {
+                        color: #fff;
+                        width: calc(100% - 20px);
+                        background-color: $vivala-orange;
+                        margin: auto;
+                        height: 10rem;
+                        font-size: 20px;
+                        padding: 0 5px;
+                        font-weight: 300;
+                        display: flex;
+                        align-items: center;
+
+                        .diy-item, .lodify-item {
+                            padding-top: 0;
+                            padding-bottom: 0;
+                            text-align: center;
+
+                            &:hover {
+                                .diy-item-text {
+                                    font-weight: 700;
+                                    color: #fff;
+                                    text-decoration: none;
+                                }
+                                .lodify-item-text {
+                                    color: #fff;
+                                }
+                            }
+                            a {
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                            }
+                            .diy-item-icon {
+                                width: 42px;
+                                margin-right: 5px;
+                            }
+                            .diy-item-text, .lodify-item-text {
+                                font-size: 1.2rem;
+
+                                strong {
+                                    display: flex;
+                                }
+                            }
+                            .lodify-item-text {
+                                margin: auto;
+                            }
+                        }
+                        .lodify-item {
+                            display: inline-flex;
+                            width: auto;
+                            padding: 15px 40px;
+
+                            @include phone {
+                                padding: 15px 0;
+                            }
+                        }
+                    }
+                }
+                .optional-ou {
+                    display: flex;
+                    align-items: center;
+
+                    @include tablet-portrait {
+                        text-align: center;
+                        margin: 2rem auto;
+                    }
+                    @include phone {
+                        text-align: center;
+                        margin: 2rem auto;
+                    }
+                    .optional-ou-text {
+                        color: $vivala-orange;
+                        text-transform: lowercase;
+                        font-weight: 700;
+                        font-size: 2rem;
+
+                        @include phone {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        &.frase-destaque {
+            text-align: center;
+            padding: 55px 15px;
+
+            @include phone {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .frase-destaque-text {
+                color: $vivala-darkgrey;
+                font-style: italic;
+                font-weight: 900;
+                font-size: 2.8rem;
+
+                @include phone {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    .social-container {
+        text-align: center;
+        background-color: $vivala-midgrey;
+        padding: 20px 0;
+
+        a {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+    .associado-container {
+        background-color: $vivala-darkturquoise;
+        color: #fff;
+        text-align: center;
+        padding: 70px 15px;
+
+        .seje-um-associado-frase {
+            font-size: 2.5rem;
+            max-width: 46vw;
+            margin: 0 auto 50px;
+            line-height: 3rem;
+
+            @include desktop-1600 {
+                max-width: 57vw;
+            }
+            @include desktop-1440 {
+                max-width: 70vw;
+            }
+            @include desktop-1200 {
+                max-width: 82vw;
+            }
+            @include tablet-landscape {
+                max-width: 100%;
+            }
+            @include tablet-portrait {
+                max-width: 95%;
+                font-size: 2rem;
+            }
+            @include phone {
+                max-width: 100%;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+            }
+        }
+        .seje-um-associado-btn {
+            background-color: transparent;
+            border: 1px solid #fff;
+            border-radius: 8px;
+            display: inline-flex;
+            width: auto;
+            margin: auto;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 8px 60px 12px;
+
+            &:hover {
+                background-color: $vivala-lightturquoise;
+            }
+            @include phone {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+    }
+    .instituto-vivala {
+        @include linearGradient(#fff, $vivala-darkturquoise);
+        height: 95vh;
+        overflow: hidden;
+
+        @include tablet-portrait {
+            margin-top: 60px;
+            height: 52vh;
+        }
+        @include phone {
+            margin-top: 60px;
+            height: 52vh;
+        }
+        .container {
+            height: 100%;
+
+            @include tablet-portrait {
+                padding: 0;
+                width: 100vw;
+            }
+            @include phone {
+                padding: 0;
+            }
+        }
+        .home-instituto-slick-container {
+            width: 80vw;
+            height: calc(100% - 120px);
+            margin: 60px auto;
+            position: relative;
+
+            @include desktop-1200 {
+                width: 75vw;
+            }
+            @include tablet-portrait {
+                width: 100vw;
+                height: calc(100% - 145px);
+                margin-top: 0;
+            }
+            @include phone {
+                width: 100vw;
+                height: calc(100% - 145px);
+                margin-top: 0;
+            }
+            .instituto-vivala-logo-container {
+                position: absolute;
+                top: -5px;
+                right: 60px;
+                z-index: 1;
+                padding: 60px 10px 15px;
+                background-color: #fff;
+                box-shadow: 2px 2px 1px 1px $vivala-darkturquoise;
+                border-radius: 4px;
+
+                @include tablet-portrait {
+                    position: relative;
+                    top: 0;
+                    right: auto;
+                    padding: 15px 10px;
+                    box-shadow: none;
+                    border-radius: 0;
+                    margin-bottom: 20px;
+                    border-top: 2px solid $vivala-darkgrey;
+                    border-bottom: 2px solid $vivala-darkgrey;
+                    text-align: center;
+                }
+                @include phone {
+                    position: relative;
+                    top: 0;
+                    right: auto;
+                    padding: 15px 10px;
+                    box-shadow: none;
+                    border-radius: 0;
+                    margin-bottom: 20px;
+                    border-top: 2px solid $vivala-darkgrey;
+                    border-bottom: 2px solid $vivala-darkgrey;
+                    text-align: center;
+                }
+                img {
+                    max-width: 180px;
+
+                    @include phone {
+                        max-width: 100px;
+                    }
+                }
+            }
+            .slidinho {
+                height: 100%;
+                border: 2px solid #fff;
+                border-radius: 4px;
+
+                @include tablet-portrait {
+                    width: 75vw;
+                    margin: 0 auto;
+                    height: 32vh;
+                }
+                @include phone {
+                    width: 75vw;
+                    margin: 0 auto;
+                }
+                .slick-list {
+                    height: 100%;
+
+                    .slick-track {
+                        height: 100%;
+                    }
+                    .slick-slide {
+                        width: 80vw;
+                        text-align: center;
+                        background-size: cover;
+
+                        @include desktop-1200 {
+                            width: 75vw;
+                        }
+                        @include tablet-portrait{
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                        @include phone {
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .newsletter {
+        background-color: $vivala-lightgrey;
+        padding: 40px 0;
+
+        .newsletter-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+
+            @include tablet-landscape {
+                width: 80vw;
+            }
+            @include tablet-portrait {
+                width: 90vw;
+            }
+        }
+        .newsletter-highlight-text {
+            font-weight: 700;
+            width: 15%;
+            color: $vivala-darkgrey;
+            font-size: 1.2rem;
+
+            @include desktop-1600 {
+                width: 23%;
+            }
+            @include desktop-1200 {
+                width: 30%;
+            }
+            @include tablet-portrait {
+                width: 100%;
+                text-align: center;
+            }
+            @include phone {
+                width: 100%;
+                text-align: left;
+            }
+        }
+        .newsletter-form {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: row;
+            width: 85%;
+
+            @include desktop-1600 {
+                width: 77%;
+            }
+            @include desktop-1200 {
+                width: 70%;
+            }
+            @include tablet-portrait {
+                flex-direction: row;
+            }
+            @include phone {
+                flex-direction: column;
+                width: 100%;
+            }
+            .newsletter-form-input {
+                margin-left: 8px;
+                margin-right: 8px;
+                width: 20vw;
+                margin-bottom: 20px;
+
+                @include phone {
+                    width: 100%;
+                }
+                &:first-of-type {
+                    width: 100%;
+                }
+            }
+            .newsletter-form-btn {
+                margin-left: 10px;
+            }
+        }
+    }
+    .media-news {
+        background-color: $vivala-midgrey;
+
+        .media-news-title {
+            padding-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1;
+            text-align: center;
+        }
+    }
+}
