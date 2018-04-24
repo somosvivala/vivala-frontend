@@ -1,6 +1,7 @@
 import Index from '../components/pages/index';
 import VolunturismoIndex from '../components/pages/volunturismo';
 import EcoturismoIndex from '../components/pages/ecoturismo';
+import ImersaoIndex from '../components/pages/imersoes';
 import ExpeditionsIndex from '../components/pages/expeditions';
 import ExpeditionsShow from '../components/pages/expeditions/show';
 import CorporativeIndex from '../components/pages/corporative';
@@ -44,6 +45,12 @@ export default [
         exact: true,
         component: EcoturismoIndex,
         key: 'ecoturismo.index'
+    },
+    {
+        path: '/imersoes',
+        exact: true,
+        component: ImersaoIndex,
+        key: 'imersao.index'
     },
     {
         path: '/expedicoes',

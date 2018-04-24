@@ -35,8 +35,7 @@ class VolunturismoIndex extends Component {
                         </Typography>
                     </div>
                     <div className="servicos-items container">
-                        { /* items.length > 0 && <ServicosItems servicos={items} key="volunturismo-items" /> */ }
-                        <ServicosItems items={items} key="volunturismo-items" />
+                        { items.length > 0 && <ServicosItems items={items} key="volunturismo-items" /> }
                     </div>
                 </div>
             </div>
