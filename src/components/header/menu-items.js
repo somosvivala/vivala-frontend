@@ -30,12 +30,27 @@ class MenuItems extends Component {
                     </Grid>
                     <Grid item xs={12}>
                         <Typography type="subheading" color="inherit">
+                            <Link to="/volunturismo">Volunturismo</Link>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography type="subheading" color="inherit">
+                            <Link to="/ecoturismo">Ecoturismo</Link>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography type="subheading" color="inherit">
+                            <Link to="/imersoes">Imersões</Link>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography type="subheading" color="inherit">
                             <Link to="/busque-sua-viagem">Busque Sua Viagem</Link>
                         </Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <Typography type="subheading" color="inherit">
-                            <Link to="/agentes">Agentes</Link>
+                            <Link to="/agentes">Seja um Agente</Link>
                         </Typography>
                     </Grid>
                     <Grid item xs={12}>

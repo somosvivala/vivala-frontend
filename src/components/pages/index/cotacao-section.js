@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Typography from 'material-ui/Typography';
-import Grid from 'material-ui/Grid';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
 import List, { ListItem } from 'material-ui/List';
-import {Image} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
 import PacotesCompletosIcon from '../../../assets/svg/icons/pacotes.svg';
 import HoteisIcon from '../../../assets/svg/icons/hoteis.svg';
 import VoosIcon from '../../../assets/svg/icons/voos.svg';
-import FraseConhecaPng from '../../../assets/images/home/Frase-aviso-conheca.png';
 import AviaozinhoPng from '../../../assets/images/home/airplane.png';
 
 class CotacaoSection extends Component
 {
     render() {
-        const { classes, text } = this.props;
         return (
             <div className="container cotacoes">
                 <div className="row box-frase">
@@ -48,7 +42,7 @@ class CotacaoSection extends Component
                         </div>
                     </div>
                     <div className="optional-ou">
-                        <Typography type="body2" variant="body2" color="inherit" className="optional-ou-text">Ou</Typography>
+                        <Typography type="body2" color="inherit" className="optional-ou-text">Ou</Typography>
                     </div>
                     <div className="orange-box right">
                         <div className="box-header has-link">

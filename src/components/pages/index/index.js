@@ -27,12 +27,14 @@ class IndexPage extends Component {
 
         const photos = [
             {
-                image: 'https://i.imgur.com/2z9sWWo.png'
+                image: 'https://i.imgur.com/q2H12iW.png'
             },
             {
-                image: 'https://i.imgur.com/2z9sWWo.png'
+                image: 'https://i.imgur.com/q2H12iW.png'
             }
         ];
+
+        document.title = "Vivalá | Somos Todos Vivalá"
 
         return (
             <div className="content-wrapper">
