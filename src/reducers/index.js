@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import expeditions from './expeditions';
 import volunturismo from './volunturismo';
 import ecoturismo from './ecoturismo';
-import imersao from './imersao';
+import imersoes from './imersao';
 import subscribe from './subscribe';
 import newsletter from './newsletter';
 import contact from './contact';
@@ -16,7 +16,7 @@ export default combineReducers({
     expeditions,
     volunturismo,
     ecoturismo,
-    imersao,
+    imersoes,
     subscribe,
     newsletter,
     contact,
