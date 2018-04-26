@@ -580,6 +580,12 @@ body {
             font-size: 2.5rem;
             line-height: 3rem;
 
+            @include desktop-1440 {
+                font-size: 2.2rem;
+            }
+            @include desktop-1200 {
+                font-size: 2rem;
+            }
             @include tablet-landscape {
                 font-size: 1.8rem;
                 line-height: 2.2rem;
@@ -614,6 +620,7 @@ body {
             .item {
                 height: 55vh;
                 margin-bottom: 2rem;
+                cursor: pointer;
 
                 @include tablet-landscape {
                     height: 50vh;
@@ -626,11 +633,38 @@ body {
                     padding-left: 0;
                     padding-right: 0;
                 }
+                &:hover {
+                    &:after {
+                        background-color: rgba(#000, 0.2);
+                    }
+                    .inner-item {
+                        animation: zooming 3s infinite normal;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+
+                        .item-content {
+                            &:before {
+                                background-color: rgba($vivala-orange, 1);
+                            }
+                        }
+                    }
+                }
+                &:after {
+                    @extend %bfaf;
+                    width: calc(100% - 30px);
+                    height: 100%;
+                    position: absolute;
+                    z-index: 0;
+                    top: 0;
+                    left: 15px;
+                    transition: all 0.3s ease;
+                }
                 .inner-item {
                     height: 100%;
                     background-repeat: no-repeat;
-                    background-size: cover;
+                    background-size: 101% auto;
                     display: flex;
+                    background-position: center;
 
                     .item-content {
                         position: absolute;
@@ -647,7 +681,7 @@ body {
                         }
                         &:before {
                             content: '';
-                            background-color: rgba($vivala-orange, 1);
+                            background-color: rgba($vivala-orange, .7);
                             mix-blend-mode: multiply;
                             width: calc(100% - 30px);
                             height: 100%;
@@ -655,7 +689,8 @@ body {
                             position: absolute;
                             top: 0;
                             left: 15px;
-                            z-index: 0;
+                            z-index: 1;
+                            transition: all 0.3s ease;
 
                             @include phone {
                                 width: 100%;
@@ -665,7 +700,7 @@ body {
                         .item-title {
                             color: #fff;
                             position: relative;
-                            z-index: 1;
+                            z-index: 2;
                             font-size: 1.8rem;
                             line-height: 3rem;
                             padding: 10px 30px;

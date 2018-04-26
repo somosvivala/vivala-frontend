@@ -31,7 +31,7 @@ class VolunturismoIndex extends Component {
                     <VolunturismoHeader />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
-                            Pensei em add uma frase chamativa aqui, talvez explicando um pouco do serviço
+                            Faça voluntariado ajudando no desenvolvimento de microempreendedores brasileiros
                         </Typography>
                     </div>
                     <div className="servicos-items container">
