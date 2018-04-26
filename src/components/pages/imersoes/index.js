@@ -31,7 +31,7 @@ class ImersaoIndex extends Component {
                     <ImersaoHeader />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
-                            Pensei em add uma frase chamativa aqui, talvez explicando um pouco do serviço
+                            Viva o melhor de paraísos brasileiros nas datas que quiser!
                         </Typography>
                     </div>
                     <div className="servicos-items container">

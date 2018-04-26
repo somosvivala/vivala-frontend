@@ -31,7 +31,7 @@ class EcoturismoIndex extends Component {
                     <EcoturismoHeader />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
-                            Pensei em add uma frase chamativa aqui, talvez explicando um pouco do serviço
+                            Encontre beleza e equilíbrio através do contato com a natureza no Brasil
                         </Typography>
                     </div>
                     <div className="servicos-items container">
