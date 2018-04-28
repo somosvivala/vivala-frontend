@@ -29,7 +29,7 @@ class AgentsIndex extends Component {
         const { classes } = this.props;
         const button = 'Receba sua cotacao em 24H';
         return (
-            <div>
+            <div className="content-wrapper">
                 <AgentsList />
 
                 <div className={classes.bg}>

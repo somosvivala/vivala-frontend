@@ -5,7 +5,7 @@ import InstituteSupport from './support';
 class InstituteIndex extends Component {
     render() {
         return (
-            <div>
+            <div className="content-wrapper">
                 <InstituteHeader />
                 <InstituteSupport />
             </div>

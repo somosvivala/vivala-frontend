@@ -79,7 +79,7 @@ class AboutIndex extends Component {
         }
 
         return (
-            <div>
+            <div className="content-wrapper">
                 <div className={classes.bg}>
                     <div className="container padding">
                         <Typography type="headline" className={classes.headline} gutterBottom>

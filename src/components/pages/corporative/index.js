@@ -5,7 +5,7 @@ import CorporativeBonus from './bonus';
 class CorporativeIndex extends Component {
     render() {
         return (
-            <div>
+            <div className="content-wrapper">
                 <CorporativeFeatures />
                 <CorporativeBonus />
             </div>
