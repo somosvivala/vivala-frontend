@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Helmet} from "react-helmet";
 import {connect} from 'react-redux';
 import {requestImersoes} from '../../../actions/imersao';
 import ImersaoHeader from "./header";
@@ -27,6 +28,18 @@ class ImersaoIndex extends Component {
 
         return (
             <div className="content-wrapper">
+                <Helmet>
+                    <title>Imersões</title>
+                    <meta name="theme-color" content="#ED6D2C" />
+                    <meta name="description" content="Viva o Melhor de Paraísos Brasileiros nas Datas que Quiser!" />
+
+                    <meta property="og:locale" content="pt_BR" />
+                    <meta property="og:url" content={this.props.location.pathname} />
+                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+                    <meta property="og:site_name" content="Vivalá" />
+                    <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
+                    <meta property="og:type" content="website" />
+                </Helmet>
                 <div className="servicos-page container">
                     <ImersaoHeader />
                     <div className="frase-impacto">

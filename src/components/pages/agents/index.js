@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Helmet} from "react-helmet";
 import PropTypes from 'prop-types';
 import AgentsList from './list';
 import Typography from 'material-ui/Typography';
@@ -30,6 +31,19 @@ class AgentsIndex extends Component {
         const button = 'Receba sua cotacao em 24H';
         return (
             <div>
+                <Helmet>
+                    <title>Seja um Agente Vivalá</title>
+                    <meta name="theme-color" content="#ED6D2C" />
+                    <meta name="description" content="Quer Trabalhar só com Turismo ou Fazer Renda Extra? Ganhe Até R$ 1.000,00 por Semana" />
+
+                    <meta property="og:locale" content="pt_BR" />
+                    <meta property="og:url" content={this.props.location.pathname} />
+                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+                    <meta property="og:site_name" content="Vivalá" />
+                    <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
+                    <meta property="og:type" content="website" />
+                </Helmet>
+
                 <AgentsList />
 
                 <div className={classes.bg}>

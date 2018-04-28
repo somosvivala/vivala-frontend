@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 import {connect} from 'react-redux';
 import Servicos from './servicos';
 import Social from '../../social/index';
@@ -34,10 +35,20 @@ class IndexPage extends Component {
             }
         ];
 
-        document.title = "Vivalá | Somos Todos Vivalá"
-
         return (
             <div className="content-wrapper">
+                <Helmet>
+                    <title>Vivalá</title>
+                    <meta name="theme-color" content="#ED6D2C" />
+                    <meta name="description" content="Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+
+                    <meta property="og:locale" content="pt_BR" />
+                    <meta property="og:url" content={this.props.location.pathname} />
+                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+                    <meta property="og:site_name" content="Vivalá" />
+                    <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
+                    <meta property="og:type" content="website" />
+                </Helmet>
                 <Servicos />
                 <Social color="#aaa"
                         facebook="https://www.facebook.com/SomosVivala/"
