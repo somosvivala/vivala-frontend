@@ -6,7 +6,7 @@ import InstituteSupport from './support';
 class InstituteIndex extends Component {
     render() {
         return (
-            <div>
+            <div className="content-wrapper">
                 <Helmet>
                     <title>Instituto Vivalá</title>
                     <meta name="theme-color" content="#09A2A1" />

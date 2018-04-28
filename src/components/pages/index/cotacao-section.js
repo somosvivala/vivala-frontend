@@ -45,20 +45,20 @@ class CotacaoSection extends Component
                         <Typography type="body2" color="inherit" className="optional-ou-text">Ou</Typography>
                     </div>
                     <div className="orange-box right">
-                        <div className="box-header has-link">
-                            <Link to="/cotacao">
+                        <Link to="/cotacao" className="box-link">
+                            <div className="box-header">
                                 Receba sua cotação em 24 horas
-                            </Link>
-                        </div>
-                        <div className="box-content">
-                            <List className="let-others-do-it-for-you">
-                                <ListItem button component="a" rel="noopener noreferrer" target="_blank" href="https://www.e-agencias.com.br/vivala/home/packages" className="lodify-item">
-                                    <Link to="/cotacao">
-                                        <Typography type="subheading" color="inherit" className="lodify-item-text">E seja atendido <strong>de forma ágil,<br /> humanizada e gratuita</strong></Typography>
-                                    </Link>
-                                </ListItem>
-                            </List>
-                        </div>
+                            </div>
+                            <div className="box-content">
+                                <List className="let-others-do-it-for-you">
+                                    <ListItem rel="noopener noreferrer" className="lodify-item">
+                                        <Link to="/cotacao">
+                                            <Typography type="subheading" color="inherit" className="lodify-item-text">E seja atendido <strong>de forma ágil,<br /> humanizada e gratuita</strong></Typography>
+                                        </Link>
+                                    </ListItem>
+                                </List>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

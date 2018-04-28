@@ -30,7 +30,7 @@ class AgentsIndex extends Component {
         const { classes } = this.props;
         const button = 'Receba sua cotacao em 24H';
         return (
-            <div>
+            <div className="content-wrapper">
                 <Helmet>
                     <title>Seja um Agente Vivalá</title>
                     <meta name="theme-color" content="#ED6D2C" />
@@ -47,7 +47,6 @@ class AgentsIndex extends Component {
                     <meta property="og:image:width" content="1200" />
                     <meta property="og:image:height" content="630" />
                 </Helmet>
-
                 <AgentsList />
 
                 <div className={classes.bg}>

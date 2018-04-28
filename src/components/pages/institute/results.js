@@ -41,7 +41,7 @@ class InstituteResults extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className={classes.bg}>
+            <div className="content-wrapper">
                 <div className="container padding">
                     <Typography type="headline" color="accent" className={classes.title} gutterBottom>
                         Resultados

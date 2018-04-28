@@ -6,7 +6,7 @@ import CorporativeBonus from './bonus';
 class CorporativeIndex extends Component {
     render() {
         return (
-            <div>
+            <div className="content-wrapper">
                 <Helmet>
                     <title>Corporativo</title>
                     <meta name="theme-color" content="#ED6D2C" />

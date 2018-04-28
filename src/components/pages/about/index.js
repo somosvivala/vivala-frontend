@@ -80,7 +80,7 @@ class AboutIndex extends Component {
         }
 
         return (
-            <div>
+            <div className="content-wrapper">
                 <Helmet>
                     <title>Sobre | Vivalá</title>
                     <meta name="theme-color" content="#ED6D2C" />

@@ -65,7 +65,7 @@ class SearchPageIndex extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div>
+            <div className="content-wrapper">
                 <Helmet>
                     <title>Busque Sua Viagem</title>
                     <meta name="theme-color" content="#ED6D2C" />
