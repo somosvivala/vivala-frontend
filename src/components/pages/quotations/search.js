@@ -33,7 +33,7 @@ class QuotationsSearch extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div>
+            <div className="content-wrapper">
                 <div className={classes.bg}>
                     <div className="container padding">
                         <Typography type="headline" paragraph className={classes.text}>

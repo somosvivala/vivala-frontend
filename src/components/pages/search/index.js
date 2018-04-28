@@ -41,7 +41,7 @@ const styleSheet = createStyleSheet('SearchPageIndex', theme => ({
     },
     title: {
         textTransform: 'uppercase',
-        textAlign: 'left',    
+        textAlign: 'left',
         padding: '1rem'
     },
     titulo: {
@@ -64,7 +64,7 @@ class SearchPageIndex extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div>
+            <div className="content-wrapper">
                 <div className={classes.bg}>
                     <div className="container padding">
                         <Typography type="headline" className={classes.titulo} gutterBottom>Busque sua viagem</Typography>

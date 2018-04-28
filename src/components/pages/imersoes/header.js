@@ -12,7 +12,7 @@ class ImersaoHeader extends Component {
                         Imersões
                     </Typography>
                     <Typography type="body1" className="section-subtitle">
-                         Roteiros incríveis para irquando quiser
+                         Roteiros incríveis para ir quando quiser
                     </Typography>
                 </Grid>
 

@@ -84,7 +84,7 @@ const styleSheet = createStyleSheet('InstituteAbout', theme => ({
         position: 'absolute',
         textAlign: 'center',
         color: 'white !important'
-        
+
     }
 
 }));
@@ -137,7 +137,7 @@ class InstituteAbout extends Component {
 
         return (
             <div className={classes.bg}>
-                <div>
+                <div className="content-wrapper">
                     <div className={classes.bg}>
                         <div className="container padding">
                             <Typography type="headline" color="accent" className={classes.title}>
