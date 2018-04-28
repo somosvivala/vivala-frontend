@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "8.1.4"
+    "node": "8.10.0"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -23,6 +23,7 @@
     "react-dom": "^15.6.1",
     "react-fontawesome": "^1.6.1",
     "react-ga": "^2.2.0",
+    "react-helmet": "^5.2.0",
     "react-material-select": "^1.2.0",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",

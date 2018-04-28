@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Helmet} from "react-helmet";
 import {connect} from 'react-redux';
 import {requestEcoturismos} from '../../../actions/ecoturismo';
 import EcoturismoHeader from "./header";
@@ -27,6 +28,22 @@ class EcoturismoIndex extends Component {
 
         return (
             <div className="content-wrapper">
+                <Helmet>
+                    <title>Ecoturismo | Vivalá</title>
+                    <meta name="theme-color" content="#ED6D2C" />
+                    <meta name="description" content="Viagens com uma Profunda Conexão com a Natureza, que Incentiva a Busca por Bem Estar e a Formação de uma Consciência Sustentável em Relação ao Meio Ambiente. " />
+
+                    <meta property="og:locale" content="pt_BR" />
+                    <meta property="og:url" content={this.props.location.pathname} />
+                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+                    <meta property="og:site_name" content="Vivalá" />
+                    <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:image" content="https://res.cloudinary.com/vivala/image/upload/imagem_home_1524934756" />
+                    <meta property="og:image:type" content="image/jpg" />
+                    <meta property="og:image:width" content="1200" />
+                    <meta property="og:image:height" content="630" />
+                </Helmet>
                 <div className="servicos-page container">
                     <EcoturismoHeader />
                     <div className="frase-impacto">
