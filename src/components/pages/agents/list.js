@@ -69,20 +69,8 @@ class AgentsList extends Component {
 
         var imageCrop;
 
-        if ( window.screen.width < 480 ) {
-            imageCrop = 135;
-        } else if ( window.screen.width < 769 ) {
-            imageCrop = 190;
-        } else if ( window.screen.width < 1025 ) {
-            imageCrop = 190;
-        } else if ( window.screen.width < 1201 ) {
-            imageCrop = 190;
-        } else if ( window.screen.width < 1367 ) {
-            imageCrop = 190;
-        } else if ( window.screen.width < 1441 ) {
-            imageCrop = 190;
-        } else if ( window.screen.width < 1601 ) {
-            imageCrop = 190;
+        if ( window.screen.width < 769 ) {
+            imageCrop = 240;
         } else if ( window.screen.width < 1921 ) {
             imageCrop = 320;
         }
@@ -107,8 +95,7 @@ class AgentsList extends Component {
         const { classes, agents, fetching, error, fetched } = this.props;
 
         var numofSlides = 4;
-
-        if ( window.screen.width < 480 ) {
+        if ( window.screen.width < 420 ) {
             numofSlides = 1;
         } else if ( window.screen.width < 769 ) {
             numofSlides = 2;
@@ -120,9 +107,6 @@ class AgentsList extends Component {
             autoplaySpeed: 7000,
             slidesToShow: numofSlides,
             slidesToScroll: 1,
-            responsive: [
-                { breakpoint: 480, settings: { slidesToShow: 2 } },
-            ],
             adaptativeHeight: true
         }
 
