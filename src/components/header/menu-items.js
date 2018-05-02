@@ -72,11 +72,6 @@ class MenuItems extends Component {
                     </Grid>
                     <Grid item xs={12}>
                         <Typography type="subheading" color="inherit">
-                            <Link to="/expedicoes">Expedições</Link>
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography type="subheading" color="inherit">
                             <Link to="/instituto">Instituto Sustentável</Link>
                         </Typography>
                     </Grid>

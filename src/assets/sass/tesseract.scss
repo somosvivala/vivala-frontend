@@ -105,6 +105,9 @@ body {
                 @include desktop-1440 {
                     background-size: auto 100%;
                 }
+                @include desktop-1366 {
+                    background-size: 100% auto;
+                }
                 @include tablet-landscape {
                     height: 60vh;
                 }
@@ -121,6 +124,12 @@ body {
                 &:hover {
                     background-size: 110% auto;
 
+                    @include desktop-1440 {
+                        background-size: auto 110%;
+                    }
+                    @include desktop-1366 {
+                        background-size: 110% auto;
+                    }
                     @include phone {
                         background-size: auto 110%;
                     }
@@ -141,7 +150,7 @@ body {
                 &.big {
                     width: 100%;
 
-                    @include desktop-1440 {
+                    @include desktop-1366 {
                         background-size: 100% auto;
                     }
                     @include tablet-landscape {
@@ -153,9 +162,15 @@ body {
                     @include phone {
                         background-size: auto 100%;
                     }
+
+                    &:hover {
+                        @include desktop-1366 {
+                            background-size: 110% auto;
+                        }
+                    }
                 }
                 &.volunturismo {
-                    background-image: url('../images/home/home-volunturismo-desktop.png');
+                    background-image: url('http://res.cloudinary.com/tesseract/image/upload/v1525217172/volunturismo_xnelwh.jpg');
 
                     .meta-content {
                         .subtitle {
@@ -166,7 +181,7 @@ body {
                     }
                 }
                 &.ecoturismo {
-                    background-image: url('../images/home/home-ecoturismo-desktop.png');
+                    background-image: url('http://res.cloudinary.com/tesseract/image/upload/v1525218889/home_ecoturismo_vivala.jpg');
                     margin-right: 1%;
 
                     @include tablet-portrait {
@@ -177,7 +192,7 @@ body {
                     }
                 }
                 &.imersoes {
-                    background-image: url('../images/home/home-imersoes-desktop.png');
+                    background-image: url('http://res.cloudinary.com/tesseract/image/upload/v1525218887/home_imersoes_vivala.jpg');
                     margin-left: 1%;
 
                     @include tablet-portrait {

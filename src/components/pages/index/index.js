@@ -28,10 +28,10 @@ class IndexPage extends Component {
 
         const photos = [
             {
-                image: 'https://i.imgur.com/q2H12iW.png'
+                image: 'http://res.cloudinary.com/tesseract/image/upload/v1525218885/instituto_ok_gvklfm.jpg'
             },
             {
-                image: 'https://i.imgur.com/q2H12iW.png'
+                image: 'http://res.cloudinary.com/tesseract/image/upload/v1525218885/instituto_ok_gvklfm.jpg'
             }
         ];
 

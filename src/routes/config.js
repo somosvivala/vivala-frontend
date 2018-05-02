@@ -53,18 +53,6 @@ export default [
         key: 'imersao.index'
     },
     {
-        path: '/expedicoes',
-        exact: true,
-        component: ExpeditionsIndex,
-        key: 'expeditions.index'
-    },
-    {
-        path: '/expedicoes/:id',
-        exact: true,
-        component: ExpeditionsShow,
-        key: 'expeditions.show'
-    },
-    {
         path: '/corporativo',
         exact: true,
         component: CorporativeIndex,
@@ -177,18 +165,6 @@ export default [
         exact: true,
         component: ContactIndex,
         key: 'contact.index'
-    },
-    {
-        path: '/experiencias',
-        exact: true,
-        component: ExperiencesIndex,
-        key: 'experiencias.index'
-    },
-    {
-        path: '/experiencias/:id',
-        exact: true,
-        component: ExperiencesShow,
-        key: 'experiencias.show'
     },
     {
         component: PageNotFound,
