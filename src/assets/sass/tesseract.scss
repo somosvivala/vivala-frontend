@@ -170,7 +170,7 @@ body {
                     }
                 }
                 &.volunturismo {
-                    background-image: url('http://res.cloudinary.com/tesseract/image/upload/v1525217172/volunturismo_xnelwh.jpg');
+                    background-image: url('https://res.cloudinary.com/tesseract/image/upload/q_90/v1525217172/volunturismo_xnelwh.jpg');
 
                     .meta-content {
                         .subtitle {
@@ -181,7 +181,7 @@ body {
                     }
                 }
                 &.ecoturismo {
-                    background-image: url('http://res.cloudinary.com/tesseract/image/upload/v1525218889/home_ecoturismo_vivala.jpg');
+                    background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525218889/home_ecoturismo_vivala.jpg');
                     margin-right: 1%;
 
                     @include tablet-portrait {
@@ -192,7 +192,7 @@ body {
                     }
                 }
                 &.imersoes {
-                    background-image: url('http://res.cloudinary.com/tesseract/image/upload/v1525218887/home_imersoes_vivala.jpg');
+                    background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525218887/home_imersoes_vivala.jpg');
                     margin-left: 1%;
 
                     @include tablet-portrait {
@@ -261,7 +261,7 @@ body {
             }
         }
         &.cotacoes {
-            background-image: url('../images/home/Background-Agencia-HOME-12.png');
+            background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525229437/Background-Agencia-Home_menor_aghsru.jpg');
             background-size: 90vw auto;
             background-repeat: no-repeat;
             background-position: center -30vh;

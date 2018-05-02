@@ -22,7 +22,7 @@ class InstitutoSlider extends Component {
             ],
             adaptativeHeight: false,
             variableWidth: true,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             arrows: false,
             prevArrow: <PrevArrow white />,
