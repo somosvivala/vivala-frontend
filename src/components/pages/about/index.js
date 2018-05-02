@@ -97,23 +97,25 @@ class AboutIndex extends Component {
                     <meta property="og:image:width" content="1200" />
                     <meta property="og:image:height" content="630" />
                 </Helmet>
-                <div className={classes.bg}>
-                    <div className="container padding">
-                        <Typography type="headline" className={classes.headline} gutterBottom>
-                            Sobre
-                        </Typography>
-                        <Typography type="body1" paragraph className={classes.subTitle}>
-                            Acreditamos que viagens melhoram pessoas
-                            e pessoas melhoram o mundo
-                        </Typography>
-                    </div>
-                    <div className="container video">
-                        <Youtube videoId="kaIRH4Uh7nw" opts={{ width: window.screen.width < 900 ? '100%' : '900px', height: window.screen.width < 900 ? '300px' : '450px' }}/>
-                    </div>
+                <div className="sobre container">
+                    <Grid container className="page-header about-header " gutter={0} align="center" justify="center">
+                        <Grid item xs={12} className="header-content">
+                            <Typography type="headline" color="accent" className="section-title" gutterBottom>
+                                Sobre
+                            </Typography>
+                            <Typography type="body1" className="section-subtitle">
+                                Acreditamos que viagens melhoram pessoas pessoas melhoram o mundo
+                            </Typography>
+                        </Grid>
+
+                        <Grid className="video-wrapper" item xs={12}>
+                            <Youtube videoId="kaIRH4Uh7nw" opts={{ width: '100%', height: '100%' }}/>
+                        </Grid>
+                    </Grid>
                 </div>
                 <div>
-                    <div className={classes.imagemBackground}>
-                        <div className="container">
+                    <div className="container">
+                        <div className={classes.imagemBackground}>
                             <Grid gutter={0} container className={classes.gridContainer}>
 
                                 <Slider {...settings} className={classes.slider}>
