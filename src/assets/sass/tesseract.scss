@@ -597,10 +597,6 @@ body {
             text-align: center;
             padding: 55px 15px;
 
-            @include phone {
-                padding-left: 0;
-                padding-right: 0;
-            }
             .frase-destaque-text {
                 color: $vivala-darkgrey;
                 font-style: italic;
@@ -1083,7 +1079,7 @@ body {
                             background-repeat: no-repeat;
                         }
                         @include phone {
-                            background-size: contain;
+                            background-size: 100% auto;
                             background-position: center;
                             background-repeat: no-repeat;
                         }
