@@ -105,6 +105,9 @@ body {
                 @include desktop-1440 {
                     background-size: auto 100%;
                 }
+                @include desktop-1366 {
+                    background-size: 100% auto;
+                }
                 @include tablet-landscape {
                     height: 60vh;
                 }
@@ -121,6 +124,12 @@ body {
                 &:hover {
                     background-size: 110% auto;
 
+                    @include desktop-1440 {
+                        background-size: auto 110%;
+                    }
+                    @include desktop-1366 {
+                        background-size: 110% auto;
+                    }
                     @include phone {
                         background-size: auto 110%;
                     }
@@ -141,7 +150,7 @@ body {
                 &.big {
                     width: 100%;
 
-                    @include desktop-1440 {
+                    @include desktop-1366 {
                         background-size: 100% auto;
                     }
                     @include tablet-landscape {
@@ -153,9 +162,15 @@ body {
                     @include phone {
                         background-size: auto 100%;
                     }
+
+                    &:hover {
+                        @include desktop-1366 {
+                            background-size: 110% auto;
+                        }
+                    }
                 }
                 &.volunturismo {
-                    background-image: url('../images/home/home-volunturismo-desktop.png');
+                    background-image: url('https://res.cloudinary.com/tesseract/image/upload/q_90/v1525217172/volunturismo_xnelwh.jpg');
 
                     .meta-content {
                         .subtitle {
@@ -166,7 +181,7 @@ body {
                     }
                 }
                 &.ecoturismo {
-                    background-image: url('../images/home/home-ecoturismo-desktop.png');
+                    background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525218889/home_ecoturismo_vivala.jpg');
                     margin-right: 1%;
 
                     @include tablet-portrait {
@@ -177,7 +192,7 @@ body {
                     }
                 }
                 &.imersoes {
-                    background-image: url('../images/home/home-imersoes-desktop.png');
+                    background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525218887/home_imersoes_vivala.jpg');
                     margin-left: 1%;
 
                     @include tablet-portrait {
@@ -246,7 +261,7 @@ body {
             }
         }
         &.cotacoes {
-            background-image: url('../images/home/Background-Agencia-HOME-12.png');
+            background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525229437/Background-Agencia-Home_menor_aghsru.jpg');
             background-size: 90vw auto;
             background-repeat: no-repeat;
             background-position: center -30vh;
@@ -582,10 +597,6 @@ body {
             text-align: center;
             padding: 55px 15px;
 
-            @include phone {
-                padding-left: 0;
-                padding-right: 0;
-            }
             .frase-destaque-text {
                 color: $vivala-darkgrey;
                 font-style: italic;
@@ -727,6 +738,50 @@ body {
                         margin: 0 auto;
                     }
                 }
+    .page-header {
+        padding: 50px 20px 25px;
+
+        @include phone {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .header-content {
+            align-items: normal;
+            margin-bottom: 30px;
+
+            @include phone {
+                text-align: center;
+            }
+            .section-title {
+                font-weight: 700;
+                color: $vivala-orange;
+                font-size: 2.5rem;
+                letter-spacing: -.5px;
+                margin-bottom: 5px;
+
+                @include phone {
+                    font-size: 1.8rem;
+                }
+            }
+            .section-subtitle {
+                font-size: 1.2rem;
+                color: $vivala-darkgrey;
+
+                @include phone {
+                    font-size: 1.4rem;
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .video-wrapper {
+            height: 65vh;
+
+            @include tablet-portrait {
+                height: 40vh;
+            }
+            @include phone {
+                height: 40vh;
             }
         }
     }
@@ -758,6 +813,9 @@ body {
 
             @include desktop-1440 {
                 font-size: 2.2rem;
+            }
+            @include desktop-1366 {
+                font-size: 2.3rem;
             }
             @include desktop-1200 {
                 font-size: 2rem;
@@ -1101,7 +1159,7 @@ body {
                             background-repeat: no-repeat;
                         }
                         @include phone {
-                            background-size: contain;
+                            background-size: 100% auto;
                             background-position: center;
                             background-repeat: no-repeat;
                         }

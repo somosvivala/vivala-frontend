@@ -19,13 +19,11 @@ const styleSheet = createStyleSheet('SearchPageIndex', theme => ({
     },
     circle: {
         backgroundColor: theme.vivala.color,
-        height: 25,
-        padding: 10,
-        width: 25,
+        padding: '6px 10px',
         borderRadius: '50%',
         fontSize: 20,
         color: 'white !important',
-        fontWeight: 'bold',
+        fontWeight: 500,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
