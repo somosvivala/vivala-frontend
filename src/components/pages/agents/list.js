@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom';
 import {requestAgents} from '../../../actions/agents';
 import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('AgentsList', theme => ({
     bg: {
@@ -107,7 +108,10 @@ class AgentsList extends Component {
             autoplaySpeed: 7000,
             slidesToShow: numofSlides,
             slidesToScroll: 1,
-            adaptativeHeight: true
+            adaptativeHeight: true,
+            arrows: true,
+            prevArrow: <PrevArrow orange />,
+            nextArrow: <NextArrow orange />,
         }
 
         if (fetching) {
