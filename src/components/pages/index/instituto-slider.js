@@ -27,7 +27,8 @@ class InstitutoSlider extends Component {
             arrows: false,
             prevArrow: <PrevArrow white />,
             nextArrow: <NextArrow white />,
-            speed: 500
+            speed: 500,
+            draggable: false
         }
 
         return (

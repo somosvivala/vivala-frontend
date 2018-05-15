@@ -24,7 +24,7 @@ class Servicos extends Component {
                         <div className="item ecoturismo" id="ecoturismo">
                             <div className="meta-content">
                                 <Typography className="title">Ecoturismo</Typography>
-                                <Typography className="subtitle">Experiências de conexão com a natureza</Typography>
+                                <Typography className="subtitle">Experiências de profunda conexão com a natureza</Typography>
                             </div>
                         </div>
                     </Link>
@@ -32,7 +32,7 @@ class Servicos extends Component {
                         <div className="item imersoes" id="imersoes">
                             <div className="meta-content">
                                 <Typography className="title">Imersões</Typography>
-                                <Typography className="subtitle">Roteiros incríveis para ir quando quiser</Typography>
+                                <Typography className="subtitle">Viagens de imersão na cultura local através de fornecedores selecionados à dedo</Typography>
                             </div>
                         </div>
                     </Link>
