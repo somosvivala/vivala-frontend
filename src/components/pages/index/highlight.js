@@ -7,7 +7,7 @@ class HighlightSection extends Component
         return (
             <div className="container frase-destaque">
                 <Typography type="title" color="inherit" className="frase-destaque-text">
-                    Transformando a realidade de pessoas e comunidades
+                    Programas de capacitação profissional, mentoria e acesso à capital para microempreendedores brasileiros
                 </Typography>
             </div>
         );

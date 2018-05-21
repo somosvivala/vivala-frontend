@@ -1,4 +1,10 @@
 body {
+    a {
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
     .menu-wrapper {
         height: 80px;
         border-bottom: 1px solid $vivala-midgrey;
@@ -375,10 +381,10 @@ body {
                 bottom: -3rem;
 
                 @include desktop-1366 {
-                    width: 65vw;
+                    width: 68vw;
                 }
                 @include desktop-1200 {
-                    width: 75vw;
+                    width: 78vw;
                 }
                 @include tablet-landscape {
                     width: 85vw;
@@ -658,6 +664,25 @@ body {
             }
         }
     }
+    .sobre {
+        background-color: $vivala-lightgrey;
+
+        .about-header {
+            padding-bottom: 0;
+        }
+    }
+    .sobre-slider {
+        .container {
+            padding: 0 35px;
+        }
+        .sobre-slider-wrapper {
+            background-image: url("http://res.cloudinary.com/vivala/image/upload/v1501121822/sobre_vivala_slide_fundo.png");
+            background-repeat: 'no-repeat';
+            background-position: 'center';
+            background-size: 'cover';
+            margin: '0 auto';
+        }
+    }
     .agentes-page {
         .section-title {
             font-weight: 700;
@@ -738,6 +763,8 @@ body {
                         margin: 0 auto;
                     }
                 }
+          }
+      }
     .page-header {
         padding: 50px 20px 25px;
 

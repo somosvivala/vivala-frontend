@@ -71,8 +71,31 @@ class CompletePackagesIndex extends Component {
 
         if (saved) {
             return (
+                <div className="content-wrapper">
+                    <div className={classes.bg}>
+                        <div className="container padding">
+                            <CompletePackagesHeader/>
+                            <Typography type="subheading" align="right">{page} / 9</Typography>
+
+                            <LinearProgress
+                                color="primary"
+                                mode="determinate"
+                                value={page * 11.11}
+                                valueBuffer={100}
+                            />
+                            <div style={{ marginTop: 30 }}>
+                                <Message type={error ? 'error' : 'success'} title="Cotação - Pacotes Completos" heading="Formulário enviado com sucesso!" subheading="Em até 24 h entraremos em contato com as melhores soluções para sua experiência" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        return (
+            <div className="content-wrapper">
                 <div className={classes.bg}>
-                    <div className="container padding">
+                    <div className="container" style={{ padding: '40px 20px' }}>
                         <CompletePackagesHeader/>
                         <Typography type="subheading" align="right">{page} / 9</Typography>
 
@@ -82,75 +105,56 @@ class CompletePackagesIndex extends Component {
                             value={page * 11.11}
                             valueBuffer={100}
                         />
-                        <div style={{ marginTop: 30 }}>
-                            <Message type={error ? 'error' : 'success'} title="Cotação - Pacotes Completos" heading="Formulário enviado com sucesso!" subheading="Em até 24 h entraremos em contato com as melhores soluções para sua experiência" />
-                        </div>
+                        { page === 1 && <FirstStep onSubmit={this.nextPage} /> }
+                        { page === 2 &&
+                            <SecondStep
+                                previousPage={this.previousPage}
+                                onSubmit={this.nextPage}
+                            />
+                        }
+                        { page === 3 &&
+                            <ThirdStep
+                                previousPage={this.previousPage}
+                                onSubmit={this.nextPage}
+                            />
+                        }
+                        { page === 4 &&
+                            <FourthStep
+                                previousPage={this.previousPage}
+                                onSubmit={this.nextPage}
+                            />
+                        }
+                        { page === 5 &&
+                            <FifthStep
+                                previousPage={this.previousPage}
+                                onSubmit={this.nextPage}
+                            />
+                        }
+                        { page === 6 &&
+                            <SixthStep
+                                previousPage={this.previousPage}
+                                onSubmit={this.nextPage}
+                            />
+                        }
+                        { page === 7 &&
+                            <SeventhStep
+                                previousPage={this.previousPage}
+                                onSubmit={this.nextPage}
+                            />
+                        }
+                        { page === 8 &&
+                            <EigthStep
+                                previousPage={this.previousPage}
+                                onSubmit={this.nextPage}
+                            />
+                        }
+                        { page === 9 &&
+                            <NinthStep
+                                previousPage={this.previousPage}
+                                onSubmit={this.handleSubmit}
+                            />
+                        }
                     </div>
-                </div>
-            );
-        }
-
-        return (
-            <div className={classes.bg}>
-                <div className="container" style={{ padding: '40px 20px' }}>
-                    <CompletePackagesHeader/>
-                    <Typography type="subheading" align="right">{page} / 9</Typography>
-
-                    <LinearProgress
-                        color="primary"
-                        mode="determinate"
-                        value={page * 11.11}
-                        valueBuffer={100}
-                    />
-                    { page === 1 && <FirstStep onSubmit={this.nextPage} /> }
-                    { page === 2 &&
-                        <SecondStep
-                            previousPage={this.previousPage}
-                            onSubmit={this.nextPage}
-                        />
-                    }
-                    { page === 3 &&
-                        <ThirdStep
-                            previousPage={this.previousPage}
-                            onSubmit={this.nextPage}
-                        />
-                    }
-                    { page === 4 &&
-                        <FourthStep
-                            previousPage={this.previousPage}
-                            onSubmit={this.nextPage}
-                        />
-                    }
-                    { page === 5 &&
-                        <FifthStep
-                            previousPage={this.previousPage}
-                            onSubmit={this.nextPage}
-                        />
-                    }
-                    { page === 6 &&
-                        <SixthStep
-                            previousPage={this.previousPage}
-                            onSubmit={this.nextPage}
-                        />
-                    }
-                    { page === 7 &&
-                        <SeventhStep
-                            previousPage={this.previousPage}
-                            onSubmit={this.nextPage}
-                        />
-                    }
-                    { page === 8 &&
-                        <EigthStep
-                            previousPage={this.previousPage}
-                            onSubmit={this.nextPage}
-                        />
-                    }
-                    { page === 9 &&
-                        <NinthStep
-                            previousPage={this.previousPage}
-                            onSubmit={this.handleSubmit}
-                        />
-                    }
                 </div>
             </div>
         )

@@ -9,7 +9,7 @@ class AssociadoSection extends Component
         return (
             <div className="associado-container">
                 <Typography type="title" color="inherit" className="seje-um-associado-frase">
-                    Seja um <strong>associado</strong> ao fundo de <strong>investimento social</strong> e invista em <strong>microempreendedores brasileiros</strong>
+                    Seja um associado do <strong>fundo social</strong> de investimento e ajude o <strong>Instituto Vivalá</strong> a <strong>aumentar seu impacto</strong>
                 </Typography>
                 {/* <Button variant="raised" className="seje-um-associado-btn" component={Link} to="/"> */}
                 <Button className="seje-um-associado-btn" component={Link} to="/">
