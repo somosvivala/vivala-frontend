@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {Helmet} from "react-helmet";
+import CorporativoHeader from './header';
 import CorporativeFeatures from './features';
 import CorporativeBonus from './bonus';
 
 class CorporativeIndex extends Component {
     render() {
         return (
-            <div className="content-wrapper">
+            <div className="content-wrapper corporativo">
                 <Helmet>
                     <title>Corporativo</title>
                     <meta name="theme-color" content="#ED6D2C" />
@@ -23,6 +24,8 @@ class CorporativeIndex extends Component {
                     <meta property="og:image:width" content="1200" />
                     <meta property="og:image:height" content="630" />
                 </Helmet>
+
+                <CorporativoHeader />
                 <CorporativeFeatures />
                 <CorporativeBonus />
             </div>

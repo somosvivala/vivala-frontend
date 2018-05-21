@@ -43,59 +43,51 @@ class CorporativeFeatures extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className={classes.bg}>
-                <div className="container padding">
-                    <Typography type="headline" className={classes.title} gutterBottom>
-                        Corporativo
-                    </Typography>
-                    <Typography type="body1" className={classes.subtitle} gutterBottom>
-                        Tenha o melhor parceiro para sua empresa
-                    </Typography>
-                    <List>
-                        <ListItem className={classes.listItem}>
+            <div className="container padding-2x">
+                <List className="corporativo-lista">
+                    <ListItem className="corporativo-itens">
 
-                            <Image
-                                cloudName="vivala"
-                                publicId="check_laranja.png"
-                                width={100}
-                                crop="scale" alt="Ícone - Check Vivalá"
-                                className={classes.img}
-                            />
+                        <Image
+                            cloudName="vivala"
+                            publicId="Corporativo-03_sn6t7w.png"
+                            width={100}
+                            crop="scale" alt="Ícone - Check Vivalá"
+                            className={classes.img}
+                        />
 
-                            <Typography type="subheading" color="inherit" className={classes.subheading}>
-                                Gestão completa de viagens para pequenas e médias empresas
-                            </Typography>
-                        </ListItem>
-                        <ListItem className={classes.listItem}>
+                        <Typography type="subheading" color="inherit" className="corporativo-item-title">
+                            Campanhas de incentivo
+                        </Typography>
+                    </ListItem>
+                    <ListItem className="corporativo-itens">
 
-                            <Image
-                                cloudName="vivala"
-                                publicId="check_laranja.png"
-                                width={100}
-                                crop="scale" alt="Ícone - Check Vivalá"
-                                className={classes.img}
-                            />
+                        <Image
+                            cloudName="vivala"
+                            publicId="Corporativo-03_sn6t7w.png"
+                            width={100}
+                            crop="scale" alt="Ícone - Check Vivalá"
+                            className={classes.img}
+                        />
 
-                            <Typography type="subheading" color="inherit" className={classes.subheading}>
-                                Campanhas de premiação e viagens de incentivo
-                            </Typography>
-                        </ListItem>
-                        <ListItem className={classes.listItem}>
+                        <Typography type="subheading" color="inherit" className="corporativo-item-title">
+                            Gestão corporativa de viagens
+                        </Typography>
+                    </ListItem>
+                    <ListItem className="corporativo-itens">
 
-                            <Image
-                                cloudName="vivala"
-                                publicId="check_laranja.png"
-                                width={100}
-                                crop="scale" alt="Ícone - Check Vivalá"
-                                className={classes.img}
-                            />
+                        <Image
+                            cloudName="vivala"
+                            publicId="Corporativo-03_sn6t7w.png"
+                            width={100}
+                            crop="scale" alt="Ícone - Check Vivalá"
+                            className={classes.img}
+                        />
 
-                            <Typography type="subheading" color="inherit" className={classes.subheading}>
-                                Grupos e eventos
-                            </Typography>
-                        </ListItem>
-                    </List>
-                </div>
+                        <Typography type="subheading" color="inherit" className="corporativo-item-title">
+                            Ecoturismo e Volunturismo sob medida
+                        </Typography>
+                    </ListItem>
+                </List>
             </div>
         );
     }

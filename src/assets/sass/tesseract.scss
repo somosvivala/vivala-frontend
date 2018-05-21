@@ -671,6 +671,21 @@ body {
             padding-bottom: 0;
         }
     }
+    .corporativo {
+        .container {
+            &.servicos-page {
+                .header-content {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .corporativo-lista {
+            border: 2px solid $vivala-midgrey;
+            box-shadow: 0 0 0 0 $vivala-midgrey;
+            border-radius: 4px;
+            margin-bottom: 40px;
+        }
+    }
     .sobre-slider {
         .container {
             padding: 0 35px;
