@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Helmet} from "react-helmet";
 import PropTypes from 'prop-types';
+import AgentsHeader from './header';
 import AgentsList from './list';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
@@ -30,7 +31,7 @@ class AgentsIndex extends Component {
         const { classes } = this.props;
         const button = 'Receba sua cotacao em 24H';
         return (
-            <div className="content-wrapper">
+            <div className="agentes-page content-wrapper">
                 <Helmet>
                     <title>Seja um Agente Vivalá</title>
                     <meta name="theme-color" content="#ED6D2C" />
@@ -47,21 +48,10 @@ class AgentsIndex extends Component {
                     <meta property="og:image:width" content="1200" />
                     <meta property="og:image:height" content="630" />
                 </Helmet>
-                <AgentsList />
 
-                <div className={classes.bg}>
-                    <div className="container padding-2x">
-                        <Typography type="body1" paragraph>
-                            Quer uma proposta para sua viagem ágil, humanizada e gratuita?
-                        </Typography>
-                        <Link to="/cotacao">
-                            <Button raised color="primary" className={classes.button}>
-                                {button}
-                                <FontAwesome name='long-arrow-right' style={{ fontSize: 25, paddingLeft: 20 }} />
-                            </Button>
-                        </Link>
-                    </div>
-                </div>
+                <AgentsHeader />
+
+                <AgentsList />
             </div>
         );
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
@@ -138,6 +139,22 @@ class InstituteAbout extends Component {
         return (
             <div className={classes.bg}>
                 <div className="content-wrapper">
+                    <Helmet>
+                        <title>Sobre | Instituto Vivalá</title>
+                        <meta name="theme-color" content="#09A2A1" />
+                        <meta name="description" content="Projetos de Capacitação Profissional e Investimentos para Microempreendedores Mentorados." />
+
+                        <meta property="og:locale" content="pt_BR" />
+                        <meta property="og:url" content={this.props.location.pathname} />
+                        <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+                        <meta property="og:site_name" content="Vivalá" />
+                        <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
+                        <meta property="og:type" content="website" />
+                        <meta property="og:image" content="https://res.cloudinary.com/vivala/image/upload/imagem_home_1524934756" />
+                        <meta property="og:image:type" content="image/jpg" />
+                        <meta property="og:image:width" content="1200" />
+                        <meta property="og:image:height" content="630" />
+                    </Helmet>
                     <div className={classes.bg}>
                         <div className="container padding">
                             <Typography type="headline" color="accent" className={classes.title}>
