@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Typography from 'material-ui/Typography';
-import {Image} from 'cloudinary-react';
 
 class ServicosItem extends Component {
     render() {
         const { item } = this.props;
-        const align = window.screen.width > 800 ? 'flex-start' : 'center';
 
         return (
             <a target="_blank" href={item.link_destino}>

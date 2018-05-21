@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import ServicosItem from './list-item';
 
 class ServicosItems extends Component {
@@ -12,8 +11,6 @@ class ServicosItems extends Component {
     }
 
     render() {
-        const { items } = this.props;
-
         return (
             <div className="items">
                 { this.renderListItems() }
@@ -21,9 +18,5 @@ class ServicosItems extends Component {
         );
     }
 }
-
-ServicosItems.propTypes = {
-    items: PropTypes.array.isRequired
-};
 
 export default ServicosItems;
