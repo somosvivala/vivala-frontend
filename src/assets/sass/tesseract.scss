@@ -698,6 +698,88 @@ body {
             margin: '0 auto';
         }
     }
+    .agentes-page {
+        .section-title {
+            font-weight: 700;
+            color: $vivala-orange;
+            font-size: 2.5rem;
+            letter-spacing: -.5px;
+            margin-bottom: 5px;
+
+            @include phone {
+                font-size: 1.8rem;
+            }
+        }
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: $vivala-darkgrey;
+
+            @include phone {
+                font-size: 1.4rem;
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+        .agentes-header {
+            padding: 50px 20px 25px;
+
+            @include phone {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .header-content {
+                align-items: normal;
+                margin-bottom: 30px;
+
+                @include phone {
+                    text-align: center;
+                }
+            }
+            .video-wrapper {
+                height: 65vh;
+
+                @include tablet-portrait {
+                    height: 40vh;
+                }
+                @include phone {
+                    height: 40vh;
+                }
+            }
+        }
+        .agentes-vivala {
+            background-color: $vivala-lightgrey;
+            padding: 30px 0;
+
+            .section-title {
+                font-weight: 600;
+                margin-bottom: 50px;
+
+                @include tablet-portrait {
+                    font-size: 2rem;
+                }
+            }
+            .agentes-item {
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+
+                .agentes-meta {
+                    text-align: left;
+
+                    @include tablet-portrait {
+                        text-align: center;
+                    }
+                    &:first-of-type {
+                        margin-top: 12px;
+                    }
+                }
+                img {
+                    @include tablet-portrait {
+                        margin: 0 auto;
+                    }
+                }
+          }
+      }
     .page-header {
         padding: 50px 20px 25px;
 

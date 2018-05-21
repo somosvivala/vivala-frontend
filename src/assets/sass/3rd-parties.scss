@@ -36,6 +36,19 @@
     content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958269/arrow-left-branco_zzg8ao.png);
   }
 }
+.slick-next.orange {
+  z-index: 99999999;
+  &:before {
+    content: url(https://i.imgur.com/QczAgZ3.png);
+  }
+}
+
+.slick-prev.orange {
+  z-index: 999999999;
+  &:before {
+    content: url(https://i.imgur.com/KtapxVj.png);
+  }
+}
 .slick-prev.instituto {
   z-index: 999999999;
   &:before {
