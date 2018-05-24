@@ -6,6 +6,7 @@ import {
 } from '../actions/imersao/action';
 
 const INITIAL_STATE = {
+    video: null,
     items: [],
     one: null,
     fetching: false,
@@ -38,6 +39,7 @@ export default function (state = INITIAL_STATE, action) {
         case FETCH_IMERSOES:
             return {
                 ...state,
+                video: action.payload.video,
                 items: action.payload.items,
                 fetching: INITIAL_STATE.fetching,
                 fetched: true

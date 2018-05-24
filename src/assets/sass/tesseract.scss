@@ -672,18 +672,82 @@ body {
         }
     }
     .corporativo {
-        .container {
-            &.servicos-page {
-                .header-content {
-                    margin-bottom: 0;
+        .header-content {
+            margin-bottom: 0;
+        }
+        .section-title {
+            font-weight: 700;
+            color: $vivala-orange;
+            font-size: 2.5rem;
+            letter-spacing: -.5px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .lista-wrapper {
+            .corporativo-lista {
+                border: 2px solid $vivala-midgrey;
+                box-shadow: 0 0 0 0 $vivala-midgrey;
+                border-radius: 4px;
+                margin-bottom: 40px;
+            }
+        }
+        .bonus {
+            background-color: $vivala-midgrey;
+
+            .corporativo-slider-container {
+                .corporativo-slider {
+                    .slick-slide {
+                        max-width: 20%;
+                        padding: 0 15px;
+                        margin: 50px 0;
+
+                        @include desktop-1440 {
+                            max-width: 100/3;
+                            padding: 0 30px;
+                        }
+                        .slider-item {
+                            background-color: $vivala-lightgrey;
+                            text-align: center;
+                            height: 300px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0 10px;
+
+                            .item-meta {
+                                .title {
+                                    font-weight: 700;
+                                    font-size: 16px;
+                                }
+                                .img-container {
+                                    height: 150px;
+                                    display: flex;
+                                    align-items: center;
+
+                                    img {
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-        .corporativo-lista {
-            border: 2px solid $vivala-midgrey;
-            box-shadow: 0 0 0 0 $vivala-midgrey;
-            border-radius: 4px;
-            margin-bottom: 40px;
+        .clientes {
+            background-color: $vivala-lightgrey;
+            margin-top: 15px;
+            padding: 20px 0 40px;
+
+            .clients-images {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .client-item {
+                    width: 100/3;
+                }
+            }
         }
     }
     .sobre-slider {
@@ -769,12 +833,20 @@ body {
                     @include tablet-portrait {
                         text-align: center;
                     }
+                    @include phone {
+                        text-align: center;
+                    }
                     &:first-of-type {
                         margin-top: 12px;
                     }
                 }
                 img {
+                    max-width: calc(100% - 30px);
+
                     @include tablet-portrait {
+                        margin: 0 auto;
+                    }
+                    @include phone {
                         margin: 0 auto;
                     }
                 }

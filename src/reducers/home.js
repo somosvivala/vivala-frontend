@@ -1,13 +1,14 @@
 import {
-    FETCH_VOLUNTURISMO,
-    FETCH_VOLUNTURISMOS,
-    REQUEST_LOADING_VOLUNTURISMO,
-    REQUEST_REJECTED_VOLUNTURISMO
-} from '../actions/volunturismo/action';
+    FETCH_HOME,
+    REQUEST_LOADING_HOME,
+    REQUEST_REJECTED_HOME
+} from '../actions/home/action';
 
 const INITIAL_STATE = {
-    video: null,
-    items: [],
+    fotoVolunturismo: null,
+    fotoEcoturismo: null,
+    fotoImersoes: null,
+    fotoInstituto: null,
     one: null,
     fetching: false,
     fetched: false,
@@ -16,31 +17,26 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
-        case REQUEST_LOADING_VOLUNTURISMO:
+        case REQUEST_LOADING_HOME:
             return {
                 ...state,
                 fetching: true,
                 fetched: INITIAL_STATE.fetched
             };
-        case REQUEST_REJECTED_VOLUNTURISMO:
+        case REQUEST_REJECTED_HOME:
             return {
                 ...state,
                 fetching: INITIAL_STATE.fetching,
                 fetched: INITIAL_STATE.fetched,
                 error: action.payload
             };
-        case FETCH_VOLUNTURISMO:
+        case FETCH_HOME:
             return {
                 ...state,
-                one: action.payload,
-                fetching: INITIAL_STATE.fetching,
-                fetched: true
-            };
-        case FETCH_VOLUNTURISMOS:
-            return {
-                ...state,
-                video: action.payload.video,
-                items: action.payload.items,
+                fotoVolunturismo: action.payload.fotoVolunturismo,
+                fotoEcoturismo: action.payload.fotoEcoturismo,
+                fotoImersoes: action.payload.fotoImersoes,
+                fotoInstituto: action.payload.fotoInstituto,
                 fetching: INITIAL_STATE.fetching,
                 fetched: true
             };

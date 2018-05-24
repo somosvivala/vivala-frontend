@@ -6,44 +6,11 @@ import List, { ListItem } from 'material-ui/List';
 import Icon from 'material-ui/Icon';
 import {Image} from 'cloudinary-react';
 
-const styleSheet = createStyleSheet('CorporativeFeatures', theme => ({
-    bg: {
-        backgroundColor: '#f7f7f7'
-    },
-    title: {
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-        textAlign: window.screen.width < 900 ? 'center' : 'left',
-        marginTop: '2rem',
-    },
-    subtitle: {
-        textAlign: window.screen.width < 900 ? 'center' : 'left',
-        margin: '0 0 2rem 0'
-    },
-    listItem: {
-        backgroundColor: '#eceaeb',
-        marginBottom: 10,
-        display: 'flex'
-    },
-    icon: {
-        fontSize: 40,
-        maxWidth: '25%'
-    },
-    subheading: {
-        marginLeft: 20,
-        maxWidth: '75%'
-    },
-    img: {
-        marginLeft: '20px',
-        maxWidth: '40px',
-    }
-}));
-
 class CorporativeFeatures extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className="container padding-2x">
+            <div className="container padding-2x lista-wrapper">
                 <List className="corporativo-lista">
                     <ListItem className="corporativo-itens">
 
@@ -52,7 +19,7 @@ class CorporativeFeatures extends Component {
                             publicId="Corporativo-03_sn6t7w.png"
                             width={100}
                             crop="scale" alt="Ícone - Check Vivalá"
-                            className={classes.img}
+                            className="list-check-icon"
                         />
 
                         <Typography type="subheading" color="inherit" className="corporativo-item-title">
@@ -66,7 +33,7 @@ class CorporativeFeatures extends Component {
                             publicId="Corporativo-03_sn6t7w.png"
                             width={100}
                             crop="scale" alt="Ícone - Check Vivalá"
-                            className={classes.img}
+                            className="list-check-icon"
                         />
 
                         <Typography type="subheading" color="inherit" className="corporativo-item-title">
@@ -80,7 +47,7 @@ class CorporativeFeatures extends Component {
                             publicId="Corporativo-03_sn6t7w.png"
                             width={100}
                             crop="scale" alt="Ícone - Check Vivalá"
-                            className={classes.img}
+                            className="list-check-icon"
                         />
 
                         <Typography type="subheading" color="inherit" className="corporativo-item-title">
@@ -97,4 +64,4 @@ CorporativeFeatures.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styleSheet)(CorporativeFeatures);
+export default CorporativeFeatures;

@@ -9,6 +9,7 @@ import contact from './contact';
 import index from './index-page';
 import agents from './agents';
 import experiences from './experiences';
+import home from './home';
 import { reducer as formReducer } from 'redux-form'
 
 export default combineReducers({
@@ -23,4 +24,5 @@ export default combineReducers({
     index,
     agents,
     experiences,
+    home
 });

@@ -3,6 +3,7 @@ import {Helmet} from "react-helmet";
 import CorporativoHeader from './header';
 import CorporativeFeatures from './features';
 import CorporativeBonus from './bonus';
+import CorporativeClients from './clients';
 
 class CorporativeIndex extends Component {
     render() {
@@ -28,6 +29,7 @@ class CorporativeIndex extends Component {
                 <CorporativoHeader />
                 <CorporativeFeatures />
                 <CorporativeBonus />
+                <CorporativeClients />
             </div>
         );
     }

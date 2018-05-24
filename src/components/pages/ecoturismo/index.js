@@ -14,7 +14,7 @@ class EcoturismoIndex extends Component {
     }
 
     render() {
-        const { items, fetching, error } = this.props;
+        const { video, items, fetching, error } = this.props;
 
         if (error) {
             return <BadRequestError />;
@@ -45,7 +45,7 @@ class EcoturismoIndex extends Component {
                     <meta property="og:image:height" content="630" />
                 </Helmet>
                 <div className="servicos-page container">
-                    <EcoturismoHeader />
+                    <EcoturismoHeader videoId={video} />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
                             Encontre beleza e equilíbrio através do contato com a natureza no Brasil
@@ -64,7 +64,8 @@ function mapStateToProps(state) {
     return {
         fetching: state.ecoturismo.fetching,
         error: state.ecoturismo.error,
-        items: state.ecoturismo.items
+        items: state.ecoturismo.items,
+        video: state.ecoturismo.video
     }
 }
 
