@@ -682,17 +682,40 @@ body {
             letter-spacing: -.5px;
             margin-bottom: 5px;
             text-transform: uppercase;
+
+            @include phone {
+                font-size: 1.5rem;
+            }
         }
         .lista-wrapper {
+            padding-top: 0;
+
             .corporativo-lista {
                 border: 2px solid $vivala-midgrey;
-                box-shadow: 0 0 0 0 $vivala-midgrey;
+                box-shadow: 3px 3px 3px 0 #DADADA;
                 border-radius: 4px;
                 margin-bottom: 40px;
+
+                .corporativo-itens {
+                    .list-check-icon {
+                        max-width: 50px;
+                        vertical-align: middle;
+                    }
+                    .corporativo-item-title {
+                        vertical-align: middle;
+                        margin-bottom: 0;
+                        font-size: 1.2rem;
+                        margin-left: 0.5rem;
+                        margin-top: 0.5rem;
+                        color: $vivala-darkgrey;
+                    }
+                }
             }
         }
         .bonus {
             background-color: $vivala-midgrey;
+            padding-top: 30px;
+            padding-bottom: 30px;
 
             .corporativo-slider-container {
                 .corporativo-slider {
@@ -744,8 +767,18 @@ body {
                 align-items: center;
                 justify-content: center;
 
+                @include phone {
+                    flex-direction: column;
+                }
                 .client-item {
-                    width: 100/3;
+                    width: (100% / 3);
+
+                    @include phone {
+                        width: 100%;
+                    }
+                    img {
+                        max-width: 100%;
+                    }
                 }
             }
         }
