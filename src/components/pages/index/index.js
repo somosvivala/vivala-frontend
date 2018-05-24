@@ -10,25 +10,25 @@ import HighlightSection from './highlight';
 import AssociadoSection from './associado';
 import InstitutoSlider from './instituto-slider';
 import trans from '../../../utils/translate';
-import {requestIndex} from '../../../actions/index';
+import {requestHome} from '../../../actions/home';
 import LoadingInfinite from '../../loadings/infinite';
 
 class IndexPage extends Component {
 
     componentWillMount() {
-        this.props.requestIndex();
+        this.props.requestHome();
     }
 
     render() {
-        const { fetching, expeditions } = this.props;
+        const { fetching, fotoVolunturismo, fotoEcoturismo, fotoImersoes, fotoInstituto } = this.props;
 
-        if (fetching || !expeditions) {
+        if (fetching || !fotoVolunturismo || !fotoEcoturismo || !fotoImersoes || !fotoInstituto) {
             return <LoadingInfinite />;
         }
 
         const photos = [
             {
-                image: 'https://res.cloudinary.com/tesseract/image/upload/v1525218885/instituto_ok_gvklfm.jpg'
+                image: fotoInstituto
             }
         ];
 
@@ -50,7 +50,7 @@ class IndexPage extends Component {
                     <meta property="og:image:width" content="1200" />
                     <meta property="og:image:height" content="630" />
                 </Helmet>
-                <Servicos />
+                <Servicos fotoVolunturismo={fotoVolunturismo} fotoEcoturismo={fotoEcoturismo} fotoImersoes={fotoImersoes} />
                 <Social color="#aaa"
                         facebook="https://www.facebook.com/SomosVivala/"
                         linkedin="https://pt.linkedin.com/company/vivalá"
@@ -58,14 +58,13 @@ class IndexPage extends Component {
                         youtube="https://www.youtube.com/channel/UCT8bbWeVmbaDDMxvWlI8bBA"
                 />
                 <CotacaoSection />
-                {/*<Institute text={trans('index.institute.text')} expeditions={expeditions.edicoes_passadas} />*/}
                 <InstitutoSlider expeditions={photos} />
                 <HighlightSection />
                 <AssociadoSection />
                 <Newsletter text={trans('newsletter.text')}
                             placeholderName={trans('newsletter.placeholderName')}
                 />
-                <MediaNews text={trans('index.mediaNews.text')} />
+                <MediaNews />
             </div>
         );
     }
@@ -73,9 +72,12 @@ class IndexPage extends Component {
 
 function mapStateToProps(state) {
     return {
-        expeditions: state.index.content,
-        fetching: state.index.fetching,
+        fotoVolunturismo: state.home.fotoVolunturismo,
+        fotoEcoturismo: state.home.fotoEcoturismo,
+        fotoImersoes: state.home.fotoImersoes,
+        fotoInstituto: state.home.fotoInstituto,
+        fetching: state.home.fetching,
     }
 }
 
-export default connect(mapStateToProps, {requestIndex})(IndexPage);
+export default connect(mapStateToProps, {requestHome})(IndexPage);

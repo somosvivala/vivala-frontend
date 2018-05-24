@@ -14,7 +14,7 @@ class ImersaoIndex extends Component {
     }
 
     render() {
-        const { items, fetching, error } = this.props;
+        const { video, items, fetching, error } = this.props;
 
         if (error) {
             return <BadRequestError />;
@@ -45,7 +45,7 @@ class ImersaoIndex extends Component {
                     <meta property="og:image:height" content="630" />
                 </Helmet>
                 <div className="servicos-page container">
-                    <ImersaoHeader />
+                    <ImersaoHeader videoId={video} />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
                             Viva o melhor de paraísos brasileiros nas datas que quiser!
@@ -64,7 +64,8 @@ function mapStateToProps(state) {
     return {
         fetching: state.imersoes.fetching,
         error: state.imersoes.error,
-        items: state.imersoes.items
+        items: state.imersoes.items,
+        video: state.imersoes.video
     }
 }
 

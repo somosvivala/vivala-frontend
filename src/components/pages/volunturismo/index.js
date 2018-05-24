@@ -14,7 +14,7 @@ class VolunturismoIndex extends Component {
     }
 
     render() {
-        const { items, fetching, error } = this.props;
+        const { video, items, fetching, error } = this.props;
 
         if (error) {
             return <BadRequestError />;
@@ -45,7 +45,7 @@ class VolunturismoIndex extends Component {
                     <meta property="og:image:height" content="630" />
                 </Helmet>
                 <div className="servicos-page container">
-                    <VolunturismoHeader />
+                    <VolunturismoHeader videoId={video} />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
                             Faça voluntariado ajudando no desenvolvimento de microempreendedores brasileiros
@@ -64,7 +64,8 @@ function mapStateToProps(state) {
     return {
         fetching: state.volunturismo.fetching,
         error: state.volunturismo.error,
-        items: state.volunturismo.items
+        items: state.volunturismo.items,
+        video: state.volunturismo.video
     }
 }
 
