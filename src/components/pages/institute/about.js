@@ -112,7 +112,7 @@ class InstituteAbout extends Component {
                                     Melhore o seu Mundo
                                 </Typography>
                                 <Typography type="body1" color="inherit" className={classes.textoSliderInstituto}>
-                                    Projetos de capacitação profissional <br/> com microempreendedores
+                                    Projetos de capacitação profissional, mentoria e acesso a capital <br/> para pequenos empreendedores
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -176,15 +176,11 @@ class InstituteAbout extends Component {
                     <div className="container padding-heights">
                         <div>
                             <Typography type="title" color="accent" className={classes.titleTextoCentral} gutterBottom>
-                                Seja a Mudança
-                            </Typography>
-                            <Typography type="body1" paragraph className={classes.textoCentral}>
-                                Para cada compra realizada no site, 5% do lucro é destinado
-                                a ações de capacitação profissional
+                                Conheça e se envolva com nossos projetos
                             </Typography>
                         </div>
                         <br/>
-                        <Link className={classes.button} to="/expedicoes">
+                        <Link className={classes.button} to="/volunturismo">
                             <Image
                                 cloudName="vivala"
                                 publicId="sobre_instituto_expedicoes.png"
@@ -193,7 +189,7 @@ class InstituteAbout extends Component {
                                 crop="fit" alt="Sobre Instituto"
                             />
                             <Typography type="title" color="inherit" className={classes.textoCardInstituto}>
-                                Expedições
+                                Capacitação profissional
                             </Typography>
                         </Link>
                         <Link className={classes.button} to="/instituto">
@@ -202,10 +198,10 @@ class InstituteAbout extends Component {
                                 publicId="sobre_instituto_sustentavel.png"
                                 width={window.screen.width > 900 ? 900 : 500}
                                 height={window.screen.width > 900 ? 400 : 170}
-                                crop="fit" alt="Sobre Instituto Sustentável"
+                                crop="fit" alt="Sobre Fundo Social de Investimento"
                             />
                             <Typography type="title" color="inherit" className={classes.textoCardInstituto}>
-                                Instituto Sustentável
+                                Fundo Social de Investimento
                             </Typography>
                         </Link>
                         <Link className={classes.button} to="/instituto/resultados">

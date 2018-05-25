@@ -57,7 +57,7 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
         textAlign: 'left',
         marginLeft: '5%',
         width: '90%'
-    }
+    },
 }));
 
 class AgentsList extends Component {
@@ -125,7 +125,7 @@ class AgentsList extends Component {
         return (
             <div className="agentes-vivala">
                 <div className="container padding">
-                    <Typography type="headline" align="center" className="section-title" gutterBottom>
+                    <Typography type="subheading" align="center" className="section-title" gutterBottom>
                         Seja um Agente de Viagens Vivalá!
                     </Typography>
 
