@@ -98,7 +98,7 @@ body {
             }
             .item {
                 width: 49%;
-                height: 73vh;
+                height: 70vh;
                 float: left;
                 position: relative;
                 margin-bottom: 2%;
@@ -108,11 +108,14 @@ body {
                 background-position: center;
                 transition: all 0.3s ease;
 
+                @include desktop-1600 {
+                    height: 67vh;
+                }
                 @include desktop-1440 {
-                    background-size: auto 100%;
+                    height: 62vh;
                 }
                 @include desktop-1366 {
-                    background-size: 100% auto;
+                    height: 55vh;
                 }
                 @include tablet-landscape {
                     height: 60vh;
@@ -120,23 +123,17 @@ body {
                 @include tablet-portrait {
                     width: 100%;
                     height: 50vh;
-                    background-size: 100% auto;
                 }
                 @include phone {
                     width: 100%;
-                    background-size: auto 100%;
                     margin-bottom: 30px;
                 }
                 &:hover {
-                    background-size: 110% auto;
 
-                    @include desktop-1440 {
-                        background-size: auto 110%;
-                    }
-                    @include desktop-1366 {
+                    &.width {
                         background-size: 110% auto;
                     }
-                    @include phone {
+                    &.height {
                         background-size: auto 110%;
                     }
                     &:after {
@@ -152,6 +149,12 @@ body {
                     top: 0;
                     left: 0;
                     transition: all 0.3s ease;
+                }
+                &.width {
+                    background-size: 100% auto;
+                }
+                &.height {
+                    background-size: auto 100%;
                 }
                 &.big {
                     width: 100%;
@@ -175,7 +178,7 @@ body {
                         }
                     }
                 }
-                &.volunturismo {
+                &#volunturismo {
                     background-image: url('https://res.cloudinary.com/tesseract/image/upload/q_90/v1525217172/volunturismo_xnelwh.jpg');
 
                     .meta-content {
@@ -186,7 +189,7 @@ body {
                         }
                     }
                 }
-                &.ecoturismo {
+                &#ecoturismo {
                     background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525218889/home_ecoturismo_vivala.jpg');
                     margin-right: 1%;
 
@@ -197,7 +200,7 @@ body {
                         margin-right: 0;
                     }
                 }
-                &.imersoes {
+                &#imersoes {
                     background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525218887/home_imersoes_vivala.jpg');
                     margin-left: 1%;
 
@@ -380,6 +383,9 @@ body {
                 position: relative;
                 bottom: -3rem;
 
+                @include desktop-1600 {
+                    width: 65vw;
+                }
                 @include desktop-1366 {
                     width: 68vw;
                 }
