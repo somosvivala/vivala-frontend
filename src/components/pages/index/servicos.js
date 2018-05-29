@@ -4,17 +4,27 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class Servicos extends Component {
-   render() {
-       const { fotoVolunturismo, fotoEcoturismo, fotoImersoes } = this.props;
+    constructor(props) {
+        super(props);
 
-       var classBig, classNormal;
-       if ( window.innerWidth > window.innerHeight ) {
-           classBig = 'item big width';
-           classNormal = 'item width';
-       } else {
-           classBig = 'item big height';
-           classNormal = 'item height';
-       }
+        var Big, Normal;
+
+        if ( window.innerWidth > window.innerHeight ) {
+            Big = 'item big width';
+            Normal = 'item width';
+        } else {
+            Big = 'item big height';
+            Normal = 'item height';
+        }
+
+        this.state = {
+            classBig: Big,
+            classNormal: Normal
+        }
+    }
+
+    render() {
+        const { fotoVolunturismo, fotoEcoturismo, fotoImersoes } = this.props;
 
         return (
             <div className="container servicos">
@@ -25,7 +35,7 @@ class Servicos extends Component {
                 </div>
                 <div className="inner-wrapper clearfix">
                     <Link to="/volunturismo">
-                        <div className={classBig} id="volunturismo" style={{ backgroundImage: `url(${fotoVolunturismo})` }}>
+                        <div className={this.state.classBig} id="volunturismo" style={{ backgroundImage: `url(${fotoVolunturismo})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Volunturismo</Typography>
                                 <Typography className="subtitle">Expedições de turismo e voluntariado</Typography>
@@ -33,7 +43,7 @@ class Servicos extends Component {
                         </div>
                     </Link>
                     <Link to="/ecoturismo">
-                        <div className={classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
+                        <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Ecoturismo</Typography>
                                 <Typography className="subtitle">Experiências de profunda conexão com a natureza</Typography>
@@ -41,7 +51,7 @@ class Servicos extends Component {
                         </div>
                     </Link>
                     <Link to="/imersoes">
-                        <div className={classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
+                        <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Imersões</Typography>
                                 <Typography className="subtitle">Viagens de imersão na cultura local através de fornecedores selecionados à dedo</Typography>
@@ -58,7 +68,7 @@ Servicos.propTypes = {
     classes: PropTypes.object.isRequired,
     fotoVolunturismo: PropTypes.string,
     fotoEcoturismo: PropTypes.string,
-    fotoImersoes: PropTypes.string
+    fotoImersoes: PropTypes.string,
 };
 
 export default Servicos;
