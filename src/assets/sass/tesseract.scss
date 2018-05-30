@@ -132,6 +132,9 @@ body {
                     width: 100%;
                     margin-bottom: 30px;
                 }
+                @include phone-landscape {
+                    height: 75vh;
+                }
                 &:hover {
 
                     &.width {
@@ -260,6 +263,7 @@ body {
                         @include phone {
                             font-size: 1.2rem;
                             padding-right: 30px;
+                            line-height: 1.4rem;
                         }
                     }
                 }
@@ -781,11 +785,17 @@ body {
                 @include phone {
                     flex-direction: column;
                 }
+                @include phone-landscape {
+                    flex-direction: row;
+                }
                 .client-item {
                     width: (100% / 3);
 
                     @include phone {
                         width: 100%;
+                    }
+                    @include phone-landscape {
+                        width: (100% / 3);
                     }
                     img {
                         max-width: 100%;
@@ -1031,6 +1041,9 @@ body {
                 @include phone {
                     padding-left: 0;
                     padding-right: 0;
+                }
+                @include phone-landscape {
+                    height: 75vh;
                 }
                 &:hover {
                     a {
