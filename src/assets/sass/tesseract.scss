@@ -417,6 +417,9 @@ body {
                         width: 375px;
                     }
                     &.left {
+                        @include phone {
+                            display: none;
+                        }
                         .box-header {
                             text-align: left;
                             padding-left: 35px;
@@ -440,6 +443,10 @@ body {
                         .box-header {
                             &:before {
                                 transform: skew(-2deg, -2deg);
+
+                                @include phone {
+                                    transform: none;
+                                }
                             }
                         }
                     }
@@ -597,6 +604,7 @@ body {
                     @include phone {
                         text-align: center;
                         margin: 2rem auto;
+                        display: none;
                     }
                     @include phone-landscape {
                         width: 100%;
@@ -1487,6 +1495,11 @@ body {
             font-weight: 700;
             letter-spacing: 1;
             text-align: center;
+        }
+    }
+    .busque-sozinho {
+        @include phone {
+            display: none;
         }
     }
 }

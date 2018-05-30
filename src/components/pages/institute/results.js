@@ -65,33 +65,33 @@ class InstituteResults extends Component {
                     </Typography>
                     <List>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+4</Typography>
+                            <Typography className={classes.icon}>+11</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Expedições
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+3</Typography>
+                            <Typography className={classes.icon}>+4</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Regiões brasileiras
+                                Regiões
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
                             <Typography className={classes.icon}>+100</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Microempreendedores capacitados
+                                Microempreendedores assistidos
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+100</Typography>
+                            <Typography className={classes.icon}>+200</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Voluntários (Transformadores)
+                                Voluntários
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+R$ 70.000</Typography>
+                            <Typography className={classes.icon}>+R$ 150.000</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Injetados na economia local
+                                Injetados nas economias locais
                             </Typography>
                         </ListItem>
                     </List>
