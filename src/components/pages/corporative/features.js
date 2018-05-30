@@ -23,7 +23,21 @@ class CorporativeFeatures extends Component {
                         />
 
                         <Typography type="subheading" color="inherit" className="corporativo-item-title">
-                            Campanhas de incentivo
+                            Viagens personalizados para voluntariado e ecoturismo
+                        </Typography>
+                    </ListItem>
+                    <ListItem className="corporativo-itens">
+
+                        <Image
+                            cloudName="vivala"
+                            publicId="Corporativo-03_sn6t7w.png"
+                            width={100}
+                            crop="scale" alt="Ícone - Check Vivalá"
+                            className="list-check-icon"
+                        />
+
+                        <Typography type="subheading" color="inherit" className="corporativo-item-title">
+                            Campanhas de premiação e viagens de incentivo
                         </Typography>
                     </ListItem>
                     <ListItem className="corporativo-itens">
@@ -38,20 +52,6 @@ class CorporativeFeatures extends Component {
 
                         <Typography type="subheading" color="inherit" className="corporativo-item-title">
                             Gestão corporativa de viagens
-                        </Typography>
-                    </ListItem>
-                    <ListItem className="corporativo-itens">
-
-                        <Image
-                            cloudName="vivala"
-                            publicId="Corporativo-03_sn6t7w.png"
-                            width={100}
-                            crop="scale" alt="Ícone - Check Vivalá"
-                            className="list-check-icon"
-                        />
-
-                        <Typography type="subheading" color="inherit" className="corporativo-item-title">
-                            Ecoturismo e Volunturismo sob medida
                         </Typography>
                     </ListItem>
                 </List>

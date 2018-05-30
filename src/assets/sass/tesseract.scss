@@ -113,13 +113,13 @@ body {
                 transition: all 0.3s ease;
 
                 @include desktop-1600 {
-                    height: 67vh;
+                    height: 70vh;
                 }
                 @include desktop-1440 {
-                    height: 62vh;
+                    height: 70vh;
                 }
                 @include desktop-1366 {
-                    height: 55vh;
+                    height: 70vh;
                 }
                 @include tablet-landscape {
                     height: 60vh;
@@ -160,6 +160,9 @@ body {
                 &.width {
                     background-size: 100% auto;
 
+                    @include tablet-portrait {
+                        background-size: cover;
+                    }
                     @include phone {
                         background-size: cover;
                     }
@@ -170,6 +173,9 @@ body {
                 &.height {
                     background-size: auto 100%;
 
+                    @include tablet-portrait {
+                        background-size: cover;
+                    }
                     @include phone {
                         background-size: cover;
                     }
@@ -1062,6 +1068,9 @@ body {
                         &.width {
                             background-size: 110% auto;
 
+                            @include tablet-portrait {
+                                background-size: cover;
+                            }
                             @include phone {
                                 background-size: cover;
                             }
@@ -1072,6 +1081,9 @@ body {
                         &.height {
                             background-size: auto 110%;
 
+                            @include tablet-portrait {
+                                background-size: cover;
+                            }
                             @include phone {
                                 background-size: cover;
                             }
@@ -1108,6 +1120,9 @@ body {
                     &.width {
                         background-size: 100% auto;
 
+                        @include tablet-portrait {
+                            background-size: cover;
+                        }
                         @include phone {
                             background-size: cover;
                         }
@@ -1118,6 +1133,9 @@ body {
                     &.height {
                         background-size: auto 100%;
 
+                        @include tablet-portrait {
+                            background-size: cover;
+                        }
                         @include phone {
                             background-size: cover;
                         }
