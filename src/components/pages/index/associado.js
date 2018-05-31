@@ -12,7 +12,7 @@ class AssociadoSection extends Component
                     Seja um associado do <strong>fundo social</strong> de investimento e ajude o <strong>Instituto Vivalá</strong> a <strong>aumentar seu impacto</strong>
                 </Typography>
                 {/* <Button variant="raised" className="seje-um-associado-btn" component={Link} to="/"> */}
-                <Button className="seje-um-associado-btn" component={Link} to="/">
+                <Button className="seje-um-associado-btn" component={Link} to="/instituto/sobre">
                     Saiba mais
                 </Button>
             </div>

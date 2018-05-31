@@ -48,7 +48,7 @@ class ImersaoIndex extends Component {
                     <ImersaoHeader videoId={video} />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
-                            Viva o melhor de paraísos brasileiros nas datas que quiser!
+                            Viva experiências locais nas datas que quiser
                         </Typography>
                     </div>
                     <div className="servicos-items container">

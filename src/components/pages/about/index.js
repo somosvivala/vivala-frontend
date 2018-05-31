@@ -105,7 +105,7 @@ class AboutIndex extends Component {
                                     Sobre
                                 </Typography>
                                 <Typography type="body1" className="section-subtitle">
-                                    Acreditamos que viagens melhoram pessoas pessoas melhoram o mundo
+                                    Acreditamos que viagens melhoram pessoas e pessoas melhoram o mundo
                                 </Typography>
                             </Grid>
 

@@ -55,6 +55,10 @@ body {
         }
         &.servicos {
             .section-header {
+                @include phone-landscape {
+                    width: 75%;
+                    margin: 0 auto;
+                }
                 h2 {
                     font-size: 5rem;
 
@@ -98,7 +102,7 @@ body {
             }
             .item {
                 width: 49%;
-                height: 73vh;
+                height: 70vh;
                 float: left;
                 position: relative;
                 margin-bottom: 2%;
@@ -108,11 +112,14 @@ body {
                 background-position: center;
                 transition: all 0.3s ease;
 
+                @include desktop-1600 {
+                    height: 70vh;
+                }
                 @include desktop-1440 {
-                    background-size: auto 100%;
+                    height: 70vh;
                 }
                 @include desktop-1366 {
-                    background-size: 100% auto;
+                    height: 70vh;
                 }
                 @include tablet-landscape {
                     height: 60vh;
@@ -120,23 +127,20 @@ body {
                 @include tablet-portrait {
                     width: 100%;
                     height: 50vh;
-                    background-size: 100% auto;
                 }
                 @include phone {
                     width: 100%;
-                    background-size: auto 100%;
                     margin-bottom: 30px;
                 }
+                @include phone-landscape {
+                    height: 75vh;
+                }
                 &:hover {
-                    background-size: 110% auto;
 
-                    @include desktop-1440 {
-                        background-size: auto 110%;
-                    }
-                    @include desktop-1366 {
+                    &.width {
                         background-size: 110% auto;
                     }
-                    @include phone {
+                    &.height {
                         background-size: auto 110%;
                     }
                     &:after {
@@ -153,31 +157,36 @@ body {
                     left: 0;
                     transition: all 0.3s ease;
                 }
-                &.big {
-                    width: 100%;
+                &.width {
+                    background-size: 100% auto;
 
-                    @include desktop-1366 {
-                        background-size: 100% auto;
-                    }
-                    @include tablet-landscape {
-                        background-size: auto 100%;
-                    }
                     @include tablet-portrait {
-                        background-size: auto 100%;
+                        background-size: cover;
                     }
                     @include phone {
-                        background-size: auto 100%;
+                        background-size: cover;
                     }
-
-                    &:hover {
-                        @include desktop-1366 {
-                            background-size: 110% auto;
-                        }
+                    @include phone-landscape {
+                        background-size: cover;
                     }
                 }
-                &.volunturismo {
-                    background-image: url('https://res.cloudinary.com/tesseract/image/upload/q_90/v1525217172/volunturismo_xnelwh.jpg');
+                &.height {
+                    background-size: auto 100%;
 
+                    @include tablet-portrait {
+                        background-size: cover;
+                    }
+                    @include phone {
+                        background-size: cover;
+                    }
+                    @include phone-landscape {
+                        background-size: cover;
+                    }
+                }
+                &.big {
+                    width: 100%;
+                }
+                &#volunturismo {
                     .meta-content {
                         .subtitle {
                             @include phone {
@@ -186,8 +195,7 @@ body {
                         }
                     }
                 }
-                &.ecoturismo {
-                    background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525218889/home_ecoturismo_vivala.jpg');
+                &#ecoturismo {
                     margin-right: 1%;
 
                     @include tablet-portrait {
@@ -197,8 +205,7 @@ body {
                         margin-right: 0;
                     }
                 }
-                &.imersoes {
-                    background-image: url('https://res.cloudinary.com/tesseract/image/upload/v1525218887/home_imersoes_vivala.jpg');
+                &#imersoes {
                     margin-left: 1%;
 
                     @include tablet-portrait {
@@ -257,10 +264,12 @@ body {
                         z-index: 1;
                         font-size: 1.5rem;
                         color: inherit;
+                        line-height: 2rem;
 
                         @include phone {
                             font-size: 1.2rem;
                             padding-right: 30px;
+                            line-height: 1.4rem;
                         }
                     }
                 }
@@ -380,6 +389,9 @@ body {
                 position: relative;
                 bottom: -3rem;
 
+                @include desktop-1600 {
+                    width: 65vw;
+                }
                 @include desktop-1366 {
                     width: 68vw;
                 }
@@ -586,6 +598,9 @@ body {
                         text-align: center;
                         margin: 2rem auto;
                     }
+                    @include phone-landscape {
+                        width: 100%;
+                    }
                     .optional-ou-text {
                         color: $vivala-orange;
                         text-transform: lowercase;
@@ -594,6 +609,9 @@ body {
 
                         @include phone {
                             font-size: 1.5rem;
+                        }
+                        @include phone-landscape {
+                            margin: 0 auto;
                         }
                     }
                 }
@@ -659,6 +677,9 @@ body {
                     }
                     @include phone {
                         height: 40vh;
+                    }
+                    @include phone-landscape {
+                        height: 100vh;
                     }
                 }
             }
@@ -770,11 +791,17 @@ body {
                 @include phone {
                     flex-direction: column;
                 }
+                @include phone-landscape {
+                    flex-direction: row;
+                }
                 .client-item {
                     width: (100% / 3);
 
                     @include phone {
                         width: 100%;
+                    }
+                    @include phone-landscape {
+                        width: (100% / 3);
                     }
                     img {
                         max-width: 100%;
@@ -840,6 +867,9 @@ body {
                 }
                 @include phone {
                     height: 40vh;
+                }
+                @include phone-landscape {
+                    height: 100vh;
                 }
             }
         }
@@ -931,6 +961,9 @@ body {
             @include phone {
                 height: 40vh;
             }
+            @include phone-landscape {
+                height: 100vh;
+            }
         }
     }
     .footer {
@@ -1015,6 +1048,9 @@ body {
                     padding-left: 0;
                     padding-right: 0;
                 }
+                @include phone-landscape {
+                    height: 75vh;
+                }
                 &:hover {
                     a {
                         &:after {
@@ -1029,10 +1065,31 @@ body {
                         }
                     }
                     .inner-item {
-                        background-size: 110% auto;
+                        &.width {
+                            background-size: 110% auto;
 
-                        @include phone {
-                             background-size: auto 110%;
+                            @include tablet-portrait {
+                                background-size: cover;
+                            }
+                            @include phone {
+                                background-size: cover;
+                            }
+                            @include phone-landscape {
+                                background-size: cover;
+                            }
+                        }
+                        &.height {
+                            background-size: auto 110%;
+
+                            @include tablet-portrait {
+                                background-size: cover;
+                            }
+                            @include phone {
+                                background-size: cover;
+                            }
+                            @include phone-landscape {
+                                background-size: cover;
+                            }
                         }
                         .item-content {
                             &:before {
@@ -1056,13 +1113,35 @@ body {
                 .inner-item {
                     height: 100%;
                     background-repeat: no-repeat;
-                    background-size: 101% auto;
                     display: flex;
                     background-position: center;
                     transition: all .3s ease;
 
-                    @include phone {
+                    &.width {
+                        background-size: 100% auto;
+
+                        @include tablet-portrait {
+                            background-size: cover;
+                        }
+                        @include phone {
+                            background-size: cover;
+                        }
+                        @include phone-landscape {
+                            background-size: cover;
+                        }
+                    }
+                    &.height {
                         background-size: auto 100%;
+
+                        @include tablet-portrait {
+                            background-size: cover;
+                        }
+                        @include phone {
+                            background-size: cover;
+                        }
+                        @include phone-landscape {
+                            background-size: cover;
+                        }
                     }
                     .item-content {
                         position: absolute;
@@ -1200,6 +1279,9 @@ body {
             margin-top: 60px;
             height: 52vh;
         }
+        @include phone-landscape {
+            height: 100vh;
+        }
         .container {
             height: 100%;
 
@@ -1286,6 +1368,9 @@ body {
                     width: 75vw;
                     margin: 0 auto;
                     height: 24.5vh;
+                }
+                @include phone-landscape {
+                    height: 55vh;
                 }
                 .slick-list {
                     height: 100%;

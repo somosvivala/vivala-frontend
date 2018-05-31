@@ -1,3 +1,9 @@
+@mixin phone-landscape {
+	@media (min-width: #{$phone-width}) and (max-width: #{$tablet-portrait - 1px})  and (orientation : landscape) {
+		@content;
+	}
+}
+
 @mixin phone {
 	@media (min-width: #{$phone-width}) and (max-width: #{$tablet-portrait - 1px}) {
 		@content;
