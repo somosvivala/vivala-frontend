@@ -417,6 +417,9 @@ body {
                         width: 375px;
                     }
                     &.left {
+                        @include phone {
+                            display: none;
+                        }
                         .box-header {
                             text-align: left;
                             padding-left: 35px;
@@ -438,8 +441,15 @@ body {
                     }
                     &.right {
                         .box-header {
+                            border-top: 2px solid $vivala-orange;
+                            padding-top: 8px;
+
                             &:before {
                                 transform: skew(-2deg, -2deg);
+
+                                @include phone {
+                                    content: none;
+                                }
                             }
                         }
                     }
@@ -597,6 +607,7 @@ body {
                     @include phone {
                         text-align: center;
                         margin: 2rem auto;
+                        display: none;
                     }
                     @include phone-landscape {
                         width: 100%;
@@ -1487,6 +1498,19 @@ body {
             font-weight: 700;
             letter-spacing: 1;
             text-align: center;
+        }
+    }
+    .busque-sozinho {
+        @include phone {
+            display: none;
+        }
+    }
+    .instituto-sobre-slider {
+        .texto-slider-instituto {
+            @include phone {
+                width: 20%;
+                margin: 0 auto 40px;
+            }
         }
     }
 }

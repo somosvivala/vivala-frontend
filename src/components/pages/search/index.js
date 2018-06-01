@@ -90,7 +90,7 @@ class SearchPageIndex extends Component {
                     </div>
                 </div>
 
-                <div className={classes.bg2}>
+                <div className={classes.bg2 + ' busque-sozinho'}>
                     <div className="container padding">
                         <Typography type="title" gutterBottom className={classes.title}>Como funciona</Typography>
                         <List>
@@ -145,7 +145,7 @@ class SearchPageIndex extends Component {
                     </div>
                 </div>
 
-                <SearchButton />
+                <SearchButton darkBg="true" />
             </div>
         );
     }

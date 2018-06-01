@@ -115,53 +115,7 @@ class AboutIndex extends Component {
                         </Grid>
                     </div>
                 </div>
-                <div className="sobre-slider">
-                    <div className="container">
-                        <div className="sobre-slider-wrapper">
-                            <Grid gutter={0} container className={classes.gridContainer}>
-
-                                <Slider {...settings} className={classes.slider}>
-                                    <div>
-                                        <div className={classes.box}>
-                                            <Typography type="subheading" className={classes.subheading}>
-                                                Não perca mais horas e horas procurando sua próxima viagem.
-                                                Peça sua cotação de forma ágil e seja atendido por agentes profissionais de forma humanizada e gratuita. Analisaremos seu perfil e iremos te sugerir opções em até 24 horas!
-                                            </Typography>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div className={classes.box}>
-                                            <Typography type="subheading" className={classes.subheading}>
-                                                Se preferir, busque e compre suas próximas experiências comparando mais de 500.000 fornecedores no mundo
-                                            </Typography>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div className={classes.box}>
-                                            <Typography type="subheading" className={classes.subheading}>
-                                                Buscando soluções corporativas?
-                                                Realizamos a gestão corporativa de viagens e programas de incentivo de viagens para seus funcionários.
-                                            </Typography>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div className={classes.box}>
-                                            <Typography type="subheading" className={classes.subheading}>
-                                                A Vivalá reverte 5% do seu lucro para o Instituto Vivalá,
-                                                fortalecendo o trabalho de Expedições de capacitação profissional realizado com microempreendedores brasileiros,
-                                                ou seja, comprando conosco você estará ajudando o Instituto a se manter e expandir suas atividades.
-                                            </Typography>
-                                        </div>
-                                    </div>
-                                </Slider>
-
-                            </Grid>
-                        </div>
-                    </div>
-                </div>
+                
                 <MediaNews text={trans('index.mediaNews.text')} />
             </div>
         );

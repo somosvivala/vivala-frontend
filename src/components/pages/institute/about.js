@@ -106,12 +106,12 @@ class InstituteAbout extends Component {
                                 crop="scale" alt="Sobre Instituto"
                             />
                         </Grid>
-                        <Grid gutter={0} container className={classes.text}>
+                        <Grid gutter={0} container className={classes.text + ' instituto-sobre-slider'}>
                             <Grid item xs={8}>
                                 <Typography type="subheading" color="inherit" className={`${classes.headerSliderInstituto} ${classes.whiteColor}`} gutterBottom>
                                     Melhore o seu Mundo
                                 </Typography>
-                                <Typography type="body1" color="inherit" className={classes.textoSliderInstituto}>
+                                <Typography type="body1" color="inherit" className={classes.textoSliderInstituto + ' texto-slider-instituto'}>
                                     Projetos de capacitação profissional, mentoria e acesso a capital <br/> para pequenos empreendedores
                                 </Typography>
                             </Grid>
