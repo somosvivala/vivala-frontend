@@ -441,11 +441,14 @@ body {
                     }
                     &.right {
                         .box-header {
+                            border-top: 2px solid $vivala-orange;
+                            padding-top: 8px;
+
                             &:before {
                                 transform: skew(-2deg, -2deg);
 
                                 @include phone {
-                                    transform: none;
+                                    content: none;
                                 }
                             }
                         }
@@ -1500,6 +1503,14 @@ body {
     .busque-sozinho {
         @include phone {
             display: none;
+        }
+    }
+    .instituto-sobre-slider {
+        .texto-slider-instituto {
+            @include phone {
+                width: 20%;
+                margin: 0 auto 40px;
+            }
         }
     }
 }
