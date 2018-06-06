@@ -20,7 +20,7 @@ class MenuItems extends Component {
 
         return (
             <Grid gutter={24} container align="flex-start" justify="space-around">
-                <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item>
+                <Grid gutter={0} container xs={direction === 'column' ? 12 : 4} item>
                     <Grid item xs={12}>
                         <Typography type="subheading" gutterBottom>
                             <strong>Vivalá</strong>

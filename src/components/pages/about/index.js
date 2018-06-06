@@ -115,8 +115,8 @@ class AboutIndex extends Component {
                         </Grid>
                     </div>
                 </div>
-                
-                <MediaNews text={trans('index.mediaNews.text')} />
+
+                <MediaNews />
             </div>
         );
     }
