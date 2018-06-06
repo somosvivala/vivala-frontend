@@ -13,7 +13,7 @@ class CorporativoHeader extends Component {
                             Corporativo
                         </Typography>
                         <Typography type="body1" className="section-subtitle">
-                             Expedições de turismo e voluntariado
+                             Tenha o melhor parceiro para sua empresa
                         </Typography>
                     </Grid>
                 </Grid>

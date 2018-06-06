@@ -39,8 +39,8 @@ class CorporativeBonus extends Component {
                         Vantagens oferecidas para nossos <br/> clientes corporativos
                     </Typography>
 
-                    <div className="corporativo-slider-container">
-                        <Slider {...settings} className="corporativo-slider">
+                    <div className="the-slider-container">
+                        <Slider {...settings} className="the-slider">
                             <div>
                                 <div className="slider-item">
                                     <div className="item-meta">

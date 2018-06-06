@@ -5,6 +5,12 @@ body {
             color: inherit;
         }
     }
+    .infinite-loader {
+        .loading {
+            top: 80px;
+            margin-bottom: 80px;
+        }
+    }
     .menu-wrapper {
         height: 80px;
         border-bottom: 1px solid $vivala-midgrey;
@@ -744,51 +750,6 @@ body {
                 }
             }
         }
-        .bonus {
-            background-color: $vivala-midgrey;
-            padding-top: 30px;
-            padding-bottom: 30px;
-
-            .corporativo-slider-container {
-                .corporativo-slider {
-                    .slick-slide {
-                        max-width: 20%;
-                        padding: 0 15px;
-                        margin: 50px 0;
-
-                        @include desktop-1440 {
-                            max-width: 100/3;
-                            padding: 0 30px;
-                        }
-                        .slider-item {
-                            background-color: $vivala-lightgrey;
-                            text-align: center;
-                            height: 300px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            padding: 0 10px;
-
-                            .item-meta {
-                                .title {
-                                    font-weight: 700;
-                                    font-size: 16px;
-                                }
-                                .img-container {
-                                    height: 150px;
-                                    display: flex;
-                                    align-items: center;
-
-                                    img {
-                                        margin: 0 auto;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
         .clientes {
             background-color: $vivala-lightgrey;
             margin-top: 15px;
@@ -816,6 +777,66 @@ body {
                     }
                     img {
                         max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .bonus {
+        background-color: $vivala-midgrey;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .section-title {
+            font-weight: 700;
+            color: $vivala-orange;
+            font-size: 2.5rem;
+            letter-spacing: -.5px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .section-subtitle {
+            font-size: 1.4rem;
+            margin-top: 12px;
+            color: $vivala-darkgrey;
+            font-weight: 500;
+        }
+        .the-slider-container {
+            .the-slider {
+                .slick-slide {
+                    max-width: 20%;
+                    padding: 0 15px;
+                    margin: 50px 0;
+
+                    @include desktop-1440 {
+                        max-width: 100/3;
+                        padding: 0 30px;
+                    }
+                    .slider-item {
+                        background-color: $vivala-lightgrey;
+                        text-align: center;
+                        height: 300px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0 10px;
+
+                        .item-meta {
+                            .title {
+                                font-weight: 700;
+                                font-size: 16px;
+                                padding: 0 50px;
+                            }
+                            .img-container {
+                                height: 150px;
+                                display: flex;
+                                align-items: center;
+
+                                img {
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
                     }
                 }
             }
