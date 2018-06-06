@@ -871,6 +871,7 @@ body {
             color: $vivala-darkgrey;
 
             @include phone {
+                line-height: 1.4rem;
                 font-size: 1.4rem;
                 max-width: 80%;
                 margin: 0 auto;
@@ -912,6 +913,7 @@ body {
             .section-title {
                 font-weight: 700;
                 margin-bottom: 50px;
+                line-height: 2rem;
 
                 @include tablet-portrait {
                     font-size: 2rem;
