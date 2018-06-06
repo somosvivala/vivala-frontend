@@ -3,16 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "8.1.4"
+    "node": "8.10.0"
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "bootstrap": "^4.1.0",
     "cloudinary-react": "^1.0.4",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
     "material-design-icons": "^3.0.1",
     "material-ui": "next",
-    "moment": "^2.18.1",
+    "moment": "2.19.3",
+    "hoek": "4.2.1",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.0.2",
     "prop-types": "^15.5.10",
@@ -22,6 +24,7 @@
     "react-dom": "^15.6.1",
     "react-fontawesome": "^1.6.1",
     "react-ga": "^2.2.0",
+    "react-helmet": "^5.2.0",
     "react-material-select": "^1.2.0",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",

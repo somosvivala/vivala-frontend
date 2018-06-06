@@ -12,8 +12,8 @@ const styleSheet = createStyleSheet('LoadingInfinite', {
 function LoadingInfinite(props) {
     const classes = props.classes;
     return (
-        <div className={classes.root}>
-            <LinearProgress />
+        <div className="infinite-loader">
+            <LinearProgress className="loading" />
         </div>
     );
 }

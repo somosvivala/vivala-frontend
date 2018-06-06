@@ -42,7 +42,7 @@ class Drawer extends Component {
                         </IconButton>
                     </Grid>
                     <Grid container item gutter={0} className={classes.menuItems} direction="column">
-                        <MenuItems key="drawer-items" direction={"column"} showContact={false} />
+                        <MenuItems key="drawer-items" direction={"column"} showContact={true} />
                     </Grid>
                 </Grid>
             </MaterialDrawer>

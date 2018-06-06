@@ -5,11 +5,12 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Slider from 'react-slick';
-import {Image} from 'cloudinary-react';
+import {Image ,Transformation} from 'cloudinary-react';
 import {Link} from 'react-router-dom';
 import {requestAgents} from '../../../actions/agents';
 import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('AgentsList', theme => ({
     bg: {
@@ -24,11 +25,6 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
     slider: {
         margin: '20px auto',
         width: '94%'
-    },
-    item: {
-        textAlign: 'center',
-        width: '100%',
-        overflow: 'hidden'
     },
     subTitle: {
         textAlign: window.screen.width < 900 ? 'center' : 'left',
@@ -61,7 +57,7 @@ const styleSheet = createStyleSheet('AgentsList', theme => ({
         textAlign: 'left',
         marginLeft: '5%',
         width: '90%'
-    }
+    },
 }));
 
 class AgentsList extends Component {
@@ -71,20 +67,24 @@ class AgentsList extends Component {
 
     renderItems = () => {
         const {agents, classes} = this.props;
+
+        var imageCrop;
+
+        if ( window.screen.width < 769 ) {
+            imageCrop = 240;
+        } else if ( window.screen.width < 1921 ) {
+            imageCrop = 320;
+        }
+
         return agents.map((agent, key) => {
             return (
                 <div  key={`agente-${key}`}>
-                    <div className={classes.item}>
-                        <Image
-                            cloudName="vivala"
-                            publicId={agent.foto}
-                            height={window.screen.width < 480 ? 135 : 190}
-                            width={window.screen.width < 480 ? 135 : 190}
-                            crop="scale" alt={agent.nome}
-                            className={classes.img}
-                        />
-                        <Typography className={classes.textoCardAgente} type="body1">{agent.nome}</Typography>
-                        <Typography className={classes.textoCardAgente} type="body1">{agent.local}</Typography>
+                    <div className="agentes-item">
+                        <Image cloudName="vivala" publicId={agent.foto}>
+                            <Transformation width={ imageCrop } height={ imageCrop } crop="fill" />
+                        </Image>
+                        <Typography className="agentes-meta" type="body1">{agent.nome}</Typography>
+                        <Typography className="agentes-meta" type="body1">{agent.local}</Typography>
                     </div>
                 </div>
             )
@@ -94,16 +94,24 @@ class AgentsList extends Component {
 
     render() {
         const { classes, agents, fetching, error, fetched } = this.props;
+
+        var numofSlides = 4;
+        if ( window.screen.width < 420 ) {
+            numofSlides = 1;
+        } else if ( window.screen.width < 769 ) {
+            numofSlides = 2;
+        }
+
         const settings = {
             infinite: true,
             autoplay: true,
             autoplaySpeed: 7000,
-            slidesToShow: 4,
+            slidesToShow: numofSlides,
             slidesToScroll: 1,
-            responsive: [
-                { breakpoint: 480, settings: { slidesToShow: 2 } },
-            ],
-            adaptativeHeight: true
+            adaptativeHeight: true,
+            arrows: true,
+            prevArrow: <PrevArrow orange />,
+            nextArrow: <NextArrow orange />,
         }
 
         if (fetching) {
@@ -115,15 +123,11 @@ class AgentsList extends Component {
         }
 
         return (
-            <div className={classes.bg}>
+            <div className="agentes-vivala">
                 <div className="container padding">
-                    <Typography type="headline" align="center" className={classes.subheading} gutterBottom>
-                        Agentes
+                    <Typography type="subheading" align="center" className="section-title" gutterBottom>
+                        Seja um Agente de Viagens Vivalá!
                     </Typography>
-                    <Typography type="body1" align="center" gutterBottom className={classes.subTitle}>
-                        Conheça algumas pessoas do nosso time de agentes
-                    </Typography>
-
 
                     { agents.length > 0  &&
                         <Slider {...settings} className={classes.slider}>

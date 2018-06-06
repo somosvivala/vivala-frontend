@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
@@ -84,7 +85,7 @@ const styleSheet = createStyleSheet('InstituteAbout', theme => ({
         position: 'absolute',
         textAlign: 'center',
         color: 'white !important'
-        
+
     }
 
 }));
@@ -105,13 +106,13 @@ class InstituteAbout extends Component {
                                 crop="scale" alt="Sobre Instituto"
                             />
                         </Grid>
-                        <Grid gutter={0} container className={classes.text}>
+                        <Grid gutter={0} container className={classes.text + ' instituto-sobre-slider'}>
                             <Grid item xs={8}>
                                 <Typography type="subheading" color="inherit" className={`${classes.headerSliderInstituto} ${classes.whiteColor}`} gutterBottom>
                                     Melhore o seu Mundo
                                 </Typography>
-                                <Typography type="body1" color="inherit" className={classes.textoSliderInstituto}>
-                                    Projetos de capacitação profissional <br/> com microempreendedores
+                                <Typography type="body1" color="inherit" className={classes.textoSliderInstituto + ' texto-slider-instituto'}>
+                                    Projetos de capacitação profissional, mentoria e acesso a capital <br/> para pequenos empreendedores
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -137,7 +138,23 @@ class InstituteAbout extends Component {
 
         return (
             <div className={classes.bg}>
-                <div>
+                <div className="content-wrapper">
+                    <Helmet>
+                        <title>Sobre | Instituto Vivalá</title>
+                        <meta name="theme-color" content="#09A2A1" />
+                        <meta name="description" content="Projetos de Capacitação Profissional e Investimentos para Microempreendedores Mentorados." />
+
+                        <meta property="og:locale" content="pt_BR" />
+                        <meta property="og:url" content={this.props.location.pathname} />
+                        <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+                        <meta property="og:site_name" content="Vivalá" />
+                        <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
+                        <meta property="og:type" content="website" />
+                        <meta property="og:image" content="https://res.cloudinary.com/vivala/image/upload/imagem_home_1524934756" />
+                        <meta property="og:image:type" content="image/jpg" />
+                        <meta property="og:image:width" content="1200" />
+                        <meta property="og:image:height" content="630" />
+                    </Helmet>
                     <div className={classes.bg}>
                         <div className="container padding">
                             <Typography type="headline" color="accent" className={classes.title}>
@@ -159,15 +176,11 @@ class InstituteAbout extends Component {
                     <div className="container padding-heights">
                         <div>
                             <Typography type="title" color="accent" className={classes.titleTextoCentral} gutterBottom>
-                                Seja a Mudança
-                            </Typography>
-                            <Typography type="body1" paragraph className={classes.textoCentral}>
-                                Para cada compra realizada no site, 5% do lucro é destinado
-                                a ações de capacitação profissional
+                                Conheça e se envolva com nossos projetos
                             </Typography>
                         </div>
                         <br/>
-                        <Link className={classes.button} to="/expedicoes">
+                        <Link className={classes.button} to="/volunturismo">
                             <Image
                                 cloudName="vivala"
                                 publicId="sobre_instituto_expedicoes.png"
@@ -176,7 +189,7 @@ class InstituteAbout extends Component {
                                 crop="fit" alt="Sobre Instituto"
                             />
                             <Typography type="title" color="inherit" className={classes.textoCardInstituto}>
-                                Expedições
+                                Capacitação profissional
                             </Typography>
                         </Link>
                         <Link className={classes.button} to="/instituto">
@@ -185,10 +198,10 @@ class InstituteAbout extends Component {
                                 publicId="sobre_instituto_sustentavel.png"
                                 width={window.screen.width > 900 ? 900 : 500}
                                 height={window.screen.width > 900 ? 400 : 170}
-                                crop="fit" alt="Sobre Instituto Sustentável"
+                                crop="fit" alt="Sobre Fundo Social de Investimento"
                             />
                             <Typography type="title" color="inherit" className={classes.textoCardInstituto}>
-                                Instituto Sustentável
+                                Fundo Social de Investimento
                             </Typography>
                         </Link>
                         <Link className={classes.button} to="/instituto/resultados">

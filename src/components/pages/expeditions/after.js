@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
-import Typography from'material-ui/Typography';
+import Typography from 'material-ui/Typography';
 import Slider from 'react-slick';
 import ExpeditionsListItem from './list-item';
 import {PrevArrow, NextArrow} from '../../arrows';

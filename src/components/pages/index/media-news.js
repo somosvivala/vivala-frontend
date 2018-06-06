@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import {Image} from 'cloudinary-react';
+import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('MediaNews', theme => ({
     bg: {
@@ -23,7 +24,7 @@ const styleSheet = createStyleSheet('MediaNews', theme => ({
         fontWeight: 700,
         letterSpacing: 1,
         textAlign: window.screen.width < 900 ? 'center' : 'left',
-    },  
+    },
     logoMedia: {
         width: '60%',
         objectFit: 'contain',
@@ -41,12 +42,15 @@ class MediaNews extends Component {
             adaptativeHeight: true,
             autoplay: true,
             autoplaySpeed: 5000,
-            speed: 500
+            speed: 500,
+            arrows: false,
+            prevArrow: <PrevArrow white />,
+            nextArrow: <NextArrow white />,
         }
         return (
-            <div className={classes.bg}>
+            <div className="media-news">
                 <div className="container padding">
-                    <Typography type="title" paragraph className={classes.text}>{text}</Typography>
+                    <Typography type="title" paragraph className="media-news-title">{text}</Typography>
                     <Slider {...settings} className={classes.slider}>
                         <div>
                             <a className={classes.item} rel="noopener noreferrer" target="_blank" href="https://catracalivre.com.br/geral/agenda/indicacao/startup-conecta-pessoas-que-tem-interesse-de-viajar-e-realizar-voluntariado-no-brasil/">

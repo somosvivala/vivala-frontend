@@ -24,7 +24,7 @@ class ExpeditionsIndex extends Component {
         }
 
         return (
-            <div>
+            <div className="content-wrapper">
                 <ExpeditionsHeader />
                 { future.length > 0 && <ExpeditionsAfter expeditions={future} key="expeditions-future" /> }
                 { past.length > 0 && <ExpeditionsBefore expeditions={past} key="expeditions-past" /> }
