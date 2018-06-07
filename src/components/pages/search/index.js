@@ -77,8 +77,8 @@ class SearchPageIndex extends Component {
                     <meta property="og:type" content="website" />
                     <meta property="og:image" content="https://res.cloudinary.com/vivala/image/upload/v1528403873/home_volunturismo_1527197447_vasb9e.jpg" />
                     <meta property="og:image:type" content="image/jpg" />
-                    <meta property="og:image:width" content="1200" />
-                    <meta property="og:image:height" content="630" />
+                    <meta property="og:image:width" content="1621" />
+                    <meta property="og:image:height" content="788" />
                 </Helmet>
                 <div className={classes.bg}>
                     <div className="container padding">
