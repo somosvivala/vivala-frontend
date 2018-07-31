@@ -23,11 +23,10 @@ class InstituteHeader extends Component {
             <div className={classes.bg}>
                 <div className="container padding">
                     <Typography type="headline" color="accent" gutterBottom className={classes.title}>
-                        Instituto Sustentável
+                        FUNDO SOCIAL DE INVESTIMENTO
                     </Typography>
                     <Typography type="body1">
-                        Através do seu apoio teremos mais força para continuar
-                        e expandir nossos projetos de capacitação profissional para microempreendedores
+                        Se torne um associado do fundo e ajude a criar oportunidades para microempreendedores brasileiros em comunidades carentes
                     </Typography>
                 </div>
             </div>
