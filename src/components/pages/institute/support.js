@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import {Link} from 'react-router-dom';
-import {Image} from 'cloudinary-react';
+import Youtube from 'react-youtube';
 
 const styleSheet = createStyleSheet('InstituteSupport', theme => ({
     bg: {
@@ -46,20 +46,11 @@ class InstituteSupport extends Component {
                 <div className={classes.bg}>
                     <div className="container padding-2x">
                         <Typography type="title" color="inherit" className={classes.title} paragraph>
-                            Seja um doador
+                            Seja um associado
                         </Typography>
-                        <Image
-                            cloudName="vivala"
-                            publicId="instututo_apoio.png"
-                            width={window.screen.width > 800 ? 700 : 400}
-                            height={window.screen.width > 800 ? 300 : 200}
-                            crop="scale" alt="Apoio Financeiro"
-                            className={classes.img}
-                        />
+                        <Youtube videoId="CPxNSZNqYTE" opts={{ width: window.screen.width < 900 ? '100%' : '60%' }}/>
                         <Typography type="subheading" color="inherit" className={classes.body} paragraph>
-                            Ajude a expandir o trabalho do Instituto contribuindo mensalmente com a quantia que desejar.
-                            <br/>
-                            <Link to="https://paybox.doare.org/br/paybox?lang=br&amount=50&currency=BRL&values=30,50,150,300,500&orgId=a66bd958-8227-11e7-a51d-f23c913baafa&subscribe=&subscriptionAmount=50&showSubscription=1" rel="noopener noreferrer" target="_blank" className={classes.bolder}>CLIQUE AQUI</Link> e saiba mais.
+                            <Link to="https://paybox.doare.org/br/paybox?lang=br&amount=50&currency=BRL&values=30,50,150,300,500&orgId=a66bd958-8227-11e7-a51d-f23c913baafa&subscribe=&subscriptionAmount=50&showSubscription=1" rel="noopener noreferrer" target="_blank" className={classes.bolder}>Clique aqui e escolha a quantia que deseja contribuir mensalmente</Link>
                         </Typography>
                     </div>
                 </div>
