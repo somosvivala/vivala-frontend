@@ -112,7 +112,7 @@ class InstituteAbout extends Component {
                                     Melhore o seu Mundo
                                 </Typography>
                                 <Typography type="body1" color="inherit" className={classes.textoSliderInstituto + ' texto-slider-instituto'}>
-                                    Projetos de capacitação profissional, mentoria e acesso a capital <br/> para pequenos empreendedores
+                                    Programas de capacitação profissional, mentoria de negócios <br/>e acesso a capital para microempreendedores brasileiros
                                 </Typography>
                             </Grid>
                         </Grid>

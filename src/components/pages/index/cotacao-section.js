@@ -53,7 +53,7 @@ class CotacaoSection extends Component
                                 <List className="let-others-do-it-for-you">
                                     <ListItem rel="noopener noreferrer" className="lodify-item">
                                         <Link to="/cotacao">
-                                            <Typography type="subheading" color="inherit" className="lodify-item-text">E seja atendido <strong>de forma ágil,<br /> personalizada e gratuita</strong></Typography>
+                                            <Typography type="subheading" color="inherit" className="lodify-item-text">E conheça mais de 160 países<br /> com pacotes personalizados.</Typography>
                                         </Link>
                                     </ListItem>
                                 </List>

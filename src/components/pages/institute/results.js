@@ -65,13 +65,13 @@ class InstituteResults extends Component {
                     </Typography>
                     <List>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+11</Typography>
+                            <Typography className={classes.icon}>+17</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Expedições
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+4</Typography>
+                            <Typography className={classes.icon}>+5</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Regiões
                             </Typography>
@@ -83,13 +83,13 @@ class InstituteResults extends Component {
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+200</Typography>
+                            <Typography className={classes.icon}>+300</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Voluntários
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+R$ 150.000</Typography>
+                            <Typography className={classes.icon}>+R$ 200.000</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 Injetados nas economias locais
                             </Typography>

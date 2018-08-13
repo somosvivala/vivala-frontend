@@ -48,7 +48,7 @@ class ImersaoIndex extends Component {
                     <ImersaoHeader videoId={video} />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
-                            Viva experiências locais
+                            Escolha o destino preferido, a melhor data e viva experiências locais
                         </Typography>
                     </div>
                     <div className="servicos-items container">

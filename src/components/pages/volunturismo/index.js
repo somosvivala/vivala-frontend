@@ -48,7 +48,7 @@ class VolunturismoIndex extends Component {
                     <VolunturismoHeader videoId={video} />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
-                            Faça voluntariado ajudando no desenvolvimento de microempreendedores brasileiros
+                            Viaje e faça voluntariado pelo Brasil ajudando no desenvolvimento de microempreendedores brasileiros
                         </Typography>
                     </div>
                     <div className="servicos-items container">
