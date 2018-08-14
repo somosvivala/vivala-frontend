@@ -54,7 +54,7 @@ class Servicos extends Component {
                         <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Imersões</Typography>
-                                <Typography className="subtitle">Viagens de imersão na cultura local através de fornecedores selecionados à dedo</Typography>
+                                <Typography className="subtitle">Escolha o destino preferido, a melhor data e viva experiências locais</Typography>
                             </div>
                         </div>
                     </Link>

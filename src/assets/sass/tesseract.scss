@@ -317,56 +317,56 @@ body {
                     }
                     .frase-destaque-text {
                         font-family: $main-font;
-                        font-size: 90px;
+                        font-size: 80px;
                         color: $vivala-orange;
                         text-shadow: -3px 2px #fff;
                         text-align: left;
                         letter-spacing: -.5px;
 
                         @include tablet-portrait {
-                            font-size: 50px;
+                            font-size: 40px;
                         }
                         @include phone {
-                            font-size: 40px;
+                            font-size: 30px;
                         }
                         .conheca {
                             display: flex;
                             margin-left: 55px;
-                            font-size: 115px;
+                            font-size: 90px;
 
                             @include tablet-portrait {
-                                font-size: 85px;
+                                font-size: 50px;
                                 margin-left: 30px;
                             }
                             @include phone {
-                                font-size: 60px;
+                                font-size: 35px;
                                 margin-left: 20px;
                             }
                         }
                         .plus {
                             position: relative;
                             left: 20px;
-                            font-size: 105px;
+                            font-size: 80px;
 
                             @include tablet-portrait {
-                                font-size: 65px;
+                                font-size: 45px;
                                 left: 10px;
                             }
                             @include phone {
-                                font-size: 40px;
+                                font-size: 25px;
                                 left: 10px;
                             }
                         }
                         .number {
-                            font-size: 135px;
+                            font-size: 105px;
                             font-weight: 700;
                             vertical-align: middle;
 
                             @include tablet-portrait {
-                                font-size: 95px;
+                                font-size: 70px;
                             }
                             @include phone {
-                                font-size: 60px;
+                                font-size: 35px;
                             }
                         }
                     }
