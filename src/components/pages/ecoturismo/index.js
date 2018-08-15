@@ -54,7 +54,7 @@ class EcoturismoIndex extends Component {
                     </div>
                     <Image
                         cloudName="vivala"
-                        publicId={window.screen.width > 1200 ? 'Experiencias_Desktop.001_sgerog' : window.screen.width > 900 ? 'Experiencias_Tablet.001_qulofc' : 'Experiencias_Mobile.001_pokotg' }
+                        publicId={window.screen.width > 1200 ? 'Experiencias_Desktop.001_sgerog' : window.screen.width > 900 ? 'Experiencias_Tablet.001_qulofc' : 'Experiencias_Tablet.001_qulofc' }
                         width="100%"
                         alt="Tabela horarios experiências 2018"
                     />

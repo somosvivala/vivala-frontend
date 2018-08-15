@@ -55,7 +55,7 @@ class VolunturismoIndex extends Component {
                     </div>
                     <Image
                         cloudName="vivala"
-                        publicId={window.screen.width > 1200 ? 'Expedicoes_Desktop.002_pdrz29' : window.screen.width > 900 ? 'Expedicoes_Tablet.002_s9tncd' : 'Expedicoes_Mobile.002_booc1f' }
+                        publicId={window.screen.width > 1200 ? 'Expedicoes_Desktop.002_pdrz29' : window.screen.width > 900 ? 'Expedicoes_Tablet.002_s9tncd' : 'Expedicoes_Tablet.002_s9tncd' }
                         width="100%"
                         alt="Tabela horarios expedições 2018"
                     />
