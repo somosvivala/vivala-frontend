@@ -7,6 +7,7 @@ import ServicosItems from '../../servicos-items';
 import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
 import Typography from "material-ui/Typography";
+import {Image} from 'cloudinary-react';
 
 class VolunturismoIndex extends Component {
     componentWillMount() {
@@ -46,11 +47,19 @@ class VolunturismoIndex extends Component {
                 </Helmet>
                 <div className="servicos-page container">
                     <VolunturismoHeader videoId={video} />
+
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
                             Viaje e faça voluntariado pelo Brasil ajudando no desenvolvimento de comunidades pelo país
                         </Typography>
                     </div>
+                    <Image
+                        cloudName="vivala"
+                        publicId={window.screen.width > 1200 ? 'Expedicoes_Desktop.002_pdrz29' : window.screen.width > 900 ? 'Expedicoes_Tablet.002_s9tncd' : 'Expedicoes_Mobile.002_booc1f' }
+                        width="100%"
+                        alt="Tabela horarios expedições 2018"
+                    />
+
                     <div className="servicos-items container">
                         { items.length > 0 && <ServicosItems items={items} key="volunturismo-items" /> }
                     </div>

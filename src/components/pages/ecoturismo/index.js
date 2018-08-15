@@ -7,6 +7,7 @@ import ServicosItems from '../../servicos-items';
 import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
 import Typography from "material-ui/Typography";
+import {Image} from 'cloudinary-react';
 
 class EcoturismoIndex extends Component {
     componentWillMount() {
@@ -51,6 +52,12 @@ class EcoturismoIndex extends Component {
                             Encontre beleza e equilíbrio através do contato com a natureza no Brasil
                         </Typography>
                     </div>
+                    <Image
+                        cloudName="vivala"
+                        publicId={window.screen.width > 1200 ? 'Experiencias_Desktop.001_sgerog' : window.screen.width > 900 ? 'Experiencias_Tablet.001_qulofc' : 'Experiencias_Mobile.001_pokotg' }
+                        width="100%"
+                        alt="Tabela horarios experiências 2018"
+                    />
                     <div className="servicos-items container">
                         { items.length > 0 && <ServicosItems items={items} key="ecoturismo-items" /> }
                     </div>
