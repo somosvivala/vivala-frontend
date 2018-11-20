@@ -7,6 +7,7 @@ import ServicosItems from '../../servicos-items';
 import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
 import Typography from "material-ui/Typography";
+import {Image} from 'cloudinary-react';
 
 class ImersaoIndex extends Component {
     componentWillMount() {
@@ -50,6 +51,13 @@ class ImersaoIndex extends Component {
                         <Typography className="frase-impacto-title">
                             Escolha o destino preferido, a melhor data e viva experiências locais
                         </Typography>
+                    </div>
+                    <div className="container-calendario">
+                        <Image
+                            cloudName="vivala"
+                            publicId={window.screen.width > 1200 ? 'Agenda_2019.001_1_uvbbdr' : window.screen.width > 900 ? 'Agenda_2019.001_1_uvbbdr' : 'Agenda_2019.001_1_uvbbdr' }
+                            alt="Tabela horarios experiências 2019"
+                        />
                     </div>
                     <div className="servicos-items container">
                         { items.length > 0 && <ServicosItems items={items} key="imersoes-items" /> }

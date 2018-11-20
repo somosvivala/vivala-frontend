@@ -1536,4 +1536,25 @@ body {
             }
         }
     }
+
+
+
+    /** Imagem com calendario antes dos produtos **/
+    
+    .container-calendario {
+        overflow:auto;
+        img {
+            width: 100%;
+            @include phone {
+                width: auto;
+                height: 75vh;
+            }
+            @include tablet {
+                width: auto;
+                height: 65vh;
+            }
+        }
+    }
+
+
 }

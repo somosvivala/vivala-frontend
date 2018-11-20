@@ -53,12 +53,13 @@ class VolunturismoIndex extends Component {
                             Viaje e faça voluntariado pelo Brasil ajudando no desenvolvimento de comunidades pelo país
                         </Typography>
                     </div>
-                    <Image
-                        cloudName="vivala"
-                        publicId={window.screen.width > 1200 ? 'Expedicoes_Desktop.002_pdrz29' : window.screen.width > 900 ? 'Expedicoes_Tablet.002_s9tncd' : 'Expedicoes_Tablet.002_s9tncd' }
-                        width="100%"
-                        alt="Tabela horarios expedições 2018"
-                    />
+                    <div className="container-calendario">
+                        <Image
+                            cloudName="vivala"
+                            publicId={window.screen.width > 1200 ? 'Agenda_2019_Volunturismo_o0cze0' : window.screen.width > 900 ? 'Agenda_2019_Volunturismo_o0cze0' : 'Agenda_2019_Volunturismo_o0cze0' }
+                            alt="Tabela horarios experiências 2019"
+                        />
+                    </div>
 
                     <div className="servicos-items container">
                         { items.length > 0 && <ServicosItems items={items} key="volunturismo-items" /> }

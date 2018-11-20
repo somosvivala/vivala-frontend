@@ -52,12 +52,13 @@ class EcoturismoIndex extends Component {
                             Encontre beleza e equilíbrio através do contato com a natureza no Brasil
                         </Typography>
                     </div>
-                    <Image
-                        cloudName="vivala"
-                        publicId={window.screen.width > 1200 ? 'Experiencias_Desktop.001_sgerog' : window.screen.width > 900 ? 'Experiencias_Tablet.001_qulofc' : 'Experiencias_Tablet.001_qulofc' }
-                        width="100%"
-                        alt="Tabela horarios experiências 2018"
-                    />
+                    <div className="container-calendario">
+                        <Image
+                            cloudName="vivala"
+                            publicId={window.screen.width > 1200 ? 'Agenda_2019_Ecoturismo_j77ecn' : window.screen.width > 900 ? 'Agenda_2019_Ecoturismo_j77ecn' : 'Agenda_2019_Ecoturismo_j77ecn' }
+                            alt="Tabela horarios experiências 2019"
+                        />
+                    </div>
                     <div className="servicos-items container">
                         { items.length > 0 && <ServicosItems items={items} key="ecoturismo-items" /> }
                     </div>

@@ -10,6 +10,12 @@
 	}
 }
 
+@mixin tablet {
+    @media (min-width: #{$tablet-portrait}) and (max-width: #{$tablet-landscape - 1px}) {
+        @content;
+    }
+}
+
 @mixin tablet-portrait {
     @media (min-width: #{$tablet-portrait}) and (max-width: #{$tablet-landscape - 1px}) and (orientation : portrait) {
         @content;
