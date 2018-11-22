@@ -14,7 +14,7 @@ class EcoturismoHeader extends Component {
                         Ecoturismo
                     </Typography>
                     <Typography type="body1" className="section-subtitle">
-                        Experiências de profunda conexão com a natureza
+                        Experiências <strong>em grupo</strong> de profunda conexão com a natureza <strong>em finais de semana e feriados</strong>
                     </Typography>
                 </Grid>
 

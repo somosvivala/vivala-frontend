@@ -7,6 +7,7 @@ import ServicosItems from '../../servicos-items';
 import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
 import Typography from "material-ui/Typography";
+import {Image} from 'cloudinary-react';
 
 class ImersaoIndex extends Component {
     componentWillMount() {
@@ -48,7 +49,7 @@ class ImersaoIndex extends Component {
                     <ImersaoHeader videoId={video} />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
-                            Escolha o destino preferido, a melhor data e viva experiências locais
+                            Escolha seu destino, vá sozinho ou com alguns amigos e tenha um contato profundo com a natureza no Brasil 
                         </Typography>
                     </div>
                     <div className="servicos-items container">

@@ -50,15 +50,16 @@ class VolunturismoIndex extends Component {
 
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
-                            Viaje e faça voluntariado pelo Brasil ajudando no desenvolvimento de comunidades pelo país
+                            Viaje e faça voluntariado pelo Brasil ajudando na capacitação profissional de  comunidades pelo país
                         </Typography>
                     </div>
-                    <Image
-                        cloudName="vivala"
-                        publicId={window.screen.width > 1200 ? 'Expedicoes_Desktop.002_pdrz29' : window.screen.width > 900 ? 'Expedicoes_Tablet.002_s9tncd' : 'Expedicoes_Tablet.002_s9tncd' }
-                        width="100%"
-                        alt="Tabela horarios expedições 2018"
-                    />
+                    <div className="container-calendario barra-rolagem-volunturismo">
+                        <Image
+                            cloudName="vivala"
+                            publicId={window.screen.width > 1200 ? 'WhatsApp_Image_2018-11-21_at_12.44.46_xq4uio' : window.screen.width > 900 ? 'WhatsApp_Image_2018-11-21_at_12.44.46_xq4uio' : 'WhatsApp_Image_2018-11-21_at_12.44.46_xq4uio' }
+                            alt="Tabela horarios experiências 2019"
+                        />
+                    </div>
 
                     <div className="servicos-items container">
                         { items.length > 0 && <ServicosItems items={items} key="volunturismo-items" /> }
