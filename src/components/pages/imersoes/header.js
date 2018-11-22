@@ -14,7 +14,7 @@ class ImersaoHeader extends Component {
                         Imersões
                     </Typography>
                     <Typography type="body1" className="section-subtitle">
-                         Roteiros incríveis para ir quando quiser
+                        Experiências <strong>individuais ou em pequenos grupos</strong> de profunda conexão com a natureza <strong>para ir quando quiser</strong>.
                     </Typography>
                 </Grid>
 
