@@ -55,7 +55,7 @@ class EcoturismoIndex extends Component {
                     <div className="container-calendario barra-rolagem-ecoturismo">
                         <Image
                             cloudName="vivala"
-                            publicId={window.screen.width > 1200 ? 'WhatsApp_Image_2018-11-21_at_12.44.57_de87ye' : window.screen.width > 900 ? 'WhatsApp_Image_2018-11-21_at_12.44.57_de87ye' : 'WhatsApp_Image_2018-11-21_at_12.44.57_de87ye' }
+                            publicId={window.screen.width > 1200 ? 'Agenda_2019.003_2_vbroqc' : window.screen.width > 900 ? 'Agenda_2019.003_2_vbroqc' : 'Agenda_2019.003_2_vbroqc' }
                             alt="Tabela horarios experiências 2019"
                         />
                     </div>

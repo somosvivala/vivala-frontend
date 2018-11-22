@@ -11,10 +11,10 @@ class ImersaoHeader extends Component {
             <Grid container className="servicos-header " gutter={0} align="center" justify="center">
                 <Grid item xs={12} className="header-content">
                     <Typography type="headline" color="accent" className="section-title" gutterBottom>
-                        Imersões
+                        Ecoturismo Privado
                     </Typography>
                     <Typography type="body1" className="section-subtitle">
-                        Experiências <strong>individuais ou em pequenos grupos</strong> de profunda conexão com a natureza <strong>para ir quando quiser</strong>.
+                        Experiências individuais ou em pequenos grupos de profunda conexão com a natureza para ir quando quiser.
                     </Typography>
                 </Grid>
 

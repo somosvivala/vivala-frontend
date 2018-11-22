@@ -56,7 +56,7 @@ class VolunturismoIndex extends Component {
                     <div className="container-calendario barra-rolagem-volunturismo">
                         <Image
                             cloudName="vivala"
-                            publicId={window.screen.width > 1200 ? 'WhatsApp_Image_2018-11-21_at_12.44.46_xq4uio' : window.screen.width > 900 ? 'WhatsApp_Image_2018-11-21_at_12.44.46_xq4uio' : 'WhatsApp_Image_2018-11-21_at_12.44.46_xq4uio' }
+                            publicId={window.screen.width > 1200 ? 'Agenda_2019.002_2_xi66pg' : window.screen.width > 900 ? 'Agenda_2019.002_2_xi66pg' : 'Agenda_2019.002_2_xi66pg' }
                             alt="Tabela horarios experiências 2019"
                         />
                     </div>
