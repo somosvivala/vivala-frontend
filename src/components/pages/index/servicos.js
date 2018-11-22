@@ -37,24 +37,24 @@ class Servicos extends Component {
                     <Link to="/volunturismo">
                         <div className={this.state.classBig} id="volunturismo" style={{ backgroundImage: `url(${fotoVolunturismo})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Volunturismo</Typography>
-                                <Typography className="subtitle">Expedições <strong>em grupo</strong> de turismo e voluntariado <strong>em finais de semana e feriados</strong></Typography>
+                                <Typography className="title">Volunturismo em grupo</Typography>
+                                <Typography className="subtitle">Expedições em grupo de turismo e voluntariado em finais de semana e feriados</Typography>
                             </div>
                         </div>
                     </Link>
                     <Link to="/ecoturismo">
                         <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Ecoturismo</Typography>
-                                <Typography className="subtitle-home-servicos">Experiências <strong>em grupo</strong> de profunda conexão com a natureza <strong>em finais de semana e feriados</strong></Typography>
+                                <Typography className="title">Ecoturismo em grupo</Typography>
+                                <Typography className="subtitle-home-servicos">Experiências em grupo de profunda conexão com a natureza em finais de semana e feriados</Typography>
                             </div>
                         </div>
                     </Link>
                     <Link to="/imersoes">
                         <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Ecoturismo</Typography>
-                                <Typography className="subtitle-home-servicos">Experiências <strong>individuais ou em pequenos grupos</strong> de profunda conexão com a natureza <strong>para ir quando quiser</strong>.</Typography>
+                                <Typography className="title">Ecoturismo privado</Typography>
+                                <Typography className="subtitle-home-servicos">Experiências individuais ou em pequenos grupos de profunda conexão com a natureza para ir quando quiser.</Typography>
                             </div>
                         </div>
                     </Link>

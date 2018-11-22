@@ -11,10 +11,10 @@ class VolunturismoHeader extends Component {
             <Grid container className="servicos-header " gutter={0} align="center" justify="center">
                 <Grid item xs={12} className="header-content">
                     <Typography type="headline" color="accent" className="section-title" gutterBottom>
-                        Volunturismo
+                        Volunturismo em Grupo
                     </Typography>
                     <Typography type="body1" className="section-subtitle">
-                        Expedições <strong>em grupo</strong> de turismo e voluntariado <strong>em finais de semana e feriados</strong>                    </Typography>
+                        Expedições em grupo de turismo e voluntariado em finais de semana e feriados                    </Typography>
                 </Grid>
 
                 <Grid className="video-wrapper" item xs={12}>
