@@ -145,7 +145,6 @@ class SearchPageIndex extends Component {
                     </div>
                 </div>
 
-                <SearchButton darkBg="true" />
             </div>
         );
     }

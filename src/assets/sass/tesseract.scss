@@ -69,7 +69,10 @@ body {
                     font-size: 5rem;
 
                     @include desktop-1440 {
-                        font-size: 4rem;
+                        font-size: 3.7rem;
+                    }
+                    @include desktop-1366 {
+                        font-size: 3.4rem;
                     }
                     @include tablet-landscape {
                         font-size: 3.2rem;
@@ -265,6 +268,19 @@ body {
                             margin-bottom: 10px;
                         }
                     }
+                    .subtitle-home-servicos {
+                        position: relative;
+                        z-index: 1;
+                        font-size: 1.4rem;
+                        color: inherit;
+                        line-height: 2rem;
+
+                        @include phone {
+                            font-size: 1.2rem;
+                            padding-right: 30px;
+                            line-height: 1.4rem;
+                        }
+                    }
                     .subtitle {
                         position: relative;
                         z-index: 1;
@@ -317,56 +333,56 @@ body {
                     }
                     .frase-destaque-text {
                         font-family: $main-font;
-                        font-size: 90px;
+                        font-size: 80px;
                         color: $vivala-orange;
                         text-shadow: -3px 2px #fff;
                         text-align: left;
                         letter-spacing: -.5px;
 
                         @include tablet-portrait {
-                            font-size: 50px;
+                            font-size: 40px;
                         }
                         @include phone {
-                            font-size: 40px;
+                            font-size: 30px;
                         }
                         .conheca {
                             display: flex;
                             margin-left: 55px;
-                            font-size: 115px;
+                            font-size: 90px;
 
                             @include tablet-portrait {
-                                font-size: 85px;
+                                font-size: 50px;
                                 margin-left: 30px;
                             }
                             @include phone {
-                                font-size: 60px;
+                                font-size: 35px;
                                 margin-left: 20px;
                             }
                         }
                         .plus {
                             position: relative;
                             left: 20px;
-                            font-size: 105px;
+                            font-size: 80px;
 
                             @include tablet-portrait {
-                                font-size: 65px;
+                                font-size: 45px;
                                 left: 10px;
                             }
                             @include phone {
-                                font-size: 40px;
+                                font-size: 25px;
                                 left: 10px;
                             }
                         }
                         .number {
-                            font-size: 135px;
+                            font-size: 105px;
                             font-weight: 700;
                             vertical-align: middle;
 
                             @include tablet-portrait {
-                                font-size: 95px;
+                                font-size: 70px;
                             }
                             @include phone {
-                                font-size: 60px;
+                                font-size: 35px;
                             }
                         }
                     }
@@ -642,10 +658,10 @@ body {
                 color: $vivala-darkgrey;
                 font-style: italic;
                 font-weight: 900;
-                font-size: 2.8rem;
+                font-size: 2.1rem;
 
                 @include phone {
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -1253,10 +1269,10 @@ body {
         padding: 70px 15px;
 
         .seje-um-associado-frase {
-            font-size: 2.5rem;
-            max-width: 46vw;
+            font-size: 2rem;
+            max-width: 56vw;
             margin: 0 auto 50px;
-            line-height: 3rem;
+            line-height: 2.5rem;
 
             @include desktop-1600 {
                 max-width: 57vw;
@@ -1272,12 +1288,12 @@ body {
             }
             @include tablet-portrait {
                 max-width: 95%;
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             @include phone {
                 max-width: 100%;
-                font-size: 1.6rem;
-                line-height: 1.9rem;
+                font-size: 1.2rem;
+                line-height: 1.7rem;
             }
         }
         .seje-um-associado-btn {
@@ -1536,4 +1552,87 @@ body {
             }
         }
     }
+
+
+
+    /** Imagem com calendario antes dos produtos **/
+    
+    .container-calendario {
+        padding: 5px;
+        overflow:auto;
+        img {
+            width: 100%;
+            @include phone {
+                width: auto;
+                height: 75vh;
+            }
+            @include tablet {
+                width: auto;
+                height: 65vh;
+            }
+        }
+    }
+
+
 }
+
+.barra-rolagem-ecoturismo {
+    @include phone {
+        /* !important is needed sometimes */
+        &::-webkit-scrollbar {
+            width: 12px !important;
+            height: 10px !important;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3) !important;
+            -webkit-border-radius: 14px !important;
+            border-radius: 14px !important;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 14px !important;
+            border-radius: 14px !important;
+            background: $vivala-orange !important; 
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.5) !important; 
+
+        }
+        &::-webkit-scrollbar-thumb:window-inactive {
+            background: $vivala-orange !important; 
+        }
+    }
+
+}
+
+.barra-rolagem-volunturismo {
+    @include phone {
+        /* !important is needed sometimes */
+        &::-webkit-scrollbar {
+            width: 12px !important;
+            height: 10px !important;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3) !important;
+            -webkit-border-radius: 14px !important;
+            border-radius: 14px !important;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 14px !important;
+            border-radius: 14px !important;
+            background: $vivala-lightturquoise !important; 
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.5) !important; 
+
+        }
+        &::-webkit-scrollbar-thumb:window-inactive {
+            background: $vivala-lightturquoise !important; 
+        }
+    }
+
+}
+

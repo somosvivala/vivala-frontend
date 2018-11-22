@@ -7,6 +7,7 @@ import ServicosItems from '../../servicos-items';
 import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
 import Typography from "material-ui/Typography";
+import {Image} from 'cloudinary-react';
 
 class EcoturismoIndex extends Component {
     componentWillMount() {
@@ -48,8 +49,15 @@ class EcoturismoIndex extends Component {
                     <EcoturismoHeader videoId={video} />
                     <div className="frase-impacto">
                         <Typography className="frase-impacto-title">
-                            Encontre beleza e equilíbrio através do contato com a natureza no Brasil
+                            Encontre paisagens de tirar o fôlego e equilíbrio interno através do contato com a natureza no Brasil
                         </Typography>
+                    </div>
+                    <div className="container-calendario barra-rolagem-ecoturismo">
+                        <Image
+                            cloudName="vivala"
+                            publicId={window.screen.width > 1200 ? 'WhatsApp_Image_2018-11-21_at_12.44.57_de87ye' : window.screen.width > 900 ? 'WhatsApp_Image_2018-11-21_at_12.44.57_de87ye' : 'WhatsApp_Image_2018-11-21_at_12.44.57_de87ye' }
+                            alt="Tabela horarios experiências 2019"
+                        />
                     </div>
                     <div className="servicos-items container">
                         { items.length > 0 && <ServicosItems items={items} key="ecoturismo-items" /> }

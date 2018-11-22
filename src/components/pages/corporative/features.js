@@ -23,7 +23,7 @@ class CorporativeFeatures extends Component {
                         />
 
                         <Typography type="subheading" color="inherit" className="corporativo-item-title">
-                            Viagens personalizados para voluntariado e ecoturismo
+                            Viagens personalizadas para voluntariado e ecoturismo
                         </Typography>
                     </ListItem>
                     <ListItem className="corporativo-itens">

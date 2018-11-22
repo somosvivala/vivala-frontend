@@ -30,7 +30,7 @@ class Servicos extends Component {
             <div className="container servicos">
                 <div className="row">
                     <div className="section-header">
-                        <h2><span className="viaje">Viaje pelo Brasil</span> <span className="roteiros">com roteiros especiais</span></h2>
+                        <h2><span className="viaje">Black Week Vivalá 15% off para viagens em grupo</span></h2>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
@@ -38,7 +38,7 @@ class Servicos extends Component {
                         <div className={this.state.classBig} id="volunturismo" style={{ backgroundImage: `url(${fotoVolunturismo})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Volunturismo</Typography>
-                                <Typography className="subtitle">Expedições de turismo e voluntariado</Typography>
+                                <Typography className="subtitle">Expedições <strong>em grupo</strong> de turismo e voluntariado <strong>em finais de semana e feriados</strong></Typography>
                             </div>
                         </div>
                     </Link>
@@ -46,15 +46,15 @@ class Servicos extends Component {
                         <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Ecoturismo</Typography>
-                                <Typography className="subtitle">Experiências de profunda conexão com a natureza</Typography>
+                                <Typography className="subtitle-home-servicos">Experiências <strong>em grupo</strong> de profunda conexão com a natureza <strong>em finais de semana e feriados</strong></Typography>
                             </div>
                         </div>
                     </Link>
                     <Link to="/imersoes">
                         <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Imersões</Typography>
-                                <Typography className="subtitle">Viagens de imersão na cultura local através de fornecedores selecionados à dedo</Typography>
+                                <Typography className="title">Ecoturismo</Typography>
+                                <Typography className="subtitle-home-servicos">Experiências <strong>individuais ou em pequenos grupos</strong> de profunda conexão com a natureza <strong>para ir quando quiser</strong>.</Typography>
                             </div>
                         </div>
                     </Link>

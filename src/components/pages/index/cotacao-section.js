@@ -15,7 +15,7 @@ class CotacaoSection extends Component
                 <div className="row box-frase">
                     <div className="frase-destaque">
                         {/*<img src={FraseConhecaPng} alt="conheça mais de 160 países"/>*/}
-                        <Typography type="title" color="inherit" className="frase-destaque-text"><span className="conheca">Conheça</span> <span className="plus">+</span> de <span className="number">160</span> países</Typography>
+                        <Typography type="title" color="inherit" className="frase-destaque-text"><span className="conheca">Ou conheça</span> <span className="plus">+</span> de <span className="number">160</span> países</Typography>
                         <img src={AviaozinhoPng} id="aviaozinho" alt="aviãozinho"/>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ class CotacaoSection extends Component
                                 <List className="let-others-do-it-for-you">
                                     <ListItem rel="noopener noreferrer" className="lodify-item">
                                         <Link to="/cotacao">
-                                            <Typography type="subheading" color="inherit" className="lodify-item-text">E seja atendido <strong>de forma ágil,<br /> personalizada e gratuita</strong></Typography>
+                                            <Typography type="subheading" color="inherit" className="lodify-item-text">E seja atendido <strong>de forma ágil,<br/>personalizada e gratuita<br/></strong>.</Typography>
                                         </Link>
                                     </ListItem>
                                 </List>
