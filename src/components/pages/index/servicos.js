@@ -30,7 +30,7 @@ class Servicos extends Component {
             <div className="container servicos">
                 <div className="row">
                     <div className="section-header">
-                        <h2><span className="viaje">Black Week Vivalá 15% off para viagens em grupo</span></h2>
+                        <h2><span className="viaje">Black Week Vivalá: 15% off para viagens em grupo</span></h2>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
