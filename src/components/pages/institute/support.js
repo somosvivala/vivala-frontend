@@ -50,7 +50,7 @@ class InstituteSupport extends Component {
                         </Typography>
                         <Youtube videoId="CPxNSZNqYTE" opts={{ width: window.screen.width < 900 ? '100%' : '60%' }}/>
                         <Typography type="subheading" color="inherit" className={classes.body} paragraph>
-                            <Link to="https://paybox.doare.org/br/paybox?lang=br&amount=50&currency=BRL&values=30,50,150,300,500&orgId=a66bd958-8227-11e7-a51d-f23c913baafa&subscribe=&subscriptionAmount=50&showSubscription=1" rel="noopener noreferrer" target="_blank" className={classes.bolder}>Clique aqui e escolha a quantia que deseja contribuir mensalmente</Link>
+                            <a href="https://paybox.doare.org/br/paybox?lang=br&amount=50&currency=BRL&values=30,50,150,300,500&orgId=a66bd958-8227-11e7-a51d-f23c913baafa&subscribe=&subscriptionAmount=50&showSubscription=1" rel="noopener noreferrer" target="_blank" className={classes.bolder}>Clique aqui e escolha a quantia que deseja contribuir mensalmente</a>
                         </Typography>
                     </div>
                 </div>
