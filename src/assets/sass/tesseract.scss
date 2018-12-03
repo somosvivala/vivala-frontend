@@ -54,7 +54,7 @@ body {
             @include phone {
                 text-align: center;
             }
-            h2 {
+            h2,h1 {
                 font-family: $main-font;
                 color: $vivala-orange;
             }
@@ -65,7 +65,7 @@ body {
                     width: 75%;
                     margin: 0 auto;
                 }
-                h2 {
+                h2,h1 {
                     font-size: 5rem;
 
                     @include desktop-1440 {
@@ -83,7 +83,7 @@ body {
                         flex-direction: column;
                     }
                     @include phone {
-                        font-size: 2rem;
+                        font-size: 2.1rem;
                         display: inline-flex;
                         flex-direction: column;
                         width: 100%;
@@ -95,7 +95,7 @@ body {
                         }
                         @include phone {
                             padding-right: 0;
-                            text-align: left;
+                            text-align: center;
                         }
                     }
                     .roteiros {
@@ -262,6 +262,7 @@ body {
                         margin-bottom: 16px;
                         letter-spacing: 0.5px;
                         color: inherit;
+                        line-height:1.5rem;
 
                         @include phone {
                             font-size: 1.8rem;
