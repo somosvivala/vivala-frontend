@@ -7,6 +7,7 @@ import {maskTelephone} from '../../../../utils/normalizations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
+import Input from 'material-ui/Input';
 
 class LodingSeventhStep extends Component {
     render() {
@@ -67,9 +68,9 @@ class LodingSeventhStep extends Component {
                             </Button>
                         </Grid>
                         <Grid gutter={0} container item xs={6} justify="flex-end">
-                            <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting}>
-                                Enviar
-                            </Button>
+                            
+                            <Input disabled={invalid || pristine || submitting} disableUnderline={true} type="submit" value="Enviar" className="btnSubmit" />
+
                         </Grid>
                     </Grid>
                 </Grid>
