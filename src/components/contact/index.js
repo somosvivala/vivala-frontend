@@ -98,9 +98,7 @@ class ContactForm extends Component {
                         }
 
                         <Grid gutter={0} container justify="flex-end" style={{ marginTop: 30 }}>
-                            <Button raised color="accent" type="submit" disabled={invalid || pristine || submitting}>
-                                <Input disableUnderline={true} type="submit" value="Enviar" className="btnSubmit" />
-                            </Button>
+                            <Input disabled={invalid || pristine || submitting} disableUnderline={true} type="submit" value="Enviar" className="btnSubmit" />
                         </Grid>
                     </Grid>
                 </form>

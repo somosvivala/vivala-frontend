@@ -5,6 +5,7 @@ import {email, required} from '../../utils/validations';
 import Button from 'material-ui/Button';
 import TextField from '../form-fields/text';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
+import Input from 'material-ui/Input';
 
 const styleSheet = createStyleSheet('Newsletter', theme => ({
     input: {
@@ -46,14 +47,9 @@ class NewsletterForm extends Component {
                     validate={email}
                     className="newsletter-form-input"
                 />
-                <Button type="submit"
-                        raised
-                        color="primary"
-                        className="newsletter-form-btn"
-                        disabled={invalid || pristine || submitting}
-                >
-                    Cadastrar
-                </Button>
+                
+            <Input disabled={invalid || pristine || submitting} disableUnderline={true} type="submit" value="Cadastrar" className="btnSubmit" />
+
             </form>
         );
     }
