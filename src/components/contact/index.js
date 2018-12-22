@@ -5,6 +5,7 @@ import {email, required} from '../../utils/validations';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
+import Input from 'material-ui/Input';
 import TextField from '../form-fields/text';
 import {maskTelephone} from '../../utils/normalizations';
 
@@ -98,7 +99,7 @@ class ContactForm extends Component {
 
                         <Grid gutter={0} container justify="flex-end" style={{ marginTop: 30 }}>
                             <Button raised color="accent" type="submit" disabled={invalid || pristine || submitting}>
-                                Enviar
+                                <Input disableUnderline={true} type="submit" value="Enviar" className="btnSubmit" />
                             </Button>
                         </Grid>
                     </Grid>

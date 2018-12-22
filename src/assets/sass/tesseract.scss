@@ -1638,3 +1638,25 @@ body {
 
 }
 
+button {
+
+    .btnSubmit input {
+        color: white;
+        height: 0.8em;
+        padding: 4px 0;
+    }
+
+    &:disabled {
+        .btnSubmit input {
+            color: rgba(0, 0, 0, 0.26);
+            height: 0.8em;
+            padding: 4px 0;
+        }
+
+    }
+}
+
+
+.pt-6 {
+    padding-top: 6rem!important;
+}
