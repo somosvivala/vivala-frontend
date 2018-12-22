@@ -66,13 +66,8 @@ class ContactIndex extends Component {
 
         return (
             <div className={classes.bg}>
-                <div className="container padding">
+                <div className="container padding pt-6">
                     <Grid gutter={24} container>
-                        <Grid xs={12} item >
-                            <Typography type="headline">
-                                Contato
-                            </Typography>
-                        </Grid>
                         <Grid xs={12} item >
                             <Typography type="title" color="inherit" gutterBottom>
                                 <a href="tel://+551126452632"><strong>11 2645-2632</strong></a>

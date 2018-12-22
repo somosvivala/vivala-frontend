@@ -24,39 +24,39 @@
 }
 
 .slick-next.white {
-  z-index: 99999999;
+  z-index: 99;
   &:before {
     content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958269/arrow-right-branco_cqtzam.png);
   }
 }
 
 .slick-prev.white {
-  z-index: 999999999;
+  z-index: 99;
   &:before {
     content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958269/arrow-left-branco_zzg8ao.png);
   }
 }
 .slick-next.orange {
-  z-index: 99999999;
+  z-index: 99;
   &:before {
     content: url(https://i.imgur.com/QczAgZ3.png);
   }
 }
 
 .slick-prev.orange {
-  z-index: 999999999;
+  z-index: 99;
   &:before {
     content: url(https://i.imgur.com/KtapxVj.png);
   }
 }
 .slick-prev.instituto {
-  z-index: 999999999;
+  z-index: 99;
   &:before {
     content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958269/arrow-left-instituto_c027pe.png);
   }
 }
 .slick-next.instituto {
-  z-index: 999999999;
+  z-index: 99;
   &:before {
     content: url(https://res.cloudinary.com/vivala/image/upload/c_scale,w_13/v1503958269/arrow-right-instituto_i0c0ko.png);
   }
@@ -78,11 +78,11 @@
 
 .fix-slider {
   .slick-prev {
-    z-index: 99999;
+    z-index: 99;
     left: 0 !important;
   }
   .slick-next {
-    z-index: 99999;
+    z-index: 99;
     right: 0 !important;
   }
 }
