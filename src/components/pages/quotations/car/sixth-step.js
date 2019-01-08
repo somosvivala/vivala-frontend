@@ -15,6 +15,7 @@ class CarSixthStep extends Component {
 
         return (
             <form onSubmit={handleSubmit} className="quotation-form">
+
                 <Grid container gutter={24}>
                     <Grid item xs={12}>
                         <Typography type="title" color="inherit" style={{ marginBottom: 20 }}>
@@ -68,7 +69,24 @@ class CarSixthStep extends Component {
                             </Button>
                         </Grid>
                         <Grid gutter={0} container item xs={6} justify="flex-end">
-                            <Input disabled={invalid || pristine || submitting} disableUnderline={true} type="submit" value="Enviar" className="btnSubmit" />
+                            <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting} onClick={handleSubmit(data => {
+
+                                data.token_rdstation = document.getElementsByName('token_rdstation')[0].value;
+                                data.identificador = "teste formulario via api";
+
+                                let dataFinal = Object.keys(data).map(function(idx) {
+                                    return {
+                                        name: idx,
+                                        value: data[idx]
+                                    }
+                                });
+
+                                window.RdIntegration.post(dataFinal);
+                                this.props.onSubmit(data);
+
+                            })}>
+                                Enviar
+                            </Button>
                         </Grid>
                     </Grid>
                 </Grid>
