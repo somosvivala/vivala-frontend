@@ -3,11 +3,7 @@ import {Helmet} from "react-helmet";
 import PropTypes from 'prop-types';
 import AgentsHeader from './header';
 import AgentsList from './list';
-import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
-import {Link} from 'react-router-dom';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
-import FontAwesome from 'react-fontawesome';
 
 
 const styleSheet = createStyleSheet('AgentsIndex', theme => ({
@@ -28,8 +24,6 @@ const styleSheet = createStyleSheet('AgentsIndex', theme => ({
 
 class AgentsIndex extends Component {
     render() {
-        const { classes } = this.props;
-        const button = 'Receba sua cotacao em 24H';
         return (
             <div className="agentes-page content-wrapper">
                 <Helmet>

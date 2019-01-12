@@ -7,7 +7,6 @@ import ServicosItems from '../../servicos-items';
 import BadRequestError from '../../errors/404';
 import LoadingInfinite from '../../loadings/infinite';
 import Typography from "material-ui/Typography";
-import {Image} from 'cloudinary-react';
 
 class ImersaoIndex extends Component {
     componentWillMount() {

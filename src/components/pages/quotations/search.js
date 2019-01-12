@@ -72,16 +72,6 @@ class QuotationsSearch extends Component {
                               Passeios
                             </Button>
                         </Link>
-                        <Link to="/cotacao/cruzeiro">
-                            <Button raised color="primary" className={classes.button}>
-                              Cruzeiros
-                            </Button>
-                        </Link>
-                        <Link to="/cotacao/rodoviario">
-                            <Button raised color="primary" className={classes.button}>
-                               Ônibus
-                            </Button>
-                        </Link>
                     </div>
                 </div>
             </div>
