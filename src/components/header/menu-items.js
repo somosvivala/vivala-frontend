@@ -11,10 +11,10 @@ class MenuItems extends Component {
         var cotacaoLink, cotacaoNome = '';
 
         if ( window.screen.width < 900 ) {
-            cotacaoLink = 'cotacao';
+            cotacaoLink = '/cotacao';
             cotacaoNome = 'Peça uma cotação';
         } else {
-            cotacaoLink = 'busque-sua-viagem';
+            cotacaoLink = '/busque-sua-viagem';
             cotacaoNome = 'Busque Sua Viagem';
         }
 
