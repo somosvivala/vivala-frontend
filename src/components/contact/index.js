@@ -98,7 +98,33 @@ class ContactForm extends Component {
                         }
 
                         <Grid gutter={0} container justify="flex-end" style={{ marginTop: 30 }}>
-                            <Input disabled={invalid || pristine || submitting} disableUnderline={true} type="submit" value="Enviar" className="btnSubmit" />
+
+                            <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting} onClick={handleSubmit(data => {
+
+                                data.token_rdstation = document.getElementsByName('token_rdstation')[0].value;
+                                data.identificador = '/contato';
+                                if (corporative) {
+                                    data.identificador = '/corporativo';
+                                }
+                                if (agents) {
+                                    data.identificador = '/agentes/seja-um-agente';
+                                }
+
+                                let dataRDStation = Object.keys(data).map(function(idx) {
+                                    var valorCampo = data[idx];
+
+                                    return {
+                                        name: idx,
+                                        value: valorCampo
+                                    }
+                                });
+
+                                window.RdIntegration.post(dataRDStation);
+                                this.props.onSubmit(data);
+
+                            })}>
+                                Enviar
+                            </Button>
                         </Grid>
                     </Grid>
                 </form>
