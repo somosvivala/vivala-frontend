@@ -7,7 +7,6 @@ import {maskTelephone} from '../../../../utils/normalizations';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
-import Input from 'material-ui/Input';
 
 class TripFifthStep extends Component {
     render() {
@@ -69,7 +68,37 @@ class TripFifthStep extends Component {
                         </Grid>
                         <Grid gutter={0} container item xs={6} justify="flex-end">
                             
-                            <Input disabled={invalid || pristine || submitting} disableUnderline={true} type="submit" value="Enviar" className="btnSubmit" />
+                            <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting} onClick={handleSubmit(data => {
+
+                                data.token_rdstation = document.getElementsByName('token_rdstation')[0].value;
+                                data.identificador = "/cotacao/passeio";
+
+                                let dataRDStation = Object.keys(data).map(function(idx) {
+                                    var valorCampo = data[idx];
+
+                                    //se for um desses, precisamos mapear os valores.
+                                    if (
+                                        idx  === 'hospedagem_servicos' || 
+                                        idx === 'tipos_transfer' || 
+                                        idx === 'passeios_interesses' ||
+                                        idx === 'categorias_carro' ||
+                                        idx === 'itens_carro'
+                                    ){
+                                        valorCampo = Object.keys(data[idx]).toString();
+                                    }                                    
+
+                                    return {
+                                        name: idx,
+                                        value: valorCampo
+                                    }
+                                });
+
+                                window.RdIntegration.post(dataRDStation);
+                                this.props.onSubmit(data);
+
+                            })}>
+                                Enviar
+                            </Button>
 
                         </Grid>
                     </Grid>
