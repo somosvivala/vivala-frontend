@@ -2,8 +2,6 @@ import Index from '../components/pages/index';
 import VolunturismoIndex from '../components/pages/volunturismo';
 import EcoturismoIndex from '../components/pages/ecoturismo';
 import ImersaoIndex from '../components/pages/imersoes';
-import ExpeditionsIndex from '../components/pages/expeditions';
-import ExpeditionsShow from '../components/pages/expeditions/show';
 import CorporativeIndex from '../components/pages/corporative';
 import AgentsIndex from '../components/pages/agents';
 import AgentsSubscribe from '../components/pages/agents/subscribe';
@@ -18,13 +16,9 @@ import SearchPageIndex from '../components/pages/search';
 import CompletePackagesIndex from '../components/pages/quotations/complete-packages';
 import LodgingIndex from '../components/pages/quotations/lodging';
 import FlightsIndex from '../components/pages/quotations/flights';
-import HighwayIndex from '../components/pages/quotations/highway';
-import CruiseIndex from '../components/pages/quotations/cruise';
 import TripIndex from '../components/pages/quotations/trip';
 import InsuranceIndex from '../components/pages/quotations/insurance';
 import CarIndex from '../components/pages/quotations/car';
-import ExperiencesIndex from '../components/pages/experiences';
-import ExperiencesShow from '../components/pages/experiences/show';
 import PageNotFound from '../components/errors/404';
 
 export default [
@@ -129,18 +123,6 @@ export default [
         exact: true,
         component: FlightsIndex,
         key: 'quotations.flights'
-    },
-    {
-        path: '/cotacao/rodoviario',
-        exact: true,
-        component: HighwayIndex,
-        key: 'quotations.highway'
-    },
-    {
-        path: '/cotacao/cruzeiro',
-        exact: true,
-        component: CruiseIndex,
-        key: 'quotations.cruise'
     },
     {
         path: '/cotacao/passeio',

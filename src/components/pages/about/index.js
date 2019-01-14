@@ -5,9 +5,7 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import Youtube from 'react-youtube';
-import Slider from 'react-slick';
 import MediaNews from '../index/media-news';
-import trans from '../../../utils/translate';
 import {PrevArrow, NextArrow} from '../../arrows';
 
 const styleSheet = createStyleSheet('AboutIndex', theme => ({
