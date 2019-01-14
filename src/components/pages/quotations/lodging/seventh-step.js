@@ -71,7 +71,7 @@ class LodingSeventhStep extends Component {
                             <Button raised color="primary" type="submit" disabled={invalid || pristine || submitting} onClick={handleSubmit(data => {
 
                                 data.token_rdstation = document.getElementsByName('token_rdstation')[0].value;
-                                data.identificador = "/cotacao/hospedagem";
+                                data.identificador = "/cotacao/hospedagens";
 
                                 let dataRDStation = Object.keys(data).map(function(idx) {
                                     var valorCampo = data[idx];
