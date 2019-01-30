@@ -94,7 +94,6 @@ class MenuItems extends Component {
                         </Grid>
                         <Grid item xs={12}>
                             <Typography type="body1">
-                                <a href="tel://+551126452632">(11) 2645-2632</a> <br/>
                                 <a href="mailto:contato@vivala.com.br">contato@vivala.com.br</a> <br/>
                                 Seg a Sexta das 9h às 18h
                             </Typography>

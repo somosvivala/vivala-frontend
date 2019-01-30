@@ -69,9 +69,6 @@ class ContactIndex extends Component {
                 <div className="container padding pt-6">
                     <Grid gutter={24} container>
                         <Grid xs={12} item >
-                            <Typography type="title" color="inherit" gutterBottom>
-                                <a href="tel://+551126452632"><strong>11 2645-2632</strong></a>
-                            </Typography>
                             <Typography type="title" color="inherit" paragraph>
                                 <a href="mailto:contato@vivala.com.br">contato@vivala.com.br</a>
                             </Typography>
