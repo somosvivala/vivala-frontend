@@ -23,7 +23,7 @@ class ServicosItem extends Component {
         const { item } = this.props;
 
         return (
-            <a target="_blank" href={item.link_destino}>
+            <a target="_blank" href={item.link_destino} className="item-produtos">
                 <div className={this.state.classNormal} style={{ backgroundImage: `url(${item.foto_link})` }}>
                     <div className="item-content">
                         <Typography className="item-title">{item.titulo}</Typography>
