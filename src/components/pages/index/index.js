@@ -3,7 +3,6 @@ import {Helmet} from "react-helmet";
 import {connect} from 'react-redux';
 import Servicos from './servicos';
 import Social from '../../social/index';
-import CotacaoSection from './cotacao-section';
 import Newsletter from '../../newsletter';
 import MediaNews from './media-news';
 import HighlightSection from './highlight';
@@ -37,11 +36,12 @@ class IndexPage extends Component {
                 <Helmet>
                     <title>Vivalá - Volunturismo e Ecoturismo no Brasil</title>
                     <meta name="theme-color" content="#ED6D2C" />
+                    <meta name="title" content="Vivalá - Volunturismo e Ecoturismo no Brasil" />
                     <meta name="description" content="Acreditamos que viagens melhoram pessoas e pessoas melhoram o mundo. Conheça nossos roteiros!" />
 
                     <meta property="og:locale" content="pt_BR" />
                     <meta property="og:url" content={this.props.location.pathname} />
-                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil" />
                     <meta property="og:site_name" content="Vivalá" />
                     <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
                     <meta property="og:type" content="website" />
@@ -57,7 +57,6 @@ class IndexPage extends Component {
                         instagram="https://www.instagram.com/somosvivala/"
                         youtube="https://www.youtube.com/channel/UCT8bbWeVmbaDDMxvWlI8bBA"
                 />
-                <CotacaoSection />
                 <InstitutoSlider expeditions={photos} />
                 <HighlightSection />
                 <AssociadoSection />

@@ -8,16 +8,6 @@ class MenuItems extends Component {
     render() {
         const {direction, showContact} = this.props;
 
-        var cotacaoLink, cotacaoNome = '';
-
-        if ( window.screen.width < 900 ) {
-            cotacaoLink = '/cotacao';
-            cotacaoNome = 'Peça uma cotação';
-        } else {
-            cotacaoLink = '/busque-sua-viagem';
-            cotacaoNome = 'Busque Sua Viagem';
-        }
-
         return (
             <Grid gutter={24} container align="flex-start" justify="space-around">
                 <Grid gutter={0} container xs={direction === 'column' ? 12 : 4} item>
@@ -44,11 +34,6 @@ class MenuItems extends Component {
                     <Grid item xs={12}>
                         <Typography type="subheading" color="inherit">
                             <Link to="/imersoes">Imersões</Link>
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography type="subheading" color="inherit">
-                            <Link to={cotacaoLink}>{cotacaoNome}</Link>
                         </Typography>
                     </Grid>
                     <Grid item xs={12}>
