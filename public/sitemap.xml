@@ -1,12 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?><urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>https://vivala.com.br/</loc></url>
-<url><loc>https://vivala.com.br/agentes</loc></url>
-<url><loc>https://vivala.com.br/contato</loc></url>
-<url><loc>https://vivala.com.br/corporativo</loc></url>
-<url><loc>https://vivala.com.br/ecoturismo</loc></url>
-<url><loc>https://vivala.com.br/imersoes</loc></url>
-<url><loc>https://vivala.com.br/instituto</loc></url>
-<url><loc>https://vivala.com.br/instituto/resultados</loc></url>
-<url><loc>https://vivala.com.br/instituto/sobre</loc></url>
-<url><loc>https://vivala.com.br/sobre</loc></url>
-<url><loc>https://vivala.com.br/volunturismo</loc></url></urlset>
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url><loc>https://vivala.com.br/</loc></url>
+    <url><loc>https://vivala.com.br/contato</loc></url>
+    <url><loc>https://vivala.com.br/corporativo</loc></url>
+    <url><loc>https://vivala.com.br/ecoturismo</loc></url>
+    <url><loc>https://vivala.com.br/imersoes</loc></url>
+    <url><loc>https://vivala.com.br/instituto</loc></url>
+    <url><loc>https://vivala.com.br/instituto/resultados</loc></url>
+    <url><loc>https://vivala.com.br/instituto/sobre</loc></url>
+    <url><loc>https://vivala.com.br/sobre</loc></url>
+    <url><loc>https://vivala.com.br/volunturismo</loc></url>
+</urlset>

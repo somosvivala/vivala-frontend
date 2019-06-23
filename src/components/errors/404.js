@@ -24,15 +24,15 @@ class PageNotFound extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.bg}>
-                <div className="container padding-2x">
+                <div className="container pag404">
                     <Typography type="display1" color="inherit" gutterBottom className={classes.title}>
-                        Página não encontrada (404)
+                        Página não encontrada
                     </Typography>
                     <Typography type="display2" paragraph>
                         : (
                     </Typography>
                     <Typography type="title" color="inherit" className={classes.message}>
-                        O link que você acessou parece estar quebrado ou a página pode ter sido removida.
+                        O link que você acessou parece estar errado ou a página pode ter sido removida.
                     </Typography>
                     <Button raised color="primary"><Link to="/">Voltar para Home</Link></Button>
                 </div>
