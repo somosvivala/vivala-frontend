@@ -3,8 +3,6 @@ import VolunturismoIndex from '../components/pages/volunturismo';
 import EcoturismoIndex from '../components/pages/ecoturismo';
 import ImersaoIndex from '../components/pages/imersoes';
 import CorporativeIndex from '../components/pages/corporative';
-import AgentsIndex from '../components/pages/agents';
-import AgentsSubscribe from '../components/pages/agents/subscribe';
 import AboutIndex from '../components/pages/about';
 import InstituteIndex from '../components/pages/institute';
 import InstituteAbout from '../components/pages/institute/about';
@@ -42,18 +40,6 @@ export default [
         exact: true,
         component: CorporativeIndex,
         key: 'corporative.index'
-    },
-    {
-        path: '/agentes',
-        exact: true,
-        component: AgentsIndex,
-        key: 'agents.index'
-    },
-    {
-        path: '/agentes/seja-um-agente',
-        exact: true,
-        component: AgentsSubscribe,
-        key: 'agents.subscribe'
     },
     {
         path: '/sobre',
