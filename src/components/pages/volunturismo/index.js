@@ -49,14 +49,12 @@ class VolunturismoIndex extends Component {
                     <VolunturismoHeader videoId={video} />
 
                     <div className="frase-impacto">
-                        <Typography className="frase-impacto-title">
-                            Viaje e faça voluntariado pelo Brasil ajudando na capacitação profissional de  comunidades pelo país
-                        </Typography>
+                        <Typography className="frase-impacto-title">Vivencie a natureza e faça voluntariado pelo Brasil, desenvolvendo comunidades do país</Typography>
                     </div>
                     <div className="container-calendario barra-rolagem-volunturismo">
                         <Image
                             cloudName="vivala"
-                            publicId={window.screen.width > 1200 ? 'Agenda_2019.002_2_xi66pg' : window.screen.width > 900 ? 'Agenda_2019.002_2_xi66pg' : 'Agenda_2019.002_2_xi66pg' }
+                            publicId="Agenda_2019-2_e_2020-1_puvu0g"
                             alt="Tabela horarios experiências 2019"
                         />
                     </div>
