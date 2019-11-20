@@ -34,9 +34,9 @@ class IndexPage extends Component {
         return (
             <div className="content-wrapper">
                 <Helmet>
-                    <title>Vivalá - Volunturismo e Ecoturismo no Brasil</title>
+                    <title>Vivalá - Volunturismo no Brasil</title>
                     <meta name="theme-color" content="#ED6D2C" />
-                    <meta name="title" content="Vivalá - Volunturismo e Ecoturismo no Brasil" />
+                    <meta name="title" content="Vivalá - Volunturismo no Brasil" />
                     <meta name="description" content="Acreditamos que viagens melhoram pessoas e pessoas melhoram o mundo. Conheça nossos roteiros!" />
 
                     <meta property="og:locale" content="pt_BR" />
