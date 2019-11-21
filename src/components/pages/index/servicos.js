@@ -30,15 +30,15 @@ class Servicos extends Component {
             <div className="container servicos">
                 <div className="row">
                     <div className="section-header">
-                        <h1>Black Week Vivalá com até 20% de desconto</h1>
+                        <h1>Black Week Vivalá com até R$ 350 de desconto!</h1>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
                     <Link to="/volunturismo">
                         <div className={this.state.classBig} id="volunturismo" style={{ backgroundImage: `url(${fotoVolunturismo})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Volunturismo no Brasil</Typography>
-                                <Typography className="subtitle">Expedições em grupo de turismo e voluntariado em finais de semana e feriados</Typography>
+                                <Typography className="title">Volunturismo no Brasil - Agenda 2020</Typography>
+                                <Typography className="subtitle">Expedições de base comunitária e voluntariado em feriados </Typography>
                             </div>
                         </div>
                     </Link>
@@ -46,7 +46,7 @@ class Servicos extends Component {
                         <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Amazônia - Rio Negro</Typography>
-                                <Typography className="subtitle-home-servicos">Em Janeiro de 2020. Lago do Acajatuba, Amazonas</Typography>
+                                <Typography className="subtitle-home-servicos">Lago do Acajatuba, Amazonas, de 22 a 26 de janeiro</Typography>
                             </div>
                         </div>
                     </a>
@@ -54,7 +54,7 @@ class Servicos extends Component {
                         <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Amazônia - Rio Tapajós</Typography>
-                                <Typography className="subtitle-home-servicos">Em Janeiro de 2020. Floresta Nacional dos Tapajós e Alter do Chão, Pará</Typography>
+                                <Typography className="subtitle-home-servicos">Floresta Nacional dos Tapajós e Alter do Chão, Pará, de 22 a 26 de janeiro</Typography>
                             </div>
                         </div>
                     </a>
