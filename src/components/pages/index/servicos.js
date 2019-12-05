@@ -30,34 +30,34 @@ class Servicos extends Component {
             <div className="container servicos">
                 <div className="row">
                     <div className="section-header">
-                        <h1>Viva a natureza e se envolva com o Brasil</h1>
+                        <h1>Volunturismo no Brasil</h1>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
                     <Link to="/volunturismo">
                         <div className={this.state.classBig} id="volunturismo" style={{ backgroundImage: `url(${fotoVolunturismo})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Volunturismo em grupo</Typography>
-                                <Typography className="subtitle">Expedições em grupo de turismo e voluntariado em finais de semana e feriados</Typography>
+                                <Typography className="title">Volunturismo no Brasil - Agenda 2020</Typography>
+                                <Typography className="subtitle">Expedições de base comunitária e voluntariado em feriados </Typography>
                             </div>
                         </div>
                     </Link>
-                    <Link to="/ecoturismo">
+                    <a href="https://experiencias.vivala.com.br/rio-negro-fevereiro-2020">
                         <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Ecoturismo em grupo</Typography>
-                                <Typography className="subtitle-home-servicos">Experiências em grupo de profunda conexão com a natureza em finais de semana e feriados</Typography>
+                                <Typography className="title">Amazônia - Rio Negro</Typography>
+                                <Typography className="subtitle-home-servicos">Carnaval de 21 a 25 de fevereiro</Typography>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/imersoes">
+                    </a>
+                    <a href="https://experiencias.vivala.com.br/rio-tapajos-janeiro-2020">
                         <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Ecoturismo privado</Typography>
-                                <Typography className="subtitle-home-servicos">Experiências individuais ou em pequenos grupos de profunda conexão com a natureza para ir quando quiser.</Typography>
+                                <Typography className="title">Amazônia - Rio Tapajós</Typography>
+                                <Typography className="subtitle-home-servicos">Floresta Nacional dos Tapajós e Alter do Chão, Pará, de 22 a 26 de janeiro</Typography>
                             </div>
                         </div>
-                    </Link>
+                    </a>
                 </div>
             </div>
         );
