@@ -30,7 +30,7 @@ class Servicos extends Component {
             <div className="container servicos">
                 <div className="row">
                     <div className="section-header">
-                        <h1>Black Week Vivalá com até R$ 350 de desconto!</h1>
+                        <h1>Volunturismo no Brasil</h1>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
@@ -42,11 +42,11 @@ class Servicos extends Component {
                             </div>
                         </div>
                     </Link>
-                    <a href="https://experiencias.vivala.com.br/rio-negro-janeiro-2020">
+                    <a href="https://experiencias.vivala.com.br/rio-negro-fevereiro-2020">
                         <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Amazônia - Rio Negro</Typography>
-                                <Typography className="subtitle-home-servicos">Lago do Acajatuba, Amazonas, de 22 a 26 de janeiro</Typography>
+                                <Typography className="subtitle-home-servicos">Carnaval de 21 a 25 de fevereiro</Typography>
                             </div>
                         </div>
                     </a>
