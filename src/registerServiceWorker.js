@@ -57,7 +57,7 @@ function registerValidSW(swUrl) {
               // It's the perfect time to display a "New content is
               // available; please refresh." message in your web app.
               console.log('New content is available; please refresh.');
-              window.location.reload();
+              //window.location.reload();
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
@@ -85,7 +85,7 @@ function checkValidServiceWorker(swUrl) {
         // No service worker found. Probably a different app. Reload the page.
         navigator.serviceWorker.ready.then(registration => {
           registration.unregister().then(() => {
-            window.location.reload();
+            //window.location.reload();
           });
         });
       } else {
