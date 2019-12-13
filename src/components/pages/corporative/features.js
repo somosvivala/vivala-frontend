@@ -10,7 +10,7 @@ class CorporativeFeatures extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className="container padding-2x lista-wrapper">
+            <div className="container padding-1x lista-wrapper">
                 <List className="corporativo-lista">
                     <ListItem className="corporativo-itens">
 
