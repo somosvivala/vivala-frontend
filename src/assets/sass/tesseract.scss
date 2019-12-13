@@ -763,7 +763,15 @@ body {
                         margin-bottom: 0;
                         font-size: 1.2rem;
                         margin-left: 0.5rem;
-                        margin-top: 0.5rem;
+                        margin-top: 0.3rem;
+                        color: $vivala-orange;
+                    }
+                    .corporativo-item-text {
+                        vertical-align: middle;
+                        margin-bottom: 0;
+                        font-size: 1.1rem;
+                        margin-left: 0.5rem;
+                        margin-top: 0rem;
                         color: $vivala-darkgrey;
                     }
                 }
@@ -811,6 +819,7 @@ body {
             color: $vivala-orange;
             font-size: 2.5rem;
             letter-spacing: -.5px;
+            line-height: 48px;
             margin-bottom: 5px;
             text-transform: uppercase;
         }

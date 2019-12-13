@@ -22,9 +22,14 @@ class CorporativeFeatures extends Component {
                             className="list-check-icon"
                         />
 
-                        <Typography type="subheading" color="inherit" className="corporativo-item-title">
-                            Viagens personalizadas para voluntariado e ecoturismo
-                        </Typography>
+                        <div>
+                            <Typography type="bold" color="inherit" className="corporativo-item-title">
+                                Envolva sua faculdade
+                            </Typography>
+                            <Typography type="subheading" color="inherit" className="corporativo-item-text">
+                                Programas para graduação e pós graduação
+                            </Typography>
+                        </div>
                     </ListItem>
                     <ListItem className="corporativo-itens">
 
@@ -36,9 +41,14 @@ class CorporativeFeatures extends Component {
                             className="list-check-icon"
                         />
 
-                        <Typography type="subheading" color="inherit" className="corporativo-item-title">
-                            Campanhas de premiação e viagens de incentivo
-                        </Typography>
+                        <div>
+                            <Typography type="bold" color="inherit" className="corporativo-item-title">
+                                Envolva seu colégio
+                            </Typography>
+                            <Typography type="subheading" color="inherit" className="corporativo-item-text">
+                                Programas para ensino médio e formatura de volunturismo   
+                            </Typography>
+                        </div>
                     </ListItem>
                     <ListItem className="corporativo-itens">
 
@@ -50,9 +60,14 @@ class CorporativeFeatures extends Component {
                             className="list-check-icon"
                         />
 
-                        <Typography type="subheading" color="inherit" className="corporativo-item-title">
-                            Gestão corporativa de viagens
-                        </Typography>
+                        <div>
+                            <Typography type="bold" color="inherit" className="corporativo-item-title">
+                                Envolva sua empresa
+                            </Typography>
+                            <Typography type="subheading" color="inherit" className="corporativo-item-text">
+                                Programas corporativos
+                            </Typography>
+                        </div>
                     </ListItem>
                 </List>
             </div>

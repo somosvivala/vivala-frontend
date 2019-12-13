@@ -36,7 +36,7 @@ class CorporativeBonus extends Component {
             <div className="bonus">
                 <div className="container padding">
                     <Typography type="title" align="center" className="section-title" gutterBottom>
-                        Vantagens oferecidas para nossos <br/> clientes corporativos
+                        Experiências únicas de troca, aprendizado e impacto social através do Volunturismo
                     </Typography>
 
                     <div className="the-slider-container">
@@ -45,27 +45,7 @@ class CorporativeBonus extends Component {
                                 <div className="slider-item">
                                     <div className="item-meta">
                                         <Typography type="subheading" className="title">
-                                            Reduza Custos
-                                        </Typography>
-                                        <div className="img-container">
-                                            <Image
-                                                cloudName="vivala"
-                                                publicId="corporativo_icone_2.png"
-                                                width={120}
-                                                height={120}
-                                                crop="fit" alt="Ícone - Reduza Custos"
-                                                className=""
-                                            />
-                                        </div>
-                                        <Typography type="body1">Os melhores preços do mercado</Typography>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="slider-item">
-                                    <div className="item-meta">
-                                        <Typography type="subheading" className="title">
-                                            Economize Tempo
+                                            Aprendizado através da experiência
                                         </Typography>
                                         <div className="img-container">
                                             <Image
@@ -77,7 +57,7 @@ class CorporativeBonus extends Component {
                                                 className=""
                                             />
                                         </div>
-                                        <Typography type="body1">Seja atendido de forma ágil e personalizada</Typography>
+                                        <Typography type="body1">Construções de novas habilidades com a mão na massa</Typography>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +65,7 @@ class CorporativeBonus extends Component {
                                 <div className="slider-item">
                                     <div className="item-meta">
                                         <Typography type="subheading" className="title">
-                                            Campanhas de Incentivo
+                                            Projetos personalizados
                                         </Typography>
                                         <div className="img-container">
                                             <Image
@@ -97,7 +77,7 @@ class CorporativeBonus extends Component {
                                                 className=""
                                             />
                                         </div>
-                                        <Typography type="body1">Realize campanhas atreladas as suas metas</Typography>
+                                        <Typography type="body1">Expedições que se adequam a missão de sua organização</Typography>
                                     </div>
                                 </div>
                             </div>
@@ -105,7 +85,7 @@ class CorporativeBonus extends Component {
                                 <div className="slider-item">
                                     <div className="item-meta">
                                         <Typography type="subheading" className="title">
-                                            Melhore o controle
+                                            Acompanhamento Vivalá
                                         </Typography>
                                         <div className="img-container">
                                             <Image
@@ -113,11 +93,11 @@ class CorporativeBonus extends Component {
                                                 publicId="corporativo_icone_1.png"
                                                 width={120}
                                                 height={120}
-                                                crop="fit" alt="Ícone - Melhore o Controle"
+                                                crop="fit" alt="Ícone - Acompanhamento Vivalá"
                                                 className=""
                                             />
                                         </div>
-                                        <Typography type="body1">Receba relatórios mensais com seus gastos</Typography>
+                                        <Typography type="body1">Líderes de projeto sempre presentes na coordenação e facilitação do voluntariado</Typography>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +105,7 @@ class CorporativeBonus extends Component {
                                 <div className="slider-item">
                                     <div className="item-meta">
                                         <Typography type="subheading" className="title">
-                                            Valorize seus funcionários
+                                            Impacto social profundo
                                         </Typography>
                                         <div className="img-container">
                                             <Image
@@ -133,11 +113,11 @@ class CorporativeBonus extends Component {
                                                 publicId="corporativo_icone_5.png"
                                                 width={120}
                                                 height={120}
-                                                crop="fit" alt="Ícone - Valorize seus funcionários"
+                                                crop="fit" alt="Ícone - Impacto Social Profundo"
                                                 className=""
                                             />
                                         </div>
-                                        <Typography type="body1">Atendimento e descontos em sua viagem de lazer</Typography>
+                                        <Typography type="body1">Injeção de capital e capacitação profissional para quem mais precisa</Typography>
                                     </div>
                                 </div>
                             </div>

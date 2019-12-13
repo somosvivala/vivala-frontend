@@ -63,28 +63,6 @@ class ContactForm extends Component {
                                 validate={required}
                             />
                         </Grid>
-                        { corporative &&
-                            <Grid item xs={12}>
-                                <Field
-                                    type="text"
-                                    name="nome_empresa"
-                                    component={TextField}
-                                    label="Nome da Empresa"
-                                    validate={required}
-                                />
-                            </Grid>
-                        }
-                        { corporative &&
-                            <Grid item xs={12}>
-                                <Field
-                                    type="number"
-                                    name="numero_funcionarios"
-                                    component={TextField}
-                                    label="Número de Funcionários"
-                                    validate={required}
-                                />
-                            </Grid>
-                        }
                         { (corporative || common) &&
                             <Grid item xs={12}>
                                 <Field

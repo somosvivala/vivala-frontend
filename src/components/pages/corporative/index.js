@@ -12,7 +12,8 @@ class CorporativeIndex extends Component {
                 <Helmet>
                     <title>Corporativo</title>
                     <meta name="theme-color" content="#ED6D2C" />
-                    <meta name="description" content="O Melhor Parceiro para Sua Empresa para Roteiros Personalizados e Especiais, Viagens de Incentivo e a Gestão Corporativa de Viagens." />
+                    <meta name="description" content="Vivências de turismo de base comunitária e voluntariado no Brasil
+" />
 
                     <meta property="og:locale" content="pt_BR" />
                     <meta property="og:url" content={this.props.location.pathname} />
