@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Helmet} from "react-helmet";
 import PropTypes from 'prop-types';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
@@ -19,6 +18,7 @@ const styleSheet = createStyleSheet('InstituteResults', theme => ({
         flex: 5
     },
     icon: {
+        textAlign: window.screen.width < 800 ? 'center' : 'left',
         fontWeight: 'bold',
         backgroundColor: theme.institute.color,
         color: 'white',
@@ -43,55 +43,45 @@ class InstituteResults extends Component {
         const { classes } = this.props;
         return (
             <div className="content-wrapper">
-                <Helmet>
-                    <title>Resultados | Instituto Vivalá</title>
-                    <meta name="theme-color" content="#09A2A1" />
-                    <meta name="description" content="Projetos de Capacitação Profissional e Investimentos para Microempreendedores Mentorados." />
-
-                    <meta property="og:locale" content="pt_BR" />
-                    <meta property="og:url" content={this.props.location.pathname} />
-                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
-                    <meta property="og:site_name" content="Vivalá" />
-                    <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
-                    <meta property="og:type" content="website" />
-                    <meta property="og:image" content="https://res.cloudinary.com/vivala/image/upload/v1528403873/home_volunturismo_1527197447_vasb9e.jpg" />
-                    <meta property="og:image:type" content="image/jpg" />
-                    <meta property="og:image:width" content="1621" />
-                    <meta property="og:image:height" content="788" />
-                </Helmet>
                 <div className="container padding">
                     <Typography type="headline" color="accent" className={classes.title} gutterBottom>
                         Resultados
                     </Typography>
                     <List>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+17</Typography>
+                            <Typography className={classes.icon}>+4 mil</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Expedições
+                                horas de voluntariado
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+5</Typography>
+                            <Typography className={classes.icon}>+450 mil</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Regiões
+                                reais injetados nas economias locais
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+100</Typography>
+                            <Typography className={classes.icon}>+500</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Microempreendedores assistidos
+                                voluntárixs
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+300</Typography>
+                            <Typography className={classes.icon}>+150</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Voluntários
+                               micronegócios em nosso programa de capacitação profissional
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+R$ 200.000</Typography>
+                            <Typography className={classes.icon}>+30</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
-                                Injetados nas economias locais
+                                expedições pelo país
+                            </Typography>
+                        </ListItem>
+                        <ListItem className={classes.listItem}>
+                            <Typography className={classes.icon}>+6</Typography>
+                            <Typography type="subheading" color="inherit" className={classes.text}>
+                                comunidades brasileiras
                             </Typography>
                         </ListItem>
                     </List>

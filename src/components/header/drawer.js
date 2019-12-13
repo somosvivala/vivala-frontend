@@ -31,6 +31,7 @@ class Drawer extends Component {
                 open={open}
                 onRequestClose={close}
                 onClick={close}
+                className="container-menu-principal"
             >
                 <Grid gutter={0} justify="space-between" container className={classes.list}>
                     <Grid item className={classes.img}>
