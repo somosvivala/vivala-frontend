@@ -20,7 +20,7 @@ const styleSheet = createStyleSheet('InstituteResults', theme => ({
     icon: {
         textAlign: window.screen.width < 800 ? 'center' : 'left',
         fontWeight: 'bold',
-        backgroundColor: theme.institute.color,
+        backgroundColor: "#ED6D2C",
         color: 'white',
         display: 'flex',
         alignItems: 'center',
@@ -44,7 +44,7 @@ class InstituteResults extends Component {
         return (
             <div className="content-wrapper">
                 <div className="container padding">
-                    <Typography type="headline" color="accent" className={classes.title} gutterBottom>
+                    <Typography type="headline" color="#ED6D2C" className={classes.title} gutterBottom>
                         Resultados
                     </Typography>
                     <List>
@@ -73,7 +73,7 @@ class InstituteResults extends Component {
                             </Typography>
                         </ListItem>
                         <ListItem className={classes.listItem}>
-                            <Typography className={classes.icon}>+30</Typography>
+                            <Typography className={classes.icon}>+40</Typography>
                             <Typography type="subheading" color="inherit" className={classes.text}>
                                 expedições pelo país
                             </Typography>
