@@ -57,9 +57,6 @@ class IndexPage extends Component {
                         instagram="https://www.instagram.com/somosvivala/"
                         youtube="https://www.youtube.com/channel/UCT8bbWeVmbaDDMxvWlI8bBA"
                 />
-                <InstitutoSlider expeditions={photos} />
-                <HighlightSection />
-                <AssociadoSection />
                 <Newsletter text={trans('newsletter.text')}
                             placeholderName={trans('newsletter.placeholderName')}
                 />

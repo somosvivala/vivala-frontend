@@ -42,19 +42,19 @@ class Servicos extends Component {
                             </div>
                         </div>
                     </Link>
-                    <a href="https://experiencias.vivala.com.br/rio-negro-fevereiro-2020">
-                        <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
-                            <div className="meta-content">
-                                <Typography className="title">Amazônia - Rio Negro</Typography>
-                                <Typography className="subtitle-home-servicos">Carnaval de 21 a 25 de fevereiro</Typography>
-                            </div>
-                        </div>
-                    </a>
                     <a href="https://experiencias.vivala.com.br/rio-tapajos-janeiro-2020">
-                        <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
+                        <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoImersoes})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Amazônia - Rio Tapajós</Typography>
                                 <Typography className="subtitle-home-servicos">Floresta Nacional dos Tapajós e Alter do Chão, Pará, de 22 a 26 de janeiro</Typography>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://experiencias.vivala.com.br/rio-negro-fevereiro-2020">
+                        <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
+                            <div className="meta-content">
+                                <Typography className="title">Amazônia - Rio Negro</Typography>
+                                <Typography className="subtitle-home-servicos">Carnaval de 21 a 25 de fevereiro</Typography>
                             </div>
                         </div>
                     </a>
