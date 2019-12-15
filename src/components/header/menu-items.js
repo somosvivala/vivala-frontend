@@ -30,7 +30,7 @@ class MenuItems extends Component {
                     </Grid>
                     <Grid item xs={12}>
                         <Typography type="subheading" color="inherit">
-                            <Link to="/corporativo">Corporativo</Link>
+                            <Link to="/corporativo">Para Organizações</Link>
                         </Typography>
                     </Grid>
                     <Grid item xs={12}>

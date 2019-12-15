@@ -17,9 +17,9 @@ class CorporativeIndex extends Component {
 
                     <meta property="og:locale" content="pt_BR" />
                     <meta property="og:url" content={this.props.location.pathname} />
-                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo no Brasil" />
                     <meta property="og:site_name" content="Vivalá" />
-                    <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
+                    <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado em Lugares Incríveis." />
                     <meta property="og:type" content="website" />
                     <meta property="og:image" content="https://res.cloudinary.com/vivala/image/upload/v1528403873/home_volunturismo_1527197447_vasb9e.jpg" />
                     <meta property="og:image:type" content="image/jpg" />

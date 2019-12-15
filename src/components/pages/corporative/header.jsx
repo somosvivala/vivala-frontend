@@ -10,7 +10,7 @@ class CorporativoHeader extends Component {
                 <Grid container className="servicos-header " gutter={0} align="center" justify="center">
                     <Grid item xs={12} className="header-content">
                         <Typography type="headline" color="accent" className="section-title" gutterBottom>
-                            Corporativo
+                            Volunturismo para organizações
                         </Typography>
                         <Typography type="body1" className="section-subtitle">
                             Vivências de turismo de base comunitária e voluntariado no Brasil
