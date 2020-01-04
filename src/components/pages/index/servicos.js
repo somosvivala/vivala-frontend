@@ -50,11 +50,11 @@ class Servicos extends Component {
                             </div>
                         </div>
                     </a>
-                    <a href="https://experiencias.vivala.com.br/rio-negro-fevereiro-2020">
+                    <a href="https://experiencias.vivala.com.br/rio-negro-abril-2020">
                         <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
                             <div className="meta-content">
                                 <Typography className="title">Amazônia - Rio Negro</Typography>
-                                <Typography className="subtitle-home-servicos">Carnaval de 21 a 25 de fevereiro</Typography>
+                                <Typography className="subtitle-home-servicos">Páscoa de 09 a 12 de abril</Typography>
                             </div>
                         </div>
                     </a>
