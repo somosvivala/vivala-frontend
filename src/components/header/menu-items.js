@@ -38,6 +38,11 @@ class MenuItems extends Component {
                             <Link to="/resultados">Resultados</Link>
                         </Typography>
                     </Grid>
+                    <Grid item xs={12}>
+                        <Typography type="subheading" color="inherit">
+                            <a href="https:/www.blog.vivala.com.br/">Blog</a>
+                        </Typography>
+                    </Grid>
                 </Grid>
                 { showContact &&
                     <Grid gutter={0} container xs={direction === 'column' ? 12 : 3} item direction="column">
