@@ -25,18 +25,16 @@ class VolunturismoIndex extends Component {
             return <LoadingInfinite />;
         }
 
-        document.title = "Volunturismo | Vivalá"
-
         return (
             <div className="content-wrapper">
                 <Helmet>
-                    <title>Volunturismo | Vivalá</title>
+                    <title>Volunturismo | Expedições de Turismo e Voluntariado no Brasil | Vivalá</title>
                     <meta name="theme-color" content="#ED6D2C" />
                     <meta name="description" content="Viagens para Conhecer e Interagir com a Natureza e Cultura Local, Realizando um Trabalho Voluntário que visa a Capacitação Profissional de Pequenos Empreendedores." />
 
                     <meta property="og:locale" content="pt_BR" />
                     <meta property="og:url" content={this.props.location.pathname} />
-                    <meta property="og:title" content="Vivalá - Operadora de Volunturismo e Ecoturismo no Brasil e Agência Global de Viagens" />
+                    <meta property="og:title" content="Volunturismo | Expedições de Turismo e Voluntariado no Brasil | Vivalá" />
                     <meta property="og:site_name" content="Vivalá" />
                     <meta property="og:description" content="Viaje pelo Brasil com roteiros de Turismo e Voluntariado, Experiências de Conexão com a Natureza e Lugares Incríveis para ir quando quiser." />
                     <meta property="og:type" content="website" />
@@ -54,8 +52,8 @@ class VolunturismoIndex extends Component {
                     <div className="container-calendario barra-rolagem-volunturismo">
                         <Image
                             cloudName="vivala"
-                            publicId="Agenda_2020_uadqjq"
-                            alt="Tabela horarios experiências 2020"
+                            publicId="calendario_2020_xmil8u"
+                            alt="Agenda de expedições em 2020"
                         />
                     </div>
 
