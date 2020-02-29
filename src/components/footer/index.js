@@ -19,7 +19,7 @@ class Footer extends Component {
                         </Grid>
 
                         <Grid item xs={4}>
-                            <Typography type="subheading" color="inherit" style={{ textAlign: 'right', fontWeight: 'bold' }}>Vivala <br />© 2019</Typography>
+                            <Typography type="subheading" color="inherit" style={{ textAlign: 'right', fontWeight: 'bold' }}>Vivala <br />© 2020</Typography>
                         </Grid>
                     </Grid>
                 </div>
@@ -31,7 +31,7 @@ class Footer extends Component {
                 <div className="container padding-2x">
                     <MenuItems direction={"row"} showContact={true}  />
                     <Grid container align="center" justify="center" style={{ marginTop: 40 }}>
-                        <Typography type="subheading" color="inherit"><strong>© 2019 Vivalá</strong></Typography>
+                        <Typography type="subheading" color="inherit"><strong>© 2020 Vivalá</strong></Typography>
                     </Grid>
                 </div>
             </Grid>
