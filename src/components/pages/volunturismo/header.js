@@ -13,8 +13,6 @@ class VolunturismoHeader extends Component {
                     <Typography type="headline" color="accent" className="section-title" gutterBottom>
                         Volunturismo em Grupo
                     </Typography>
-                    <Typography type="body1" className="section-subtitle">
-                        Expedições em grupo de turismo e voluntariado em finais de semana e feriados                    </Typography>
                 </Grid>
 
                 <Grid className="video-wrapper" item xs={12}>

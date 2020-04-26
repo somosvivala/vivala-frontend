@@ -89,6 +89,16 @@ body {
                         width: 100%;
                         padding: 0 15px;
                     }
+
+                    &.subtitulo-principal {
+                      font-size: 1.75rem;
+                      color: black;
+                      margin-top: 20px;
+                      @include phone {
+                        font-size: 1.25rem;
+                      }
+                    }
+
                     .viaje {
                         @include tablet-portrait {
                             padding-right: 6.5rem;
