@@ -31,7 +31,7 @@ class Servicos extends Component {
                 <div className="row">
                     <div className="section-header">
                         <h1>Volunturismo no Brasil</h1>
-                        <h2 className="subtitulo-principal">Descontos  de R$ 145 até R$ 690 nas expedições de setembro a dezembro de 2020</h2>
+                        <h2 className="subtitulo-principal">Aproveite descontos de até R$ 690 nas expedições de finados e ano novo de 2020</h2>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
