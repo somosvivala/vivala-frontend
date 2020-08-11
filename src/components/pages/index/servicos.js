@@ -38,8 +38,8 @@ class Servicos extends Component {
                     <Link to="/volunturismo">
                         <div className={this.state.classBig} id="volunturismo" style={{ backgroundImage: `url(${fotoVolunturismo})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Volunturismo no Brasil - Agenda 2020</Typography>
-                                <Typography className="subtitle">Expedições de base comunitária e voluntariado em feriados </Typography>
+                                <Typography className="title">Volunturismo no Brasil - Agenda 2020 e 2021</Typography>
+                                <Typography className="subtitle">Expedições com muita natureza, interação com os locais e voluntariado</Typography>
                             </div>
                         </div>
                     </Link>
