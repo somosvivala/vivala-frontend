@@ -30,32 +30,32 @@ class Servicos extends Component {
             <div className="container servicos">
                 <div className="row">
                     <div className="section-header">
-                        <h1>Volunturismo no Brasil</h1>
-                        <h2 className="subtitulo-principal">Aproveite descontos de até R$ 690 nas expedições de ano novo de 2020</h2>
+                        <h1>Turismo Sustentável no Brasil</h1>
+                        <h2 className="subtitulo-principal">Ecoturismo de base comunitária e voluntariado em unidades de conservação</h2>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
                     <Link to="/volunturismo">
                         <div className={this.state.classBig} id="volunturismo" style={{ backgroundImage: `url(${fotoVolunturismo})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Volunturismo no Brasil - Agenda 2020 e 2021</Typography>
-                                <Typography className="subtitle">Expedições com muita natureza, interação com os locais e voluntariado</Typography>
+                                <Typography className="title">Agenda 2021</Typography>
+                                <Typography className="subtitle">Expedições com profundo contato com a natureza, população local e voluntariado.</Typography>
                             </div>
                         </div>
                     </Link>
-                    <a href="https://experiencias.vivala.com.br/virada20-21">
+                    <a href="https://experiencias.vivala.com.br/rionegrojaneiro21">
                         <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Amazônia - Rio Negro</Typography>
-                                <Typography className="subtitle-home-servicos">Ano Novo - 2020/2021 - 20% OFF</Typography>
+                                <Typography className="title">AMAZÔNIA - RIO NEGRO</Typography>
+                                <Typography className="subtitle-home-servicos">Janeiro 2021 - Até 20% off</Typography>
                             </div>
                         </div>
                     </a>
-                    <a href="https://experiencias.vivala.com.br/viradatapajos2021">
+                    <a href="https://experiencias.vivala.com.br/carnaval-tapajos-2021">
                         <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
                             <div className="meta-content">
-                                <Typography className="title">Amazônia - Rio Tapajós</Typography>
-                                <Typography className="subtitle-home-servicos">Ano Novo - 2020/2021 - 20% OFF</Typography>
+                                <Typography className="title">AMAZÔNIA - RIO TAPAJÓS</Typography>
+                                <Typography className="subtitle-home-servicos">Carnaval 2021 - Até 20% off</Typography>
                             </div>
                         </div>
                     </a>
