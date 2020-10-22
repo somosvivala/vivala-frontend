@@ -52,8 +52,8 @@ class VolunturismoIndex extends Component {
                     <div className="container-calendario barra-rolagem-volunturismo">
                         <Image
                             cloudName="vivala"
-                            publicId="Agenda_2020-21_ago_omn9bt"
-                            alt="Agenda de expedições em 2020"
+                            publicId="Agenda_2020-21-out_kkreqw"
+                            alt="Agenda de expedições em 2021"
                         />
                     </div>
 
