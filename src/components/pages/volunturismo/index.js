@@ -47,7 +47,7 @@ class VolunturismoIndex extends Component {
                     <VolunturismoHeader videoId={video} />
 
                     <div className="frase-impacto">
-                        <Typography className="frase-impacto-title">Vivencie a natureza e faça voluntariado pelo Brasil, desenvolvendo comunidades do país</Typography>
+                        <Typography className="frase-impacto-title">Black Month: Expedições em comunidades do país com até R$700 de desconto</Typography>
                     </div>
                     <div className="container-calendario barra-rolagem-volunturismo">
                         <Image

@@ -31,7 +31,7 @@ class Servicos extends Component {
                 <div className="row">
                     <div className="section-header">
                         <h1>Turismo Sustentável no Brasil</h1>
-                        <h2 className="subtitulo-principal">Ecoturismo de base comunitária e voluntariado em unidades de conservação</h2>
+                        <h2 className="subtitulo-principal">Black Month: Expedições com até R$700 de desconto</h2>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
