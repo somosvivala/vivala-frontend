@@ -31,7 +31,6 @@ class Servicos extends Component {
                 <div className="row">
                     <div className="section-header">
                         <h1>Turismo Sustentável no Brasil</h1>
-                        <h2 className="subtitulo-principal">Ecoturismo de base comunitária e voluntariado em unidades de conservação</h2>
                     </div>
                 </div>
                 <div className="inner-wrapper clearfix">
@@ -43,11 +42,11 @@ class Servicos extends Component {
                             </div>
                         </div>
                     </Link>
-                    <a href="https://experiencias.vivala.com.br/rionegrojaneiro21">
+                    <a href="https://experiencias.vivala.com.br/rio-negro-carnaval-2021">
                         <div className={this.state.classNormal} id="ecoturismo" style={{ backgroundImage: `url(${fotoEcoturismo})` }}>
                             <div className="meta-content">
                                 <Typography className="title">AMAZÔNIA - RIO NEGRO</Typography>
-                                <Typography className="subtitle-home-servicos">Janeiro 2021 - Até 20% off</Typography>
+                                <Typography className="subtitle-home-servicos">Carnaval 2021</Typography>
                             </div>
                         </div>
                     </a>
@@ -55,7 +54,7 @@ class Servicos extends Component {
                         <div className={this.state.classNormal} id="imersoes" style={{ backgroundImage: `url(${fotoImersoes})` }}>
                             <div className="meta-content">
                                 <Typography className="title">AMAZÔNIA - RIO TAPAJÓS</Typography>
-                                <Typography className="subtitle-home-servicos">Carnaval 2021 - Até 20% off</Typography>
+                                <Typography className="subtitle-home-servicos">Carnaval 2021</Typography>
                             </div>
                         </div>
                     </a>
